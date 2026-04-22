@@ -1,0 +1,2608 @@
+{
+  "enrollment": {
+    "AL": {
+      "total": 748650,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "AK": {
+      "total": 131243,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "AZ": {
+      "total": 1117630,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "AR": {
+      "total": 484978,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "CA": {
+      "total": 5924113,
+      "y": 2023,
+      "src": "NCES CCD + CDE Census",
+      "cf": "High",
+      "k8": 5331702
+    },
+    "CO": {
+      "total": 865661,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "CT": {
+      "total": 512652,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "DE": {
+      "total": 141842,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "DC": {
+      "total": 92794,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "FL": {
+      "total": 2872335,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "GA": {
+      "total": 1749701,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "HI": {
+      "total": 169308,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "ID": {
+      "total": 316414,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "IL": {
+      "total": 1846264,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "IN": {
+      "total": 1032723,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "IA": {
+      "total": 508112,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "KS": {
+      "total": 483505,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "KY": {
+      "total": 657520,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "LA": {
+      "total": 708190,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "ME": {
+      "total": 172545,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "MD": {
+      "total": 890122,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "MA": {
+      "total": 914958,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "MI": {
+      "total": 1426491,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "MN": {
+      "total": 869967,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "MS": {
+      "total": 436523,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "MO": {
+      "total": 891248,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "MT": {
+      "total": 149291,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "NE": {
+      "total": 329162,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "NV": {
+      "total": 479574,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "NH": {
+      "total": 166594,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "NJ": {
+      "total": 1392567,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "NM": {
+      "total": 311719,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "NY": {
+      "total": 2533449,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "NC": {
+      "total": 1544289,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "ND": {
+      "total": 119033,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "OH": {
+      "total": 1675300,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "OK": {
+      "total": 698761,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "OR": {
+      "total": 572624,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "PA": {
+      "total": 1692829,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "RI": {
+      "total": 136154,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "SC": {
+      "total": 793860,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "SD": {
+      "total": 141467,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "TN": {
+      "total": 1004625,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "TX": {
+      "total": 5532518,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "UT": {
+      "total": 689883,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "VT": {
+      "total": 82455,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "VA": {
+      "total": 1258852,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "WA": {
+      "total": 1093745,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "WV": {
+      "total": 246883,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "WI": {
+      "total": 814202,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    },
+    "WY": {
+      "total": 91036,
+      "y": 2023,
+      "src": "NCES CCD",
+      "cf": "High"
+    }
+  },
+  "states": [
+    {
+      "code": "AL",
+      "name": "Alabama",
+      "governance": "State adoption",
+      "status": "Active",
+      "priority": 2,
+      "last_verified": "2026-04-22",
+      "summary": "Alabama runs state adoption with published bid packets. ALSDE manages textbook procurement. The Digital Literacy and Computer Science bid is active for the 2026-2027 cycle, with the new K-12 Course of Study adopted December 2025.",
+      "authority": "State-approved list, local selection",
+      "cycles": [
+        {
+          "id": "AL1",
+          "su": "Digital Literacy & Computer Science",
+          "gr": "Computer Science",
+          "gd": "K-12",
+          "ay": 2026,
+          "iy": 2027,
+          "cs": "2027-07-01",
+          "ce": "2033-06-30",
+          "st": "Active call open",
+          "cf": "High",
+          "dl": "2026-04-30",
+          "dlL": "Bid packet due",
+          "ac": true,
+          "src": "https://www.alabamaachieves.org/wp-content/uploads/2026/02/TAP_20260227_DigitalLiteracyCSBidPacket_v1.pdf",
+          "v": "2026-04-22",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "LTI",
+          "hq": false,
+          "ch": false,
+          "tier": "VERIFIED",
+          "ke": [
+            {
+              "d": "2025-12-11",
+              "l": "SBOE adopts K-12 DLCS Course of Study",
+              "p": true
+            },
+            {
+              "d": "2026-02-27",
+              "l": "Bid packet published",
+              "p": true
+            },
+            {
+              "d": "2026-04-30",
+              "l": "Bid submission deadline"
+            },
+            {
+              "d": "2027-07-01",
+              "l": "Contract effective"
+            },
+            {
+              "d": "2027-08-01",
+              "l": "Voluntary implementation begins"
+            },
+            {
+              "d": "2028-08-01",
+              "l": "Required implementation begins"
+            }
+          ],
+          "src2": [
+            {
+              "t": "AL Bid Packet (PDF)",
+              "u": "https://www.alabamaachieves.org/wp-content/uploads/2026/02/TAP_20260227_DigitalLiteracyCSBidPacket_v1.pdf",
+              "ty": "Official PDF"
+            },
+            {
+              "t": "AL Adoption Hub",
+              "u": "https://www.alabamaachieves.org/content-areas-specialty/textbook-adoption-and-procurement/",
+              "ty": "Official page"
+            }
+          ],
+          "tips": [
+            {
+              "cat": "Urgent",
+              "note": "The bid deadline is April 30, just over a week away. If your materials aren't already in review internally, the window is very tight."
+            },
+            {
+              "cat": "Context",
+              "note": "The State Board adopted the new K-12 Digital Literacy and Computer Science Course of Study on December 11, 2025. Computer science will be required for high school graduation starting with the Class of 2032."
+            },
+            {
+              "cat": "Submission",
+              "note": "Download the full bid packet and check every requirement before assembling. Alabama's packets include specific formatting expectations that are easy to miss."
+            },
+            {
+              "cat": "Packaging",
+              "note": "LTI integration is expected. If you don't have LTI set up for your digital materials, flag this with your tech team immediately."
+            },
+            {
+              "cat": "Accessibility",
+              "note": "NIMAS files are required. Get your production team started on these early, they take time to generate and validate."
+            },
+            {
+              "cat": "Risk",
+              "note": "Incomplete submissions get disqualified. There are no extensions. Treat this as a hard stop, not a soft target."
+            },
+            {
+              "cat": "Implementation",
+              "note": "Voluntary implementation begins school year 2027-28. Required implementation follows in 2028-29. Plan your district rollout strategy accordingly."
+            }
+          ],
+          "students": 748650
+        }
+      ]
+    },
+    {
+      "code": "CA",
+      "name": "California",
+      "governance": "Hybrid state/local",
+      "status": "Active",
+      "priority": 6,
+      "last_verified": "2026-03-25",
+      "summary": "California is hybrid: K-8 state-level through SBE/IQC, 9-12 is local. The 2026 ELA/ELD follow-up adoption is active with an SBE-approved timeline. This is a follow-up to the 2015 primary adoption — materials will be added to the existing list.",
+      "authority": "CDE administers, IQC recommends, SBE approves (K-8). Local authority (9-12).",
+      "cycles": [
+        {
+          "id": "CA1",
+          "su": "ELA/ELD Follow-up Adoption",
+          "gr": "ELA",
+          "gd": "K-8",
+          "ay": 2026,
+          "iy": 2027,
+          "cs": "Added to 2015 list",
+          "ce": "Until superseded",
+          "st": "Active call open",
+          "cf": "High",
+          "dl": "2026-05-15",
+          "dlL": "Complete programs due",
+          "ac": true,
+          "src": "https://www.cde.ca.gov/ci/rl/im/elaeldfupsigevents.asp",
+          "v": "2026-04-22",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "Print, digital, or combination",
+          "hq": false,
+          "ch": true,
+          "tier": "VERIFIED",
+          "ke": [
+            {
+              "d": "2026-02-11",
+              "l": "Intent to submit due",
+              "p": true
+            },
+            {
+              "d": "2026-03-11",
+              "l": "Submission forms due",
+              "p": true
+            },
+            {
+              "d": "2026-04-08",
+              "l": "Publisher fees due",
+              "p": true
+            },
+            {
+              "d": "2026-04-27",
+              "l": "Reviewer training begins (Apr 27 to May 1)"
+            },
+            {
+              "d": "2026-05-15",
+              "l": "Complete programs due"
+            },
+            {
+              "d": "2026-07-20",
+              "l": "Deliberations week 1 (Jul 20 to 24)"
+            },
+            {
+              "d": "2026-07-27",
+              "l": "Deliberations week 2 (Jul 27 to 31)"
+            },
+            {
+              "d": "2026-08-12",
+              "l": "IQC public comment"
+            },
+            {
+              "d": "2026-09-17",
+              "l": "IQC recommendations (Sep 17 to 18)"
+            },
+            {
+              "d": "2026-11-12",
+              "l": "SBE final vote (Nov 12 to 13)"
+            }
+          ],
+          "src2": [
+            {
+              "t": "Schedule of Significant Events",
+              "u": "https://www.cde.ca.gov/ci/rl/im/elaeldfupsigevents.asp",
+              "ty": "Official page"
+            },
+            {
+              "t": "ELA IM Hub",
+              "u": "https://www.cde.ca.gov/ci/rl/im/",
+              "ty": "Official page"
+            },
+            {
+              "t": "Follow-up FAQ",
+              "u": "https://www.cde.ca.gov/ci/rl/im/elaeldfollowupadoptfaq.asp",
+              "ty": "Official page"
+            },
+            {
+              "t": "Publisher Bulletin 3",
+              "u": "https://www.cde.ca.gov/ci/rl/im/pubbulletin3elaeldfup.asp",
+              "ty": "Official page"
+            },
+            {
+              "t": "2026 Participants",
+              "u": "https://www.cde.ca.gov/ci/rl/im/elaeldparticipants2026.asp",
+              "ty": "Official page"
+            }
+          ],
+          "tips": [
+            {
+              "cat": "Status",
+              "note": "Publisher fees were due April 8 and that deadline has passed. Content Review Experts were appointed March 11, 2026. The next critical date is May 15 for complete instructional programs."
+            },
+            {
+              "cat": "Submission",
+              "note": "Complete programs are due May 15. That means physical or digital copies sent to the reviewer delivery list. CDE emails your delivery list during the Apr 27 to May 1 reviewer training week."
+            },
+            {
+              "cat": "Content Prep",
+              "note": "For digital programs, you can provide online access instructions or pre-loaded devices like iPad, Chromebook, or laptop. Devices must be returned after deliberations."
+            },
+            {
+              "cat": "Standards",
+              "note": "Align to ELA/ELD Framework Chapter 12 evaluation criteria. AB 1454 requires alignment to evidence-based reading instruction and program guidelines for dyslexia."
+            },
+            {
+              "cat": "Key Distinction",
+              "note": "This is a follow-up to the 2015 primary adoption, not a new one. Your materials will be added to the existing 2015 list. Partial programs are allowed for types 1 to 3. Existing 2015 programs stay on the list regardless."
+            },
+            {
+              "cat": "Risk",
+              "note": "Deliberations week 2 (Jul 27 to 31) may shift depending on how many publishers participate. The whole timeline is subject to SBE change."
+            },
+            {
+              "cat": "Local Nuance",
+              "note": "This adoption only covers K-8. If you sell 9-12 materials in California, that's a completely separate, district-by-district process."
+            },
+            {
+              "cat": "Cost",
+              "note": "The participation fee is set at $8,000 per program per grade level under Title 5 CCR Section 9517.1. This is mandated by California Education Code Section 60227."
+            }
+          ],
+          "students": 5331702
+        },
+        {
+          "id": "CA2",
+          "su": "Mathematics (K-8)",
+          "gr": "Math",
+          "gd": "K-8",
+          "ay": 2025,
+          "iy": 2026,
+          "cs": "Aug 2026",
+          "ce": "TBD",
+          "st": "Published schedule",
+          "cf": "High",
+          "dl": "2026-08-01",
+          "dlL": "First classroom implementation",
+          "ac": false,
+          "src": "https://www.cde.ca.gov/ci/ma/im/evalmapinstructmath2025.asp",
+          "v": "2026-03-26",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "Per CDE requirements",
+          "hq": true,
+          "ch": false,
+          "tier": "VERIFIED",
+          "src2": [
+            {
+              "t": "CDE 2025 Math Adoption",
+              "u": "https://www.cde.ca.gov/ci/ma/im/evalmapinstructmath2025.asp",
+              "ty": "Official page"
+            }
+          ],
+          "ke": [
+            {
+              "d": "2025-01-01",
+              "l": "Publisher Briefing & Call for Bids",
+              "p": true
+            },
+            {
+              "d": "2025-02-01",
+              "l": "Intent to Bid due",
+              "p": true
+            },
+            {
+              "d": "2025-03-01",
+              "l": "Bid Submission due",
+              "p": true
+            },
+            {
+              "d": "2025-04-01",
+              "l": "Publisher Fees & Presentations",
+              "p": true
+            },
+            {
+              "d": "2025-05-01",
+              "l": "State Committee samples due",
+              "p": true
+            },
+            {
+              "d": "2025-08-01",
+              "l": "Final pricing required",
+              "p": true
+            },
+            {
+              "d": "2026-08-01",
+              "l": "First classroom implementation"
+            }
+          ],
+          "tips": [
+            {
+              "cat": "Status",
+              "note": "This adoption cycle is past the submission phase. Bids closed March 2025, state committee review happened May 2025, final pricing was due August 2025. The process is now in its final stages."
+            },
+            {
+              "cat": "Implementation",
+              "note": "First classroom implementation is scheduled for August 2026. If your materials were submitted and approved, prepare for district-level rollout."
+            },
+            {
+              "cat": "If You Missed It",
+              "note": "If you didn't submit for this cycle, the window is closed. Focus on the next California math opportunity — likely a future primary or follow-up adoption. Watch the CDE frameworks page for scheduling."
+            }
+          ],
+          "students": 5331702
+        }
+      ]
+    },
+    {
+      "code": "FL",
+      "name": "Florida",
+      "governance": "State adoption",
+      "status": "Active",
+      "priority": 3,
+      "last_verified": "2026-03-25",
+      "summary": "Florida has a published multi-year cycle through 2030-31. Contracts run April 1-March 31. SB 7004 requires approved lists by July 31 of the prior year.",
+      "authority": "Commissioner publishes approved list. Districts select and adopt.",
+      "cycles": [
+        {
+          "id": "FL1",
+          "su": "Mathematics & Computer Science",
+          "gr": "Math",
+          "gd": "K-12",
+          "ay": 2027,
+          "iy": 2027,
+          "cs": "2027-04-01",
+          "ce": "2032-03-31",
+          "st": "Active call open",
+          "cf": "High",
+          "dl": "2026-07-31",
+          "dlL": "Approved list due (SB 7004)",
+          "ac": true,
+          "src": "https://www.fldoe.org/academics/standards/instructional-materials/",
+          "v": "2026-04-22",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "Electronic; unbundled per statute",
+          "hq": false,
+          "ch": false,
+          "tier": "VERIFIED",
+          "ke": [
+            {
+              "d": "2025-01-01",
+              "l": "Specs released",
+              "p": true
+            },
+            {
+              "d": "2025-05-01",
+              "l": "Call for Bids opened",
+              "p": true
+            },
+            {
+              "d": "2025-07-14",
+              "l": "Intent to Bid due (198 Math, 77 CS)",
+              "p": true
+            },
+            {
+              "d": "2025-08-01",
+              "l": "Bid Submission due",
+              "p": true
+            },
+            {
+              "d": "2025-09-01",
+              "l": "State Committee samples",
+              "p": true
+            },
+            {
+              "d": "2026-07-31",
+              "l": "State approved list released"
+            },
+            {
+              "d": "2027-04-01",
+              "l": "Contracts effective"
+            },
+            {
+              "d": "2027-08-01",
+              "l": "First classroom implementation"
+            },
+            {
+              "d": "2032-03-31",
+              "l": "Contract end"
+            }
+          ],
+          "src2": [
+            {
+              "t": "FLDOE IM Hub",
+              "u": "https://www.fldoe.org/academics/standards/instructional-materials/",
+              "ty": "Official page"
+            },
+            {
+              "t": "2026-27 Math Short Bid Report",
+              "u": "https://www.fldoe.org/file/5574/2627SBL-K-12-Math.pdf",
+              "ty": "Official PDF"
+            },
+            {
+              "t": "2026-27 Computer Science Short Bid Report",
+              "u": "https://www.fldoe.org/file/5574/2627SBL-K-12-CompSci.pdf",
+              "ty": "Official PDF"
+            },
+            {
+              "t": "Adoption Cycle PDF",
+              "u": "https://www.fldoe.org/file/5574/AdoptionCycle.pdf",
+              "ty": "Official PDF"
+            },
+            {
+              "t": "2026-27 Publisher Timeline",
+              "u": "https://www.fldoe.org/file/5574/2627pubtimelinechecklist.pdf",
+              "ty": "Official PDF"
+            }
+          ],
+          "tips": [
+            {
+              "cat": "Verified",
+              "note": "FLDOE confirms 198 bids for K-12 Mathematics and 77 bids for K-12 Computer Science under review for the 2026-27 adoption. All intents were submitted July 14, 2025."
+            },
+            {
+              "cat": "Timeline",
+              "note": "The state approved list is due by July 31, 2026. Your materials are already in review if you submitted. If you haven't submitted, this cycle is closed."
+            },
+            {
+              "cat": "Standards",
+              "note": "Align to Florida B.E.S.T. Standards. If standards change during your contract, you'll need to update materials within 9 months and sign a Standards Alignment Assurance form."
+            },
+            {
+              "cat": "Pricing",
+              "note": "Florida requires unbundled component pricing. Every piece must be individually priced. You cannot only offer bundles."
+            },
+            {
+              "cat": "Format",
+              "note": "Electronic format samples are required and will be retained by FLDOE. Make sure your digital samples are final-quality, not drafts."
+            },
+            {
+              "cat": "Planning Ahead",
+              "note": "Social Studies specs for the 2027-28 cycle are now available. If you publish Social Studies materials, download the 2027-28 K-12 Social Studies Specifications from FLDOE."
+            }
+          ],
+          "students": 2872335
+        },
+        {
+          "id": "FL2",
+          "su": "Social Studies",
+          "gr": "Social Studies",
+          "gd": "K-12",
+          "ay": 2028,
+          "iy": 2028,
+          "cs": "2028-04-01",
+          "ce": "2033-03-31",
+          "st": "Published schedule",
+          "cf": "High",
+          "dl": "2026-01-01",
+          "dlL": "Specs available (Jan 2026)",
+          "ac": false,
+          "src": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
+          "v": "2026-03-25",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "TBD",
+          "hq": false,
+          "ch": true,
+          "tier": "VERIFIED",
+          "src2": [],
+          "ke": [],
+          "tips": [
+            {
+              "cat": "Early Prep",
+              "note": "Specifications became available January 2026. Download them now and start your standards crosswalk. Early movers have a real advantage in Florida cycles."
+            }
+          ],
+          "students": 2872335
+        },
+        {
+          "id": "FL3",
+          "su": "Science",
+          "gr": "Science",
+          "gd": "K-12",
+          "ay": 2029,
+          "iy": 2029,
+          "cs": "2029-04-01",
+          "ce": "2034-03-31",
+          "st": "Published schedule",
+          "cf": "High",
+          "dl": "2027-01-01",
+          "dlL": "Specs (est.)",
+          "ac": false,
+          "src": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
+          "v": "2026-03-25",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "TBD",
+          "hq": false,
+          "ch": true,
+          "tier": "VERIFIED",
+          "src2": [],
+          "ke": [],
+          "tips": [],
+          "students": 2872335
+        },
+        {
+          "id": "FL4",
+          "su": "English Language Arts",
+          "gr": "ELA",
+          "gd": "K-12",
+          "ay": 2030,
+          "iy": 2030,
+          "cs": "2030-04-01",
+          "ce": "2035-03-31",
+          "st": "Published schedule",
+          "cf": "Medium",
+          "dl": "2028-01-01",
+          "dlL": "Specs (est.)",
+          "ac": false,
+          "src": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
+          "v": "2026-03-25",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "TBD",
+          "hq": false,
+          "ch": true,
+          "tier": "ADJUSTED",
+          "src2": [],
+          "ke": [],
+          "tips": [
+            {
+              "cat": "Data Note",
+              "note": "This cycle's exact timing has a known ~1 year offset in some industry projections. The official DOE schedule shows 2029-30 cycle. Plan against the official calendar, not third-party estimates."
+            }
+          ],
+          "students": 2872335
+        },
+        {
+          "id": "FL5",
+          "su": "World Languages, CTE, Arts, Health/PE",
+          "gr": "Multiple",
+          "gd": "K-12",
+          "ay": 2031,
+          "iy": 2031,
+          "cs": "2031-04-01",
+          "ce": "2036-03-31",
+          "st": "Published schedule",
+          "cf": "Medium",
+          "dl": "2029-01-01",
+          "dlL": "Specs (est.)",
+          "ac": false,
+          "src": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
+          "v": "2026-03-26",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "TBD",
+          "hq": false,
+          "ch": true,
+          "tier": "ADJUSTED",
+          "src2": [],
+          "ke": [],
+          "tips": [
+            {
+              "cat": "Data Note",
+              "note": "Industry projections place this cycle about 1 year later than the official schedule. The DOE shows 2030-31 (specs Jan 2029). Treat any dates beyond the official cycle PDF with caution."
+            },
+            {
+              "cat": "Long Range",
+              "note": "This is 5 years out. Useful for strategic planning only. No submission prep needed yet."
+            }
+          ],
+          "students": 2872335
+        }
+      ]
+    },
+    {
+      "code": "ID",
+      "name": "Idaho",
+      "governance": "State adoption",
+      "status": "Upcoming",
+      "priority": 1,
+      "last_verified": "2026-03-25",
+      "summary": "Idaho has state curricular materials adoption through SDE. Active program with defined review cycles.",
+      "authority": "State adoption with local selection",
+      "cycles": [
+        {
+          "id": "ID1",
+          "su": "Curricular Materials (subjects TBD)",
+          "gr": "Multiple",
+          "gd": "K-12",
+          "ay": 2026,
+          "iy": 2027,
+          "cs": "TBD",
+          "ce": "TBD",
+          "st": "Upcoming",
+          "cf": "Watch",
+          "dl": "2026-06-01",
+          "dlL": "Check SDE for current cycle",
+          "ac": false,
+          "src": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/curricular-materials/",
+          "v": "2026-03-25",
+          "acc": true,
+          "nim": true,
+          "dig": false,
+          "pk": "TBD",
+          "hq": false,
+          "ch": false,
+          "tier": "VERIFIED",
+          "src2": [
+            {
+              "t": "Idaho SDE Curricular Materials",
+              "u": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/curricular-materials/",
+              "ty": "Official page"
+            }
+          ],
+          "ke": [],
+          "tips": [
+            {
+              "cat": "Discovery",
+              "note": "Idaho's SDE page lists current adoption subjects and requirements. Check it now — we're still parsing the full details. If you sell materials in Idaho, confirm the active cycle directly with SDE."
+            }
+          ],
+          "students": 316414
+        }
+      ]
+    },
+    {
+      "code": "KY",
+      "name": "Kentucky",
+      "governance": "Local control",
+      "status": "District watch",
+      "priority": 1,
+      "last_verified": "2026-03-15",
+      "summary": "Kentucky is local-control. KDE provides guidance but districts decide independently.",
+      "authority": "District authority",
+      "cycles": [
+        {
+          "id": "KY1",
+          "su": "All Subjects (Local)",
+          "gr": "Multiple",
+          "gd": "K-12",
+          "ay": 2026,
+          "iy": 2026,
+          "cs": "Varies",
+          "ce": "Varies",
+          "st": "District watch only",
+          "cf": "Watch",
+          "dl": "Varies",
+          "dlL": "District decisions",
+          "ac": false,
+          "src": "https://www.education.ky.gov/curriculum/books/Pages/default.aspx",
+          "v": "2026-03-15",
+          "acc": true,
+          "nim": true,
+          "dig": false,
+          "pk": "Varies",
+          "hq": false,
+          "ch": false,
+          "tier": "VERIFIED",
+          "src2": [],
+          "ke": [],
+          "tips": [
+            {
+              "cat": "Strategy",
+              "note": "There is no statewide calendar here. You need to track individual districts — board agendas, procurement portals, and local curriculum review committees. Think of Kentucky as 170+ separate opportunities, not one state adoption."
+            }
+          ],
+          "students": 657520
+        }
+      ]
+    },
+    {
+      "code": "LA",
+      "name": "Louisiana",
+      "governance": "State adoption",
+      "status": "Monitoring",
+      "priority": 1,
+      "last_verified": "2026-04-22",
+      "summary": "Louisiana runs state adoption through BESE. No verified active Call for Bids at this time. Math and ELA cycles have been discussed but no official dates confirmed by LDOE.",
+      "authority": "State adoption through BESE",
+      "cycles": []
+    },
+    {
+      "code": "MS",
+      "name": "Mississippi",
+      "governance": "State adoption",
+      "status": "Upcoming",
+      "priority": 2,
+      "last_verified": "2026-03-18",
+      "summary": "Mississippi publishes a multi-year schedule extending to 2031. MDE manages review.",
+      "authority": "State-approved list, local selection",
+      "cycles": [
+        {
+          "id": "MS1",
+          "su": "ELA / English Language Arts",
+          "gr": "ELA",
+          "gd": "K-12",
+          "ay": 2026,
+          "iy": 2027,
+          "cs": "2027-07-01",
+          "ce": "2033-06-30",
+          "st": "Upcoming",
+          "cf": "High",
+          "dl": "2026-05-01",
+          "dlL": "Publisher timeline milestone",
+          "ac": false,
+          "src": "https://msinstructionalmaterials.org/wp-content/uploads/2026/02/2023-2031-Textbook-Adoption-Schedule.pdf",
+          "v": "2026-03-18",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "Common Cartridge",
+          "hq": false,
+          "ch": true,
+          "tier": "VERIFIED",
+          "src2": [
+            {
+              "t": "MS Schedule (PDF)",
+              "u": "https://msinstructionalmaterials.org/wp-content/uploads/2026/02/2023-2031-Textbook-Adoption-Schedule.pdf",
+              "ty": "Official PDF"
+            }
+          ],
+          "ke": [
+            {
+              "d": "2026-07-01",
+              "l": "Call for Bids & Intent to Bid"
+            },
+            {
+              "d": "2026-08-01",
+              "l": "Bid Submission due"
+            },
+            {
+              "d": "2026-09-01",
+              "l": "State Committee samples"
+            },
+            {
+              "d": "2026-11-01",
+              "l": "Caravan events"
+            },
+            {
+              "d": "2027-08-01",
+              "l": "First classroom implementation"
+            }
+          ],
+          "tips": [
+            {
+              "cat": "Timing",
+              "note": "Call for Bids and Intent to Bid are expected around July 2026. Bid submissions around August. Start your MS standards alignment work now so you're ready when the window opens."
+            },
+            {
+              "cat": "Events",
+              "note": "Mississippi runs caravans (publisher showcase events) in November of the adoption year. Plan your demo materials and team availability around this."
+            },
+            {
+              "cat": "Risk",
+              "note": "All dates in Mississippi are explicitly marked as subject to change. Don't commit final production schedules until you've confirmed the latest version of the timeline."
+            }
+          ],
+          "students": 436523
+        },
+        {
+          "id": "MS2",
+          "su": "Mathematics",
+          "gr": "Math",
+          "gd": "K-12",
+          "ay": 2027,
+          "iy": 2028,
+          "cs": "2028-07-01",
+          "ce": "2034-06-30",
+          "st": "Published schedule",
+          "cf": "High",
+          "dl": "2027-03-01",
+          "dlL": "Cycle opens (est.)",
+          "ac": false,
+          "src": "https://msinstructionalmaterials.org/wp-content/uploads/2026/02/2023-2031-Textbook-Adoption-Schedule.pdf",
+          "v": "2026-03-18",
+          "acc": true,
+          "nim": true,
+          "dig": false,
+          "pk": "TBD",
+          "hq": false,
+          "ch": true,
+          "tier": "VERIFIED",
+          "src2": [],
+          "ke": [],
+          "tips": [],
+          "students": 436523
+        }
+      ]
+    },
+    {
+      "code": "NV",
+      "name": "Nevada",
+      "governance": "Rolling review",
+      "status": "Rolling",
+      "priority": 2,
+      "last_verified": "2026-04-22",
+      "summary": "Nevada uses a rolling submission model. Publishers submit anytime; reviews are ongoing.",
+      "authority": "Rolling state review",
+      "cycles": [
+        {
+          "id": "NV1",
+          "su": "All Subjects (Rolling)",
+          "gr": "Multiple",
+          "gd": "K-12",
+          "ay": 2026,
+          "iy": 2026,
+          "cs": "Rolling",
+          "ce": "Rolling",
+          "st": "Rolling",
+          "cf": "High",
+          "dl": "Ongoing",
+          "dlL": "Submit anytime",
+          "ac": false,
+          "src": "https://doe.nv.gov/offices/office-of-teaching-and-learning/instructional-materials",
+          "v": "2026-04-22",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "Varies",
+          "hq": true,
+          "ch": false,
+          "tier": "VERIFIED",
+          "src2": [
+            {
+              "t": "NV IM Hub",
+              "u": "https://doe.nv.gov/offices/office-of-teaching-and-learning/instructional-materials",
+              "ty": "Official page"
+            }
+          ],
+          "ke": [],
+          "tips": [
+            {
+              "cat": "Strategy",
+              "note": "Treat Nevada as an active pipeline, not a one-time deadline. There's no urgency pressure, but there's also no guaranteed review window. Submit when your materials are truly ready."
+            },
+            {
+              "cat": "HQIM",
+              "note": "Nevada uses HQIM language. If your materials haven't been evaluated against HQIM criteria, do that work before submitting."
+            }
+          ],
+          "students": 479574
+        }
+      ]
+    },
+    {
+      "code": "NM",
+      "name": "New Mexico",
+      "governance": "State adoption",
+      "status": "Upcoming",
+      "priority": 2,
+      "last_verified": "2026-03-17",
+      "summary": "New Mexico publishes a detailed cycle table linking review timing, contracts, purchasing, and delivery.",
+      "authority": "State-approved with local selection",
+      "cycles": [
+        {
+          "id": "NM1",
+          "su": "Mathematics",
+          "gr": "Math",
+          "gd": "K-12",
+          "ay": 2026,
+          "iy": 2027,
+          "cs": "2026-07-01",
+          "ce": "2032-06-30",
+          "st": "Upcoming",
+          "cf": "High",
+          "dl": "2026-04-15",
+          "dlL": "Review institute window",
+          "ac": false,
+          "src": "https://web.ped.nm.gov/wp-content/uploads/2025/01/adoption-cycle_02_19_24.pdf",
+          "v": "2026-03-17",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "Common Cartridge",
+          "hq": true,
+          "ch": false,
+          "tier": "VERIFIED",
+          "src2": [
+            {
+              "t": "NM Cycle PDF",
+              "u": "https://web.ped.nm.gov/wp-content/uploads/2025/01/adoption-cycle_02_19_24.pdf",
+              "ty": "Official PDF"
+            },
+            {
+              "t": "NM Publishers Bureau",
+              "u": "https://web.ped.nm.gov/bureaus/instructional-materials/publishers/",
+              "ty": "Official page"
+            }
+          ],
+          "ke": [
+            {
+              "d": "2026-06-01",
+              "l": "Summer review institute"
+            },
+            {
+              "d": "2026-08-01",
+              "l": "First classroom implementation (Math)"
+            }
+          ],
+          "tips": [
+            {
+              "cat": "Critical",
+              "note": "NM's summer review institute is around June 2026. If you miss this window, you wait a full cycle. Check with NM PED now for registration details."
+            },
+            {
+              "cat": "Also Coming",
+              "note": "NM also has ELA & WL 9-12 coming — State Committee samples expected March 2026, Call for Bids August 2026, Intent to Bid September, Bid Submission November. K-8 ELA & WL follows with Call for Bids August 2026."
+            },
+            {
+              "cat": "Packaging",
+              "note": "Common Cartridge packaging is expected. Start your packaging work now if you haven't already."
+            }
+          ],
+          "students": 311719
+        }
+      ]
+    },
+    {
+      "code": "NC",
+      "name": "North Carolina",
+      "governance": "State adoption",
+      "status": "Monitoring",
+      "priority": 1,
+      "last_verified": "2026-04-22",
+      "summary": "North Carolina has a state adoption process through the NC Textbook Commission. The Commission's last recorded meeting was September 2024, and multiple commissioner seats have been vacant since the term ended April 1, 2025. NC adopted new ELA Standard Course of Study (Draft 4) on January 8, 2026 for 2027-28 implementation. No active Call for Bids at present.",
+      "authority": "Textbook Commission recommends, State Board approves, districts select.",
+      "cycles": [
+        {
+          "id": "NC1",
+          "su": "ELA Standards Revision",
+          "gr": "ELA",
+          "gd": "K-12",
+          "ay": 2027,
+          "iy": 2028,
+          "cs": "2027-08-01",
+          "ce": "TBD",
+          "st": "Published schedule",
+          "cf": "High",
+          "dl": "TBD",
+          "dlL": "Adoption cycle TBD",
+          "ac": false,
+          "src": "https://www.dpi.nc.gov/districts-schools/classroom-resources/office-teaching-and-learning",
+          "v": "2026-04-22",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "TBD",
+          "hq": false,
+          "ch": true,
+          "tier": "VERIFIED",
+          "ke": [
+            {
+              "d": "2026-01-08",
+              "l": "SBE adopted 2026 ELA Standard Course of Study",
+              "p": true
+            },
+            {
+              "d": "2027-08-01",
+              "l": "New ELA standards implementation"
+            }
+          ],
+          "src2": [
+            {
+              "t": "NC DPI Office of Teaching and Learning",
+              "u": "https://www.dpi.nc.gov/districts-schools/classroom-resources/office-teaching-and-learning",
+              "ty": "Official page"
+            },
+            {
+              "t": "NC DPI Textbook Adoption",
+              "u": "https://www.dpi.nc.gov/districts-schools/district-operations/textbook-adoption",
+              "ty": "Official page"
+            },
+            {
+              "t": "NC Textbook Commission",
+              "u": "https://www.dpi.nc.gov/districts-schools/district-operations/textbook-adoption/textbook-commission",
+              "ty": "Official page"
+            }
+          ],
+          "tips": [
+            {
+              "cat": "Status",
+              "note": "The NC Textbook Commission's most recent recorded meetings were September 2024. Multiple seats have been vacant since the April 2025 term expiration. No active Call for Bids at this time."
+            },
+            {
+              "cat": "Standards",
+              "note": "The State Board adopted Draft 4 of the 2026 ELA Standard Course of Study on January 8, 2026. The current 2017 ELA Standard Course of Study remains in place for the 2025-26 and 2026-27 school years. New standards implement in 2027-28."
+            },
+            {
+              "cat": "Planning",
+              "note": "Start aligning ELA materials to the newly adopted 2026 ELA Standard Course of Study now. When a Call for Bids does open, early alignment work will pay off."
+            },
+            {
+              "cat": "Watch",
+              "note": "Register on the NC Publishers Registry to receive any future Invitation to Submit. Only registered publishers can participate when adoption cycles resume."
+            }
+          ],
+          "students": 1544289
+        }
+      ]
+    },
+    {
+      "code": "OK",
+      "name": "Oklahoma",
+      "governance": "State adoption",
+      "status": "Upcoming",
+      "priority": 2,
+      "last_verified": "2026-03-16",
+      "summary": "Oklahoma publishes subject cycles. Some subjects may be affected by pending legislation.",
+      "authority": "State-approved with local selection",
+      "cycles": [
+        {
+          "id": "OK1",
+          "su": "Social Studies",
+          "gr": "Social Studies",
+          "gd": "K-12",
+          "ay": 2026,
+          "iy": 2027,
+          "cs": "2027-07-01",
+          "ce": "2033-06-30",
+          "st": "Upcoming",
+          "cf": "Medium",
+          "dl": "2026-08-01",
+          "dlL": "Committee review (est.)",
+          "ac": false,
+          "src": "https://oklahoma.gov/content/dam/ok/en/osde/documents/services/standards-learning/hqim/oklahoma-state-textbook-committee/Subject%20Material%20Adoption%20Cycle%202026.pdf",
+          "v": "2026-03-16",
+          "acc": true,
+          "nim": true,
+          "dig": false,
+          "pk": "TBD",
+          "hq": false,
+          "ch": true,
+          "ln": "Some subjects affected by pending legislative actions.",
+          "src2": [
+            {
+              "t": "OK Cycle PDF",
+              "u": "https://oklahoma.gov/content/dam/ok/en/osde/documents/services/standards-learning/hqim/oklahoma-state-textbook-committee/Subject%20Material%20Adoption%20Cycle%202026.pdf",
+              "ty": "Official PDF"
+            },
+            {
+              "t": "OK HQIM Hub",
+              "u": "https://oklahoma.gov/education/services/hqim.html",
+              "ty": "Official page"
+            }
+          ],
+          "ke": [],
+          "tips": [
+            {
+              "cat": "Legal Watch",
+              "note": "Some Oklahoma subjects have been affected by legal stays. Before you invest in submission prep, confirm the current status of this cycle directly with OSDE. A legal hold could delay or cancel the review."
+            },
+            {
+              "cat": "Planning",
+              "note": "Even with uncertainty, align your materials to Oklahoma Academic Standards now. If the cycle proceeds, you'll be ready. If it's delayed, the standards work still applies."
+            }
+          ],
+          "students": 698761
+        }
+      ]
+    },
+    {
+      "code": "OR",
+      "name": "Oregon",
+      "governance": "State adoption",
+      "status": "Active",
+      "priority": 4,
+      "last_verified": "2026-03-25",
+      "summary": "Oregon has a structured multi-year adoption schedule. Current cycle: PE, World Languages, Arts (2026). Social Science completed 2025. ODE manages review with published criteria.",
+      "authority": "State Board adopts. Districts select from adopted list or conduct independent adoption.",
+      "cycles": [
+        {
+          "id": "OR1",
+          "su": "Physical Education, World Languages, Arts",
+          "gr": "Multiple",
+          "gd": "K-12",
+          "ay": 2026,
+          "iy": 2027,
+          "cs": "Fall 2027",
+          "ce": "Fall 2029 (2yr postponement max)",
+          "st": "Active call open",
+          "cf": "High",
+          "dl": "2026-02-20",
+          "dlL": "Info Request Form was due",
+          "ac": true,
+          "src": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/announcements-and-notices.aspx",
+          "v": "2026-03-25",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "Per ODE criteria",
+          "hq": true,
+          "ch": false,
+          "tier": "VERIFIED",
+          "ke": [
+            {
+              "d": "2026-01-01",
+              "l": "WL Call for Bids",
+              "p": true
+            },
+            {
+              "d": "2026-02-01",
+              "l": "WL Intent to Bid",
+              "p": true
+            },
+            {
+              "d": "2026-02-13",
+              "l": "PE Publisher Briefing held",
+              "p": true
+            },
+            {
+              "d": "2026-02-20",
+              "l": "PE Info Request Form due",
+              "p": true
+            },
+            {
+              "d": "2026-03-01",
+              "l": "WL Bid Submission",
+              "p": true
+            },
+            {
+              "d": "2026-06-01",
+              "l": "WL State Committee samples"
+            },
+            {
+              "d": "2026-08-01",
+              "l": "WL First classroom implementation (est.)"
+            },
+            {
+              "d": "2027-09-01",
+              "l": "PE/Arts classroom implementation"
+            }
+          ],
+          "src2": [
+            {
+              "t": "ODE HQIM Announcements",
+              "u": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/announcements-and-notices.aspx",
+              "ty": "Official page"
+            },
+            {
+              "t": "ODE Adopted Materials",
+              "u": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/Pages/Adopted-Instructional-Materials.aspx",
+              "ty": "Official page"
+            },
+            {
+              "t": "ODE Adoption Criteria",
+              "u": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/adoption-criteria.aspx",
+              "ty": "Official page"
+            },
+            {
+              "t": "ODE Social Sciences",
+              "u": "https://www.oregon.gov/ode/educator-resources/standards/socialsciences/pages/default.aspx",
+              "ty": "Official page"
+            }
+          ],
+          "tips": [
+            {
+              "cat": "World Languages",
+              "note": "The WL Call for Bids went out January 2026. Intent to Bid was due February. Bid Submission was March. If you missed the WL window, it's closed for this cycle. State Committee samples happen around June 2026."
+            },
+            {
+              "cat": "PE/Arts",
+              "note": "The PE Publisher Briefing happened Feb 13 and Info Request Form was due Feb 20. If you missed these, contact ODE's Instructional Materials Coordinator directly — you may still have a path in for PE and Arts."
+            },
+            {
+              "cat": "Standards",
+              "note": "Oregon adopted new Social Science Standards in 2024 (required implementation by 2026-27 SY). If your PE, WL, or Arts materials touch cross-curricular themes, be aware of the new standards landscape."
+            },
+            {
+              "cat": "Packaging",
+              "note": "Oregon uses an Instructional Materials Evaluation Tool (OR-IMET) specific to each content area. Download and review the relevant OR-IMET before finalizing your submission."
+            },
+            {
+              "cat": "Implementation",
+              "note": "Districts must implement by September of the year after adoption. However, districts can request a 2-year postponement. Plan your sales cycle around both the adoption and the postponement window."
+            }
+          ],
+          "students": 572624
+        },
+        {
+          "id": "OR2",
+          "su": "ELA / English Language Arts",
+          "gr": "ELA",
+          "gd": "K-12",
+          "ay": 2027,
+          "iy": 2028,
+          "cs": "Fall 2028",
+          "ce": "Fall 2030",
+          "st": "Published schedule",
+          "cf": "High",
+          "dl": "2027-02-01",
+          "dlL": "Publisher Briefing (est.)",
+          "ac": false,
+          "src": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/announcements-and-notices.aspx",
+          "v": "2026-03-25",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "TBD",
+          "hq": true,
+          "ch": false,
+          "tier": "VERIFIED",
+          "src2": [],
+          "ke": [],
+          "tips": [
+            {
+              "cat": "Early Prep",
+              "note": "Oregon's ELA adoption is on the published schedule for 2027. Start reviewing the OR-IMET criteria framework now. Oregon's evaluation criteria are adopted by the State Board a year before the review cycle."
+            }
+          ],
+          "students": 572624
+        }
+      ]
+    },
+    {
+      "code": "SC",
+      "name": "South Carolina",
+      "governance": "State adoption",
+      "status": "Active",
+      "priority": 3,
+      "last_verified": "2026-04-22",
+      "summary": "SC runs a call-for-bids process with hard deadlines and specific content sample requirements. The 2026 Call for Bids covers Career and Technical Education (CTE) and Visual and Performing Arts (VPA).",
+      "authority": "State-approved list, local selection",
+      "cycles": [
+        {
+          "id": "SC1",
+          "su": "CTE and Visual and Performing Arts",
+          "gr": "Multiple",
+          "gd": "K-12",
+          "ay": 2026,
+          "iy": 2027,
+          "cs": "2027-07-01",
+          "ce": "2033-06-30",
+          "st": "Active call open",
+          "cf": "High",
+          "dl": "2026-03-31",
+          "dlL": "Bid submission deadline (passed)",
+          "ac": true,
+          "src": "https://ed.sc.gov/newsroom/news-releases/request-for-bids-high-quality-instructional-materials/",
+          "v": "2026-04-22",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "Common Cartridge",
+          "hq": true,
+          "ch": false,
+          "tier": "VERIFIED",
+          "ke": [
+            {
+              "d": "2026-01-14",
+              "l": "Call for Bids opened",
+              "p": true
+            },
+            {
+              "d": "2026-03-31",
+              "l": "Bid submission deadline",
+              "p": true
+            },
+            {
+              "d": "2027-07-01",
+              "l": "Contract start"
+            }
+          ],
+          "src2": [
+            {
+              "t": "SCDE Bid News Release",
+              "u": "https://ed.sc.gov/newsroom/news-releases/request-for-bids-high-quality-instructional-materials/",
+              "ty": "Official page"
+            },
+            {
+              "t": "SC Instructional Materials Hub",
+              "u": "https://ed.sc.gov/instruction/instructional-materials/",
+              "ty": "Official page"
+            },
+            {
+              "t": "Publisher Registration",
+              "u": "https://ed.sc.gov/instruction/instructional-materials/information-for-publishers/publisher-vendor-registration-for-the-instructional-materials-bid-portal-imbp/",
+              "ty": "Official page"
+            }
+          ],
+          "tips": [
+            {
+              "cat": "Verified",
+              "note": "SCDE confirms the 2026 Call for Bids is for Career and Technical Education and Visual and Performing Arts courses. Bids closed March 31, 2026. The process is now in review."
+            },
+            {
+              "cat": "Status",
+              "note": "If you submitted CTE or VPA bids, the review process is underway. If you missed the window, this cycle is closed for these subjects."
+            },
+            {
+              "cat": "Process",
+              "note": "Bids must be submitted through the Instructional Materials Bid Portal (IMBP), with all required documents emailed to OIMinfo@ed.sc.gov with subject line 2026 Bid Forms."
+            },
+            {
+              "cat": "Packaging",
+              "note": "SC historically requires Common Cartridge for digital materials and follows IMS Global interoperability standards. Confirm current packaging requirements with SCDE directly."
+            }
+          ],
+          "students": 793860
+        }
+      ]
+    },
+    {
+      "code": "TN",
+      "name": "Tennessee",
+      "governance": "State adoption",
+      "status": "Active",
+      "priority": 4,
+      "last_verified": "2026-03-26",
+      "summary": "Tennessee adopts through the Textbook Commission using labeled schedules (A through H+). Schedule E (PE/Health, CTE) is active. Schedule F (Social Studies, CTE: Business) is upcoming. Schedule G (World Languages) and H (ELA) are verified for 2026-28. Full cycle through Math in 2029-30. Six-year contracts.",
+      "authority": "Commission recommends, SBE approves, districts select.",
+      "cycles": [
+        {
+          "id": "TN1",
+          "su": "PE/Health, CTE: Adv Manufacturing & IT",
+          "gr": "Multiple",
+          "gd": "K-12",
+          "ay": 2025,
+          "iy": 2027,
+          "cs": "2026-07-01",
+          "ce": "2032-06-30",
+          "st": "Active call open",
+          "cf": "High",
+          "dl": "2026-05-14",
+          "dlL": "Commission review meeting",
+          "ac": true,
+          "src": "https://www.tn.gov/textbook-commission/textbook-information-for-publishers.html",
+          "v": "2026-03-25",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "Per Commission specs",
+          "hq": false,
+          "ch": false,
+          "tier": "VERIFIED",
+          "ke": [
+            {
+              "d": "2025-07-30",
+              "l": "Initial scoring report",
+              "p": true
+            },
+            {
+              "d": "2026-01-12",
+              "l": "Commission meeting",
+              "p": true
+            },
+            {
+              "d": "2026-02-19",
+              "l": "Commission meetings",
+              "p": true
+            },
+            {
+              "d": "2026-05-14",
+              "l": "Commission review meeting"
+            },
+            {
+              "d": "2026-07-22",
+              "l": "Commission meeting"
+            }
+          ],
+          "src2": [
+            {
+              "t": "TN Publisher Info",
+              "u": "https://www.tn.gov/textbook-commission/textbook-information-for-publishers.html",
+              "ty": "Official page"
+            },
+            {
+              "t": "TN Adoption Process",
+              "u": "https://www.tn.gov/textbook-commission/textbook-adoption-process.html",
+              "ty": "Official page"
+            },
+            {
+              "t": "TN Adoption Schedule",
+              "u": "https://www.tn.gov/content/dam/tn/education/textbook/Instructional_Materials_Adoption_Schedule.pdf",
+              "ty": "Official PDF"
+            },
+            {
+              "t": "Schedule F Calendar",
+              "u": "https://www.tn.gov/content/dam/tn/textbook-commission/documents/schedule-f/Schedule_F_Calendar.pdf",
+              "ty": "Official PDF"
+            }
+          ],
+          "tips": [
+            {
+              "cat": "Status",
+              "note": "Schedule E is in active review. Scoring reports were published July 2025. Commission meetings are ongoing through mid-2026. If you bid into this cycle, stay in close contact with the Commission for meeting updates."
+            },
+            {
+              "cat": "Process",
+              "note": "The Commission uses state advisory panels to review materials against a screening instrument. Public review happens simultaneously — parents and community members can view and comment on your materials online."
+            },
+            {
+              "cat": "Contract",
+              "note": "Contracts run 6 years at the original bid price. Make sure your pricing accounts for the full contract duration, not just year one."
+            }
+          ],
+          "students": 1004625
+        },
+        {
+          "id": "TN2",
+          "su": "Social Studies, CTE: Business Mgmt & Admin",
+          "gr": "Social Studies",
+          "gd": "K-12",
+          "ay": 2026,
+          "iy": 2028,
+          "cs": "2027-07-01",
+          "ce": "2033-06-30",
+          "st": "Upcoming",
+          "cf": "High",
+          "dl": "2026-09-01",
+          "dlL": "Schedule F cycle opens (est.)",
+          "ac": false,
+          "src": "https://www.tn.gov/content/dam/tn/textbook-commission/documents/schedule-f/Schedule_F_Calendar.pdf",
+          "v": "2026-03-25",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "TBD",
+          "hq": false,
+          "ch": false,
+          "tier": "VERIFIED",
+          "src2": [],
+          "ke": [],
+          "tips": [
+            {
+              "cat": "Timing",
+              "note": "Schedule F is the next cycle after the current Schedule E. The calendar PDF has specific dates. Download it now and mark the intent-to-bid and submission windows on your internal calendar."
+            },
+            {
+              "cat": "Subjects",
+              "note": "This covers Social Studies AND CTE: Business Management & Administration. If you publish in either area, this is your window for Tennessee."
+            },
+            {
+              "cat": "Prep",
+              "note": "Start your Tennessee Academic Standards alignment work now. The review process includes screening against state standards, and gaps will be flagged."
+            }
+          ],
+          "students": 1004625
+        },
+        {
+          "id": "TN3",
+          "su": "World Languages",
+          "gr": "Multiple",
+          "gd": "K-12",
+          "ay": 2027,
+          "iy": 2029,
+          "cs": "2028-07-01",
+          "ce": "2034-06-30",
+          "st": "Published schedule",
+          "cf": "High",
+          "dl": "2026-10-01",
+          "dlL": "Bids expected Oct 2026",
+          "ac": false,
+          "src": "https://www.tn.gov/content/dam/tn/education/textbook/Instructional_Materials_Adoption_Schedule.pdf",
+          "v": "2026-03-26",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "TBD",
+          "hq": false,
+          "ch": false,
+          "tier": "VERIFIED",
+          "src2": [],
+          "ke": [
+            {
+              "d": "2026-10-01",
+              "l": "Call for Bids"
+            },
+            {
+              "d": "2026-11-01",
+              "l": "Intent to Bid due"
+            },
+            {
+              "d": "2027-01-01",
+              "l": "Bid Submission due"
+            },
+            {
+              "d": "2027-02-01",
+              "l": "State Committee samples"
+            },
+            {
+              "d": "2028-08-01",
+              "l": "First classroom implementation"
+            }
+          ],
+          "tips": [
+            {
+              "cat": "Verified",
+              "note": "Confirmed at 95% confidence. Schedule G shows WL adoption 2026-27. Call for Bids in October 2026, Intent to Bid in November 2026, Bid Submission January 2027, and State Committee samples February 2027."
+            },
+            {
+              "cat": "Timing",
+              "note": "You have about 6 months before the Call for Bids opens. Use this time to align your WL materials to TN Academic Standards and prepare your bid package."
+            },
+            {
+              "cat": "Implementation",
+              "note": "First classroom implementation is August 2028. That's the date districts need materials delivered and ready."
+            }
+          ],
+          "students": 1004625
+        },
+        {
+          "id": "TN4",
+          "su": "ELA / English Language Arts",
+          "gr": "ELA",
+          "gd": "K-12",
+          "ay": 2028,
+          "iy": 2030,
+          "cs": "2029-07-01",
+          "ce": "2035-06-30",
+          "st": "Published schedule",
+          "cf": "High",
+          "dl": "2027-10-01",
+          "dlL": "Bids expected Oct 2027",
+          "ac": false,
+          "src": "https://www.tn.gov/content/dam/tn/education/textbook/Instructional_Materials_Adoption_Schedule.pdf",
+          "v": "2026-03-26",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "TBD",
+          "hq": false,
+          "ch": false,
+          "tier": "VERIFIED",
+          "src2": [],
+          "ke": [],
+          "tips": [
+            {
+              "cat": "Verified",
+              "note": "Confirmed at 95% confidence. Schedule H shows ELA adoption in 2027-28 with implementation 2029-30."
+            },
+            {
+              "cat": "Long-Range",
+              "note": "This is two years out. Use the time now to evaluate your ELA materials against Tennessee standards and identify any gaps early."
+            }
+          ],
+          "students": 1004625
+        },
+        {
+          "id": "TN5",
+          "su": "Mathematics",
+          "gr": "Math",
+          "gd": "K-12",
+          "ay": 2030,
+          "iy": 2032,
+          "cs": "2031-07-01",
+          "ce": "2037-06-30",
+          "st": "Published schedule",
+          "cf": "High",
+          "dl": "2029-10-01",
+          "dlL": "Bids expected Oct 2029",
+          "ac": false,
+          "src": "https://www.tn.gov/content/dam/tn/education/textbook/Instructional_Materials_Adoption_Schedule.pdf",
+          "v": "2026-03-26",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "TBD",
+          "hq": false,
+          "ch": false,
+          "tier": "VERIFIED",
+          "src2": [],
+          "ke": [],
+          "tips": [
+            {
+              "cat": "Verified",
+              "note": "Confirmed at 95% confidence. Schedule B (updated) shows Math in 2029-30 with implementation 2031-32. This is a long-range planning window."
+            },
+            {
+              "cat": "Planning",
+              "note": "Four years out. Use this for strategic product planning only — don't commit production resources yet. Standards may change before this cycle opens."
+            }
+          ],
+          "students": 1004625
+        }
+      ]
+    },
+    {
+      "code": "TX",
+      "name": "Texas",
+      "governance": "State adoption",
+      "status": "Active",
+      "priority": 5,
+      "last_verified": "2026-04-22",
+      "summary": "Texas runs IMRA through TEA and the SBOE. Cycle 2026 covers K-12 Fine Arts, 6-12 CTE Batch 1, and K-5 Supplemental RLA, plus reconsidered materials from IMRA 2024 and 2025. SBOE final vote scheduled November 16-20, 2026. Districts get $40 per student annually for adopting approved materials through EMAT.",
+      "authority": "SBOE approves. Districts select via EMAT with $40/student incentive.",
+      "cycles": [
+        {
+          "id": "TX1",
+          "su": "Fine Arts, CTE Batch 1, Supplemental RLA",
+          "gr": "Multiple",
+          "gd": "K-12",
+          "ay": 2026,
+          "iy": 2028,
+          "cs": "2027-01-01",
+          "ce": "SBOE contract; EMAT",
+          "st": "Active call open",
+          "cf": "High",
+          "dl": "2026-11-16",
+          "dlL": "SBOE final vote (Nov 16-20)",
+          "ac": true,
+          "src": "https://sboe.texas.gov/state-board-of-education/imra/current-imra-cycle",
+          "v": "2026-04-22",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "Interoperability per RFIM",
+          "hq": false,
+          "ch": false,
+          "tier": "VERIFIED",
+          "ke": [
+            {
+              "d": "2025-10-31",
+              "l": "Publisher application deadline",
+              "p": true
+            },
+            {
+              "d": "2026-01-26",
+              "l": "SBOE adds materials",
+              "p": true
+            },
+            {
+              "d": "2026-03-27",
+              "l": "Products due for review",
+              "p": true
+            },
+            {
+              "d": "2026-05-01",
+              "l": "Reviewer examination begins"
+            },
+            {
+              "d": "2026-08-31",
+              "l": "Appeals conclude (est.)"
+            },
+            {
+              "d": "2026-10-12",
+              "l": "Corrections window opens"
+            },
+            {
+              "d": "2026-11-03",
+              "l": "Corrections window closes"
+            },
+            {
+              "d": "2026-11-16",
+              "l": "SBOE final vote (Nov 16 to 20)"
+            }
+          ],
+          "src2": [
+            {
+              "t": "SBOE Current IMRA Cycle",
+              "u": "https://sboe.texas.gov/state-board-of-education/imra/current-imra-cycle",
+              "ty": "Official page"
+            },
+            {
+              "t": "RFIM PDF",
+              "u": "https://tea.texas.gov/state-board-of-education/imra/imra26-rfim.pdf",
+              "ty": "Official PDF"
+            },
+            {
+              "t": "IMRA Multi-Year Plan",
+              "u": "https://tea.texas.gov/academics/instructional-materials/review-and-adoption-process/imra-multi-year-plan",
+              "ty": "Official page"
+            },
+            {
+              "t": "IMRA Rubrics",
+              "u": "https://im.tea.texas.gov/rubrics",
+              "ty": "Official page"
+            },
+            {
+              "t": "TEA Publishers",
+              "u": "https://tea.texas.gov/academics/instructional-materials/publishers",
+              "ty": "Official page"
+            }
+          ],
+          "tips": [
+            {
+              "cat": "Status",
+              "note": "IMRA Cycle 2026 is now in the reviewer examination phase. Products were due March 27 and that deadline has passed. Reviewer examination runs May through August 2026."
+            },
+            {
+              "cat": "Review Process",
+              "note": "IMRA reviewers examine submissions using SBOE-approved quality rubrics. Publishers participate in several phases of quality review appeal during this window."
+            },
+            {
+              "cat": "Corrections",
+              "note": "The corrections window runs October 12 to November 3. Publishers submit changes and corrections, then reviewers re-evaluate and adjust scores."
+            },
+            {
+              "cat": "Stakes",
+              "note": "HB 100 means rejected materials cannot be purchased or used by any Texas school system. Rejection is an active block on the Texas market, not just missing the approved list."
+            },
+            {
+              "cat": "Market Impact",
+              "note": "Districts get $40 per student per year for choosing state-approved materials through EMAT. This is a significant incentive driving district purchasing toward approved materials."
+            },
+            {
+              "cat": "Subjects",
+              "note": "Cycle 2026 covers K-12 Fine Arts, 6-12 CTE Batch 1 courses, and K-5 Supplemental RLA. Previously reviewed subjects from IMRA 2024 and 2025 can also be re-submitted."
+            },
+            {
+              "cat": "Rubrics",
+              "note": "Current rubrics include: full-subject ELAR K-3 and 4-8, SLAR K-3 and 4-6, supplemental RLA K-5, mathematics K-12, CTE 6-12, and Fine Arts K-12. K-3 ELAR and SLAR rubrics include phonics components."
+            }
+          ],
+          "students": 5532518
+        },
+        {
+          "id": "TX2",
+          "su": "LOTE, CTE Batch 2, Positive Character Traits",
+          "gr": "Multiple",
+          "gd": "K-12",
+          "ay": 2027,
+          "iy": 2029,
+          "cs": "TBD",
+          "ce": "TBD",
+          "st": "Published schedule",
+          "cf": "High",
+          "dl": "2026-09-01",
+          "dlL": "LOTE rubric SBOE approval (est.)",
+          "ac": false,
+          "src": "https://tea.texas.gov/academics/instructional-materials/review-and-adoption-process/imra-multi-year-plan",
+          "v": "2026-04-22",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "TBD",
+          "hq": false,
+          "ch": false,
+          "tier": "VERIFIED",
+          "src2": [
+            {
+              "t": "IMRA Multi-Year Plan",
+              "u": "https://tea.texas.gov/academics/instructional-materials/review-and-adoption-process/imra-multi-year-plan",
+              "ty": "Official page"
+            }
+          ],
+          "ke": [
+            {
+              "d": "2026-04-07",
+              "l": "LOTE rubric draft presented to SBOE",
+              "p": true
+            },
+            {
+              "d": "2026-09-01",
+              "l": "LOTE rubric SBOE approval (est.)"
+            }
+          ],
+          "tips": [
+            {
+              "cat": "Confirmed",
+              "note": "IMRA 2027 will cover K-12 Languages Other Than English (LOTE), additional CTE courses (Batch 2), and Positive Character Traits. The LOTE quality rubric draft was presented to SBOE at the April 7, 2026 committee meeting, with approval expected September 2026."
+            },
+            {
+              "cat": "Planning",
+              "note": "If you publish LOTE materials, start standards alignment work now against Texas Essential Knowledge and Skills. The rubric approval sets the bar for the 2027 cycle."
+            }
+          ],
+          "students": 5532518
+        }
+      ]
+    },
+    {
+      "code": "UT",
+      "name": "Utah",
+      "governance": "State adoption",
+      "status": "Upcoming",
+      "priority": 1,
+      "last_verified": "2026-03-14",
+      "summary": "Utah IMC reviews by subject. Districts select from recommended lists.",
+      "authority": "IMC reviews, SBE recommends, districts select.",
+      "cycles": [
+        {
+          "id": "UT1",
+          "su": "Mathematics",
+          "gr": "Math",
+          "gd": "K-12",
+          "ay": 2026,
+          "iy": 2027,
+          "cs": "2027-07-01",
+          "ce": "2033-06-30",
+          "st": "Upcoming",
+          "cf": "High",
+          "dl": "2026-07-01",
+          "dlL": "Review cycle begins",
+          "ac": false,
+          "src": "https://schools.utah.gov/curr/imc",
+          "v": "2026-03-14",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "LTI",
+          "hq": true,
+          "ch": false,
+          "tier": "VERIFIED",
+          "src2": [
+            {
+              "t": "Utah IMC",
+              "u": "https://schools.utah.gov/curr/imc",
+              "ty": "Official page"
+            }
+          ],
+          "ke": [],
+          "tips": [
+            {
+              "cat": "Tech",
+              "note": "LTI integration is expected in Utah. If your math materials don't support LTI, start that work now. It's not optional."
+            },
+            {
+              "cat": "Standards",
+              "note": "Align to Utah Core Standards. Check whether they've been recently updated — Utah has made revisions that could affect your alignment work."
+            }
+          ],
+          "students": 689883
+        }
+      ]
+    },
+    {
+      "code": "WV",
+      "name": "West Virginia",
+      "governance": "State adoption",
+      "status": "Upcoming",
+      "priority": 1,
+      "last_verified": "2026-03-15",
+      "summary": "WV groups adoptions with defined review and introduction years.",
+      "authority": "State-approved with local selection",
+      "cycles": [
+        {
+          "id": "WV1",
+          "su": "ELA / English Language Arts",
+          "gr": "ELA",
+          "gd": "K-12",
+          "ay": 2026,
+          "iy": 2027,
+          "cs": "2027-07-01",
+          "ce": "2033-06-30",
+          "st": "Upcoming",
+          "cf": "High",
+          "dl": "2026-05-15",
+          "dlL": "Review window opens",
+          "ac": false,
+          "src": "https://wvde.us/academics/middle-secondary-education/adopting-instructional-resources/instructional-resources-review-adoption/adoption-schedule-law-code-policies",
+          "v": "2026-03-15",
+          "acc": true,
+          "nim": true,
+          "dig": true,
+          "pk": "TBD",
+          "hq": false,
+          "ch": false,
+          "tier": "VERIFIED",
+          "src2": [
+            {
+              "t": "WVDE Adoption Schedule",
+              "u": "https://wvde.us/academics/middle-secondary-education/adopting-instructional-resources/instructional-resources-review-adoption/adoption-schedule-law-code-policies",
+              "ty": "Official page"
+            }
+          ],
+          "ke": [
+            {
+              "d": "2026-09-01",
+              "l": "Call for Bids"
+            },
+            {
+              "d": "2026-10-01",
+              "l": "Intent to Bid"
+            },
+            {
+              "d": "2026-12-01",
+              "l": "State Committee samples"
+            },
+            {
+              "d": "2027-01-01",
+              "l": "Bid Submission"
+            },
+            {
+              "d": "2027-02-01",
+              "l": "Caravan"
+            },
+            {
+              "d": "2027-08-01",
+              "l": "First classroom implementation"
+            }
+          ],
+          "tips": [
+            {
+              "cat": "Timing",
+              "note": "The Call for Bids is expected around September 2026, with Intent to Bid in October. Bid submission comes in January 2027. Start your WV standards alignment work now."
+            },
+            {
+              "cat": "Events",
+              "note": "WV runs caravans (publisher showcase events) — expected February 2027 for this ELA cycle. Plan your demo materials."
+            },
+            {
+              "cat": "Structure",
+              "note": "West Virginia uses 'adoption groups' with defined review and classroom introduction years. Make sure you understand which group ELA falls into."
+            }
+          ],
+          "students": 246883
+        }
+      ]
+    },
+    {
+      "code": "AK",
+      "name": "Alaska",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Alaska is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "AZ",
+      "name": "Arizona",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Arizona is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "AR",
+      "name": "Arkansas",
+      "governance": "State adoption",
+      "status": "Monitoring",
+      "priority": 1,
+      "last_verified": "2026-03-10",
+      "summary": "Arkansas has state adoption.",
+      "authority": "State adoption",
+      "cycles": []
+    },
+    {
+      "code": "CO",
+      "name": "Colorado",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Colorado is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "CT",
+      "name": "Connecticut",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Connecticut is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "DE",
+      "name": "Delaware",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Delaware is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "DC",
+      "name": "District of Columbia",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "District of Columbia is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "GA",
+      "name": "Georgia",
+      "governance": "State adoption",
+      "status": "Monitoring",
+      "priority": 1,
+      "last_verified": "2026-03-10",
+      "summary": "Georgia has state adoption.",
+      "authority": "State adoption",
+      "cycles": []
+    },
+    {
+      "code": "HI",
+      "name": "Hawaii",
+      "governance": "State adoption",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Hawaii has state adoption.",
+      "authority": "State adoption",
+      "cycles": []
+    },
+    {
+      "code": "IL",
+      "name": "Illinois",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Illinois is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "IN",
+      "name": "Indiana",
+      "governance": "State adoption",
+      "status": "Monitoring",
+      "priority": 1,
+      "last_verified": "2026-03-10",
+      "summary": "Indiana has state adoption.",
+      "authority": "State adoption",
+      "cycles": []
+    },
+    {
+      "code": "IA",
+      "name": "Iowa",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Iowa is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "KS",
+      "name": "Kansas",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Kansas is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "ME",
+      "name": "Maine",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Maine is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "MD",
+      "name": "Maryland",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Maryland is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "MA",
+      "name": "Massachusetts",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Massachusetts is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "MI",
+      "name": "Michigan",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Michigan is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "MN",
+      "name": "Minnesota",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Minnesota is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "MO",
+      "name": "Missouri",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Missouri is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "MT",
+      "name": "Montana",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Montana is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "NE",
+      "name": "Nebraska",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Nebraska is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "NH",
+      "name": "New Hampshire",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "New Hampshire is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "NJ",
+      "name": "New Jersey",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "New Jersey is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "NY",
+      "name": "New York",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "New York is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "ND",
+      "name": "North Dakota",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "North Dakota is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "OH",
+      "name": "Ohio",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Ohio is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "PA",
+      "name": "Pennsylvania",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Pennsylvania is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "RI",
+      "name": "Rhode Island",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Rhode Island is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "SD",
+      "name": "South Dakota",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "South Dakota is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "VT",
+      "name": "Vermont",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Vermont is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "VA",
+      "name": "Virginia",
+      "governance": "State adoption",
+      "status": "Monitoring",
+      "priority": 1,
+      "last_verified": "2026-03-10",
+      "summary": "Virginia has state adoption.",
+      "authority": "State adoption",
+      "cycles": []
+    },
+    {
+      "code": "WA",
+      "name": "Washington",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Washington is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "WI",
+      "name": "Wisconsin",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Wisconsin is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    },
+    {
+      "code": "WY",
+      "name": "Wyoming",
+      "governance": "Local control",
+      "status": "Monitoring",
+      "priority": 0,
+      "last_verified": "2026-03-10",
+      "summary": "Wyoming is local-control.",
+      "authority": "District authority",
+      "cycles": []
+    }
+  ]
+}

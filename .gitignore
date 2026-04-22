@@ -1,0 +1,23 @@
+# Never commit secrets
+.adoption-sheets-sa.json
+.sheet_config.json
+*.json.local
+
+# macOS cruft
+.DS_Store
+
+# Local launchd plist (no longer needed, can be deleted)
+com.kitaboo.adoption-push.plist
+
+# Logs
+logs/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Editor state
+.vscode/
+.idea/

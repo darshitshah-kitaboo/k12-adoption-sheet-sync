@@ -30,6 +30,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install google-api-python-client google-auth
+          
+      - name: Validate data
+        run: |
+          python scripts/validate.py
 
       - name: Run push script
         env:

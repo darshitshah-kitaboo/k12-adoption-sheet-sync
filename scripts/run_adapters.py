@@ -54,6 +54,7 @@ ADAPTERS = {
     "TX": {"module": "scripts.adapters.tx", "required": True},
     "LA": {"module": "scripts.adapters.la", "required": True},
     "TN": {"module": "scripts.adapters.tn", "required": True},
+    "OK": {"module": "scripts.adapters.ok", "required": True},
 }
 
 # Fields in a cycle record that count as meaningful when diffing. Changes
@@ -86,6 +87,15 @@ MEANINGFUL_FIELDS = (
     "substitution_template_url",
     "substitution_rule_url",
     "publisher_distr_list_url",
+    # Oklahoma fields
+    "stc_calendar_url",
+    "subject_cycle_calendar_url",
+    "data_privacy_form_url",
+    "out_of_cycle_flyer_url",
+    "supplemental_form_url",
+    "substitution_memo_url",
+    "substitution_flyer_url",
+    "substitution_guidance_url",
 )
 
 

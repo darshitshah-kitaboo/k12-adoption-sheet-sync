@@ -55,26 +55,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          echo "=== Files on runner after coordinator ==="
-          ls -la scraped/ 2>&1 || echo "(no scraped/ dir)"
-          ls -la logs/ 2>&1 || echo "(no logs/ dir)"
-          ls -la logs/changes/ 2>&1 || echo "(no logs/changes/ dir)"
-
-          echo "=== .gitignore in effect ==="
-          grep -n -E "log|changes|scraped" .gitignore || echo "(no matches)"
-
-          echo "=== git status before add ==="
-          git status --short --ignored
-
-          echo "=== running git add (verbose) ==="
-          git add -v scraped/ 2>&1 || true
-          git add -v logs/adapter_runs.jsonl 2>&1 || true
-          git add -v logs/changes/ 2>&1 || true
-
-          echo "=== git status after add ==="
-          git status --short
-
+          git add scraped/ logs/adapter_runs.jsonl logs/changes/ 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "chore: refresh state adapter snapshots [skip ci]"
             git push

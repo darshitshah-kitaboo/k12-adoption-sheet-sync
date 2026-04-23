@@ -1,0 +1,25 @@
+{
+  "state": "TN",
+  "name": "Tennessee",
+  "source_url": "https://www.tn.gov/textbook-commission/textbook-information-for-publishers.html",
+  "scraped_at": "2026-04-23T09:44:02+00:00",
+  "cycle_year": 2027,
+  "cycle_label": "Cycle 2027 Substitution Window",
+  "cycle_count": 1,
+  "schedule_f_url": "https://www.tn.gov/textbook-commission/schedule-f-textbook-adoption-cycle.html",
+  "official_list_url": "https://www.tn.gov/textbook-commission/textbook-reviews.html",
+  "adoption_process_url": "https://www.tn.gov/textbook-commission/textbook-adoption-process.html",
+  "cycles": [
+    {
+      "subject": "All subjects (substitution window)",
+      "ay_start": 2026,
+      "ay_end": 2027,
+      "cycle_label": "Cycle 2027 Substitution Window",
+      "commission_meeting": "March 2027",
+      "submission_deadline": "2026-12-31",
+      "substitution_template_url": "https://www.tn.gov/content/dam/tn/education/textbook/Textbook%20Substitutions%20Template.xlsx",
+      "substitution_rule_url": "https://publications.tnsosfiles.com/rules/0520/0520-05/0520-05-01.20160512.pdf",
+      "publisher_distr_list_url": "https://www.tn.gov/content/dam/tn/education/textbook/txtbk_publisher_distr_list_info.xlsx"
+    }
+  ]
+}

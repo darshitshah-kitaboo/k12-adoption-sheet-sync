@@ -1,0 +1,27 @@
+{
+  "state": "TN",
+  "date": "2026-04-23",
+  "change_count": 1,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "All subjects (substitution window)",
+        2026,
+        2027,
+        null
+      ],
+      "cycle": {
+        "subject": "All subjects (substitution window)",
+        "ay_start": 2026,
+        "ay_end": 2027,
+        "cycle_label": "Cycle 2027 Substitution Window",
+        "commission_meeting": "March 2027",
+        "submission_deadline": "2026-12-31",
+        "substitution_template_url": "https://www.tn.gov/content/dam/tn/education/textbook/Textbook%20Substitutions%20Template.xlsx",
+        "substitution_rule_url": "https://publications.tnsosfiles.com/rules/0520/0520-05/0520-05-01.20160512.pdf",
+        "publisher_distr_list_url": "https://www.tn.gov/content/dam/tn/education/textbook/txtbk_publisher_distr_list_info.xlsx"
+      }
+    }
+  ]
+}

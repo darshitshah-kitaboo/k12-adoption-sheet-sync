@@ -74,6 +74,7 @@ BROWSER_HEADERS = {
 }
 
 TIMEOUT = 30  # generous, some state sites are genuinely slow
+SLOW_TIMEOUT = 60  # used once as a second chance for genuinely slow pages
 MAX_WORKERS = 8
 MAX_RETRIES = 2  # in addition to the initial attempt
 
@@ -123,6 +124,22 @@ def fetch_status(url, timeout=TIMEOUT):
             elapsed = int((time.perf_counter() - started) * 1000)
             return None, url, elapsed, f"SSLError: {e2}"
     except requests.exceptions.Timeout:
+        # Second chance with a longer timeout. Some state procurement sites
+        # (Oklahoma DCS, Louisiana LaPAC) routinely take 40+ seconds under
+        # load. If the retry also times out, the URL really is unhealthy.
+        if timeout < SLOW_TIMEOUT:
+            try:
+                r = session.get(url, timeout=SLOW_TIMEOUT,
+                                allow_redirects=True, stream=True)
+                r.close()
+                elapsed = int((time.perf_counter() - started) * 1000)
+                return r.status_code, r.url, elapsed, "slow-retry"
+            except requests.exceptions.Timeout:
+                elapsed = int((time.perf_counter() - started) * 1000)
+                return None, url, elapsed, f"Timeout after {SLOW_TIMEOUT}s (slow-retry)"
+            except Exception as e2:
+                elapsed = int((time.perf_counter() - started) * 1000)
+                return None, url, elapsed, f"{type(e2).__name__} on slow-retry: {e2}"
         elapsed = int((time.perf_counter() - started) * 1000)
         return None, url, elapsed, f"Timeout after {timeout}s"
     except requests.exceptions.ConnectionError as e:

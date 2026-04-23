@@ -134,7 +134,14 @@ def fetch_status(url, timeout=TIMEOUT):
 
 
 def collect_urls(registry):
-    """Flatten the registry into one list of (state_code, source_type, url) tuples."""
+    """Flatten the registry into (state_code, source_type, url, skip) tuples.
+
+    skip is True when the source entry carries skip_validation: true. Skipped
+    URLs are reported but do not count toward pass/fail. Some state WAFs
+    hard-block any data-center IP (including GitHub Actions), so a 403 from
+    the validator does not mean the URL is dead. skip_validation marks those
+    so the validator does not false-alarm.
+    """
     jobs = []
     for state in registry.get("states", []):
         code = state["code"]
@@ -143,11 +150,13 @@ def collect_urls(registry):
             if stype == "secondary":
                 for i, sec in enumerate(info or []):
                     if sec.get("url"):
-                        jobs.append((code, f"secondary[{i}]", sec["url"]))
+                        jobs.append((code, f"secondary[{i}]", sec["url"],
+                                     bool(sec.get("skip_validation"))))
                 continue
-            url = (info or {}).get("url")
+            info = info or {}
+            url = info.get("url")
             if url:
-                jobs.append((code, stype, url))
+                jobs.append((code, stype, url, bool(info.get("skip_validation"))))
     return jobs
 
 
@@ -177,9 +186,12 @@ def main():
         print("No URLs to verify in registry. Exiting.")
         sys.exit(0)
 
-    print(f"Verifying {len(jobs)} URLs across "
+    skip_count = sum(1 for _, _, _, skip in jobs if skip)
+    fetch_count = len(jobs) - skip_count
+    print(f"Verifying {fetch_count} URLs across "
           f"{len(registry['states'])} states "
-          f"(max_workers={MAX_WORKERS}, timeout={TIMEOUT}s, retries={MAX_RETRIES})")
+          f"(max_workers={MAX_WORKERS}, timeout={TIMEOUT}s, retries={MAX_RETRIES}); "
+          f"{skip_count} skip_validation entries")
     started_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     # Suppress the noisy InsecureRequestWarning from urllib3 for fallback
@@ -188,9 +200,23 @@ def main():
     warnings.filterwarnings("ignore", message="Unverified HTTPS request")
 
     results = {}
+
+    # Record skipped entries up front so they appear in the report.
+    for code, stype, url, skip in jobs:
+        if skip:
+            results.setdefault(code, {})[stype] = {
+                "url": url,
+                "final_url": None,
+                "status": "SKIPPED",
+                "elapsed_ms": 0,
+                "error": "skip_validation: true (WAF-blocked from data-center IPs)",
+            }
+            if args.verbose or (not args.quiet):
+                print(f"  {code:3s} {stype:30s} SKIP          skip_validation")
+
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
         futures = {ex.submit(fetch_status, url): (code, stype, url)
-                   for code, stype, url in jobs}
+                   for code, stype, url, skip in jobs if not skip}
         for fut in as_completed(futures):
             code, stype, url = futures[fut]
             status, final, elapsed, err = fut.result()
@@ -207,16 +233,21 @@ def main():
                 err_str = f"  {err}" if err else ""
                 print(f"  {code:3s} {stype:30s} {tag} {elapsed:>5}ms{redir}{err_str}")
 
-    # Summarize
+    # Summarize. Skipped entries do not count as pass or fail; they are
+    # intentionally opted out of validation and do not block state stamping.
     per_state_pass = {}
     priority_one_failures = []
     total_ok = 0
     total_fail = 0
+    total_skipped = 0
     for state in registry["states"]:
         code = state["code"]
         state_results = results.get(code, {})
         state_pass = True
         for stype, r in state_results.items():
+            if r["status"] == "SKIPPED":
+                total_skipped += 1
+                continue
             if r["status"] == 200:
                 total_ok += 1
             else:
@@ -233,6 +264,7 @@ def main():
             "total_urls": len(jobs),
             "ok": total_ok,
             "failed": total_fail,
+            "skipped": total_skipped,
             "priority_one_failures": len(priority_one_failures),
         },
         "per_state": results,
@@ -254,7 +286,8 @@ def main():
         print(f"Stamped last_verified={today} on {stamped} fully-passing states")
 
     print(f"\n{'='*60}")
-    print(f"Total URLs: {len(jobs)}   OK: {total_ok}   Failed: {total_fail}")
+    print(f"Total URLs: {len(jobs)}   OK: {total_ok}   "
+          f"Failed: {total_fail}   Skipped: {total_skipped}")
     print(f"Priority-1 failures: {len(priority_one_failures)}")
     print(f"{'='*60}")
 

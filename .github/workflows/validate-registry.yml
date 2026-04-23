@@ -1,0 +1,60 @@
+name: validate-registry
+
+# Runs the URL validator from GitHub's US-based runner, which bypasses the
+# geo-blocks and WAF rules that fail when running from non-US IPs.
+#
+# Triggers:
+#   - Manual run from the Actions tab (workflow_dispatch)
+#   - Weekly on Mondays at 14:00 UTC (7:30 PM IST)
+#   - On any push that changes the registry or the validator itself
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 14 * * 1'
+  push:
+    paths:
+      - 'registry/sources.json'
+      - 'scripts/validate_registry.py'
+      - '.github/workflows/validate-registry.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run validator
+        id: validate
+        run: python scripts/validate_registry.py
+        continue-on-error: true
+
+      - name: Commit verification report and last_verified stamps
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add registry/verification_report.json registry/sources.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh registry verification [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Fail the job if priority-1 URLs failed
+        if: steps.validate.outcome == 'failure'
+        run: |
+          echo "Priority-1 URLs failed. See registry/verification_report.json."
+          exit 1

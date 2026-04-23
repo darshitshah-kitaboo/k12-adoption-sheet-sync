@@ -9,8 +9,10 @@
 # Local launchd plist (no longer needed, can be deleted)
 com.kitaboo.adoption-push.plist
 
-# Logs
-logs/
+# Logs — ignore the noisy .log files from the old nightly refresh script,
+# but keep the adapter audit trail (logs/adapter_runs.jsonl and
+# logs/changes/*.json) so pipeline history commits back to the repo.
+logs/*.log
 *.log
 
 # Python

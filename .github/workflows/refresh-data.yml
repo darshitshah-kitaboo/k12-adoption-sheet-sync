@@ -46,6 +46,7 @@ jobs:
         run: |
           python scripts/adapters/test_fl.py
           python scripts/adapters/test_tx.py
+          python scripts/adapters/test_la.py
 
       - name: Run coordinator
         id: coord

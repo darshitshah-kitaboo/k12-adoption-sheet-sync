@@ -52,6 +52,7 @@ RUNS_LOG = LOGS_DIR / "adapter_runs.jsonl"
 ADAPTERS = {
     "FL": {"module": "scripts.adapters.fl", "required": True},
     "TX": {"module": "scripts.adapters.tx", "required": True},
+    "LA": {"module": "scripts.adapters.la", "required": True},
 }
 
 # Fields in a cycle record that count as meaningful when diffing. Changes
@@ -74,6 +75,10 @@ MEANINGFUL_FIELDS = (
     "process_url",
     "suitability_rubric_url",
     "quality_rubric_urls",
+    # Louisiana fields
+    "rubric_url",
+    "weekly_report_url",
+    "publisher_guide_url",
 )
 
 

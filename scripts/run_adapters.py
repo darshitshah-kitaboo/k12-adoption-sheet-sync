@@ -127,8 +127,26 @@ def diff_snapshots(old, new):
     return changes
 
 
+def _snapshots_equivalent(a, b):
+    """True if two snapshots match on everything except scraped_at.
+
+    A run that only differs in the timestamp shouldn't dirty the file,
+    otherwise every scheduled run produces a bot commit for nothing.
+    """
+    def canon(d):
+        return {k: v for k, v in (d or {}).items() if k != "scraped_at"}
+    return canon(a) == canon(b)
+
+
 def write_snapshot(state_code, data):
-    """Rotate the current snapshot to .previous.json, write the new one."""
+    """Write a fresh snapshot only if meaningful content moved.
+
+    Returns the prior snapshot for the caller to diff against. If the new
+    payload is equivalent to the existing file on every field except
+    scraped_at, the file is NOT rotated or rewritten. That way a run on
+    a quiet day only touches logs/adapter_runs.jsonl (+1 audit line) and
+    doesn't trigger a bot commit for the snapshot itself.
+    """
     SCRAPED_DIR.mkdir(parents=True, exist_ok=True)
     current = SCRAPED_DIR / f"{state_code}.json"
     previous = SCRAPED_DIR / f"{state_code}.previous.json"
@@ -139,8 +157,12 @@ def write_snapshot(state_code, data):
             old_data = json.loads(current.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
             old_data = None
-        current.replace(previous)
 
+    if old_data and _snapshots_equivalent(old_data, data):
+        return old_data
+
+    if current.exists():
+        current.replace(previous)
     current.write_text(json.dumps(data, indent=2), encoding="utf-8")
     return old_data
 

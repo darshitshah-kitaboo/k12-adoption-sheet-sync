@@ -43,7 +43,9 @@ jobs:
         run: pip install requests beautifulsoup4
 
       - name: Run adapter smoke tests
-        run: python scripts/adapters/test_fl.py
+        run: |
+          python scripts/adapters/test_fl.py
+          python scripts/adapters/test_tx.py
 
       - name: Run coordinator
         id: coord

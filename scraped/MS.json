@@ -1,0 +1,93 @@
+{
+  "state": "MS",
+  "name": "Mississippi",
+  "source_url": "https://msinstructionalmaterials.org/resources/adoption/",
+  "scraped_at": "2026-04-23T12:18:40+00:00",
+  "cycle_label": "25-26 Adoption Call for Bids",
+  "ay_start": 2025,
+  "ay_end": 2026,
+  "cycle_count": 11,
+  "adoption_schedule_url": "https://msinstructionalmaterials.org/wp-content/uploads/2026/02/2023-2031-Textbook-Adoption-Schedule.pdf",
+  "rating_committee_url": "https://msinstructionalmaterials.org/wp-content/uploads/2026/02/26-27-STRC-Job-Description.pdf",
+  "textbook_handbook_url": "https://msinstructionalmaterials.org/wp-content/uploads/2025/01/2024-MDE-Textbook-Handbook.pdf",
+  "publisher_rep_form_url": "https://msinstructionalmaterials.org/wp-content/uploads/2025/05/Publisher-Representative.docx",
+  "cycles": [
+    {
+      "subject": "Arts",
+      "adopted_materials_url": "https://msinstructionalmaterials.org/adopted-materials/arts-adopted-materials/",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "25-26 Adoption Call for Bids"
+    },
+    {
+      "subject": "Business and Technology",
+      "adopted_materials_url": "https://msinstructionalmaterials.org/adopted-materials/business-and-technology-adopted-materials/",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "25-26 Adoption Call for Bids"
+    },
+    {
+      "subject": "Career and Technical Education",
+      "adopted_materials_url": "https://msinstructionalmaterials.org/adopted-materials/career-technical-education-adopted-materials/",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "25-26 Adoption Call for Bids"
+    },
+    {
+      "subject": "Computer Science",
+      "adopted_materials_url": "https://msinstructionalmaterials.org/adopted-materials/computer-science-adopted-materials/",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "25-26 Adoption Call for Bids"
+    },
+    {
+      "subject": "ELA",
+      "adopted_materials_url": "https://msinstructionalmaterials.org/adopted-materials/ela/",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "25-26 Adoption Call for Bids"
+    },
+    {
+      "subject": "Health and Physical Education",
+      "adopted_materials_url": "https://msinstructionalmaterials.org/adopted-materials/health-and-physical-education-adopted-materials/",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "25-26 Adoption Call for Bids"
+    },
+    {
+      "subject": "Mathematics",
+      "adopted_materials_url": "https://msinstructionalmaterials.org/adopted-materials/mathematics-adopted-materials/",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "25-26 Adoption Call for Bids"
+    },
+    {
+      "subject": "Pre-Kindergarten",
+      "adopted_materials_url": "https://msinstructionalmaterials.org/adopted-materials/adopted-materials-pre-kindergarten/",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "25-26 Adoption Call for Bids"
+    },
+    {
+      "subject": "Science",
+      "adopted_materials_url": "https://msinstructionalmaterials.org/adopted-materials/science-adopted-materials/",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "25-26 Adoption Call for Bids"
+    },
+    {
+      "subject": "Social Studies",
+      "adopted_materials_url": "https://msinstructionalmaterials.org/adopted-materials/social-studies-adopted-materials/",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "25-26 Adoption Call for Bids"
+    },
+    {
+      "subject": "World Language",
+      "adopted_materials_url": "https://msinstructionalmaterials.org/adopted-materials/world-language-adopted-materials/",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "25-26 Adoption Call for Bids"
+    }
+  ]
+}

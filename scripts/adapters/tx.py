@@ -73,13 +73,14 @@ TIER_PARTIAL = "partial-subject-tier-one"
 TIER_SUPPLEMENTAL = "supplemental"
 
 # Keyword map used to attach a quality rubric to a subject. The adapter
-# lowercases both sides before matching so hyphen and en-dash variants
-# both work.
+# lowercases both sides before matching. Families are intentionally broad
+# so umbrella terms route correctly: the "reading" family covers ELAR,
+# SLAR, RLA, phonics, and generic "language arts" so that a K-3 phonics
+# subject still picks up ELAR/SLAR K-3 rubrics, and a supplemental
+# "ELAR and SLAR" subject still picks up the "Supplemental RLA" rubric.
 RUBRIC_KEYWORDS = {
+    "reading": ["elar", "slar", "rla", "language arts", "phonics", "reading"],
     "math": ["math"],
-    "elar": ["elar", "english language arts"],
-    "slar": ["slar", "spanish language arts"],
-    "phonics": ["phonics"],
     "fine arts": ["fine arts"],
     "cte": ["cte", "career and technical"],
 }

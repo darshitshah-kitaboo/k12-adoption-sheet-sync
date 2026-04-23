@@ -179,6 +179,31 @@ def run():
         _fail(f"Supplemental math did not match supplemental math rubric: {supp_math['quality_rubric_urls']}")
     _ok("Supplemental math matched supplemental math rubric")
 
+    # Supplemental ELAR/SLAR should pick up the Supplemental RLA K-5 rubric.
+    # The rubric title uses "RLA" instead of "ELAR/SLAR", so the matcher
+    # must know these are the same family.
+    supp_rla = by_subject.get(("supplemental", "K-5 ELAR and SLAR"))
+    if not supp_rla:
+        _fail("Supplemental K-5 ELAR and SLAR cycle missing")
+    rla_joined = " ".join(supp_rla["quality_rubric_urls"]).lower()
+    if "supplemental-rla" not in rla_joined:
+        _fail(f"Supplemental ELAR/SLAR did not match supplemental RLA rubric: {supp_rla['quality_rubric_urls']}")
+    if "supplemental-math" in rla_joined:
+        _fail("Supplemental ELAR/SLAR should not match supplemental math rubric")
+    _ok("Supplemental K-5 ELAR/SLAR matched Supplemental RLA rubric")
+
+    # K-3 phonics should pick up the ELAR K-3 and SLAR K-3 rubrics since
+    # phonics is covered under reading/language arts at K-3.
+    phonics = by_subject.get(("partial-subject-tier-one", "K-3 English and Spanish phonics"))
+    if not phonics:
+        _fail("Partial-subject K-3 phonics cycle missing")
+    phonics_joined = " ".join(phonics["quality_rubric_urls"]).lower()
+    if "elar-k3" not in phonics_joined:
+        _fail(f"K-3 phonics did not match ELAR K-3 rubric: {phonics['quality_rubric_urls']}")
+    if "slar-k3" not in phonics_joined:
+        _fail(f"K-3 phonics did not match SLAR K-3 rubric: {phonics['quality_rubric_urls']}")
+    _ok("K-3 phonics matched ELAR K-3 and SLAR K-3 rubrics")
+
     # Academic year bounds: cycle 2026 means ay_start 2026, ay_end 2027.
     for c in cycles:
         if c["ay_start"] != 2026 or c["ay_end"] != 2027:

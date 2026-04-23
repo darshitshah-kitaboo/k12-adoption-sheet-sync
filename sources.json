@@ -1,0 +1,1400 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-04-23",
+  "description": "Authoritative URLs for K12 adoption intelligence discovery. One entry per state + DC. Each entry lists stable primary and secondary sources. Used as input to scraper/ in Phases 2 and 3.",
+  "source_types": {
+    "doe_instructional_materials": "Primary DOE page listing current and upcoming adoption cycles",
+    "sbe_agenda": "State Board of Education meeting agendas and minutes archive",
+    "procurement_portal": "State RFP/bid portal where adoption procurements are posted",
+    "legislative_calendar": "Legislated adoption cycle calendar if applicable (rare)",
+    "secondary": "Any other stable source (publisher review portal, vendor landing page, news subscription)"
+  },
+  "priority_tiers": {
+    "1": "Active adoption state, Phase 2 coded adapter target",
+    "2": "Local control state, Phase 3 LLM extraction target",
+    "3": "Low-volume jurisdiction (DC), Phase 3 LLM extraction target"
+  },
+  "states": [
+    {
+      "code": "AL",
+      "name": "Alabama",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": null,
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://www.alabamaachieves.org/content-areas-specialty/textbook-adoption-and-procurement/",
+          "notes": "Alabama SDE Textbook Adoption page; 2024-25 Science and 2025-26 Social Studies/Arts cycles posted here and on SBE meeting pages."
+        },
+        "sbe_agenda": {
+          "url": "https://www.alabamaachieves.org/state-board-of-education/meeting-agendas/",
+          "notes": "Alabama SBOE agendas; companion minutes at /state-board-of-education/meeting-minutes/."
+        },
+        "procurement_portal": {
+          "url": "https://procurement.staars.alabama.gov/",
+          "notes": "STAARS statewide portal; textbook IFBs run through SDE Textbook Adoption office and post on DOE page rather than STAARS."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "AR",
+      "name": "Arkansas",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://dese.ade.arkansas.gov/Offices/learning-services/curriculum-support/arkansas-initiative-for-instructional-materials-aiim",
+          "notes": "Arkansas Initiative for Instructional Materials (AIIM) under DESE; approved HQIM catalog at https://aredreports.ade.arkansas.gov/."
+        },
+        "sbe_agenda": {
+          "url": "https://meetings.boardbook.org/Public/Organization/1133",
+          "notes": "Arkansas SBE uses BoardBook Premier; 2025 minutes also archived at https://dese.ade.arkansas.gov/stateboard/archived-minutesvideos/2025."
+        },
+        "procurement_portal": {
+          "url": "https://www.arkansas.gov/tss/procurement/bids/index.php",
+          "notes": "TSS/OSP open bids (migrating to ARBuy); DESE HQIM approvals do not run through OSP."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "CA",
+      "name": "California",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": null,
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://www.cde.ca.gov/ci/cr/cf/",
+          "notes": "CDE Curriculum Frameworks & IM hub; adoption cycles route through IQC (https://www.cde.ca.gov/be/cc/cd/) then SBE."
+        },
+        "sbe_agenda": {
+          "url": "https://www.cde.ca.gov/be/ag/ag/",
+          "notes": "California SBE agendas current and archived; 2025 adoption actions appear as SBE items."
+        },
+        "procurement_portal": {
+          "url": "https://caleprocure.ca.gov/",
+          "notes": "Cal eProcure statewide portal; CA adoption is handled through CDE/IQC/SBE, not via eProcure RFPs."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "FL",
+      "name": "Florida",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://www.fldoe.org/academics/standards/instructional-materials/",
+          "notes": "FLDOE Instructional Materials hub; 2025-26 lists updated Apr 2026; future cycles (Math 26-27, SS 27-28, Science 28-29, ELA 29-30) published on AdoptionCycle.pdf."
+        },
+        "sbe_agenda": {
+          "url": "https://www.fldoe.org/policy/state-board-of-edu/meetings/",
+          "notes": "Florida SBE meetings with 2025 archive at /meetings/2025/ for each monthly meeting."
+        },
+        "procurement_portal": {
+          "url": "https://www.dms.myflorida.com/business_operations/state_purchasing/vendor_resources/solicitations_vendor_bid_system",
+          "notes": "FL DMS Vendor Bid System; IM adoption RFPs run through FLDOE directly (Specifications PDFs under /file/5574/)."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "GA",
+      "name": "Georgia",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": null,
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://gadoe.org/teaching-and-learning/instructional-resources/",
+          "notes": "Per HB 739 (2016) Georgia opted out of formal state adoption; GaDOE maintains HQIM advisory lists only. Districts make final selections."
+        },
+        "sbe_agenda": {
+          "url": "https://gadoe.org/state-board/meeting-minutes/",
+          "notes": "GaDOE SBE meeting minutes archive; 2025 meetings posted."
+        },
+        "procurement_portal": {
+          "url": "https://ssl.doas.state.ga.us/gpr/",
+          "notes": "Georgia Procurement Registry (DOAS); no formal state IM adoption means IM-specific RFPs are rare."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "IN",
+      "name": "Indiana",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": null,
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
+          "notes": "IDOE HQCM Advisory Lists; annual review cycle with 6-year approval windows starting 2024-25."
+        },
+        "sbe_agenda": {
+          "url": "https://www.in.gov/sboe/board-meetings-and-materials/board-meetings-and-materials/",
+          "notes": "Indiana SBOE meeting materials; 2025 minutes for Mar, Aug, Sep, Oct, Nov under /sboe/files/."
+        },
+        "procurement_portal": {
+          "url": "https://www.in.gov/idoa/procurement/current-business-opportunities/",
+          "notes": "IDOA Current Business Opportunities (>$75K); IDOE HQCM is advisory, not an IDOA RFP."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "KY",
+      "name": "Kentucky",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": null,
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://www.education.ky.gov/curriculum/books/Pages/default.aspx",
+          "notes": "KDE HQIR Adoption; 2025 HQIR lists for Math (Mar 2025) and Reading/Writing (Aug 2025). Per SB 1 (2022) authority sits with local superintendents."
+        },
+        "sbe_agenda": {
+          "url": "https://www.education.ky.gov/KBE/meet/Pages/default.aspx",
+          "notes": "Kentucky BOE Meeting Information; 2025 agendas, minutes, webcasts posted."
+        },
+        "procurement_portal": {
+          "url": "https://finance.ky.gov/eProcurement/Pages/default.aspx",
+          "notes": "KY Finance Cabinet eProcurement; KDE HQIR additions happen through KDE review not eProcurement RFPs."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "LA",
+      "name": "Louisiana",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": null,
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://doe.louisiana.gov/school-system-leaders/instructional-materials-reviews",
+          "notes": "Louisiana DOE Instructional Materials Reviews (Tier 1/2/3); LDOE runs review, BESE votes approval. Annotated reviews at /curricular-resources-annotated-reviews."
+        },
+        "sbe_agenda": {
+          "url": "https://bese.louisiana.gov/meetings",
+          "notes": "Louisiana BESE meetings (BESE is separately elected from LDOE); BoardDocs archive at go.boarddocs.com/la/bese/Board.nsf for individual documents."
+        },
+        "procurement_portal": {
+          "url": "https://wwwcfprd.doa.louisiana.gov/osp/lapac/pubmain.cfm",
+          "notes": "LaPAC statewide OSP portal; LDOE reviews materials independently, LaPAC reflects post-BESE state contracts."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "MS",
+      "name": "Mississippi",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": null,
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://msinstructionalmaterials.org/resources/adoption/",
+          "notes": "Mississippi official HQIM adoption hub (run by MDE); 18-month cycle with IFBs, EdReports-aligned rubric, MBE final approval."
+        },
+        "sbe_agenda": {
+          "url": "https://mdek12.org/mbe/agenda2025/",
+          "notes": "Mississippi BOE 2025 agenda index; 2025 meetings (Jan-Dec) with attached materials."
+        },
+        "procurement_portal": {
+          "url": "https://mdek12.org/procurement/rfp/",
+          "notes": "MDE Bid Announcements page lists textbook IFBs/RFPs; primary IM procurement location (not the statewide MAGIC portal)."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "NC",
+      "name": "North Carolina",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://www.dpi.nc.gov/districts-schools/district-operations/instructional-materialstextbook-adoption",
+          "notes": "NC DPI IM/Textbook Adoption page; state adoption currently on hold pending Textbook Commission/SBE action, page still maintained."
+        },
+        "sbe_agenda": {
+          "url": "https://www.dpi.nc.gov/about-dpi/state-board-education/meeting-information",
+          "notes": "NC SBE Meeting Information; regular meetings first Thursday monthly with committee meetings day prior. Live-streamed via YouTube."
+        },
+        "procurement_portal": {
+          "url": "https://evp.nc.gov/solicitations/",
+          "notes": "NC electronic Vendor Portal (eVP); NCDPI posts any IM RFPs here when state adoption runs."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "NM",
+      "name": "New Mexico",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://web.ped.nm.gov/bureaus/instructional-materials/",
+          "notes": "NM PED Instructional Materials Bureau; 2025 K-12 Math adoption RFA posted (Summer Review Institute Jun 9, 2025); cycle details at /the-adoption-cycle/."
+        },
+        "sbe_agenda": {
+          "url": "https://web.ped.nm.gov/bureaus/public-education-commission/pec-meetings-and-notices/2025-pec-meetings/",
+          "notes": "NM Public Education Commission 2025 meetings (PEC is the constitutional board); 2026 PEC page also live."
+        },
+        "procurement_portal": {
+          "url": "https://generalservices.state.nm.us/state-purchasing/active-itbs-and-rfps/active-procurements/",
+          "notes": "NM GSD State Purchasing; IM RFAs run through PED IM Bureau directly, not GSD."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "OK",
+      "name": "Oklahoma",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": null,
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://oklahoma.gov/education/services/hqim.html",
+          "notes": "Oklahoma SDE HQIM; 2025-26 cycle opened Jun 2025 with Nov 2025 STC vote. Social Studies adoption suspended Nov 2025 due to OK Supreme Court stay on 2025 standards."
+        },
+        "sbe_agenda": {
+          "url": "https://oklahoma.gov/education/state-board-of-education.html",
+          "notes": "Oklahoma SBE; 2025 agendas/minutes at /osde/documents/about/board-meetings/2025/. State Textbook Committee is separate from SBE."
+        },
+        "procurement_portal": {
+          "url": "https://www.ok.gov/dcs/solicit/app/index.php",
+          "notes": "OMES Central Purchasing; textbook adoption runs through State Textbook Committee, rarely on OMES."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "OR",
+      "name": "Oregon",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/default.aspx",
+          "notes": "ODE HQIM hub; 2025 Social Science adoption reviewed Jul 2025, Oct 2025 SBE adoption vote; 2026 Physical Education circular posted."
+        },
+        "sbe_agenda": {
+          "url": "https://www.oregon.gov/ode/about-us/stateboard/pages/stateboardmeetings.aspx",
+          "notes": "Oregon SBE meetings; agenda materials published via BoardBook at https://meetings.boardbook.org/public/Organization/2146."
+        },
+        "procurement_portal": {
+          "url": "https://oregonbuys.gov/bso/",
+          "notes": "OregonBuys statewide eProcurement; ODE IM adoption runs through ODE criteria committees and SBE vote."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "SC",
+      "name": "South Carolina",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": null,
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://ed.sc.gov/instruction/instructional-materials/",
+          "notes": "SCDE IM page under SBE Regulation 43-70; 2024-25 and 2025-26 adoption info posted; 30-day public reviews announced via newsroom."
+        },
+        "sbe_agenda": {
+          "url": "https://ed.sc.gov/state-board/state-board-of-education/about-state-board/minutes-orders/archive/minutes-archive-2025-2032/",
+          "notes": "SC SBE minutes archive 2025-2032; 2025 meeting dates also at /feature-boxes/about-state-board/sbe-2025-meeting-dates/."
+        },
+        "procurement_portal": {
+          "url": "https://scbo.sc.gov/",
+          "notes": "SC Business Opportunities (SCBO) statewide board; SCDE posts IM adoption notices mostly on ed.sc.gov newsroom."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "TN",
+      "name": "Tennessee",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://www.tn.gov/textbook-commission.html",
+          "notes": "Tennessee Textbook and IM Quality Commission (administratively attached to SBE, not TDOE); adoption process and official lists published here."
+        },
+        "sbe_agenda": {
+          "url": "https://www.tn.gov/sbe/meetings.html",
+          "notes": "Tennessee SBE meetings; Textbook Commission reports recommendations to SBE for approval."
+        },
+        "procurement_portal": {
+          "url": "https://www.tn.gov/generalservices/procurement/central-procurement-office--cpo-/supplier-information/request-for-proposals--rfp--opportunities1.html",
+          "notes": "TN Edison supplier portal and CPO RFP page; textbook adoption runs through the Textbook Commission under statute."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "TX",
+      "name": "Texas",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://tea.texas.gov/academics/instructional-materials/review-and-adoption-process/instructional-materials-review-and-approval-resources",
+          "notes": "TEA IMRA Resources page under HB 1605; SBOE governs IMRA and approves tier-one list. Cycle 2025 ELAR/SLAR K-6 and K-12 Math reviewed for 2026-27."
+        },
+        "sbe_agenda": {
+          "url": "https://sboe.texas.gov/state-board-of-education/sboe-meetings",
+          "notes": "Texas SBOE meetings; SBOE votes IMRA approvals; TEA administers implementation."
+        },
+        "procurement_portal": {
+          "url": "https://tea.texas.gov/academics/instructional-materials/procure-instructional-materials-in-emat/instructional-materials-funding",
+          "notes": "EMAT is TEA online textbook ordering/funding system used by districts after SBOE adoption."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "UT",
+      "name": "Utah",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://schools.utah.gov/curr/imc",
+          "notes": "Utah SBE Instructional Materials Center (IMC); recommended lists via MIDAS at https://usbe.midaseducation.com/rims. 2025 Math IM adoption completed Dec 2025."
+        },
+        "sbe_agenda": {
+          "url": "https://schools.utah.gov/board/utah/meetings",
+          "notes": "Utah SBE meetings; minutes at /meetings/minutes. USBE portal on CivicClerk at usbe.portal.civicclerk.com also carries live agendas."
+        },
+        "procurement_portal": {
+          "url": "https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfUtah",
+          "notes": "Utah Public Procurement Place (U3P) on Jaggaer/SciQuest; USBE IM reviews managed via IMC/MIDAS."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "VA",
+      "name": "Virginia",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": null,
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://www.doe.virginia.gov/teaching-learning-assessment/instructional-resources-support/textbooks-instructional-materials",
+          "notes": "VDOE Textbooks & IM hub; review and approval details at /textbook-review-approval. Feb and Mar 2025 Math adoptions approved by BOE; HB 2777 (2025) formalizes HQIM definition."
+        },
+        "sbe_agenda": {
+          "url": "https://www.doe.virginia.gov/state-board-data-funding/virginia-board-of-education/2025-board-meetings-agendas-and-minutes",
+          "notes": "Virginia BOE 2025 meetings, agendas, minutes page."
+        },
+        "procurement_portal": {
+          "url": "https://eva.virginia.gov/",
+          "notes": "eVA Virginia eProcurement Marketplace; VDOE posts IM-related solicitations but textbook approval workflow runs through VBOE."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "WV",
+      "name": "West Virginia",
+      "governance": "State Adoption",
+      "priority": 1,
+      "last_verified": null,
+      "sources": {
+        "doe_instructional_materials": {
+          "url": "https://wvde.us/middle-secondary-learning/resources/instructional-resources-review-and-adoption/adoption-schedule-law-code-and-policies/",
+          "notes": "WVDE Adoption Schedule page; 2025-26 cycle (Arts, Wellness, Driver Ed, Personal Finance) effective Jul 2026. WVDE no longer maintains a multiple-list; offers cursory state review."
+        },
+        "sbe_agenda": {
+          "url": "https://wvde.us/divisions-offices/west-virginia-board-education/meeting-agendas-minutes",
+          "notes": "WV BOE Meeting Agendas and Minutes; 2025 PDFs at /sites/default/files/2025-*/ plus 2026 schedule."
+        },
+        "procurement_portal": {
+          "url": "https://www.wvoasis.gov/VSS/Default",
+          "notes": "wvOASIS Vendor Self Service statewide portal and WV Purchasing Bulletin; WVDE no longer runs a multiple-list RFP."
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "AK",
+      "name": "Alaska",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "AZ",
+      "name": "Arizona",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "CO",
+      "name": "Colorado",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "CT",
+      "name": "Connecticut",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "DC",
+      "name": "District of Columbia",
+      "governance": "Local Control",
+      "priority": 3,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "DE",
+      "name": "Delaware",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "HI",
+      "name": "Hawaii",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "IA",
+      "name": "Iowa",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "ID",
+      "name": "Idaho",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "IL",
+      "name": "Illinois",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "KS",
+      "name": "Kansas",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "MA",
+      "name": "Massachusetts",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "MD",
+      "name": "Maryland",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "ME",
+      "name": "Maine",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "MI",
+      "name": "Michigan",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "MN",
+      "name": "Minnesota",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "MO",
+      "name": "Missouri",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "MT",
+      "name": "Montana",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "ND",
+      "name": "North Dakota",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "NE",
+      "name": "Nebraska",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "NH",
+      "name": "New Hampshire",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "NJ",
+      "name": "New Jersey",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "NV",
+      "name": "Nevada",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "NY",
+      "name": "New York",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "OH",
+      "name": "Ohio",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "PA",
+      "name": "Pennsylvania",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "RI",
+      "name": "Rhode Island",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "SD",
+      "name": "South Dakota",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "VT",
+      "name": "Vermont",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "WA",
+      "name": "Washington",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "WI",
+      "name": "Wisconsin",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    },
+    {
+      "code": "WY",
+      "name": "Wyoming",
+      "governance": "Local Control",
+      "priority": 2,
+      "last_verified": "2026-04-23",
+      "sources": {
+        "doe_instructional_materials": {
+          "url": null,
+          "notes": ""
+        },
+        "sbe_agenda": {
+          "url": null,
+          "notes": ""
+        },
+        "procurement_portal": {
+          "url": null,
+          "notes": ""
+        },
+        "legislative_calendar": {
+          "url": null,
+          "notes": ""
+        },
+        "secondary": []
+      },
+      "notes": ""
+    }
+  ],
+  "verification": {
+    "method": "scripts/validate_registry.py",
+    "note": "last_verified is null until the GitHub Actions registry validator runs the first HTTP 200 pass. The sandbox this repo was seeded from has no outbound .gov access, so verification is deferred to Actions."
+  }
+}

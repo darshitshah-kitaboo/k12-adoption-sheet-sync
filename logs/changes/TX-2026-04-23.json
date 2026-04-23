@@ -1,0 +1,204 @@
+{
+  "state": "TX",
+  "date": "2026-04-23",
+  "change_count": 9,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "K\u20135 ELAR and SLAR",
+        2026,
+        2027,
+        "supplemental"
+      ],
+      "cycle": {
+        "subject": "K\u20135 ELAR and SLAR",
+        "tier": "supplemental",
+        "ay_start": 2026,
+        "ay_end": 2027,
+        "cycle_label": "IMRA Cycle 2026",
+        "rfim_url": "https://tea.texas.gov/state-board-of-education/imra/imra26-rfim.pdf",
+        "process_url": "https://tea.texas.gov/state-board-of-education/imra/imra-process-2026.pdf",
+        "suitability_rubric_url": "https://tea.texas.gov/state-board-of-education/imra/imra25-sboe-suitability-rubric-approved-11-22-24.pdf",
+        "quality_rubric_urls": []
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "K\u201312 English mathematics, including middle school advanced mathematics",
+        2026,
+        2027,
+        "full-subject-tier-one"
+      ],
+      "cycle": {
+        "subject": "K\u201312 English mathematics, including middle school advanced mathematics",
+        "tier": "full-subject-tier-one",
+        "ay_start": 2026,
+        "ay_end": 2027,
+        "cycle_label": "IMRA Cycle 2026",
+        "rfim_url": "https://tea.texas.gov/state-board-of-education/imra/imra26-rfim.pdf",
+        "process_url": "https://tea.texas.gov/state-board-of-education/imra/imra-process-2026.pdf",
+        "suitability_rubric_url": "https://tea.texas.gov/state-board-of-education/imra/imra25-sboe-suitability-rubric-approved-11-22-24.pdf",
+        "quality_rubric_urls": [
+          "https://tea.texas.gov/state-board-of-education/imra/imra25-math-k12-sboe-approved-quality-rubric.pdf"
+        ]
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "K\u20133 English and Spanish phonics",
+        2026,
+        2027,
+        "partial-subject-tier-one"
+      ],
+      "cycle": {
+        "subject": "K\u20133 English and Spanish phonics",
+        "tier": "partial-subject-tier-one",
+        "ay_start": 2026,
+        "ay_end": 2027,
+        "cycle_label": "IMRA Cycle 2026",
+        "rfim_url": "https://tea.texas.gov/state-board-of-education/imra/imra26-rfim.pdf",
+        "process_url": "https://tea.texas.gov/state-board-of-education/imra/imra-process-2026.pdf",
+        "suitability_rubric_url": "https://tea.texas.gov/state-board-of-education/imra/imra25-sboe-suitability-rubric-approved-11-22-24.pdf",
+        "quality_rubric_urls": []
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "K\u20136 Spanish mathematics, including grade 6 advanced mathematics",
+        2026,
+        2027,
+        "full-subject-tier-one"
+      ],
+      "cycle": {
+        "subject": "K\u20136 Spanish mathematics, including grade 6 advanced mathematics",
+        "tier": "full-subject-tier-one",
+        "ay_start": 2026,
+        "ay_end": 2027,
+        "cycle_label": "IMRA Cycle 2026",
+        "rfim_url": "https://tea.texas.gov/state-board-of-education/imra/imra26-rfim.pdf",
+        "process_url": "https://tea.texas.gov/state-board-of-education/imra/imra-process-2026.pdf",
+        "suitability_rubric_url": "https://tea.texas.gov/state-board-of-education/imra/imra25-sboe-suitability-rubric-approved-11-22-24.pdf",
+        "quality_rubric_urls": [
+          "https://tea.texas.gov/state-board-of-education/imra/imra25-math-k12-sboe-approved-quality-rubric.pdf"
+        ]
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "6\u201312 Career and Technical Education (CTE) | Batch 1 courses",
+        2026,
+        2027,
+        "full-subject-tier-one"
+      ],
+      "cycle": {
+        "subject": "6\u201312 Career and Technical Education (CTE) | Batch 1 courses",
+        "tier": "full-subject-tier-one",
+        "ay_start": 2026,
+        "ay_end": 2027,
+        "cycle_label": "IMRA Cycle 2026",
+        "rfim_url": "https://tea.texas.gov/state-board-of-education/imra/imra26-rfim.pdf",
+        "process_url": "https://tea.texas.gov/state-board-of-education/imra/imra-process-2026.pdf",
+        "suitability_rubric_url": "https://tea.texas.gov/state-board-of-education/imra/imra25-sboe-suitability-rubric-approved-11-22-24.pdf",
+        "quality_rubric_urls": [
+          "https://tea.texas.gov/state-board-of-education/imra/imra26-cte-6-12-sboe-approved-quality-rubric.pdf"
+        ]
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "K\u201312 English mathematics",
+        2026,
+        2027,
+        "supplemental"
+      ],
+      "cycle": {
+        "subject": "K\u201312 English mathematics",
+        "tier": "supplemental",
+        "ay_start": 2026,
+        "ay_end": 2027,
+        "cycle_label": "IMRA Cycle 2026",
+        "rfim_url": "https://tea.texas.gov/state-board-of-education/imra/imra26-rfim.pdf",
+        "process_url": "https://tea.texas.gov/state-board-of-education/imra/imra-process-2026.pdf",
+        "suitability_rubric_url": "https://tea.texas.gov/state-board-of-education/imra/imra25-sboe-suitability-rubric-approved-11-22-24.pdf",
+        "quality_rubric_urls": [
+          "https://tea.texas.gov/state-board-of-education/imra/imra25-supplemental-math-k12-sboe-approved-quality-rubric.pdf"
+        ]
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "K\u201312 fine arts",
+        2026,
+        2027,
+        "full-subject-tier-one"
+      ],
+      "cycle": {
+        "subject": "K\u201312 fine arts",
+        "tier": "full-subject-tier-one",
+        "ay_start": 2026,
+        "ay_end": 2027,
+        "cycle_label": "IMRA Cycle 2026",
+        "rfim_url": "https://tea.texas.gov/state-board-of-education/imra/imra26-rfim.pdf",
+        "process_url": "https://tea.texas.gov/state-board-of-education/imra/imra-process-2026.pdf",
+        "suitability_rubric_url": "https://tea.texas.gov/state-board-of-education/imra/imra25-sboe-suitability-rubric-approved-11-22-24.pdf",
+        "quality_rubric_urls": [
+          "https://tea.texas.gov/state-board-of-education/imra/imra26-fine-arts-k12-sboe-approved-quality-rubric.pdf"
+        ]
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "K\u20136 Spanish mathematics",
+        2026,
+        2027,
+        "supplemental"
+      ],
+      "cycle": {
+        "subject": "K\u20136 Spanish mathematics",
+        "tier": "supplemental",
+        "ay_start": 2026,
+        "ay_end": 2027,
+        "cycle_label": "IMRA Cycle 2026",
+        "rfim_url": "https://tea.texas.gov/state-board-of-education/imra/imra26-rfim.pdf",
+        "process_url": "https://tea.texas.gov/state-board-of-education/imra/imra-process-2026.pdf",
+        "suitability_rubric_url": "https://tea.texas.gov/state-board-of-education/imra/imra25-sboe-suitability-rubric-approved-11-22-24.pdf",
+        "quality_rubric_urls": [
+          "https://tea.texas.gov/state-board-of-education/imra/imra25-supplemental-math-k12-sboe-approved-quality-rubric.pdf"
+        ]
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "K\u20135 English and Spanish language arts and reading (ELAR and SLAR)",
+        2026,
+        2027,
+        "full-subject-tier-one"
+      ],
+      "cycle": {
+        "subject": "K\u20135 English and Spanish language arts and reading (ELAR and SLAR)",
+        "tier": "full-subject-tier-one",
+        "ay_start": 2026,
+        "ay_end": 2027,
+        "cycle_label": "IMRA Cycle 2026",
+        "rfim_url": "https://tea.texas.gov/state-board-of-education/imra/imra26-rfim.pdf",
+        "process_url": "https://tea.texas.gov/state-board-of-education/imra/imra-process-2026.pdf",
+        "suitability_rubric_url": "https://tea.texas.gov/state-board-of-education/imra/imra25-sboe-suitability-rubric-approved-11-22-24.pdf",
+        "quality_rubric_urls": [
+          "https://tea.texas.gov/state-board-of-education/imra/imra25-elar-k3-sboe-approved-quality-rubric.pdf",
+          "https://tea.texas.gov/state-board-of-education/imra/imra25-elar-4-8-sboe-approved-quality-rubric.pdf",
+          "https://tea.texas.gov/state-board-of-education/imra/imra25-slar-k3-sboe-approed-quality-rubric.pdf",
+          "https://tea.texas.gov/state-board-of-education/imra/imra25-slar-4-6-sboe-approved-quality-rubric.pdf"
+        ]
+      }
+    }
+  ]
+}

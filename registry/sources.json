@@ -20,7 +20,7 @@
       "name": "Alabama",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.alabamaachieves.org/content-areas-specialty/textbook-adoption-and-procurement/",
@@ -74,7 +74,7 @@
       "name": "California",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.cde.ca.gov/ci/cr/cf/",
@@ -131,8 +131,8 @@
       "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
-          "url": "https://gadoe.org/teaching-and-learning/instructional-resources/",
-          "notes": "Per HB 739 (2016) Georgia opted out of formal state adoption; GaDOE maintains HQIM advisory lists only. Districts make final selections."
+          "url": "https://gadoe.org/learning",
+          "notes": "GaDOE Learning landing page (site migrated in 2024, old /teaching-and-learning/instructional-resources/ path is gone). Per HB 739 (2016) Georgia opted out of formal state adoption; GaDOE maintains HQIM advisory lists only. Districts make final selections."
         },
         "sbe_agenda": {
           "url": "https://gadoe.org/state-board/meeting-minutes/",
@@ -155,7 +155,7 @@
       "name": "Indiana",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
@@ -182,7 +182,7 @@
       "name": "Kentucky",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.education.ky.gov/curriculum/books/Pages/default.aspx",
@@ -209,7 +209,7 @@
       "name": "Louisiana",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://doe.louisiana.gov/school-system-leaders/instructional-materials-reviews",
@@ -236,7 +236,7 @@
       "name": "Mississippi",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://msinstructionalmaterials.org/resources/adoption/",
@@ -294,10 +294,14 @@
       "sources": {
         "doe_instructional_materials": {
           "url": "https://web.ped.nm.gov/bureaus/instructional-materials/",
+          "skip_validation": true,
+          "skip_reason": "NM PED WAF hard-blocks data-center IP ranges (403 from GitHub Actions). URL is live in a real browser. Phase 2 scraping will need browser automation (Playwright) or a residential proxy.",
           "notes": "NM PED Instructional Materials Bureau; 2025 K-12 Math adoption RFA posted (Summer Review Institute Jun 9, 2025); cycle details at /the-adoption-cycle/."
         },
         "sbe_agenda": {
           "url": "https://web.ped.nm.gov/bureaus/public-education-commission/pec-meetings-and-notices/2025-pec-meetings/",
+          "skip_validation": true,
+          "skip_reason": "Same NM PED WAF block as above. URL is live in a real browser.",
           "notes": "NM Public Education Commission 2025 meetings (PEC is the constitutional board); 2026 PEC page also live."
         },
         "procurement_portal": {
@@ -317,7 +321,7 @@
       "name": "Oklahoma",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://oklahoma.gov/education/services/hqim.html",
@@ -371,7 +375,7 @@
       "name": "South Carolina",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://ed.sc.gov/instruction/instructional-materials/",
@@ -483,10 +487,14 @@
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.doe.virginia.gov/teaching-learning-assessment/instructional-resources-support/textbooks-instructional-materials",
+          "skip_validation": true,
+          "skip_reason": "VDOE WAF hard-blocks data-center IP ranges (403 from GitHub Actions). URL is live in a real browser. Phase 2 scraping will need browser automation (Playwright) or a residential proxy.",
           "notes": "VDOE Textbooks & IM hub; review and approval details at /textbook-review-approval. Feb and Mar 2025 Math adoptions approved by BOE; HB 2777 (2025) formalizes HQIM definition."
         },
         "sbe_agenda": {
           "url": "https://www.doe.virginia.gov/state-board-data-funding/virginia-board-of-education/2025-board-meetings-agendas-and-minutes",
+          "skip_validation": true,
+          "skip_reason": "Same VDOE WAF block as above. URL is live in a real browser.",
           "notes": "Virginia BOE 2025 meetings, agendas, minutes page."
         },
         "procurement_portal": {
@@ -506,7 +514,7 @@
       "name": "West Virginia",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://wvde.us/middle-secondary-learning/resources/instructional-resources-review-and-adoption/adoption-schedule-law-code-and-policies/",

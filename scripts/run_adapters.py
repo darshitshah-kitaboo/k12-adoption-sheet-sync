@@ -51,12 +51,16 @@ RUNS_LOG = LOGS_DIR / "adapter_runs.jsonl"
 # quietly during early rollout.
 ADAPTERS = {
     "FL": {"module": "scripts.adapters.fl", "required": True},
+    "TX": {"module": "scripts.adapters.tx", "required": True},
 }
 
 # Fields in a cycle record that count as meaningful when diffing. Changes
 # to scraped_at or cycle ordering are ignored; only these fields trigger a
-# change-log entry.
+# change-log entry. The set is a union across states: FL cares about bid
+# counts and list dates, TX cares about RFIM and rubric PDFs. Records that
+# lack a field (e.g. TX has no bid_count) simply compare None to None.
 MEANINGFUL_FIELDS = (
+    # Florida fields
     "bid_count",
     "latest_list_date",
     "latest_list_url",
@@ -64,6 +68,12 @@ MEANINGFUL_FIELDS = (
     "timeline_url",
     "short_bid_url",
     "detailed_bid_url",
+    # Texas fields
+    "tier",
+    "rfim_url",
+    "process_url",
+    "suitability_rubric_url",
+    "quality_rubric_urls",
 )
 
 
@@ -106,7 +116,11 @@ def diff_snapshots(old, new):
     are reported as well.
     """
     def key(c):
-        return (c.get("subject"), c.get("ay_start"), c.get("ay_end"))
+        # Tier distinguishes TX records where the same subject string can
+        # appear in multiple tiers (e.g. "K-12 English mathematics" shows
+        # up in both Full-subject and Supplemental). FL records have no
+        # tier field so the component is None for them.
+        return (c.get("subject"), c.get("ay_start"), c.get("ay_end"), c.get("tier"))
 
     old_by_key = {key(c): c for c in (old or {}).get("cycles", [])}
     new_by_key = {key(c): c for c in (new or {}).get("cycles", [])}

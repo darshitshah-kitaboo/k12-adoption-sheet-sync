@@ -48,6 +48,7 @@ jobs:
           python scripts/adapters/test_tx.py
           python scripts/adapters/test_la.py
           python scripts/adapters/test_tn.py
+          python scripts/adapters/test_ok.py
 
       - name: Run coordinator
         id: coord

@@ -1,0 +1,260 @@
+"""Coordinator for state adapters.
+
+Runs every registered adapter, writes a fresh snapshot to scraped/<STATE>.json,
+and appends a per-run summary to logs/adapter_runs.jsonl. On any adapter
+failure, the prior snapshot is retained and the failure is flagged in the log
+rather than overwritten with empty data.
+
+The coordinator intentionally does NOT merge into adoption_data.json. That
+file is the canonical, human-curated source; scraped data lives alongside it
+in scraped/ and is compared by a review step before anything is promoted.
+This keeps a bad scrape from corrupting the dashboard.
+
+Exit codes:
+    0   at least one adapter produced a non-empty snapshot, no required adapter failed
+    1   a required adapter failed or produced zero cycles
+    2   unexpected error (missing directories, malformed registry, etc.)
+
+Outputs:
+    scraped/<STATE>.json                 latest successful snapshot per state
+    scraped/<STATE>.previous.json        one-step-back snapshot (for diffing)
+    logs/adapter_runs.jsonl              one JSON line per run with per-state status
+    logs/changes/<STATE>-<date>.json     only written when a meaningful field changed
+
+Usage:
+    python3 scripts/run_adapters.py                    # run all adapters
+    python3 scripts/run_adapters.py --only FL          # run just Florida
+    python3 scripts/run_adapters.py --fixture FL=file.html
+                                                       # parse local HTML for a state
+"""
+
+import argparse
+import importlib
+import json
+import sys
+import traceback
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+# Allow `python3 scripts/run_adapters.py` from the repo root to import
+# `scripts.adapters.*` without requiring PYTHONPATH gymnastics.
+sys.path.insert(0, str(ROOT))
+SCRAPED_DIR = ROOT / "scraped"
+LOGS_DIR = ROOT / "logs"
+CHANGES_DIR = LOGS_DIR / "changes"
+RUNS_LOG = LOGS_DIR / "adapter_runs.jsonl"
+
+# State code -> adapter module name. As new adapters are written they get
+# added here. Required=True means a failure exits nonzero so the workflow
+# surfaces the red checkmark; non-required adapters are allowed to fail
+# quietly during early rollout.
+ADAPTERS = {
+    "FL": {"module": "scripts.adapters.fl", "required": True},
+}
+
+# Fields in a cycle record that count as meaningful when diffing. Changes
+# to scraped_at or cycle ordering are ignored; only these fields trigger a
+# change-log entry.
+MEANINGFUL_FIELDS = (
+    "bid_count",
+    "latest_list_date",
+    "latest_list_url",
+    "specifications_url",
+    "timeline_url",
+    "short_bid_url",
+    "detailed_bid_url",
+)
+
+
+def load_adapter(module_name):
+    """Import an adapter module. Raises ImportError if missing."""
+    return importlib.import_module(module_name)
+
+
+def run_one(state_code, config, fixture_path=None):
+    """Run a single adapter. Returns (snapshot_dict_or_None, error_or_None)."""
+    try:
+        mod = load_adapter(config["module"])
+    except Exception as e:
+        return None, f"import failed: {e}"
+
+    try:
+        if fixture_path:
+            html = Path(fixture_path).read_text(encoding="utf-8")
+        else:
+            html = mod.fetch_html()
+        data = mod.parse(html)
+    except Exception as e:
+        return None, f"{type(e).__name__}: {e}\n{traceback.format_exc()}"
+
+    if not isinstance(data, dict) or "cycles" not in data:
+        return None, "adapter returned malformed data (no cycles field)"
+
+    # Empty snapshots usually mean the source page changed shape. Treat as
+    # a failure so we don't overwrite yesterday's good data with nothing.
+    if data.get("cycle_count", 0) == 0:
+        return None, "adapter returned zero cycles (page structure likely changed)"
+
+    return data, None
+
+
+def diff_snapshots(old, new):
+    """Compare two snapshots on MEANINGFUL_FIELDS. Returns list of change dicts.
+
+    Cycles are matched by (subject, ay_start, ay_end). New and removed cycles
+    are reported as well.
+    """
+    def key(c):
+        return (c.get("subject"), c.get("ay_start"), c.get("ay_end"))
+
+    old_by_key = {key(c): c for c in (old or {}).get("cycles", [])}
+    new_by_key = {key(c): c for c in (new or {}).get("cycles", [])}
+
+    changes = []
+    for k in new_by_key.keys() - old_by_key.keys():
+        changes.append({"type": "added", "key": list(k), "cycle": new_by_key[k]})
+    for k in old_by_key.keys() - new_by_key.keys():
+        changes.append({"type": "removed", "key": list(k), "cycle": old_by_key[k]})
+    for k in old_by_key.keys() & new_by_key.keys():
+        o, n = old_by_key[k], new_by_key[k]
+        field_changes = {}
+        for f in MEANINGFUL_FIELDS:
+            if o.get(f) != n.get(f):
+                field_changes[f] = {"old": o.get(f), "new": n.get(f)}
+        if field_changes:
+            changes.append({"type": "modified", "key": list(k), "fields": field_changes})
+    return changes
+
+
+def write_snapshot(state_code, data):
+    """Rotate the current snapshot to .previous.json, write the new one."""
+    SCRAPED_DIR.mkdir(parents=True, exist_ok=True)
+    current = SCRAPED_DIR / f"{state_code}.json"
+    previous = SCRAPED_DIR / f"{state_code}.previous.json"
+
+    old_data = None
+    if current.exists():
+        try:
+            old_data = json.loads(current.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            old_data = None
+        current.replace(previous)
+
+    current.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    return old_data
+
+
+def write_changes(state_code, changes):
+    """Persist a changes record if there were any, named by UTC date."""
+    if not changes:
+        return None
+    CHANGES_DIR.mkdir(parents=True, exist_ok=True)
+    today = datetime.now(timezone.utc).date().isoformat()
+    path = CHANGES_DIR / f"{state_code}-{today}.json"
+    # If multiple runs land on the same day, append a counter to avoid losing data.
+    counter = 1
+    while path.exists():
+        counter += 1
+        path = CHANGES_DIR / f"{state_code}-{today}-{counter}.json"
+    path.write_text(json.dumps({"state": state_code, "date": today,
+                                "change_count": len(changes),
+                                "changes": changes}, indent=2),
+                    encoding="utf-8")
+    return path
+
+
+def append_run_log(entry):
+    """One JSON line per run. Cheap to tail, easy to ingest later."""
+    LOGS_DIR.mkdir(parents=True, exist_ok=True)
+    with RUNS_LOG.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(entry) + "\n")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--only", action="append",
+                    help="Run only these state codes (repeatable)")
+    ap.add_argument("--fixture", action="append", default=[],
+                    help="STATE=PATH to parse a local HTML fixture instead of fetching")
+    args = ap.parse_args()
+
+    # Parse --fixture STATE=PATH pairs.
+    fixtures = {}
+    for spec in args.fixture:
+        if "=" not in spec:
+            print(f"FATAL: --fixture expects STATE=PATH, got {spec!r}", file=sys.stderr)
+            sys.exit(2)
+        state, path = spec.split("=", 1)
+        fixtures[state.upper()] = path
+
+    selected = set(c.upper() for c in args.only) if args.only else set(ADAPTERS)
+    unknown = selected - set(ADAPTERS)
+    if unknown:
+        print(f"FATAL: unknown state codes: {sorted(unknown)}", file=sys.stderr)
+        sys.exit(2)
+
+    started_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    per_state = {}
+    any_failed_required = False
+    any_success = False
+
+    print(f"Coordinator started {started_at}")
+    print(f"Running {len(selected)} adapter(s): {sorted(selected)}")
+
+    for code in sorted(selected):
+        cfg = ADAPTERS[code]
+        fixture = fixtures.get(code)
+        data, err = run_one(code, cfg, fixture_path=fixture)
+
+        if err:
+            # Adapter failed. Keep yesterday's snapshot untouched and log the
+            # failure. Required adapters bubble up as a workflow failure.
+            per_state[code] = {
+                "status": "failed",
+                "required": cfg["required"],
+                "error": err.splitlines()[0],
+                "cycle_count": 0,
+                "change_count": 0,
+            }
+            if cfg["required"]:
+                any_failed_required = True
+            print(f"  {code}  FAILED  {err.splitlines()[0]}")
+            continue
+
+        old = write_snapshot(code, data)
+        changes = diff_snapshots(old, data)
+        changes_path = write_changes(code, changes)
+        per_state[code] = {
+            "status": "ok",
+            "required": cfg["required"],
+            "cycle_count": data["cycle_count"],
+            "change_count": len(changes),
+            "changes_file": str(changes_path.relative_to(ROOT)) if changes_path else None,
+            "scraped_at": data["scraped_at"],
+        }
+        any_success = True
+        tag = f"{len(changes)} change(s)" if changes else "no changes"
+        print(f"  {code}  OK      {data['cycle_count']} cycles, {tag}")
+
+    finished_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    entry = {
+        "started_at": started_at,
+        "finished_at": finished_at,
+        "selected": sorted(selected),
+        "per_state": per_state,
+    }
+    append_run_log(entry)
+
+    print(f"\nRun log appended to {RUNS_LOG.relative_to(ROOT)}")
+    if any_failed_required:
+        print("\nOne or more REQUIRED adapters failed. Exiting 1.", file=sys.stderr)
+        sys.exit(1)
+    if not any_success:
+        print("\nNo adapter produced a snapshot. Exiting 1.", file=sys.stderr)
+        sys.exit(1)
+    sys.exit(0)
+
+
+if __name__ == "__main__":
+    main()

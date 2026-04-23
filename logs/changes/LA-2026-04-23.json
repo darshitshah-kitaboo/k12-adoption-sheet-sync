@@ -1,0 +1,61 @@
+{
+  "state": "LA",
+  "date": "2026-04-23",
+  "change_count": 3,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "K-12 social studies courses",
+        2025,
+        2026,
+        null
+      ],
+      "cycle": {
+        "subject": "K-12 social studies courses",
+        "ay_start": 2025,
+        "ay_end": 2026,
+        "cycle_label": "2025-2026 Review Cycle",
+        "rubric_url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/2025-2026-imr-rubric---social-studies-k-12.pdf?sfvrsn=1700219a_4",
+        "weekly_report_url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/imr-weekly-report.pdf?sfvrsn=a26b841f_16",
+        "publisher_guide_url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/publisher's-guide-for-imr-submission.pdf?sfvrsn=42f58d1f_19"
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "K-12 science full courses",
+        2025,
+        2026,
+        null
+      ],
+      "cycle": {
+        "subject": "K-12 science full courses",
+        "ay_start": 2025,
+        "ay_end": 2026,
+        "cycle_label": "2025-2026 Review Cycle",
+        "rubric_url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/2025-2026-imr-rubric---science-k-12.pdf?sfvrsn=fe705116_4",
+        "weekly_report_url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/imr-weekly-report.pdf?sfvrsn=a26b841f_16",
+        "publisher_guide_url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/publisher's-guide-for-imr-submission.pdf?sfvrsn=42f58d1f_19"
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "early childhood education",
+        2025,
+        2026,
+        null
+      ],
+      "cycle": {
+        "subject": "early childhood education",
+        "ay_start": 2025,
+        "ay_end": 2026,
+        "cycle_label": "2025-2026 Review Cycle",
+        "rubric_url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/2025-2026-imr-rubric---ece-ages-birth-to-five.pdf?sfvrsn=ca1fdfe0_3",
+        "weekly_report_url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/imr-weekly-report.pdf?sfvrsn=a26b841f_16",
+        "publisher_guide_url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/publisher's-guide-for-imr-submission.pdf?sfvrsn=42f58d1f_19"
+      }
+    }
+  ]
+}

@@ -35,33 +35,16 @@ Usage:
 import argparse
 import json
 import re
-import sys
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urljoin
 
-try:
-    import requests
-    from bs4 import BeautifulSoup
-except ImportError:
-    print("FATAL: requests and beautifulsoup4 required.", file=sys.stderr)
-    print("Run: pip3 install requests beautifulsoup4", file=sys.stderr)
-    sys.exit(2)
+from bs4 import BeautifulSoup
+
+from scripts.adapters import base
 
 STATE_CODE = "TX"
 STATE_NAME = "Texas"
 SOURCE_URL = "https://sboe.texas.gov/state-board-of-education/imra/current-imra-cycle"
-
-BROWSER_HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/120.0.0.0 Safari/537.36"
-    ),
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
-}
-TIMEOUT = 30
 
 # "IMRA Cycle 2026" or "IMRA 2026" etc.
 CYCLE_YEAR_RE = re.compile(r"IMRA\s+Cycle\s+(\d{4})", re.IGNORECASE)
@@ -87,70 +70,11 @@ RUBRIC_KEYWORDS = {
 
 
 def fetch_html(url=SOURCE_URL):
-    """Fetch the live SBOE current cycle page. Raises on non-200."""
-    r = requests.get(url, headers=BROWSER_HEADERS, timeout=TIMEOUT)
-    r.raise_for_status()
-    return r.text
+    """Fetch the SBOE current cycle page through the shared helper.
 
-
-def _text(el):
-    """Shortcut to pull whitespace-collapsed text from a tag, or empty."""
-    if el is None:
-        return ""
-    return el.get_text(" ", strip=True)
-
-
-def _find_link_in_block(start, stop_tags, link_text_contains=None):
-    """Walk siblings after start until a stop_tag and return first matching href.
-
-    If link_text_contains is None any link is accepted. Case insensitive.
+    sboe.texas.gov accepts plain scripted GETs, no warmup needed.
     """
-    needle = (link_text_contains or "").lower()
-    for sib in start.find_next_siblings():
-        if getattr(sib, "name", None) in stop_tags:
-            break
-        if not hasattr(sib, "find_all"):
-            continue
-        for a in sib.find_all("a"):
-            href = a.get("href", "") or ""
-            if not href:
-                continue
-            txt = a.get_text(" ", strip=True).lower()
-            if not needle or needle in txt:
-                return href, a.get_text(" ", strip=True)
-    return None, None
-
-
-def _collect_bullets(start, stop_tags):
-    """Return list of plain-text bullets found in <li> tags before a stop tag."""
-    bullets = []
-    for sib in start.find_next_siblings():
-        name = getattr(sib, "name", None)
-        if name in stop_tags:
-            break
-        if not hasattr(sib, "find_all"):
-            continue
-        for li in sib.find_all("li"):
-            txt = li.get_text(" ", strip=True)
-            if txt:
-                bullets.append(txt)
-    return bullets
-
-
-def _collect_links(start, stop_tags):
-    """Return list of (text, href) pairs found in <a> tags before a stop tag."""
-    out = []
-    for sib in start.find_next_siblings():
-        name = getattr(sib, "name", None)
-        if name in stop_tags:
-            break
-        if not hasattr(sib, "find_all"):
-            continue
-        for a in sib.find_all("a"):
-            href = a.get("href", "") or ""
-            if href:
-                out.append((a.get_text(" ", strip=True), href))
-    return out
+    return base.fetch_html(url)
 
 
 def _match_rubric(subject, rubric_links):
@@ -173,16 +97,6 @@ def _match_rubric(subject, rubric_links):
     return matches
 
 
-def _find_heading(soup, tag_names, text_contains):
-    """Return the first heading tag whose text contains the substring."""
-    needle = text_contains.lower()
-    for name in tag_names:
-        for h in soup.find_all(name):
-            if needle in h.get_text(" ", strip=True).lower():
-                return h
-    return None
-
-
 def parse(html, source_url=SOURCE_URL):
     """Parse SBOE IMRA current cycle HTML and return a normalized dict."""
     soup = BeautifulSoup(html, "html.parser")
@@ -195,39 +109,47 @@ def parse(html, source_url=SOURCE_URL):
 
     # Cycle-wide artifacts. We look them up by their heading or anchor text so
     # a page tweak that reorders sections still works.
-    process_heading = _find_heading(soup, ("h2", "h3", "h4"), "imra process")
+    process_heading = base.find_heading_containing(
+        soup, "imra process", tag_names=("h2", "h3", "h4"))
     process_url = None
     if process_heading:
-        href, _ = _find_link_in_block(process_heading, ("h2", "h3"),
-                                      link_text_contains="imra process")
-        process_url = urljoin(source_url, href) if href else None
+        _, process_url = base.first_link_under(
+            process_heading, source_url,
+            stop_tags=("h2", "h3"),
+            link_text_contains="imra process")
 
-    rfim_heading = _find_heading(soup, ("h2", "h3"), "request for instructional materials")
+    rfim_heading = base.find_heading_containing(
+        soup, "request for instructional materials",
+        tag_names=("h2", "h3"))
     rfim_url = None
     if rfim_heading:
-        href, _ = _find_link_in_block(rfim_heading, ("h2",),
-                                      link_text_contains="rfim")
-        rfim_url = urljoin(source_url, href) if href else None
+        _, rfim_url = base.first_link_under(
+            rfim_heading, source_url,
+            stop_tags=("h2",),
+            link_text_contains="rfim")
 
     # Rubric section. Suitability rubric is a single link. Quality rubrics
     # are grouped into two h4 buckets: tier-one (full or partial) and
     # supplemental. Grouping them separately avoids matching a supplemental
     # math rubric against a tier-one math subject just because both say
     # "math".
-    rubrics_heading = _find_heading(soup, ("h2", "h3"), "rubrics")
+    rubrics_heading = base.find_heading_containing(
+        soup, "rubrics", tag_names=("h2", "h3"))
     suitability_url = None
     tier_one_rubric_links = []
     supplemental_rubric_links = []
     if rubrics_heading:
         # Suitability: first link under the h3 "Suitability Rubric" subsection.
-        suit_h = _find_heading(soup, ("h3", "h4"), "suitability rubric")
+        suit_h = base.find_heading_containing(
+            soup, "suitability rubric", tag_names=("h3", "h4"))
         if suit_h:
-            href, _ = _find_link_in_block(suit_h, ("h2", "h3", "h4"))
-            suitability_url = urljoin(source_url, href) if href else None
+            _, suitability_url = base.first_link_under(
+                suit_h, source_url, stop_tags=("h2", "h3", "h4"))
 
         # Quality rubrics live after an h3 "Quality Rubrics" heading. Walk
         # its h4 children and route links into the right bucket.
-        qual_h = _find_heading(soup, ("h3", "h4"), "quality rubrics")
+        qual_h = base.find_heading_containing(
+            soup, "quality rubrics", tag_names=("h3", "h4"))
         if qual_h:
             for sib in qual_h.find_next_siblings():
                 name = getattr(sib, "name", None)
@@ -240,9 +162,10 @@ def parse(html, source_url=SOURCE_URL):
                     bucket = supplemental_rubric_links
                 else:
                     bucket = tier_one_rubric_links
-                for text, href in _collect_links(sib, ("h2", "h3", "h4")):
+                for text, href in base.collect_links_under(
+                        sib, source_url, stop_tags=("h2", "h3", "h4")):
                     if "rubric" in text.lower():
-                        bucket.append((text, urljoin(source_url, href)))
+                        bucket.append((text, href))
 
     # Subject lists. We walk each h4 under the RFIM section and categorize
     # by its heading.
@@ -268,7 +191,7 @@ def parse(html, source_url=SOURCE_URL):
                 # Unknown heading shape. Skip rather than misclassify.
                 continue
 
-            for subject in _collect_bullets(h4, ("h2", "h3", "h4")):
+            for subject in base.collect_bullets(h4, ("h2", "h3", "h4")):
                 pool = (supplemental_rubric_links
                         if tier == TIER_SUPPLEMENTAL
                         else tier_one_rubric_links)

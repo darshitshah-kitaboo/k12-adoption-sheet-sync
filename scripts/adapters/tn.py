@@ -36,61 +36,17 @@ Usage:
 import argparse
 import json
 import re
-import sys
-import time
 from datetime import date, datetime, timezone
 from pathlib import Path
-from urllib.parse import urljoin
 
-try:
-    import requests
-    from bs4 import BeautifulSoup
-except ImportError:
-    print("FATAL: requests and beautifulsoup4 required.", file=sys.stderr)
-    print("Run: pip3 install requests beautifulsoup4", file=sys.stderr)
-    sys.exit(2)
+from bs4 import BeautifulSoup
+
+from scripts.adapters import base
 
 STATE_CODE = "TN"
 STATE_NAME = "Tennessee"
 SOURCE_URL = "https://www.tn.gov/textbook-commission/textbook-information-for-publishers.html"
 WARMUP_URL = "https://www.tn.gov/"
-
-# tn.gov sits behind a WAF that resets connections on requests that look
-# scripted. An earlier minimal header set (UA + Accept + Accept-Language)
-# was rejected with ConnectionReset on the GitHub runner. The headers below
-# mirror what Chrome actually sends, including Sec-Fetch-* and client hints.
-# Keep this list in lockstep with a recent stable Chrome release; if tn.gov
-# starts rejecting again, refresh the UA and sec-ch-ua values first.
-BROWSER_HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/122.0.0.0 Safari/537.36"
-    ),
-    "Accept": (
-        "text/html,application/xhtml+xml,application/xml;q=0.9,"
-        "image/avif,image/webp,image/apng,*/*;q=0.8,"
-        "application/signed-exchange;v=b3;q=0.7"
-    ),
-    "Accept-Language": "en-US,en;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Cache-Control": "max-age=0",
-    "Connection": "keep-alive",
-    "DNT": "1",
-    "Upgrade-Insecure-Requests": "1",
-    "Sec-Fetch-Site": "none",
-    "Sec-Fetch-Mode": "navigate",
-    "Sec-Fetch-User": "?1",
-    "Sec-Fetch-Dest": "document",
-    "sec-ch-ua": '"Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"',
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": '"Windows"',
-}
-TIMEOUT = 30
-# How many times to retry on transient network failures. tn.gov occasionally
-# resets the first connection but accepts the second after a short pause.
-MAX_ATTEMPTS = 3
-RETRY_SLEEP_SECONDS = 3
 
 # "Cycle 2027 for March 2027 Textbook Commission Meeting"
 CYCLE_YEAR_RE = re.compile(
@@ -113,62 +69,13 @@ _MONTH_IDX = {m: i for i, m in enumerate(
 
 
 def fetch_html(url=SOURCE_URL):
-    """Fetch the live TN publisher info page.
+    """Fetch the TN publisher info page using the shared WAF-safe fetch.
 
-    tn.gov drops connections that look scripted, so we:
-      1. Open a Session (persists cookies the WAF may set on the warmup).
-      2. Hit the root domain first with Sec-Fetch-Site: none.
-      3. Follow up with the real request using Sec-Fetch-Site: same-origin
-         and a Referer, matching what a browser sends after a homepage hit.
-      4. Retry on ConnectionError with a short pause. The first connection
-         to tn.gov sometimes resets and the second goes through.
-    Raises the last exception if every attempt fails.
+    tn.gov drops connections that look scripted. The warmup hit to
+    tn.gov's root lets any WAF cookie land in the session before we
+    hit the publisher page.
     """
-    last_err = None
-    for attempt in range(1, MAX_ATTEMPTS + 1):
-        try:
-            with requests.Session() as s:
-                s.headers.update(BROWSER_HEADERS)
-                # Warmup. Failure here is non-fatal; the real request still
-                # tries. The warmup hit is what establishes any WAF cookie.
-                try:
-                    s.get(WARMUP_URL, timeout=TIMEOUT)
-                except requests.RequestException:
-                    pass
-                # Real request looks like a link click from tn.gov homepage.
-                real_headers = {
-                    "Sec-Fetch-Site": "same-origin",
-                    "Referer": WARMUP_URL,
-                }
-                r = s.get(url, headers=real_headers, timeout=TIMEOUT)
-                r.raise_for_status()
-                return r.text
-        except requests.RequestException as e:
-            last_err = e
-            if attempt < MAX_ATTEMPTS:
-                time.sleep(RETRY_SLEEP_SECONDS)
-    raise last_err
-
-
-def _first_link_matching(links, *needles):
-    """Return the first (text, href) whose text contains all needles (case insensitive)."""
-    for text, href in links:
-        low = text.lower()
-        if all(n.lower() in low for n in needles):
-            return text, href
-    return None, None
-
-
-def _all_links(soup, base_url):
-    """Collect (text, absolute_href) pairs for every anchor on the page."""
-    out = []
-    for a in soup.find_all("a"):
-        href = a.get("href", "") or ""
-        if not href:
-            continue
-        txt = a.get_text(" ", strip=True)
-        out.append((txt, urljoin(base_url, href)))
-    return out
+    return base.fetch_html(url, warmup_url=WARMUP_URL)
 
 
 def parse(html, source_url=SOURCE_URL):
@@ -209,18 +116,18 @@ def parse(html, source_url=SOURCE_URL):
             except ValueError:
                 submission_deadline = None
 
-    links = _all_links(soup, source_url)
-    _, substitution_template_url = _first_link_matching(
+    links = base.all_links(soup, source_url)
+    _, substitution_template_url = base.first_link_matching(
         links, "substitution", "template")
-    _, substitution_rule_url = _first_link_matching(
+    _, substitution_rule_url = base.first_link_matching(
         links, "0520-05-01")
-    _, publisher_distr_list_url = _first_link_matching(
+    _, publisher_distr_list_url = base.first_link_matching(
         links, "this form")
-    _, schedule_f_url = _first_link_matching(
+    _, schedule_f_url = base.first_link_matching(
         links, "schedule f")
-    _, official_list_url = _first_link_matching(
+    _, official_list_url = base.first_link_matching(
         links, "official lists")
-    _, adoption_process_url = _first_link_matching(
+    _, adoption_process_url = base.first_link_matching(
         links, "adoption process")
 
     cycles = []

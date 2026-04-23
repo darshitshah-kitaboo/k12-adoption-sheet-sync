@@ -39,35 +39,17 @@ Usage:
 import argparse
 import json
 import re
-import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin
 
-try:
-    import requests
-    from bs4 import BeautifulSoup
-except ImportError:
-    print("FATAL: requests and beautifulsoup4 required.", file=sys.stderr)
-    print("Run: pip3 install requests beautifulsoup4", file=sys.stderr)
-    sys.exit(2)
+from bs4 import BeautifulSoup
+
+from scripts.adapters import base
 
 STATE_CODE = "FL"
 STATE_NAME = "Florida"
 SOURCE_URL = "https://www.fldoe.org/academics/standards/instructional-materials/"
-
-# Same browser header pattern as the validator. Florida's site is friendly
-# to scripts, but consistency across adapters makes debugging easier.
-BROWSER_HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/120.0.0.0 Safari/537.36"
-    ),
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
-}
-TIMEOUT = 30
 
 # Matches either "2026-2027 Adoption Year" or "2023-2024 Adoption Year: K-12 Science".
 # Accepts ASCII hyphen or Unicode en-dash between the years.
@@ -81,10 +63,11 @@ UPDATED_DATE_RE = re.compile(r"(?:Updated\s+)?(\d{1,2})/(\d{1,2})/(\d{2,4})")
 
 
 def fetch_html(url=SOURCE_URL):
-    """Fetch the live FLDOE IM page. Raises on non-200."""
-    r = requests.get(url, headers=BROWSER_HEADERS, timeout=TIMEOUT)
-    r.raise_for_status()
-    return r.text
+    """Fetch the FLDOE IM page through the shared helper.
+
+    fldoe.org accepts plain scripted GETs, no warmup needed.
+    """
+    return base.fetch_html(url)
 
 
 def _parse_date(text):
@@ -105,6 +88,11 @@ def _walk_block(start_element, stop_tags=("h2", "h3")):
     """Walk siblings after start_element until a stop_tag is hit.
 
     Returns (combined_text, list_of_(link_text, href) tuples).
+
+    This helper stays local to FL because it combines two walks (text
+    aggregation and link collection) into one pass. Splitting it into
+    `base.collect_links_under` plus a text-only walk would double the
+    traversal for no real payoff.
     """
     text_parts = []
     links = []

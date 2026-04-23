@@ -30,33 +30,16 @@ Usage:
 import argparse
 import json
 import re
-import sys
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urljoin
 
-try:
-    import requests
-    from bs4 import BeautifulSoup
-except ImportError:
-    print("FATAL: requests and beautifulsoup4 required.", file=sys.stderr)
-    print("Run: pip3 install requests beautifulsoup4", file=sys.stderr)
-    sys.exit(2)
+from bs4 import BeautifulSoup
+
+from scripts.adapters import base
 
 STATE_CODE = "LA"
 STATE_NAME = "Louisiana"
 SOURCE_URL = "https://doe.louisiana.gov/school-system-leaders/instructional-materials-reviews"
-
-BROWSER_HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/120.0.0.0 Safari/537.36"
-    ),
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
-}
-TIMEOUT = 30
 
 # "Currently Under Review: 2025-2026 Review Cycle" or with en-dash.
 CURRENT_CYCLE_RE = re.compile(
@@ -77,56 +60,12 @@ RUBRIC_KEYWORDS = {
 
 
 def fetch_html(url=SOURCE_URL):
-    """Fetch the live LDOE IMR page. Raises on non-200."""
-    r = requests.get(url, headers=BROWSER_HEADERS, timeout=TIMEOUT)
-    r.raise_for_status()
-    return r.text
+    """Fetch the LDOE IMR page.
 
-
-def _find_heading_containing(soup, phrase, tag_names=("h1", "h2", "h3", "h4")):
-    """Return the first heading whose text contains the phrase (case insensitive)."""
-    needle = phrase.lower()
-    for name in tag_names:
-        for h in soup.find_all(name):
-            if needle in h.get_text(" ", strip=True).lower():
-                return h
-    return None
-
-
-def _collect_bullets(start, stop_tags):
-    """Return list of plain-text bullets before a stop tag."""
-    bullets = []
-    for sib in start.find_next_siblings():
-        name = getattr(sib, "name", None)
-        if name in stop_tags:
-            break
-        if not hasattr(sib, "find_all"):
-            continue
-        for li in sib.find_all("li"):
-            txt = li.get_text(" ", strip=True)
-            # Louisiana uses bullets with trailing commas and "and". Strip
-            # both so the subject name is clean for downstream matching.
-            # "and" may sit between a comma and nothing ("..., and"), so run
-            # the trim twice.
-            for _ in range(2):
-                txt = txt.rstrip(",.").strip()
-                if txt.lower().endswith(" and"):
-                    txt = txt[:-4].strip()
-            if txt:
-                bullets.append(txt)
-    return bullets
-
-
-def _find_all_links(soup):
-    """Return every (text, absolute_href) pair on the page."""
-    out = []
-    for a in soup.find_all("a"):
-        href = a.get("href", "") or ""
-        if not href:
-            continue
-        txt = a.get_text(" ", strip=True)
-        out.append((txt, urljoin(SOURCE_URL, href)))
-    return out
+    Louisiana doe.louisiana.gov has never WAF-blocked scripted requests,
+    so a plain one-shot GET through the shared helper is enough.
+    """
+    return base.fetch_html(url)
 
 
 def _match_rubric(subject, ay_start, links):
@@ -181,7 +120,7 @@ def parse(html, source_url=SOURCE_URL):
     scraped_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     # Find the "Currently Under Review: YYYY-YYYY" heading and grab its years.
-    current = _find_heading_containing(soup, "Currently Under Review")
+    current = base.find_heading_containing(soup, "Currently Under Review")
     ay_start = ay_end = None
     cycle_label = None
     if current:
@@ -192,30 +131,24 @@ def parse(html, source_url=SOURCE_URL):
             cycle_label = f"{ay_start}-{ay_end} Review Cycle"
 
     # Subjects under review live in a UL immediately after that heading.
+    # LA bullets tend to end with ", and" or trailing commas, so enable
+    # the base helper's cleanup pass.
     subjects = []
     if current:
-        subjects = _collect_bullets(current, stop_tags=("h1", "h2", "h3"))
+        subjects = base.collect_bullets(
+            current, stop_tags=("h1", "h2", "h3"), clean=True)
 
     # Page-wide artifacts. The weekly report shows up in the same block.
-    all_links = _find_all_links(soup)
-    weekly_report_url = None
-    for text, href in all_links:
-        tl = text.lower()
-        if "weekly report" in tl and "instructional materials" in tl:
-            weekly_report_url = href
-            break
+    all_links = base.all_links(soup, source_url)
+    _, weekly_report_url = base.first_link_matching(
+        all_links, "weekly report", "instructional materials")
     if not weekly_report_url:
         # Looser match as a fallback.
-        for text, href in all_links:
-            if "weekly report" in text.lower():
-                weekly_report_url = href
-                break
+        _, weekly_report_url = base.first_link_matching(
+            all_links, "weekly report")
 
-    publisher_guide_url = None
-    for text, href in all_links:
-        if "publisher" in text.lower() and "submission" in text.lower():
-            publisher_guide_url = href
-            break
+    _, publisher_guide_url = base.first_link_matching(
+        all_links, "publisher", "submission")
 
     cycles = []
     for subject in subjects:

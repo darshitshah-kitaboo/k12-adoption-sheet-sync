@@ -2,7 +2,7 @@
   "state": "FL",
   "name": "Florida",
   "source_url": "https://www.fldoe.org/academics/standards/instructional-materials/",
-  "scraped_at": "2026-04-23T08:38:49+00:00",
+  "scraped_at": "2026-04-23T08:47:10+00:00",
   "cycle_count": 13,
   "cycles": [
     {
@@ -12,7 +12,7 @@
       "bid_count": null,
       "latest_list_date": null,
       "latest_list_url": null,
-      "specifications_url": "/file/5574/2728K12SocialStudiesSpecsFINAL-1.pdf",
+      "specifications_url": "https://www.fldoe.org/file/5574/2728K12SocialStudiesSpecsFINAL-1.pdf",
       "timeline_url": null,
       "short_bid_url": null,
       "detailed_bid_url": null,
@@ -25,9 +25,9 @@
       "bid_count": 198,
       "latest_list_date": null,
       "latest_list_url": null,
-      "specifications_url": "/file/5574/2627K12MathSpecsFINAL.pdf",
+      "specifications_url": "https://www.fldoe.org/file/5574/2627K12MathSpecsFINAL.pdf",
       "timeline_url": null,
-      "short_bid_url": "/file/5574/2627SBL-K-12-Math.pdf",
+      "short_bid_url": "https://www.fldoe.org/file/5574/2627SBL-K-12-Math.pdf",
       "detailed_bid_url": null,
       "publisher_contact_urls": []
     },
@@ -38,9 +38,9 @@
       "bid_count": 77,
       "latest_list_date": null,
       "latest_list_url": null,
-      "specifications_url": "/file/5574/2627K12CompSciSpecsFINAL.pdf",
+      "specifications_url": "https://www.fldoe.org/file/5574/2627K12CompSciSpecsFINAL.pdf",
       "timeline_url": null,
-      "short_bid_url": "/file/5574/2627SBL-K-12-CompSci.pdf",
+      "short_bid_url": "https://www.fldoe.org/file/5574/2627SBL-K-12-CompSci.pdf",
       "detailed_bid_url": null,
       "publisher_contact_urls": []
     },
@@ -51,9 +51,9 @@
       "bid_count": 138,
       "latest_list_date": null,
       "latest_list_url": null,
-      "specifications_url": "/file/5574/9-12-CTE.pdf",
+      "specifications_url": "https://www.fldoe.org/file/5574/9-12-CTE.pdf",
       "timeline_url": null,
-      "short_bid_url": "/file/5574/SBL-912CTE.pdf",
+      "short_bid_url": "https://www.fldoe.org/file/5574/SBL-912CTE.pdf",
       "detailed_bid_url": null,
       "publisher_contact_urls": []
     },
@@ -64,9 +64,9 @@
       "bid_count": 37,
       "latest_list_date": null,
       "latest_list_url": null,
-      "specifications_url": "/file/5574/K-12-Health-and-PE.pdf",
+      "specifications_url": "https://www.fldoe.org/file/5574/K-12-Health-and-PE.pdf",
       "timeline_url": null,
-      "short_bid_url": "/file/5574/SBL-K12Health.pdf",
+      "short_bid_url": "https://www.fldoe.org/file/5574/SBL-K12Health.pdf",
       "detailed_bid_url": null,
       "publisher_contact_urls": []
     },
@@ -77,9 +77,9 @@
       "bid_count": 38,
       "latest_list_date": null,
       "latest_list_url": null,
-      "specifications_url": "/file/5574/K-12-Performing-and-Visual-Arts.pdf",
+      "specifications_url": "https://www.fldoe.org/file/5574/K-12-Performing-and-Visual-Arts.pdf",
       "timeline_url": null,
-      "short_bid_url": "/file/5574/SBL-K12PerArts.pdf",
+      "short_bid_url": "https://www.fldoe.org/file/5574/SBL-K12PerArts.pdf",
       "detailed_bid_url": null,
       "publisher_contact_urls": []
     },
@@ -90,9 +90,9 @@
       "bid_count": 70,
       "latest_list_date": null,
       "latest_list_url": null,
-      "specifications_url": "/file/5574/World-Languages.pdf",
+      "specifications_url": "https://www.fldoe.org/file/5574/World-Languages.pdf",
       "timeline_url": null,
-      "short_bid_url": "/file/5574/SBL-K12WL.pdf",
+      "short_bid_url": "https://www.fldoe.org/file/5574/SBL-K12WL.pdf",
       "detailed_bid_url": null,
       "publisher_contact_urls": []
     },
@@ -103,9 +103,9 @@
       "bid_count": 7,
       "latest_list_date": null,
       "latest_list_url": null,
-      "specifications_url": "/file/5574/6-12-Additional-ELA.pdf",
+      "specifications_url": "https://www.fldoe.org/file/5574/6-12-Additional-ELA.pdf",
       "timeline_url": null,
-      "short_bid_url": "/file/5574/SBL-612AddELA.pdf",
+      "short_bid_url": "https://www.fldoe.org/file/5574/SBL-612AddELA.pdf",
       "detailed_bid_url": null,
       "publisher_contact_urls": []
     },
@@ -116,10 +116,10 @@
       "bid_count": 113,
       "latest_list_date": null,
       "latest_list_url": null,
-      "specifications_url": "/file/5574/SpecK12ELA.pdf",
+      "specifications_url": "https://www.fldoe.org/file/5574/SpecK12ELA.pdf",
       "timeline_url": null,
-      "short_bid_url": "/file/5574/Short-Bid-List-2024-ELA-K-12.pdf",
-      "detailed_bid_url": "/file/5574/BidDetailsReportELAK12.pdf",
+      "short_bid_url": "https://www.fldoe.org/file/5574/Short-Bid-List-2024-ELA-K-12.pdf",
+      "detailed_bid_url": "https://www.fldoe.org/file/5574/BidDetailsReportELAK12.pdf",
       "publisher_contact_urls": []
     },
     {
@@ -129,10 +129,10 @@
       "bid_count": 18,
       "latest_list_date": null,
       "latest_list_url": null,
-      "specifications_url": "/file/5574/2425-912PFLMMEC.pdf",
+      "specifications_url": "https://www.fldoe.org/file/5574/2425-912PFLMMEC.pdf",
       "timeline_url": null,
-      "short_bid_url": "/file/5574/Short-Bid-List-2024-Financial-Literacy.pdf",
-      "detailed_bid_url": "/file/5574/BidDetailsReport-PFL.pdf",
+      "short_bid_url": "https://www.fldoe.org/file/5574/Short-Bid-List-2024-Financial-Literacy.pdf",
+      "detailed_bid_url": "https://www.fldoe.org/file/5574/BidDetailsReport-PFL.pdf",
       "publisher_contact_urls": []
     },
     {
@@ -142,10 +142,10 @@
       "bid_count": 150,
       "latest_list_date": null,
       "latest_list_url": null,
-      "specifications_url": "/file/5574/2425-K3-ELA-IMS.pdf",
+      "specifications_url": "https://www.fldoe.org/file/5574/2425-K3-ELA-IMS.pdf",
       "timeline_url": null,
-      "short_bid_url": "/file/5574/Short-Bid-List-2024-ELA-K-3-Intervention.pdf",
-      "detailed_bid_url": "/file/5574/Bid-Details-K3.pdf",
+      "short_bid_url": "https://www.fldoe.org/file/5574/Short-Bid-List-2024-ELA-K-3-Intervention.pdf",
+      "detailed_bid_url": "https://www.fldoe.org/file/5574/Bid-Details-K3.pdf",
       "publisher_contact_urls": []
     },
     {
@@ -155,10 +155,10 @@
       "bid_count": 65,
       "latest_list_date": null,
       "latest_list_url": null,
-      "specifications_url": "/file/5574/2425-K4-MathIMS.pdf",
+      "specifications_url": "https://www.fldoe.org/file/5574/2425-K4-MathIMS.pdf",
       "timeline_url": null,
-      "short_bid_url": "/file/5574/Short-Bid-List-2024-Math-Intervention.pdf",
-      "detailed_bid_url": "/file/5574/Bid-Details-K4.pdf",
+      "short_bid_url": "https://www.fldoe.org/file/5574/Short-Bid-List-2024-Math-Intervention.pdf",
+      "detailed_bid_url": "https://www.fldoe.org/file/5574/Bid-Details-K4.pdf",
       "publisher_contact_urls": []
     },
     {
@@ -167,13 +167,13 @@
       "ay_end": 2024,
       "bid_count": 146,
       "latest_list_date": "2025-10-24",
-      "latest_list_url": "/file/5574/2324-Sci-IM-AdoptionList-102425.pdf",
-      "specifications_url": "/file/5574/2324ScienceSpecs.pdf",
-      "timeline_url": "/file/5574/2324K12Sci-PubTimeCheck.pdf",
-      "short_bid_url": "/file/5574/K12Science-2324-ShortBidList.pdf",
-      "detailed_bid_url": "/file/5574/DetailedBidReport.pdf",
+      "latest_list_url": "https://www.fldoe.org/file/5574/2324-Sci-IM-AdoptionList-102425.pdf",
+      "specifications_url": "https://www.fldoe.org/file/5574/2324ScienceSpecs.pdf",
+      "timeline_url": "https://www.fldoe.org/file/5574/2324K12Sci-PubTimeCheck.pdf",
+      "short_bid_url": "https://www.fldoe.org/file/5574/K12Science-2324-ShortBidList.pdf",
+      "detailed_bid_url": "https://www.fldoe.org/file/5574/DetailedBidReport.pdf",
       "publisher_contact_urls": [
-        "/file/5574/K12Science-2324-PubContactList.pdf"
+        "https://www.fldoe.org/file/5574/K12Science-2324-PubContactList.pdf"
       ]
     }
   ]

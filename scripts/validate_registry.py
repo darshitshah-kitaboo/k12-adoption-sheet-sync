@@ -1,24 +1,30 @@
 """
 Validate every URL in registry/sources.json by fetching it live.
 
-Runs in GitHub Actions (where outbound .gov access works) and locally on any
-machine with internet. Produces a verification report and optionally stamps
-last_verified on each state entry when all its URLs return 200.
+Uses the `requests` library with browser-realistic headers, cookie persistence,
+and automatic redirect handling. This matches how a real user's browser would
+access these state DOE sites, which is necessary because many state servers
+return 403 to urllib's default User-Agent or bounce through session cookies
+that stdlib urllib drops on the floor.
+
+Install once:
+    pip3 install requests
 
 Exit codes:
-  0   all priority-1 (active adoption) state URLs returned 200
-  1   one or more priority-1 URLs failed
-  2   unexpected error (registry file missing, malformed, etc.)
+    0   all priority-1 (active adoption) state URLs returned 200
+    1   one or more priority-1 URLs failed
+    2   unexpected error (registry file missing, malformed, etc.)
 
 Outputs:
-  registry/verification_report.json   per-URL status, timestamp, response time
-  registry/sources.json (in-place)    last_verified stamped on each state that
-                                       had every non-null URL return 200
+    registry/verification_report.json   per-URL status, timestamp, response time
+    registry/sources.json (in-place)    last_verified stamped on each state that
+                                         had every non-null URL return 200
 
 Usage:
-  python scripts/validate_registry.py           # verify + stamp
-  python scripts/validate_registry.py --dry     # verify without stamping
-  python scripts/validate_registry.py --quiet   # only print failures
+    python3 scripts/validate_registry.py              # verify + stamp
+    python3 scripts/validate_registry.py --dry        # verify without stamping
+    python3 scripts/validate_registry.py --quiet      # only print failures
+    python3 scripts/validate_registry.py --verbose    # print every URL attempt
 """
 
 import argparse
@@ -28,49 +34,101 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.request import Request, urlopen
-from urllib.error import HTTPError, URLError
-import ssl
+
+try:
+    import requests
+    from requests.adapters import HTTPAdapter
+    from urllib3.util.retry import Retry
+except ImportError:
+    print("FATAL: requests library not installed.", file=sys.stderr)
+    print("Run: pip3 install requests", file=sys.stderr)
+    sys.exit(2)
 
 ROOT = Path(__file__).resolve().parent.parent
 REGISTRY = ROOT / "registry" / "sources.json"
 REPORT = ROOT / "registry" / "verification_report.json"
 
-# Honest UA so state webmasters can trace traffic back to us if they wonder.
-USER_AGENT = (
-    "Mozilla/5.0 (compatible; KitabooAdoptionScraper/1.0; "
-    "+https://kitaboo.com; adoption-intel@kitaboo.com)"
-)
+# Browser-realistic headers. State DOE sites routinely 403 anything that looks
+# scripted. This matches Chrome 120 on macOS. Do not get creative here, the
+# header set is load-bearing for about a third of the 57 URLs.
+BROWSER_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/120.0.0.0 Safari/537.36"
+    ),
+    "Accept": (
+        "text/html,application/xhtml+xml,application/xml;q=0.9,"
+        "image/avif,image/webp,image/apng,*/*;q=0.8,"
+        "application/signed-exchange;v=b3;q=0.7"
+    ),
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
+}
 
-TIMEOUT = 20
-MAX_WORKERS = 8  # low enough to stay polite to small state DOE servers
+TIMEOUT = 30  # generous, some state sites are genuinely slow
+MAX_WORKERS = 8
+MAX_RETRIES = 2  # in addition to the initial attempt
+
+
+def build_session():
+    """Session with browser headers, cookie jar, and retry on transient errors."""
+    s = requests.Session()
+    s.headers.update(BROWSER_HEADERS)
+
+    # Retry on the common transient codes. Do not retry on 403/404, those are
+    # deterministic and retrying just wastes time.
+    retry = Retry(
+        total=MAX_RETRIES,
+        backoff_factor=1.0,
+        status_forcelist=[500, 502, 503, 504],
+        allowed_methods=["GET", "HEAD"],
+        raise_on_status=False,
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    s.mount("http://", adapter)
+    s.mount("https://", adapter)
+    return s
 
 
 def fetch_status(url, timeout=TIMEOUT):
-    """Return (status_code, final_url, elapsed_ms, error_msg).
-
-    status_code is None on network failure. Final URL is the landing page after
-    redirects. Elapsed time helps spot pages that are nominally up but so slow
-    they'd break a nightly scraper run.
-    """
-    ctx = ssl.create_default_context()
-    # Some state sites serve expired certs. Do not fail validation for that.
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
-
+    """Return (status_code, final_url, elapsed_ms, error_msg)."""
     started = time.perf_counter()
+    session = build_session()
     try:
-        req = Request(url, headers={"User-Agent": USER_AGENT})
-        with urlopen(req, timeout=timeout, context=ctx) as r:
+        # Some state sites (e.g. WVDE) reject HEAD but allow GET. Skip HEAD
+        # and go straight to GET with stream=True so we don't actually
+        # download the body.
+        r = session.get(url, timeout=timeout, allow_redirects=True, stream=True)
+        r.close()
+        elapsed = int((time.perf_counter() - started) * 1000)
+        return r.status_code, r.url, elapsed, None
+    except requests.exceptions.SSLError as e:
+        # Retry once ignoring SSL. Some state sites have expired or
+        # misconfigured certs but the page itself is up.
+        try:
+            r = session.get(url, timeout=timeout, allow_redirects=True,
+                            stream=True, verify=False)
+            r.close()
             elapsed = int((time.perf_counter() - started) * 1000)
-            return r.status, r.geturl(), elapsed, None
-    except HTTPError as e:
+            return r.status_code, r.url, elapsed, "SSL warning (ignored)"
+        except Exception as e2:
+            elapsed = int((time.perf_counter() - started) * 1000)
+            return None, url, elapsed, f"SSLError: {e2}"
+    except requests.exceptions.Timeout:
         elapsed = int((time.perf_counter() - started) * 1000)
-        return e.code, url, elapsed, f"HTTP {e.code}: {e.reason}"
-    except URLError as e:
+        return None, url, elapsed, f"Timeout after {timeout}s"
+    except requests.exceptions.ConnectionError as e:
         elapsed = int((time.perf_counter() - started) * 1000)
-        return None, url, elapsed, f"URLError: {e.reason}"
-    except Exception as e:
+        return None, url, elapsed, f"ConnectionError: {e}"
+    except requests.exceptions.RequestException as e:
         elapsed = int((time.perf_counter() - started) * 1000)
         return None, url, elapsed, f"{type(e).__name__}: {e}"
 
@@ -99,6 +157,8 @@ def main():
                     help="Validate without writing last_verified stamps")
     ap.add_argument("--quiet", action="store_true",
                     help="Only print failures, suppress per-URL 200s")
+    ap.add_argument("--verbose", action="store_true",
+                    help="Print every URL attempt with full context")
     args = ap.parse_args()
 
     if not REGISTRY.exists():
@@ -119,8 +179,13 @@ def main():
 
     print(f"Verifying {len(jobs)} URLs across "
           f"{len(registry['states'])} states "
-          f"(max_workers={MAX_WORKERS}, timeout={TIMEOUT}s)")
+          f"(max_workers={MAX_WORKERS}, timeout={TIMEOUT}s, retries={MAX_RETRIES})")
     started_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+    # Suppress the noisy InsecureRequestWarning from urllib3 for fallback
+    # unverified requests.
+    import warnings
+    warnings.filterwarnings("ignore", message="Unverified HTTPS request")
 
     results = {}
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
@@ -136,11 +201,9 @@ def main():
                 "elapsed_ms": elapsed,
                 "error": err,
             }
-            if not args.quiet or status != 200:
+            if args.verbose or (not args.quiet) or status != 200:
                 tag = f"{status:>3}" if isinstance(status, int) else "ERR"
-                redir = ""
-                if final and final != url:
-                    redir = f"  -> {final}"
+                redir = f"  -> {final}" if (final and final != url) else ""
                 err_str = f"  {err}" if err else ""
                 print(f"  {code:3s} {stype:30s} {tag} {elapsed:>5}ms{redir}{err_str}")
 

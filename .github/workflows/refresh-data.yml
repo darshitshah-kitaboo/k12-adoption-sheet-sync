@@ -1,0 +1,71 @@
+name: refresh-data
+
+# Runs the state adapter coordinator from GitHub's US-based runner.
+# Each adapter fetches its state's DOE page, parses it, and writes a
+# fresh snapshot to scraped/<STATE>.json. If any meaningful field changed
+# since the previous snapshot, a change log is written to logs/changes/.
+#
+# The coordinator does NOT touch adoption_data.json. That is the canonical
+# human-curated file. The pipeline is deliberately read-only against it;
+# a human reviews logs/changes/ and promotes confirmed updates.
+#
+# Triggers:
+#   - Manual run from the Actions tab (workflow_dispatch)
+#   - Daily at 13:00 UTC (6:30 PM IST, 9:00 AM ET) — same window as the
+#     registry validator, different day slots to spread load.
+#   - On any push that changes the coordinator, an adapter, or this file
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 13 * * *'
+  push:
+    paths:
+      - 'scripts/run_adapters.py'
+      - 'scripts/adapters/**'
+      - '.github/workflows/refresh-data.yml'
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run adapter smoke tests
+        run: python scripts/adapters/test_fl.py
+
+      - name: Run coordinator
+        id: coord
+        run: python scripts/run_adapters.py
+        continue-on-error: true
+
+      - name: Commit snapshots and change logs
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scraped/ logs/adapter_runs.jsonl logs/changes/ 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh state adapter snapshots [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Fail the job if a required adapter failed
+        if: steps.coord.outcome == 'failure'
+        run: |
+          echo "A required adapter failed. See logs/adapter_runs.jsonl."
+          tail -1 logs/adapter_runs.jsonl || true
+          exit 1

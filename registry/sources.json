@@ -20,7 +20,7 @@
       "name": "Alabama",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.alabamaachieves.org/content-areas-specialty/textbook-adoption-and-procurement/",
@@ -74,7 +74,7 @@
       "name": "California",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.cde.ca.gov/ci/cr/cf/",
@@ -155,7 +155,7 @@
       "name": "Indiana",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
@@ -182,7 +182,7 @@
       "name": "Kentucky",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.education.ky.gov/curriculum/books/Pages/default.aspx",
@@ -209,7 +209,7 @@
       "name": "Louisiana",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://doe.louisiana.gov/school-system-leaders/instructional-materials-reviews",
@@ -236,7 +236,7 @@
       "name": "Mississippi",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://msinstructionalmaterials.org/resources/adoption/",
@@ -317,7 +317,7 @@
       "name": "Oklahoma",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://oklahoma.gov/education/services/hqim.html",
@@ -371,7 +371,7 @@
       "name": "South Carolina",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://ed.sc.gov/instruction/instructional-materials/",
@@ -506,7 +506,7 @@
       "name": "West Virginia",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://wvde.us/middle-secondary-learning/resources/instructional-resources-review-and-adoption/adoption-schedule-law-code-and-policies/",

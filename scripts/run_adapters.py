@@ -55,6 +55,10 @@ ADAPTERS = {
     "LA": {"module": "scripts.adapters.la", "required": True},
     "TN": {"module": "scripts.adapters.tn", "required": True},
     "OK": {"module": "scripts.adapters.ok", "required": True},
+    "AL": {"module": "scripts.adapters.al", "required": True},
+    "MS": {"module": "scripts.adapters.ms", "required": True},
+    "SC": {"module": "scripts.adapters.sc", "required": True},
+    "VA": {"module": "scripts.adapters.va", "required": True},
 }
 
 # Fields in a cycle record that count as meaningful when diffing. Changes
@@ -96,6 +100,19 @@ MEANINGFUL_FIELDS = (
     "substitution_memo_url",
     "substitution_flyer_url",
     "substitution_guidance_url",
+    # Alabama fields
+    "approved_list_url",
+    "approved_board_meeting_date",
+    "pending_list_url",
+    "pending_board_meeting_date",
+    # Mississippi fields
+    "adopted_materials_url",
+    # South Carolina fields
+    "approved_materials_url",
+    # Virginia fields
+    "current_review_title",
+    "current_review_url",
+    "current_review_date",
 )
 
 

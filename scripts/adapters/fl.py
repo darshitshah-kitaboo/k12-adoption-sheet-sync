@@ -42,6 +42,7 @@ import re
 import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
+from urllib.parse import urljoin
 
 try:
     import requests
@@ -121,8 +122,13 @@ def _walk_block(start_element, stop_tags=("h2", "h3")):
     return " ".join(text_parts), links
 
 
-def _build_cycle(subject, ay_start, ay_end, text, links):
-    """Produce a single cycle record from a subject block."""
+def _build_cycle(subject, ay_start, ay_end, text, links, source_url):
+    """Produce a single cycle record from a subject block.
+
+    URLs are absolutized against source_url so downstream consumers
+    (dashboards, spreadsheets, emails) can use the hrefs directly without
+    needing to know they came from the FLDOE site.
+    """
     bid_count = None
     m = BID_COUNT_RE.search(text)
     if m:
@@ -137,6 +143,7 @@ def _build_cycle(subject, ay_start, ay_end, text, links):
     publisher_contact_urls = []
 
     for link_text, href in links:
+        href = urljoin(source_url, href)  # normalize relative paths to absolute
         lower_text = link_text.lower()
         lower_href = href.lower()
         if "adoption list" in lower_text or "imal" in lower_href or "adoption-list" in lower_href:
@@ -188,7 +195,7 @@ def parse(html, source_url=SOURCE_URL):
         if inline_subject:
             # "2023-2024 Adoption Year: K-12 Science" style. Whole block is one subject.
             text, links = _walk_block(h2, stop_tags=("h2",))
-            cycles.append(_build_cycle(inline_subject, ay_start, ay_end, text, links))
+            cycles.append(_build_cycle(inline_subject, ay_start, ay_end, text, links, source_url))
         else:
             # Normal shape. Walk h3 subject subsections under this h2.
             for sib in h2.find_next_siblings():
@@ -198,7 +205,7 @@ def parse(html, source_url=SOURCE_URL):
                 if name == "h3":
                     subject = sib.get_text(" ", strip=True)
                     text, links = _walk_block(sib)
-                    cycles.append(_build_cycle(subject, ay_start, ay_end, text, links))
+                    cycles.append(_build_cycle(subject, ay_start, ay_end, text, links, source_url))
 
     return {
         "state": STATE_CODE,

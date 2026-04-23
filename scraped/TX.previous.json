@@ -2,7 +2,7 @@
   "state": "TX",
   "name": "Texas",
   "source_url": "https://sboe.texas.gov/state-board-of-education/imra/current-imra-cycle",
-  "scraped_at": "2026-04-23T09:25:06+00:00",
+  "scraped_at": "2026-04-23T09:19:45+00:00",
   "cycle_year": 2026,
   "cycle_count": 9,
   "cycles": [
@@ -83,12 +83,7 @@
       "rfim_url": "https://tea.texas.gov/state-board-of-education/imra/imra26-rfim.pdf",
       "process_url": "https://tea.texas.gov/state-board-of-education/imra/imra-process-2026.pdf",
       "suitability_rubric_url": "https://tea.texas.gov/state-board-of-education/imra/imra25-sboe-suitability-rubric-approved-11-22-24.pdf",
-      "quality_rubric_urls": [
-        "https://tea.texas.gov/state-board-of-education/imra/imra25-elar-k3-sboe-approved-quality-rubric.pdf",
-        "https://tea.texas.gov/state-board-of-education/imra/imra25-elar-4-8-sboe-approved-quality-rubric.pdf",
-        "https://tea.texas.gov/state-board-of-education/imra/imra25-slar-k3-sboe-approed-quality-rubric.pdf",
-        "https://tea.texas.gov/state-board-of-education/imra/imra25-slar-4-6-sboe-approved-quality-rubric.pdf"
-      ]
+      "quality_rubric_urls": []
     },
     {
       "subject": "K\u201312 English mathematics",
@@ -125,9 +120,7 @@
       "rfim_url": "https://tea.texas.gov/state-board-of-education/imra/imra26-rfim.pdf",
       "process_url": "https://tea.texas.gov/state-board-of-education/imra/imra-process-2026.pdf",
       "suitability_rubric_url": "https://tea.texas.gov/state-board-of-education/imra/imra25-sboe-suitability-rubric-approved-11-22-24.pdf",
-      "quality_rubric_urls": [
-        "https://tea.texas.gov/state-board-of-education/imra/imra26-supplemental-rla-k5-sboe-approved-quality-rubric.pdf"
-      ]
+      "quality_rubric_urls": []
     }
   ]
 }

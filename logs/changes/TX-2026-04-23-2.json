@@ -1,0 +1,44 @@
+{
+  "state": "TX",
+  "date": "2026-04-23",
+  "change_count": 2,
+  "changes": [
+    {
+      "type": "modified",
+      "key": [
+        "K\u20135 ELAR and SLAR",
+        2026,
+        2027,
+        "supplemental"
+      ],
+      "fields": {
+        "quality_rubric_urls": {
+          "old": [],
+          "new": [
+            "https://tea.texas.gov/state-board-of-education/imra/imra26-supplemental-rla-k5-sboe-approved-quality-rubric.pdf"
+          ]
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "K\u20133 English and Spanish phonics",
+        2026,
+        2027,
+        "partial-subject-tier-one"
+      ],
+      "fields": {
+        "quality_rubric_urls": {
+          "old": [],
+          "new": [
+            "https://tea.texas.gov/state-board-of-education/imra/imra25-elar-k3-sboe-approved-quality-rubric.pdf",
+            "https://tea.texas.gov/state-board-of-education/imra/imra25-elar-4-8-sboe-approved-quality-rubric.pdf",
+            "https://tea.texas.gov/state-board-of-education/imra/imra25-slar-k3-sboe-approed-quality-rubric.pdf",
+            "https://tea.texas.gov/state-board-of-education/imra/imra25-slar-4-6-sboe-approved-quality-rubric.pdf"
+          ]
+        }
+      }
+    }
+  ]
+}

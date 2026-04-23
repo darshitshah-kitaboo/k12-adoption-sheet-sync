@@ -1,0 +1,30 @@
+{
+  "state": "OK",
+  "date": "2026-04-23",
+  "change_count": 1,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "All subjects per Adoption Subject Cycle Calendar",
+        2026,
+        2027,
+        null
+      ],
+      "cycle": {
+        "subject": "All subjects per Adoption Subject Cycle Calendar",
+        "ay_start": 2026,
+        "ay_end": 2027,
+        "cycle_label": "2026-2027 STC Adoption Cycle",
+        "stc_calendar_url": "https://oklahoma.gov/content/dam/ok/en/osde/documents/services/standards-learning/hqim/Amended%20STC%20Calendar%202026.pdf",
+        "subject_cycle_calendar_url": "https://oklahoma.gov/content/dam/ok/en/osde/documents/services/standards-learning/hqim/Amended%20Subject%20Material%20Adoption%20Cycle%20Calendar%202026.pdf",
+        "data_privacy_form_url": "https://oklahoma.gov/content/dam/ok/en/osde/documents/services/standards-learning/hqim/information-for-publishers/Data%20Privacy%20and%20Integration%20Attestation%202026.pdf",
+        "out_of_cycle_flyer_url": "https://oklahoma.gov/content/dam/ok/en/osde/documents/services/standards-learning/hqim/information-for-publishers/Out%20of%20Cycle%20Flyer%202025.pdf",
+        "supplemental_form_url": null,
+        "substitution_memo_url": "https://oklahoma.gov/content/dam/ok/en/osde/documents/services/standards-learning/hqim/information-for-publishers/Intent%20to%20Substitute%20Memo%202025.pdf",
+        "substitution_flyer_url": "https://oklahoma.gov/content/dam/ok/en/osde/documents/services/standards-learning/hqim/information-for-publishers/Substitution%20Bid%202025.pdf",
+        "substitution_guidance_url": "https://oklahoma.gov/content/dam/ok/en/osde/documents/services/standards-learning/hqim/information-for-publishers/Publisher%20Updates%20During%20Contracted%20Adoption%20Period.pdf"
+      }
+    }
+  ]
+}

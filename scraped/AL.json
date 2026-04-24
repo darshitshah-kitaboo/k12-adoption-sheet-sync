@@ -1,0 +1,64 @@
+{
+  "state": "AL",
+  "name": "Alabama",
+  "source_url": "https://www.alabamaachieves.org/content-areas-specialty/textbook-adoption-and-procurement/",
+  "scraped_at": "2026-04-24T05:37:20+00:00",
+  "cycle_year": 2025,
+  "cycle_label": "2025-2026 Adoption",
+  "cycle_count": 5,
+  "adoption_cycle_schedule_url": "https://www.alabamaachieves.org/wp-content/uploads/2023/01/TAP_2023130_COS-Schedule-5-13-22_V1.0.pdf",
+  "adoption_process_forms_url": "https://www.alabamaachieves.org/wp-content/uploads/2022/03/TAP_2022316_AlabamaStateTextbookAdoptionProcessForms_V1.0.pdf",
+  "publishers_documents_url": null,
+  "cycles": [
+    {
+      "subject": "Arts Education",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "2025-2026 Adoption",
+      "approved_list_url": "https://www.alabamaachieves.org/wp-content/uploads/2026/04/TAP_2026331_ArtsEduReview_v1.pdf",
+      "approved_board_meeting_date": "2026-03-12",
+      "pending_list_url": "https://www.alabamaachieves.org/wp-content/uploads/2025/10/TAP_20251022_Arts-Education-Textbooks-and-Supplemental-Materials-List-2025-2026_v1.0.pdf",
+      "pending_board_meeting_date": "2025-11-13"
+    },
+    {
+      "subject": "Career and Technical Education",
+      "ay_start": 2024,
+      "ay_end": 2025,
+      "cycle_label": "2024-2025 Adoption",
+      "approved_list_url": "https://www.alabamaachieves.org/wp-content/uploads/2025/01/TAP_20250127_Alabama-State-Board-Approved-Rejected-CTE-Textbooks-and-Materials-2024-2025_V1.0.pdf",
+      "approved_board_meeting_date": "2024-12-12",
+      "pending_list_url": "https://www.alabamaachieves.org/wp-content/uploads/2024/10/TAP_20241022_Career-and-Technical-Education-Publisher-Submissions-2024-Revised_v1.0.pdf",
+      "pending_board_meeting_date": "2024-12-12"
+    },
+    {
+      "subject": "English Language Arts",
+      "ay_start": 2022,
+      "ay_end": 2023,
+      "cycle_label": "2022-2023 Adoption",
+      "approved_list_url": null,
+      "approved_board_meeting_date": null,
+      "pending_list_url": "https://www.alabamaachieves.org/wp-content/uploads/2023/01/TAP_2023127_ENGLISH-LANGUAGE-ARTS-K-3-MATERIALS-REVIEW-2022-2023_V1.0.pdf",
+      "pending_board_meeting_date": "2023-03-09"
+    },
+    {
+      "subject": "Science",
+      "ay_start": 2024,
+      "ay_end": 2025,
+      "cycle_label": "2024-2025 Adoption",
+      "approved_list_url": "https://www.alabamaachieves.org/wp-content/uploads/2025/01/TAP_2025124_Science-K-12-Adoption-2024-%E2%80%93-2025-Board-Information-Final-Scores-BA_v1.0.pdf",
+      "approved_board_meeting_date": "2024-12-12",
+      "pending_list_url": "https://www.alabamaachieves.org/wp-content/uploads/2024/10/TAP_20241024_Science-Textbooks-and-Supplemental-Materials-List-Submitted-for-State-Textbook-Committee-Review-2024-2025_v1.0.pdf",
+      "pending_board_meeting_date": null
+    },
+    {
+      "subject": "Social Studies",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "2025-2026 Adoption",
+      "approved_list_url": "https://www.alabamaachieves.org/wp-content/uploads/2026/03/TAP_20260312_ApprovedRejectedSocialStudiesTextbooks20252026_v1.pdf",
+      "approved_board_meeting_date": "2026-03-12",
+      "pending_list_url": "https://www.alabamaachieves.org/wp-content/uploads/2025/10/TAP_20251027_Social-Studies-Textbooks-and-Supplemental-Materials-List-2025-2026_v1.0.pdf",
+      "pending_board_meeting_date": "2025-11-13"
+    }
+  ]
+}

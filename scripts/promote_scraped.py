@@ -21,12 +21,16 @@ Promotion rules (conservative by design):
    current_review_url. These are the URLs a publisher actually needs
    during an open call.
 
-3. If a cycle's `ac` (Active Call Open) is False but the scraped
-   snapshot reports an active cycle (state-level has_active_cycle /
-   has_active_review, or a cycle-level actionable URL from rule 2),
-   flip `ac` to True. Does NOT flip True -> False; adapters can miss a
-   Call for Bids that exists on a subpage, so the False->True direction
-   is the only safe automation.
+3. If a cycle's `ac` (Active Call Open) is False but the scraper found
+   a cycle-level actionable URL for this cycle (rule 2), flip `ac` to
+   True. State-level has_active_cycle / has_active_review alone is not
+   enough; those flags are blunt signals that can fire on an off-cycle
+   page (e.g. NC listing "bid + textbook" anchors in archives). We
+   also require the cycle to already carry a real ISO deadline (dl),
+   because the front-end countdown widget needs one and validate.py
+   fails the build otherwise. Never flips True -> False; adapters can
+   miss a Call for Bids that exists on a subpage, so the False->True
+   direction is the only safe automation.
 
 4. Resolve the `src` field:
      a. If src is empty/TBD, fill it with the best URL available
@@ -60,10 +64,17 @@ Exit codes:
 
 import argparse
 import json
+import re
 import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
+
+# ISO date (YYYY-MM-DD). Used to guard the ac False->True flip so we
+# never flip a cycle active when its dl field is still a placeholder
+# like "TBD" or "Fall 2027". The front-end countdown widget needs a
+# real date, and validate.py fails the build if the pair is mismatched.
+_ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 ROOT = Path(__file__).resolve().parent.parent
 ADOPTION_PATH = ROOT / "adoption_data.json"
@@ -254,10 +265,17 @@ def promote(adoption, snapshots, today_iso):
             scraped_cycle = find_scraped_cycle(snap_cycles, cycle)
             cycle_actionable = actionable_url(scraped_cycle)
 
-            # Rule 3: flip ac False -> True on any active signal.
-            cycle_active_signal = (
-                bool(cycle_actionable) or state_active_signal)
-            if cycle_active_signal and cycle.get("ac") is False:
+            # Rule 3: flip ac False -> True only on cycle-level evidence
+            # AND only when the cycle already has a real ISO deadline.
+            # State-level flags are too blunt (NC, for example, trips
+            # on archive anchors), and flipping ac True with dl="TBD"
+            # breaks the front-end countdown and fails validate.py.
+            dl_is_iso = bool(
+                cycle.get("dl")
+                and _ISO_DATE.match(str(cycle.get("dl"))))
+            if (cycle_actionable
+                    and dl_is_iso
+                    and cycle.get("ac") is False):
                 cycle["ac"] = True
                 state_summary["ac_flipped"] += 1
 

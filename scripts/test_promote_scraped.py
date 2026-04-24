@@ -109,8 +109,10 @@ def run():
                     },
                 ],
             },
-            # UT: cycle has null src (should be filled) and ac False with
-            # a scraped active-review signal (should flip to True).
+            # UT: cycle has null src (should be filled). Scraped snapshot
+            # carries a state-level has_active_review flag but NO cycle-
+            # level actionable URL, so under the tightened rule 3 ac
+            # must stay False. A bare state flag is not enough.
             {
                 "code": "UT",
                 "name": "Utah",
@@ -121,6 +123,7 @@ def run():
                         "su": "Mathematics",
                         "src": None,
                         "v": "2026-04-15",
+                        "dl": "2026-09-01",
                         "ac": False,
                     },
                 ],
@@ -193,8 +196,9 @@ def run():
                 ],
             },
             # ID: existing src points at a landing page and scraper has a
-            # cycle-level call_for_bids_url. Rule 4b should flip ac True
-            # AND replace src with the actionable URL. No conflict.
+            # cycle-level call_for_bids_url. Cycle already carries an
+            # ISO dl, so rule 3 flips ac to True and rule 4b replaces
+            # src with the actionable URL. No conflict.
             {
                 "code": "ID",
                 "name": "Idaho",
@@ -205,6 +209,26 @@ def run():
                         "su": "Science",
                         "src": "https://www.sde.idaho.gov/instructional-materials/",
                         "v": "2026-04-15",
+                        "dl": "2026-06-15",
+                        "ac": False,
+                    },
+                ],
+            },
+            # NV: cycle-level actionable URL is present BUT cycle dl is
+            # still a "TBD" placeholder. ac must stay False because the
+            # front-end countdown cannot render and validate.py would
+            # fail if we flipped it active.
+            {
+                "code": "NV",
+                "name": "Nevada",
+                "last_verified": "2026-04-15",
+                "cycles": [
+                    {
+                        "id": "NV1",
+                        "su": "Mathematics",
+                        "src": "https://doe.nv.gov/textbooks/",
+                        "v": "2026-04-15",
+                        "dl": "TBD",
                         "ac": False,
                     },
                 ],
@@ -257,6 +281,16 @@ def run():
                     "https://www.sde.idaho.gov/im/call-for-bids-2026-science.pdf",
             }],
         },
+        "NV": {
+            "state": "NV",
+            "source_url": "https://doe.nv.gov/textbooks/",
+            "cycle_count": 1,
+            "cycles": [{
+                "subject": "Mathematics",
+                "call_for_bids_url":
+                    "https://doe.nv.gov/textbooks/call-for-bids-math-2026.pdf",
+            }],
+        },
         # OK intentionally absent to confirm no-op path.
     }
 
@@ -279,7 +313,7 @@ def run():
         _fail(f"NC cycle ac should stay False, got {c['ac']}")
     _ok("NC: timestamps bumped, src preserved, ac stays False")
 
-    # UT: v bumped, src filled, ac flipped to True.
+    # UT: v bumped, src filled, ac stays False (no cycle-level URL).
     ut = states_by_code["UT"]
     if ut["last_verified"] != today:
         _fail(f"UT last_verified wrong: {ut['last_verified']}")
@@ -288,9 +322,9 @@ def run():
         _fail(f"UT cycle v wrong: {c['v']}")
     if c["src"] != "https://schools.utah.gov/curr/imc":
         _fail(f"UT cycle src should be filled, got {c['src']}")
-    if c["ac"] is not True:
-        _fail(f"UT cycle ac should flip to True, got {c['ac']}")
-    _ok("UT: v bumped, null src filled, ac flipped to True")
+    if c["ac"] is not False:
+        _fail(f"UT cycle ac should stay False without cycle-level URL, got {c['ac']}")
+    _ok("UT: v bumped, null src filled, ac stays False (state flag alone is not enough)")
 
     # TX: v bumped, src NOT overwritten, conflict logged.
     tx = states_by_code["TX"]
@@ -356,6 +390,17 @@ def run():
     if id_change["ac_flipped"] != 1:
         _fail(f"ID ac_flipped should be 1, got {id_change['ac_flipped']}")
     _ok("ID: active-cycle URL replaces landing page, ac flipped, no conflict")
+
+    # NV: cycle-level URL but dl="TBD" means ac MUST stay False. The
+    # validator would otherwise fail the pipeline complaining that an
+    # active cycle has a non-ISO dl.
+    nv = states_by_code["NV"]
+    c = nv["cycles"][0]
+    if c["ac"] is not False:
+        _fail(f"NV cycle ac should stay False when dl is TBD, got {c['ac']}")
+    if c["dl"] != "TBD":
+        _fail(f"NV cycle dl should remain 'TBD', got {c['dl']}")
+    _ok("NV: ac stays False when dl is a non-ISO placeholder")
 
     # Changes summary should have an entry for each state that actually moved.
     states_in_changes = {c["state"] for c in changes}

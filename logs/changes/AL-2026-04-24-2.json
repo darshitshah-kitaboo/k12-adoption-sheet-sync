@@ -1,0 +1,27 @@
+{
+  "state": "AL",
+  "date": "2026-04-24",
+  "change_count": 1,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "Digital Literacy and Computer Science",
+        2026,
+        2027,
+        null
+      ],
+      "cycle": {
+        "subject": "Digital Literacy and Computer Science",
+        "ay_start": 2026,
+        "ay_end": 2027,
+        "cycle_label": "2026-2027 Adoption",
+        "approved_list_url": null,
+        "approved_board_meeting_date": null,
+        "pending_list_url": null,
+        "pending_board_meeting_date": null,
+        "call_for_bids_url": "https://www.alabamaachieves.org/wp-content/uploads/2026/02/TAP_20260227_DigitalLiteracyCSBidPacket_v1.pdf"
+      }
+    }
+  ]
+}

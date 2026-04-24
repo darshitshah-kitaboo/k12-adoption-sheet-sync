@@ -1,0 +1,24 @@
+{
+  "state": "SC",
+  "date": "2026-04-24",
+  "change_count": 1,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "Instructional Materials",
+        2026,
+        2027,
+        null
+      ],
+      "cycle": {
+        "subject": "Instructional Materials",
+        "ay_start": 2026,
+        "ay_end": 2027,
+        "cycle_label": "2026-27 Adoption",
+        "approved_materials_url": null,
+        "call_for_bids_url": "https://ed.sc.gov/instruction/instructional-materials/information-for-publishers/2026-call-for-bids-for-instructional-materials/"
+      }
+    }
+  ]
+}

@@ -80,9 +80,28 @@ _MONTHS = ["january", "february", "march", "april", "may", "june",
 
 # Anchor text signals. "approved" and "rejected" both appear in final
 # list titles ("State Board Approved/Rejected ..."). "submitted for state
-# textbook committee review" is the pending review list.
+# textbook committee review" is the pending review list. "bid packet"
+# titles mark an active Call for Bids and are the URL publishers need
+# during an open submission window. On alabamaachieves.org the current
+# bid packets live in a separate "Publisher's - Documents" section
+# below the subject blocks, which is why we run a second page-wide scan
+# (see _find_bid_packets_page_wide) rather than relying on subject
+# siblings alone.
 APPROVED_TERMS = ("state board approved", "approved/rejected")
 PENDING_TERMS = ("submitted for state textbook committee review",)
+BID_PACKET_TERMS = ("bid packet",)
+
+# "Bid Packet" trailer we strip when deriving subject name from a bid
+# packet anchor title. Order matters; longest variant first.
+BID_PACKET_TITLE_SUFFIXES = (
+    "letter and bid packet",
+    "memo and bid packet",
+    "bid packet",
+)
+
+# Words that should not count as part of a bid packet subject name.
+# "k3", "k-3", "k12" are grade-band qualifiers on the ELA anchor.
+_STOP_SUBJECT_TOKENS = {"k3", "k-3", "k12", "k-12", "grades", "grade"}
 
 
 def fetch_html(url=SOURCE_URL):
@@ -214,8 +233,8 @@ def _section_items_vcrow(subject_row, source_url):
 def _classify(anchor_text):
     """Return (kind, (ay_start, ay_end)) for an anchor title.
 
-    kind is 'approved', 'pending', or None. Year range is None if the
-    title did not include a YYYY-YYYY fragment.
+    kind is 'approved', 'pending', 'bid_packet', or None. Year range
+    is None if the title did not include a YYYY-YYYY fragment.
     """
     low = anchor_text.lower()
     year_m = YEAR_RANGE_RE.search(anchor_text)
@@ -230,6 +249,9 @@ def _classify(anchor_text):
     for term in PENDING_TERMS:
         if term in low:
             return "pending", year
+    for term in BID_PACKET_TERMS:
+        if term in low:
+            return "bid_packet", year
     return None, year
 
 
@@ -265,6 +287,147 @@ def _meeting_date(description):
         return f"{year:04d}-{month:02d}-{day:02d}"
     except (ValueError, IndexError):
         return None
+
+
+def _bid_packet_subject(title):
+    """Derive the subject name from a bid packet anchor title.
+
+    Alabama titles look like:
+      "2026 - 2027 Digital Literacy and Computer Science Bid Packet"
+      "ELA 2022-23 K3 Letter and Bid Packet"
+      "2022-2023 Career and Technical Education Bid Packet"
+
+    Strategy: strip the year range and the trailing "Bid Packet" phrase,
+    then drop grade-band qualifiers. Returns the subject string or None
+    when nothing usable is left.
+    """
+    if not title:
+        return None
+    text = title.strip()
+    low = text.lower()
+    for suffix in BID_PACKET_TITLE_SUFFIXES:
+        idx = low.rfind(suffix)
+        if idx != -1:
+            text = text[:idx].strip()
+            break
+    # Remove year range anywhere in the remaining text.
+    text = YEAR_RANGE_RE.sub("", text)
+    # Alabama sometimes uses compact "2022-23" which YEAR_RANGE_RE
+    # does not match; clean that too.
+    text = re.sub(r"\b\d{4}\s*[\u2013\-]\s*\d{2}\b", "", text)
+    # Drop grade-band tokens and stray punctuation.
+    tokens = [t for t in re.split(r"\s+", text) if t]
+    tokens = [t for t in tokens if t.lower().strip(",.()") not in _STOP_SUBJECT_TOKENS]
+    cleaned = " ".join(tokens).strip(" -,")
+    return cleaned or None
+
+
+def _bid_packet_year(title):
+    """Extract (ay_start, ay_end) from a bid packet anchor title.
+
+    Supports both "2026-2027" and "2022-23" styles. Returns None when
+    no year range can be found.
+    """
+    m = YEAR_RANGE_RE.search(title or "")
+    if m:
+        return (int(m.group(1)), int(m.group(2)))
+    m = re.search(r"(\d{4})\s*[\u2013\-]\s*(\d{2})\b", title or "")
+    if m:
+        start = int(m.group(1))
+        end = int(str(start)[:2] + m.group(2))
+        return (start, end)
+    return None
+
+
+def _find_bid_packets_page_wide(soup, source_url, today_year):
+    """Collect the newest ACTIVE bid packet anchor per subject.
+
+    The live alabamaachieves.org page places current bid packets in a
+    "Publisher's - Documents" section far from the subject h3 that each
+    packet is actually about, so a subject-sibling walk misses them.
+    This scan covers the whole page, filters to bid packets whose AY
+    start is current or future (so multi-year-old packets do not look
+    active), and keeps the newest packet per subject.
+
+    Returns {subject_lower: {"subject": str, "href": str, "text": str,
+    "ay_start": int, "ay_end": int}}.
+    """
+    out = {}
+    for a in soup.find_all("a", href=True):
+        href = (a.get("href") or "").strip()
+        if not href:
+            continue
+        text = a.get("title") or a.get_text(" ", strip=True)
+        if not text or "bid packet" not in text.lower():
+            continue
+        years = _bid_packet_year(text)
+        if years is None:
+            continue
+        if years[0] < today_year:
+            # Historical bid packet, not an open call anymore.
+            continue
+        subject = _bid_packet_subject(text)
+        if not subject:
+            continue
+        key = subject.lower()
+        prior = out.get(key)
+        if prior is None or years[0] > prior["ay_start"]:
+            out[key] = {
+                "subject": subject,
+                "href": urljoin(source_url, href),
+                "text": text,
+                "ay_start": years[0],
+                "ay_end": years[1],
+            }
+    return out
+
+
+_SUBJECT_STOP_WORDS = {"and", "the", "of", "for", "or", "in", "a", "an"}
+
+
+def _subject_tokens(s):
+    """Lowercase content words used to score subject overlap."""
+    if not s:
+        return set()
+    raw = re.split(r"[^a-z0-9]+", s.lower())
+    return {t for t in raw if t and t not in _SUBJECT_STOP_WORDS}
+
+
+def _match_subject(cycles, bid_subject):
+    """Find the cycle whose subject best matches `bid_subject`.
+
+    Exact case-insensitive match wins. Otherwise we require at least 2
+    overlapping content words so a single shared token like "science"
+    does not wrongly map a Digital Literacy and Computer Science bid
+    packet onto the Science cycle. Among remaining candidates, prefer
+    more overlap and the longer (more specific) cycle subject. Returns
+    None when nothing overlaps cleanly, so the caller creates a new
+    cycle for the bid packet's subject.
+    """
+    target = (bid_subject or "").lower()
+    if not target:
+        return None
+    for cycle in cycles:
+        if cycle["subject"].lower() == target:
+            return cycle
+    target_tokens = _subject_tokens(bid_subject)
+    if not target_tokens:
+        return None
+    best = None
+    best_score = 0
+    best_len = 0
+    for cycle in cycles:
+        s = cycle["subject"]
+        cycle_tokens = _subject_tokens(s)
+        overlap = len(target_tokens & cycle_tokens)
+        if overlap < 2:
+            continue
+        if (overlap > best_score
+                or (overlap == best_score and len(s) > best_len)):
+            best = cycle
+            best_score = overlap
+            best_len = len(s)
+    return best
 
 
 def parse(html, source_url=SOURCE_URL):
@@ -308,20 +471,25 @@ def parse(html, source_url=SOURCE_URL):
         items = _section_items(h3, source_url)
         approved = _latest(items, "approved")
         pending = _latest(items, "pending")
+        bid_packet = _latest(items, "bid_packet")
 
-        if not approved and not pending:
+        if not approved and not pending and not bid_packet:
             # A subject heading with no trackable cycle (Health/PE had
             # only pre-2016 entries at the time of writing). Skip it so
             # we do not emit a stale record with no urls.
             continue
 
-        # Reference record used to stamp the cycle's AY. Prefer pending
-        # when it is the newer of the two since that signals the next
-        # upcoming cycle; otherwise take approved.
-        if pending and (not approved or pending["ay_start"] >= approved["ay_start"]):
-            ref = pending
-        else:
-            ref = approved
+        # Reference record used to stamp the cycle's AY. The newest
+        # year among bid_packet, pending, approved wins because it
+        # signals the most recent step in that subject's cycle. When
+        # tied, bid_packet > pending > approved because a bid packet
+        # is the actionable signal for an open call.
+        ref = approved
+        for candidate in (pending, bid_packet):
+            if not candidate:
+                continue
+            if ref is None or candidate["ay_start"] >= ref["ay_start"]:
+                ref = candidate
 
         ay_start = ref["ay_start"]
         ay_end = ref["ay_end"]
@@ -342,7 +510,58 @@ def parse(html, source_url=SOURCE_URL):
             "pending_list_url": pending["href"] if pending else None,
             "pending_board_meeting_date": _meeting_date(
                 pending.get("description") if pending else None),
+            "call_for_bids_url": bid_packet["href"] if bid_packet else None,
         })
+
+    # Second pass: the live page keeps current bid packets in a
+    # "Publisher's - Documents" block below the subject blocks, so a
+    # subject-sibling walk misses them. Scan the whole page for bid
+    # packet anchors with a current-or-future AY and attach them to
+    # the matching subject cycle. If a subject has only a bid packet
+    # and no approved/pending list yet, create a cycle for it so the
+    # actionable URL still shows up downstream.
+    today_year = datetime.now(timezone.utc).year
+    bid_packets = _find_bid_packets_page_wide(soup, source_url, today_year)
+    for bp in bid_packets.values():
+        existing = _match_subject(cycles, bp["subject"])
+        if existing is not None:
+            # Prefer the newest cycle-level URL only when the bid packet
+            # is newer than whatever was in the subject block (which is
+            # almost always the case when the subject block shows a
+            # historical approved list).
+            if (not existing.get("call_for_bids_url")
+                    or bp["ay_start"] >= existing["ay_start"]):
+                existing["call_for_bids_url"] = bp["href"]
+                if bp["ay_start"] > existing["ay_start"]:
+                    existing["ay_start"] = bp["ay_start"]
+                    existing["ay_end"] = bp["ay_end"]
+                    existing["cycle_label"] = (
+                        f"{bp['ay_start']}-{bp['ay_end']} Adoption")
+                    if (newest_ay_start is None
+                            or bp["ay_start"] > newest_ay_start):
+                        newest_ay_start = bp["ay_start"]
+                        newest_cycle_label = existing["cycle_label"]
+        else:
+            # Subject not present in the subject h3 loop. Emit a
+            # minimal cycle record so the publisher still sees the
+            # active call.
+            cycle_label = f"{bp['ay_start']}-{bp['ay_end']} Adoption"
+            cycles.append({
+                "subject": bp["subject"],
+                "ay_start": bp["ay_start"],
+                "ay_end": bp["ay_end"],
+                "cycle_label": cycle_label,
+                "approved_list_url": None,
+                "approved_board_meeting_date": None,
+                "pending_list_url": None,
+                "pending_board_meeting_date": None,
+                "call_for_bids_url": bp["href"],
+            })
+            if newest_ay_start is None or bp["ay_start"] > newest_ay_start:
+                newest_ay_start = bp["ay_start"]
+                newest_cycle_label = cycle_label
+
+    has_active_cycle = any(c.get("call_for_bids_url") for c in cycles)
 
     return {
         "state": STATE_CODE,
@@ -352,6 +571,7 @@ def parse(html, source_url=SOURCE_URL):
         "cycle_year": newest_ay_start,
         "cycle_label": newest_cycle_label,
         "cycle_count": len(cycles),
+        "has_active_cycle": has_active_cycle,
         "adoption_cycle_schedule_url": adoption_cycle_schedule_url,
         "adoption_process_forms_url": adoption_process_forms_url,
         "publishers_documents_url": publishers_documents_url,

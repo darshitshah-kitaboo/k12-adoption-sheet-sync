@@ -70,6 +70,12 @@ ADAPTERS = {
     "MS": {"module": "scripts.adapters.ms", "required": True},
     "SC": {"module": "scripts.adapters.sc", "required": False},
     "VA": {"module": "scripts.adapters.va", "required": False},
+    # Batch B. NC and UT are new and have not been run against live pages
+    # yet. Both are required=False so zero-cycle or fetch failures on the
+    # first live run only surface in the debug dump, not as a workflow
+    # failure. Promote to required=True once the live shape is stable.
+    "NC": {"module": "scripts.adapters.nc", "required": False},
+    "UT": {"module": "scripts.adapters.ut", "required": False},
 }
 
 # Fields in a cycle record that count as meaningful when diffing. Changes
@@ -124,6 +130,17 @@ MEANINGFUL_FIELDS = (
     "current_review_title",
     "current_review_url",
     "current_review_date",
+    # North Carolina fields
+    "call_for_bids_url",
+    "invitation_to_submit_url",
+    "commission_page_url",
+    "evaluation_criteria_url",
+    # Utah fields
+    "recommended_materials_url",
+    "review_schedule_url",
+    "imc_calendar_url",
+    "publisher_submission_url",
+    "subject_landing_url",
 )
 
 

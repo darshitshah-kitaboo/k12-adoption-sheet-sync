@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from scripts.promote_scraped import (  # noqa: E402
     actionable_url,
     find_scraped_cycle,
+    is_more_specific,
     is_src_empty,
     promote,
 )
@@ -49,6 +50,23 @@ def run():
     if actionable_url(cyc) != "https://x/cfb":
         _fail("actionable_url should prefer call_for_bids_url")
     _ok("actionable_url prefers call_for_bids_url then invitation then review")
+
+    # is_more_specific: PDF beats landing page, deeper path beats shallower.
+    if not is_more_specific(
+            "https://x.gov/uploads/2026/bid-packet.pdf",
+            "https://x.gov/adoption/"):
+        _fail("PDF should be more specific than landing page")
+    if not is_more_specific(
+            "https://x.gov/newsroom/news-releases/rfb-2026/",
+            "https://x.gov/instruction/"):
+        _fail("deeper path should be more specific than shallower")
+    if is_more_specific(
+            "https://x.gov/a/",
+            "https://x.gov/a/b/c/"):
+        _fail("shallower path should NOT be more specific than deeper")
+    if is_more_specific(None, "https://x.gov/a/"):
+        _fail("None candidate should not be more specific")
+    _ok("is_more_specific treats PDFs and deeper paths as more specific")
 
     # find_scraped_cycle matches by subject with exact + loose fallback.
     snap_cycles = [{"subject": "Mathematics"},
@@ -149,6 +167,24 @@ def run():
                     },
                 ],
             },
+            # AL: existing src is a specific bid packet PDF and scraper
+            # only has a generic landing page as source_url. This should
+            # NOT log a conflict because the existing URL is clearly
+            # more specific than the scraper's offer.
+            {
+                "code": "AL",
+                "name": "Alabama",
+                "last_verified": "2026-04-20",
+                "cycles": [
+                    {
+                        "id": "AL1",
+                        "su": "Digital Literacy & Computer Science",
+                        "src": "https://www.alabamaachieves.org/wp-content/uploads/2026/02/TAP_20260227_BidPacket.pdf",
+                        "v": "2026-04-20",
+                        "ac": False,
+                    },
+                ],
+            },
             # ID: existing src points at a landing page and scraper has a
             # cycle-level call_for_bids_url. Rule 4b should flip ac True
             # AND replace src with the actionable URL. No conflict.
@@ -195,6 +231,12 @@ def run():
             "source_url": "https://www.doe.virginia.gov/textbooks",
             "cycle_count": 1,
             "cycles": [{"subject": "English"}],
+        },
+        "AL": {
+            "state": "AL",
+            "source_url": "https://www.alabamaachieves.org/content-areas-specialty/textbook-adoption-and-procurement/",
+            "cycle_count": 1,
+            "cycles": [{"subject": "Digital Literacy & Computer Science"}],
         },
         "ID": {
             "state": "ID",
@@ -275,6 +317,16 @@ def run():
     if c["src"] != "https://www.doe.virginia.gov/textbooks":
         _fail(f"VA cycle src should be filled, got {c['src']}")
     _ok("VA: TBD placeholder src replaced with scraped source_url")
+
+    # AL: existing specific PDF should be kept, no conflict logged.
+    al = states_by_code["AL"]
+    c = al["cycles"][0]
+    if c["src"] != "https://www.alabamaachieves.org/wp-content/uploads/2026/02/TAP_20260227_BidPacket.pdf":
+        _fail(f"AL cycle src should be unchanged PDF, got {c['src']}")
+    al_conflicts = [x for x in conflicts if x["state"] == "AL"]
+    if al_conflicts:
+        _fail(f"AL should NOT have a conflict (existing PDF is more specific), got {al_conflicts}")
+    _ok("AL: existing specific PDF preserved, no false-positive conflict")
 
     # ID: active cycle rule replaces landing page with bid packet URL.
     idaho = states_by_code["ID"]

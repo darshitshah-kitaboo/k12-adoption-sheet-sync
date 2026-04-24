@@ -37,7 +37,11 @@ Promotion rules (conservative by design):
         in the sheet. The old value is preserved in git history.
      c. Otherwise, if an existing src disagrees with the snapshot's
         source_url, do NOT overwrite. Queue it in pending_review.json
-        for manual resolution.
+        for manual resolution. Exception: suppress the queue entry
+        when the existing src is clearly more specific than the
+        scraper's fallback (PDF vs landing page, deeper path vs
+        shallower path). In that case the existing value is obviously
+        better so there is nothing for a human to decide.
 
 Outputs:
     adoption_data.json                 updated in-place (only when fields
@@ -59,6 +63,7 @@ import json
 import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 ADOPTION_PATH = ROOT / "adoption_data.json"
@@ -77,6 +82,10 @@ ACTIONABLE_CYCLE_KEYS = (
     "invitation_to_submit_url",
     "current_review_url",
 )
+
+# File extensions that indicate a URL points to a specific artifact
+# rather than a generic landing page.
+SPECIFIC_DOC_EXTS = (".pdf", ".doc", ".docx", ".xls", ".xlsx")
 
 
 def is_src_empty(value):
@@ -137,6 +146,39 @@ def actionable_url(scraped_cycle):
         if url:
             return url
     return None
+
+
+def _path_depth(url):
+    """Count path segments in a URL. Returns 0 on parse failure."""
+    if not url or not isinstance(url, str):
+        return 0
+    try:
+        path = urlparse(url).path.strip("/")
+    except (ValueError, AttributeError):
+        return 0
+    return len([p for p in path.split("/") if p])
+
+
+def is_more_specific(candidate, fallback):
+    """True if `candidate` looks more specific than `fallback`.
+
+    Used to suppress a conflict log when the existing src in
+    adoption_data.json is clearly a better artifact than the scraper's
+    generic landing page. Rules, in order:
+      - candidate ends in a document extension and fallback does not.
+      - candidate's URL path is deeper than fallback's.
+
+    Returns False when either URL is missing.
+    """
+    if not candidate or not fallback:
+        return False
+    c_lower = candidate.lower().split("?")[0].rstrip("/")
+    f_lower = fallback.lower().split("?")[0].rstrip("/")
+    c_is_doc = any(c_lower.endswith(ext) for ext in SPECIFIC_DOC_EXTS)
+    f_is_doc = any(f_lower.endswith(ext) for ext in SPECIFIC_DOC_EXTS)
+    if c_is_doc and not f_is_doc:
+        return True
+    return _path_depth(candidate) > _path_depth(fallback)
 
 
 def load_scraped_snapshots():
@@ -227,18 +269,26 @@ def promote(adoption, snapshots, today_iso):
                   and not is_src_empty(current_src)
                   and current_src != scraped_source_url
                   and current_src != cycle_actionable):
-                # 4c: inactive cycle with a real src mismatch. Do not
-                # overwrite. Queue for human review.
-                conflicts.append({
-                    "state": code,
-                    "cycle_id": cycle.get("id", ""),
-                    "subject": cycle.get("su", ""),
-                    "field": "src",
-                    "adoption_data_value": current_src,
-                    "scraped_value": cycle_actionable or scraped_source_url,
-                    "note": ("adoption_data.json src does not match the "
-                             "scraped URL. Confirm which is canonical."),
-                })
+                # 4c: inactive cycle with a real src mismatch.
+                # Suppress the log when the existing src is clearly
+                # more specific than the scraper's fallback (PDF vs
+                # landing page, or deeper path). Keeping a curated
+                # specific URL is always preferable to a generic
+                # landing page, so there is nothing for a human to
+                # decide in those cases.
+                scraper_offer = cycle_actionable or scraped_source_url
+                if not is_more_specific(current_src, scraper_offer):
+                    conflicts.append({
+                        "state": code,
+                        "cycle_id": cycle.get("id", ""),
+                        "subject": cycle.get("su", ""),
+                        "field": "src",
+                        "adoption_data_value": current_src,
+                        "scraped_value": scraper_offer,
+                        "note": ("adoption_data.json src does not match "
+                                 "the scraped URL. Confirm which is "
+                                 "canonical."),
+                    })
 
         if any([state_summary["verified_bumped"],
                 state_summary["cycles_verified"],

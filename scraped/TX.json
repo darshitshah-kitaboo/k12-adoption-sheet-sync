@@ -2,9 +2,11 @@
   "state": "TX",
   "name": "Texas",
   "source_url": "https://sboe.texas.gov/state-board-of-education/imra/current-imra-cycle",
-  "scraped_at": "2026-04-23T09:25:06+00:00",
+  "scraped_at": "2026-04-24T16:16:45+00:00",
   "cycle_year": 2026,
   "cycle_count": 9,
+  "has_active_cycle": true,
+  "call_for_bids_url": "https://tea.texas.gov/state-board-of-education/imra/imra26-rfim.pdf",
   "cycles": [
     {
       "subject": "K\u201312 English mathematics, including middle school advanced mathematics",

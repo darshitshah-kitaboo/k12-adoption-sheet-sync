@@ -210,6 +210,28 @@ def run():
             _fail(f"Cycle {c['subject']} had wrong AY bounds: {c['ay_start']}-{c['ay_end']}")
     _ok("academic year bounds set from cycle year on every record")
 
+    # has_active_cycle flips True when the page exposes a current IMRA
+    # cycle year + the RFIM PDF. Wrapper call_for_bids_url aliases the
+    # RFIM so downstream tools can treat Texas like any other active
+    # adoption state without knowing IMRA terminology.
+    if not data.get("has_active_cycle"):
+        _fail("has_active_cycle should be True for a current IMRA cycle with RFIM")
+    if "imra26-rfim.pdf" not in (data.get("call_for_bids_url") or ""):
+        _fail(f"wrapper call_for_bids_url should alias the RFIM PDF, got {data.get('call_for_bids_url')}")
+    _ok("has_active_cycle flipped True and wrapper call_for_bids_url aliases the RFIM")
+
+    # Negative case: if the RFIM section is missing, has_active_cycle
+    # stays False and wrapper call_for_bids_url is None. Guards
+    # against an off-cycle page still looking "active" downstream.
+    off_cycle_html = FIXTURE_HTML.replace(
+        "Request for Instructional Materials", "IMRA Archive")
+    off_cycle = tx.parse(off_cycle_html)
+    if off_cycle.get("has_active_cycle"):
+        _fail("has_active_cycle should be False when RFIM heading is missing")
+    if off_cycle.get("call_for_bids_url") is not None:
+        _fail(f"wrapper call_for_bids_url should be None off-cycle, got {off_cycle.get('call_for_bids_url')}")
+    _ok("off-cycle page keeps has_active_cycle False and wrapper URL null")
+
     print("\nAll Texas adapter tests passed. Output sample:")
     print(json.dumps(data, indent=2)[:600] + "...")
 

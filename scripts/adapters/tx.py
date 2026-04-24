@@ -208,6 +208,18 @@ def parse(html, source_url=SOURCE_URL):
                     "quality_rubric_urls": subj_rubric_urls,
                 })
 
+    # When the page advertises a current IMRA cycle AND the RFIM PDF
+    # resolved, treat the cycle as active and surface the RFIM as the
+    # wrapper call_for_bids_url. IMRA's RFIM is the publisher-facing
+    # "request for instructional materials" — functionally the same
+    # role as call_for_bids_url in other states, so aliasing it at
+    # the wrapper level keeps the schema consistent across adapters.
+    # Per-cycle rfim_url is already emitted; promote_scraped lists
+    # rfim_url in ACTIONABLE_CYCLE_KEYS so Rule 3 and Rule 4b pick it
+    # up when subjects match.
+    has_active_cycle = bool(cycle_year and rfim_url and cycles)
+    wrapper_call_for_bids_url = rfim_url if has_active_cycle else None
+
     return {
         "state": STATE_CODE,
         "name": STATE_NAME,
@@ -215,6 +227,8 @@ def parse(html, source_url=SOURCE_URL):
         "scraped_at": scraped_at,
         "cycle_year": cycle_year,
         "cycle_count": len(cycles),
+        "has_active_cycle": has_active_cycle,
+        "call_for_bids_url": wrapper_call_for_bids_url,
         "cycles": cycles,
     }
 

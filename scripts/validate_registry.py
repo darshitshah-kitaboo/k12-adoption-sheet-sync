@@ -95,6 +95,21 @@ SLOW_TIMEOUT = 60  # used once as a second chance for genuinely slow pages
 MAX_WORKERS = 8
 MAX_RETRIES = 2  # in addition to the initial attempt
 
+# Dashboard URLs that are known to be bot-blocked from data-center IPs but work
+# in a real user's browser. The weekly validator otherwise reports them as 403
+# failures every run, which is noise. Add URLs here only after a human has
+# confirmed they open in a normal browser. The set is matched exactly against
+# the URL string, so a renamed or moved URL will fall off this list and start
+# failing again, which is the behavior we want for catching real rot.
+DASHBOARD_SKIP_URLS = {
+    # New Mexico PED. Tested 2026-04-24 by the user in a real browser; opens
+    # fine. Serves 403 to GitHub Actions runners and to requests with browser
+    # headers. Same pattern as registry's skip_validation for NM
+    # doe_instructional_materials.
+    "https://web.ped.nm.gov/wp-content/uploads/2025/01/adoption-cycle_02_19_24.pdf",
+    "https://web.ped.nm.gov/bureaus/instructional-materials/publishers/",
+}
+
 
 def build_session():
     """Session with browser headers, cookie jar, and retry on transient errors."""
@@ -326,6 +341,7 @@ def main():
     dashboard_results = {}
     dashboard_ok = 0
     dashboard_fail = 0
+    dashboard_skipped = 0
     dashboard_failures = []
     dashboard_total = 0
     if not args.skip_dashboard and DATA.exists():
@@ -341,10 +357,33 @@ def main():
             dash_jobs = collect_dashboard_urls(data)
             dashboard_total = len(dash_jobs)
             if dash_jobs:
-                print(f"\nVerifying {dashboard_total} dashboard URLs from adoption_data.json")
+                # Split jobs into skipped vs. to-fetch based on DASHBOARD_SKIP_URLS.
+                # Skipped entries still land in the report so you can see what
+                # was opted out, but they do not count toward pass or fail.
+                fetch_jobs = []
+                for code, field, url in dash_jobs:
+                    if url in DASHBOARD_SKIP_URLS:
+                        row = {
+                            "field": field,
+                            "url": url,
+                            "final_url": None,
+                            "status": "SKIPPED",
+                            "elapsed_ms": 0,
+                            "error": "DASHBOARD_SKIP_URLS: bot-blocked, verified in browser",
+                        }
+                        dashboard_results.setdefault(code, []).append(row)
+                        dashboard_skipped += 1
+                        if args.verbose or (not args.quiet):
+                            print(f"  {code:3s} {field:20s} SKIP          DASHBOARD_SKIP_URLS")
+                    else:
+                        fetch_jobs.append((code, field, url))
+
+                fetch_count_dash = len(fetch_jobs)
+                print(f"\nVerifying {fetch_count_dash} dashboard URLs from adoption_data.json "
+                      f"({dashboard_skipped} skipped)")
                 with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
                     futures = {ex.submit(fetch_status, url): (code, field, url)
-                               for code, field, url in dash_jobs}
+                               for code, field, url in fetch_jobs}
                     for fut in as_completed(futures):
                         code, field, url = futures[fut]
                         status, final, elapsed, err = fut.result()
@@ -381,6 +420,7 @@ def main():
                 "total_urls": dashboard_total,
                 "ok": dashboard_ok,
                 "failed": dashboard_fail,
+                "skipped": dashboard_skipped,
             },
         },
         "per_state": results,
@@ -407,7 +447,7 @@ def main():
           f"Failed: {total_fail:>3}   Skipped: {total_skipped:>3}")
     if dashboard_total:
         print(f"Dashboard  Total: {dashboard_total:>3}   OK: {dashboard_ok:>3}   "
-              f"Failed: {dashboard_fail:>3}")
+              f"Failed: {dashboard_fail:>3}   Skipped: {dashboard_skipped:>3}")
     print(f"Priority-1 registry failures: {len(priority_one_failures)}")
     print(f"{'='*60}")
 

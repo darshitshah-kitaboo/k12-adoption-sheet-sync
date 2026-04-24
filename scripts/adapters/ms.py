@@ -12,12 +12,22 @@ the publisher representative form. Subject landing pages live on the
 site-wide nav and are stable across cycles.
 
 Per-subject fields emitted:
-    subject, adopted_materials_url.
+    subject, adopted_materials_url, ay_start, ay_end, cycle_label.
 
 Wrapper fields emitted:
-    cycle_label, ay_start, ay_end,
-    adoption_schedule_url, rating_committee_url,
-    textbook_handbook_url, publisher_rep_form_url.
+    cycle_label, ay_start, ay_end, has_active_cycle,
+    call_for_bids_url, adoption_schedule_url,
+    rating_committee_url, textbook_handbook_url,
+    publisher_rep_form_url.
+
+When the active cycle heading contains "Call for Bids", the wrapper
+has_active_cycle flag is set to True and call_for_bids_url is filled
+with the source_url (MS does not publish a separate Call for Bids
+page or per-subject bid packets on this landing page). Per-cycle
+call_for_bids_url is intentionally left null: MS has no per-subject
+breakdown, and stamping every cycle would cause promote_scraped to
+flip ac True on cycles that are not yet in their call phase (e.g.
+future ELA or Math cycles that pre-date the current call).
 
 Usage:
     python3 scripts/adapters/ms.py
@@ -45,6 +55,11 @@ CYCLE_HEADING_RE = re.compile(
     r"(\d{2,4})\s*[-\u2013]\s*(\d{2,4})\s+Adoption",
     re.IGNORECASE,
 )
+
+# MS uses "Call for Bids" as the active-cycle signal inside the h2
+# heading. When present the page is advertising an open call;
+# otherwise the section is a historical or upcoming reference.
+CALL_FOR_BIDS_RE = re.compile(r"call\s+for\s+bids", re.IGNORECASE)
 
 # Links to subject catalog pages on the MS IMM site. The slug after
 # /adopted-materials/ names the subject, e.g.
@@ -102,9 +117,11 @@ def parse(html, source_url=SOURCE_URL):
 
     # Cycle label and AY bounds come from the first h2/h3 matching the
     # "NN-NN Adoption Call for Bids" pattern. Two-digit years expand to
-    # the 2000s.
+    # the 2000s. "Call for Bids" in the same heading flips
+    # has_active_cycle so the wrapper flag surfaces an open call.
     cycle_label = None
     ay_start = ay_end = None
+    has_active_cycle = False
     for tag in soup.find_all(["h2", "h3"]):
         text = tag.get_text(" ", strip=True)
         m = CYCLE_HEADING_RE.search(text)
@@ -112,6 +129,7 @@ def parse(html, source_url=SOURCE_URL):
             ay_start = _normalize_year(m.group(1))
             ay_end = _normalize_year(m.group(2))
             cycle_label = text
+            has_active_cycle = bool(CALL_FOR_BIDS_RE.search(text))
             break
 
     # Wrapper artifacts. The adoption schedule and rating committee
@@ -158,6 +176,11 @@ def parse(html, source_url=SOURCE_URL):
     # nav renders in a different order.
     cycles.sort(key=lambda c: c["subject"].lower())
 
+    # Call for Bids URL. MS puts the open-call content on the adoption
+    # landing page itself, so source_url is the best state-level link
+    # while the heading says "Call for Bids". Null when no active call.
+    call_for_bids_url = source_url if has_active_cycle else None
+
     return {
         "state": STATE_CODE,
         "name": STATE_NAME,
@@ -167,6 +190,8 @@ def parse(html, source_url=SOURCE_URL):
         "ay_start": ay_start,
         "ay_end": ay_end,
         "cycle_count": len(cycles),
+        "has_active_cycle": has_active_cycle,
+        "call_for_bids_url": call_for_bids_url,
         "adoption_schedule_url": adoption_schedule_url,
         "rating_committee_url": rating_committee_url,
         "textbook_handbook_url": textbook_handbook_url,

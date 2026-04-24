@@ -98,6 +98,15 @@ def run():
         _fail(f"publisher_rep_form_url wrong: {data['publisher_rep_form_url']}")
     _ok("schedule, rating committee, handbook, and rep form URLs captured")
 
+    # "Call for Bids" in the cycle heading flips has_active_cycle True
+    # and populates call_for_bids_url with the landing page (MS posts
+    # the open call inline rather than on a dedicated page).
+    if not data.get("has_active_cycle"):
+        _fail("has_active_cycle should be True when heading says 'Call for Bids'")
+    if data.get("call_for_bids_url") != ms.SOURCE_URL:
+        _fail(f"call_for_bids_url should equal source_url, got {data.get('call_for_bids_url')}")
+    _ok("has_active_cycle flag and call_for_bids_url wired from heading")
+
     # 11 subject nav entries.
     if data["cycle_count"] != 11:
         _fail(f"expected 11 subjects, got {data['cycle_count']}")
@@ -119,6 +128,20 @@ def run():
         if c["ay_start"] != 2025 or c["ay_end"] != 2026:
             _fail(f"subject {c['subject']} AY wrong: {c['ay_start']}-{c['ay_end']}")
     _ok("every subject record carries the active AY 2025-2026")
+
+    # Negative case: when the heading drops "Call for Bids" the flag
+    # must go silent so promote_scraped does not treat a historical
+    # summary as an open call.
+    off_cycle_html = FIXTURE_HTML.replace(
+        "25-26 Adoption Call for Bids",
+        "25-26 Adoption Summary",
+    )
+    off_cycle = ms.parse(off_cycle_html)
+    if off_cycle.get("has_active_cycle"):
+        _fail("has_active_cycle should be False when heading drops 'Call for Bids'")
+    if off_cycle.get("call_for_bids_url") is not None:
+        _fail(f"call_for_bids_url should be None when not active, got {off_cycle.get('call_for_bids_url')}")
+    _ok("off-cycle heading keeps has_active_cycle False and URL null")
 
     print("\nAll Mississippi adapter tests passed. Output sample:")
     print(json.dumps(data, indent=2)[:600] + "...")

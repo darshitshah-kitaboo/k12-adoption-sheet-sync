@@ -41,9 +41,15 @@ ROOT = Path(__file__).resolve().parent.parent
 # `scripts.adapters.*` without requiring PYTHONPATH gymnastics.
 sys.path.insert(0, str(ROOT))
 SCRAPED_DIR = ROOT / "scraped"
+DEBUG_DIR = SCRAPED_DIR / "_debug"
 LOGS_DIR = ROOT / "logs"
 CHANGES_DIR = LOGS_DIR / "changes"
 RUNS_LOG = LOGS_DIR / "adapter_runs.jsonl"
+
+# Max bytes to write into a debug HTML dump. State DOE pages cluster under
+# 1 MB; a 2 MB ceiling catches the outliers without letting a runaway
+# response bloat the repo.
+DEBUG_HTML_MAX_BYTES = 2 * 1024 * 1024
 
 # State code -> adapter module name. As new adapters are written they get
 # added here. Required=True means a failure exits nonzero so the workflow
@@ -127,30 +133,70 @@ def load_adapter(module_name):
 
 
 def run_one(state_code, config, fixture_path=None):
-    """Run a single adapter. Returns (snapshot_dict_or_None, error_or_None)."""
+    """Run a single adapter.
+
+    Returns (snapshot_dict_or_None, error_or_None, html_or_None).
+
+    The html return lets main() dump the raw HTML on failure so the next
+    CI run commits an inspectable copy of exactly what the adapter saw.
+    html is None when the failure happens before fetch (import or fetch
+    errors) or when a fixture path is in use.
+    """
     try:
         mod = load_adapter(config["module"])
     except Exception as e:
-        return None, f"import failed: {e}"
+        return None, f"import failed: {e}", None
 
+    html = None
     try:
         if fixture_path:
             html = Path(fixture_path).read_text(encoding="utf-8")
         else:
             html = mod.fetch_html()
+    except Exception as e:
+        # Fetch failed (403, DNS, timeout). No HTML to dump; the error
+        # itself is what the user needs to see.
+        return None, f"fetch failed: {type(e).__name__}: {e}", None
+
+    try:
         data = mod.parse(html)
     except Exception as e:
-        return None, f"{type(e).__name__}: {e}\n{traceback.format_exc()}"
+        return None, f"{type(e).__name__}: {e}\n{traceback.format_exc()}", html
 
     if not isinstance(data, dict) or "cycles" not in data:
-        return None, "adapter returned malformed data (no cycles field)"
+        return None, "adapter returned malformed data (no cycles field)", html
 
     # Empty snapshots usually mean the source page changed shape. Treat as
     # a failure so we don't overwrite yesterday's good data with nothing.
     if data.get("cycle_count", 0) == 0:
-        return None, "adapter returned zero cycles (page structure likely changed)"
+        return (None,
+                "adapter returned zero cycles (page structure likely changed)",
+                html)
 
-    return data, None
+    return data, None, html
+
+
+def write_debug_html(state_code, html):
+    """Write the fetched HTML to scraped/_debug/<STATE>_latest.html.
+
+    Called on any adapter failure or zero-cycle result that did have a
+    successful fetch. The file is overwritten each run so the repo does
+    not accumulate HTML history; git history alone preserves the prior
+    version if anyone wants to compare. Large responses are truncated at
+    DEBUG_HTML_MAX_BYTES so one runaway page cannot blow up the repo.
+    """
+    if html is None:
+        return None
+    DEBUG_DIR.mkdir(parents=True, exist_ok=True)
+    path = DEBUG_DIR / f"{state_code}_latest.html"
+    payload = html
+    if len(payload) > DEBUG_HTML_MAX_BYTES:
+        payload = payload[:DEBUG_HTML_MAX_BYTES] + (
+            "\n<!-- truncated by run_adapters.py at "
+            f"{DEBUG_HTML_MAX_BYTES} bytes -->\n"
+        )
+    path.write_text(payload, encoding="utf-8")
+    return path
 
 
 def diff_snapshots(old, new):
@@ -285,21 +331,31 @@ def main():
     for code in sorted(selected):
         cfg = ADAPTERS[code]
         fixture = fixtures.get(code)
-        data, err = run_one(code, cfg, fixture_path=fixture)
+        data, err, html = run_one(code, cfg, fixture_path=fixture)
 
         if err:
             # Adapter failed. Keep yesterday's snapshot untouched and log the
             # failure. Required adapters bubble up as a workflow failure.
+            # If we have HTML (parse or zero-cycle failure), dump it to
+            # scraped/_debug/ so CI commits it and we can inspect what the
+            # adapter actually saw. Fixture runs skip the dump because the
+            # input file already exists.
+            debug_path = None
+            if html is not None and not fixture:
+                debug_path = write_debug_html(code, html)
             per_state[code] = {
                 "status": "failed",
                 "required": cfg["required"],
                 "error": err.splitlines()[0],
                 "cycle_count": 0,
                 "change_count": 0,
+                "debug_html": (str(debug_path.relative_to(ROOT))
+                               if debug_path else None),
             }
             if cfg["required"]:
                 any_failed_required = True
-            print(f"  {code}  FAILED  {err.splitlines()[0]}")
+            debug_note = f"  [html dumped to {debug_path.relative_to(ROOT)}]" if debug_path else ""
+            print(f"  {code}  FAILED  {err.splitlines()[0]}{debug_note}")
             continue
 
         old = write_snapshot(code, data)

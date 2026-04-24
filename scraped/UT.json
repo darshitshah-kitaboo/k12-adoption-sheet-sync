@@ -1,0 +1,28 @@
+{
+  "state": "UT",
+  "name": "Utah",
+  "source_url": "https://schools.utah.gov/curr/imc",
+  "scraped_at": "2026-04-24T05:57:24+00:00",
+  "has_active_review": false,
+  "current_subject": null,
+  "cycle_count": 1,
+  "imc_page_url": "https://schools.utah.gov/curr/imc",
+  "review_process_url": null,
+  "core_standards_url": "https://schools.utah.gov/curr/imc#item-d26e269",
+  "recommended_materials_page_url": "https://usbe.midaseducation.com/rims",
+  "imc_calendar_url": null,
+  "publisher_submission_url": "https://schools.utah.gov/curr/imc#item-d26e474",
+  "cycles": [
+    {
+      "subject": "Unknown (see IMC calendar)",
+      "ay_start": null,
+      "ay_end": null,
+      "cycle_label": null,
+      "recommended_materials_url": "https://usbe.midaseducation.com/rims",
+      "review_schedule_url": null,
+      "imc_calendar_url": null,
+      "publisher_submission_url": "https://schools.utah.gov/curr/imc#item-d26e474",
+      "subject_landing_url": null
+    }
+  ]
+}

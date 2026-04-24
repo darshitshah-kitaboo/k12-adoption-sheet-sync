@@ -1,0 +1,27 @@
+{
+  "state": "NC",
+  "name": "North Carolina",
+  "source_url": "https://www.dpi.nc.gov/districts-schools/district-operations/textbook-adoption",
+  "scraped_at": "2026-04-24T05:57:21+00:00",
+  "has_active_cycle": true,
+  "ela_standards_year": null,
+  "cycle_count": 1,
+  "textbook_adoption_page_url": "https://www.dpi.nc.gov/districts-schools/district-operations/textbook-adoption",
+  "textbook_commission_url": "https://simbli.eboardsolutions.com/ePolicy/policy.aspx?PC=TEXT-003&Sch=10399&S=10399&C=&RevNo=1.02&T=A&Z=P&St=ADOPTED&PG=6&SN=true&SB=1",
+  "publishers_registry_url": "https://simbli.eboardsolutions.com/ePolicy/policy.aspx?PC=TEXT-006&Sch=10399&S=10399&C=&RevNo=1.02&T=A&Z=P&St=ADOPTED&PG=6&SN=true&SB=1",
+  "ela_standards_url": null,
+  "office_teaching_learning_url": null,
+  "cycles": [
+    {
+      "subject": "Unknown (see Commission page)",
+      "ay_start": null,
+      "ay_end": null,
+      "cycle_label": "Active Call for Bids",
+      "call_for_bids_url": null,
+      "invitation_to_submit_url": "https://simbli.eboardsolutions.com/ePolicy/policy.aspx?PC=TEXT-001&Sch=10399&S=10399&C=&RevNo=1.02&T=A&Z=P&St=ADOPTED&PG=6&SN=true&SB=1",
+      "commission_page_url": "https://simbli.eboardsolutions.com/ePolicy/policy.aspx?PC=TEXT-003&Sch=10399&S=10399&C=&RevNo=1.02&T=A&Z=P&St=ADOPTED&PG=6&SN=true&SB=1",
+      "publishers_registry_url": "https://simbli.eboardsolutions.com/ePolicy/policy.aspx?PC=TEXT-006&Sch=10399&S=10399&C=&RevNo=1.02&T=A&Z=P&St=ADOPTED&PG=6&SN=true&SB=1",
+      "evaluation_criteria_url": "https://simbli.eboardsolutions.com/ePolicy/policy.aspx?PC=TEXT-001&Sch=10399&S=10399&C=&RevNo=1.02&T=A&Z=P&St=ADOPTED&PG=6&SN=true&SB=1"
+    }
+  ]
+}

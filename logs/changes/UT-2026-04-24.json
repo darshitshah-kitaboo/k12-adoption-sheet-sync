@@ -1,0 +1,27 @@
+{
+  "state": "UT",
+  "date": "2026-04-24",
+  "change_count": 1,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "Unknown (see IMC calendar)",
+        null,
+        null,
+        null
+      ],
+      "cycle": {
+        "subject": "Unknown (see IMC calendar)",
+        "ay_start": null,
+        "ay_end": null,
+        "cycle_label": null,
+        "recommended_materials_url": "https://usbe.midaseducation.com/rims",
+        "review_schedule_url": null,
+        "imc_calendar_url": null,
+        "publisher_submission_url": "https://schools.utah.gov/curr/imc#item-d26e474",
+        "subject_landing_url": null
+      }
+    }
+  ]
+}

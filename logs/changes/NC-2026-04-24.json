@@ -1,0 +1,27 @@
+{
+  "state": "NC",
+  "date": "2026-04-24",
+  "change_count": 1,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "Unknown (see Commission page)",
+        null,
+        null,
+        null
+      ],
+      "cycle": {
+        "subject": "Unknown (see Commission page)",
+        "ay_start": null,
+        "ay_end": null,
+        "cycle_label": "Active Call for Bids",
+        "call_for_bids_url": null,
+        "invitation_to_submit_url": "https://simbli.eboardsolutions.com/ePolicy/policy.aspx?PC=TEXT-001&Sch=10399&S=10399&C=&RevNo=1.02&T=A&Z=P&St=ADOPTED&PG=6&SN=true&SB=1",
+        "commission_page_url": "https://simbli.eboardsolutions.com/ePolicy/policy.aspx?PC=TEXT-003&Sch=10399&S=10399&C=&RevNo=1.02&T=A&Z=P&St=ADOPTED&PG=6&SN=true&SB=1",
+        "publishers_registry_url": "https://simbli.eboardsolutions.com/ePolicy/policy.aspx?PC=TEXT-006&Sch=10399&S=10399&C=&RevNo=1.02&T=A&Z=P&St=ADOPTED&PG=6&SN=true&SB=1",
+        "evaluation_criteria_url": "https://simbli.eboardsolutions.com/ePolicy/policy.aspx?PC=TEXT-001&Sch=10399&S=10399&C=&RevNo=1.02&T=A&Z=P&St=ADOPTED&PG=6&SN=true&SB=1"
+      }
+    }
+  ]
+}

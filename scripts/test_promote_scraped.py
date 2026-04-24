@@ -81,6 +81,13 @@ def run():
         _fail("non-matching subject should return None")
     _ok("find_scraped_cycle handles exact and loose subject matches")
 
+    # Normalization: '&' in adoption_data vs 'and' in scraped h3 must match.
+    ampersand_snap = [{"subject": "Digital Literacy and Computer Science"}]
+    m = find_scraped_cycle(ampersand_snap, {"su": "Digital Literacy & Computer Science"})
+    if not m:
+        _fail("'&' vs 'and' subjects should match via normalization")
+    _ok("find_scraped_cycle treats '&' and 'and' as equivalent")
+
     today = "2026-04-24"
 
     adoption = {
@@ -232,11 +239,13 @@ def run():
             "cycle_count": 1,
             "cycles": [{"subject": "English"}],
         },
+        # AL scraped subject uses "and" while adoption_data uses "&".
+        # find_scraped_cycle must normalize them to match.
         "AL": {
             "state": "AL",
             "source_url": "https://www.alabamaachieves.org/content-areas-specialty/textbook-adoption-and-procurement/",
             "cycle_count": 1,
-            "cycles": [{"subject": "Digital Literacy & Computer Science"}],
+            "cycles": [{"subject": "Digital Literacy and Computer Science"}],
         },
         "ID": {
             "state": "ID",

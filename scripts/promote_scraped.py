@@ -113,22 +113,36 @@ def scraped_has_active_signal(snap):
     return False
 
 
+def _normalize_subject(s):
+    """Lowercase, replace '&' with 'and', collapse whitespace.
+
+    Publishers and state DOE pages use '&' and 'and' interchangeably
+    ("Digital Literacy & Computer Science" on adoption_data.json vs
+    "Digital Literacy and Computer Science" in the h3 heading). Same
+    concept, different glyph. Normalize so cycle matching still works.
+    """
+    if not s:
+        return ""
+    s = s.lower().replace("&", "and")
+    return " ".join(s.split())
+
+
 def find_scraped_cycle(snap_cycles, adoption_cycle):
     """Match an adoption_data cycle to a scraped cycle by subject.
 
-    Exact case-insensitive subject match first, then loose substring
-    match in either direction. Returns None when nothing matches or
-    the adoption cycle has no subject.
+    Exact normalized match first, then loose substring match in
+    either direction. Returns None when nothing matches or the
+    adoption cycle has no subject.
     """
-    adoption_subject = (adoption_cycle.get("su") or "").strip().lower()
+    adoption_subject = _normalize_subject(adoption_cycle.get("su"))
     if not adoption_subject:
         return None
     for sc in snap_cycles or []:
-        scraped_subject = (sc.get("subject") or "").strip().lower()
+        scraped_subject = _normalize_subject(sc.get("subject"))
         if scraped_subject and scraped_subject == adoption_subject:
             return sc
     for sc in snap_cycles or []:
-        scraped_subject = (sc.get("subject") or "").strip().lower()
+        scraped_subject = _normalize_subject(sc.get("subject"))
         if not scraped_subject:
             continue
         if (adoption_subject in scraped_subject

@@ -1,70 +1,7 @@
 {
-  "generated_at": "2026-04-24T11:10:12+00:00",
-  "count": 15,
+  "generated_at": "2026-04-24T15:39:27+00:00",
+  "count": 1,
   "conflicts": [
-    {
-      "state": "AL",
-      "cycle_id": "AL1",
-      "subject": "Digital Literacy & Computer Science",
-      "field": "src",
-      "adoption_data_value": "https://www.alabamaachieves.org/wp-content/uploads/2026/02/TAP_20260227_DigitalLiteracyCSBidPacket_v1.pdf",
-      "scraped_value": "https://www.alabamaachieves.org/content-areas-specialty/textbook-adoption-and-procurement/",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
-    },
-    {
-      "state": "FL",
-      "cycle_id": "FL2",
-      "subject": "Social Studies",
-      "field": "src",
-      "adoption_data_value": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
-      "scraped_value": "https://www.fldoe.org/academics/standards/instructional-materials/",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
-    },
-    {
-      "state": "FL",
-      "cycle_id": "FL3",
-      "subject": "Science",
-      "field": "src",
-      "adoption_data_value": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
-      "scraped_value": "https://www.fldoe.org/academics/standards/instructional-materials/",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
-    },
-    {
-      "state": "FL",
-      "cycle_id": "FL4",
-      "subject": "English Language Arts",
-      "field": "src",
-      "adoption_data_value": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
-      "scraped_value": "https://www.fldoe.org/academics/standards/instructional-materials/",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
-    },
-    {
-      "state": "FL",
-      "cycle_id": "FL5",
-      "subject": "World Languages, CTE, Arts, Health/PE",
-      "field": "src",
-      "adoption_data_value": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
-      "scraped_value": "https://www.fldoe.org/academics/standards/instructional-materials/",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
-    },
-    {
-      "state": "MS",
-      "cycle_id": "MS1",
-      "subject": "ELA / English Language Arts",
-      "field": "src",
-      "adoption_data_value": "https://msinstructionalmaterials.org/wp-content/uploads/2026/02/2023-2031-Textbook-Adoption-Schedule.pdf",
-      "scraped_value": "https://msinstructionalmaterials.org/resources/adoption/",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
-    },
-    {
-      "state": "MS",
-      "cycle_id": "MS2",
-      "subject": "Mathematics",
-      "field": "src",
-      "adoption_data_value": "https://msinstructionalmaterials.org/wp-content/uploads/2026/02/2023-2031-Textbook-Adoption-Schedule.pdf",
-      "scraped_value": "https://msinstructionalmaterials.org/resources/adoption/",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
-    },
     {
       "state": "NC",
       "cycle_id": "NC1",
@@ -72,70 +9,7 @@
       "field": "src",
       "adoption_data_value": "https://www.dpi.nc.gov/districts-schools/classroom-resources/office-teaching-and-learning",
       "scraped_value": "https://www.dpi.nc.gov/districts-schools/district-operations/textbook-adoption",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
-    },
-    {
-      "state": "OK",
-      "cycle_id": "OK1",
-      "subject": "Social Studies",
-      "field": "src",
-      "adoption_data_value": "https://oklahoma.gov/content/dam/ok/en/osde/documents/services/standards-learning/hqim/oklahoma-state-textbook-committee/Subject%20Material%20Adoption%20Cycle%202026.pdf",
-      "scraped_value": "https://oklahoma.gov/education/services/hqim/info-for-publishers.html",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
-    },
-    {
-      "state": "SC",
-      "cycle_id": "SC1",
-      "subject": "CTE and Visual and Performing Arts",
-      "field": "src",
-      "adoption_data_value": "https://ed.sc.gov/newsroom/news-releases/request-for-bids-high-quality-instructional-materials/",
-      "scraped_value": "https://ed.sc.gov/instruction/instructional-materials/",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
-    },
-    {
-      "state": "TN",
-      "cycle_id": "TN2",
-      "subject": "Social Studies, CTE: Business Mgmt & Admin",
-      "field": "src",
-      "adoption_data_value": "https://www.tn.gov/content/dam/tn/textbook-commission/documents/schedule-f/Schedule_F_Calendar.pdf",
-      "scraped_value": "https://www.tn.gov/textbook-commission/textbook-information-for-publishers.html",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
-    },
-    {
-      "state": "TN",
-      "cycle_id": "TN3",
-      "subject": "World Languages",
-      "field": "src",
-      "adoption_data_value": "https://www.tn.gov/content/dam/tn/education/textbook/Instructional_Materials_Adoption_Schedule.pdf",
-      "scraped_value": "https://www.tn.gov/textbook-commission/textbook-information-for-publishers.html",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
-    },
-    {
-      "state": "TN",
-      "cycle_id": "TN4",
-      "subject": "ELA / English Language Arts",
-      "field": "src",
-      "adoption_data_value": "https://www.tn.gov/content/dam/tn/education/textbook/Instructional_Materials_Adoption_Schedule.pdf",
-      "scraped_value": "https://www.tn.gov/textbook-commission/textbook-information-for-publishers.html",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
-    },
-    {
-      "state": "TN",
-      "cycle_id": "TN5",
-      "subject": "Mathematics",
-      "field": "src",
-      "adoption_data_value": "https://www.tn.gov/content/dam/tn/education/textbook/Instructional_Materials_Adoption_Schedule.pdf",
-      "scraped_value": "https://www.tn.gov/textbook-commission/textbook-information-for-publishers.html",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
-    },
-    {
-      "state": "TX",
-      "cycle_id": "TX2",
-      "subject": "LOTE, CTE Batch 2, Positive Character Traits",
-      "field": "src",
-      "adoption_data_value": "https://tea.texas.gov/academics/instructional-materials/review-and-adoption-process/imra-multi-year-plan",
-      "scraped_value": "https://sboe.texas.gov/state-board-of-education/imra/current-imra-cycle",
-      "note": "adoption_data.json src does not match the scraped DOE landing page. Confirm which is canonical."
+      "note": "adoption_data.json src does not match the scraped URL. Confirm which is canonical."
     }
   ]
 }

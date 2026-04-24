@@ -176,6 +176,31 @@ def run_one(state_code, config, fixture_path=None):
     return data, None, html
 
 
+def _strip_noise_tags(html):
+    """Remove <script>, <style>, and <noscript> tags from an HTML string.
+
+    WordPress pages (alabamaachieves.org) inline ~2 MB of CSS and analytics
+    JS in <head> before the <body> even starts. If we dump the raw response,
+    the size cap trips inside the head section and the committed HTML has no
+    real content to parse. Stripping noise tags before writing lets the dump
+    capture the actual page markup.
+
+    Adapters continue to see the full unmodified HTML because this only runs
+    inside write_debug_html, not in the adapter fetch path.
+    """
+    try:
+        from bs4 import BeautifulSoup
+    except ImportError:
+        return html
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+    except Exception:
+        return html
+    for tag in soup.find_all(["script", "style", "noscript"]):
+        tag.decompose()
+    return str(soup)
+
+
 def write_debug_html(state_code, html):
     """Write the fetched HTML to scraped/_debug/<STATE>_latest.html.
 
@@ -184,12 +209,16 @@ def write_debug_html(state_code, html):
     not accumulate HTML history; git history alone preserves the prior
     version if anyone wants to compare. Large responses are truncated at
     DEBUG_HTML_MAX_BYTES so one runaway page cannot blow up the repo.
+
+    Scripts, styles, and noscript tags are stripped before writing. A
+    real AL dump would otherwise be >2 MB of head-section CSS with no
+    body content reachable within the cap.
     """
     if html is None:
         return None
     DEBUG_DIR.mkdir(parents=True, exist_ok=True)
     path = DEBUG_DIR / f"{state_code}_latest.html"
-    payload = html
+    payload = _strip_noise_tags(html)
     if len(payload) > DEBUG_HTML_MAX_BYTES:
         payload = payload[:DEBUG_HTML_MAX_BYTES] + (
             "\n<!-- truncated by run_adapters.py at "

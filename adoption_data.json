@@ -1271,7 +1271,7 @@
           "cf": "High",
           "dl": "TBD",
           "dlL": "Adoption cycle TBD",
-          "ac": true,
+          "ac": false,
           "src": "https://www.dpi.nc.gov/districts-schools/classroom-resources/office-teaching-and-learning",
           "v": "2026-04-24",
           "acc": true,

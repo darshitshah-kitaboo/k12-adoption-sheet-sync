@@ -1,0 +1,8 @@
+# Append-only logs: when two CI runs land on main concurrently and both
+# append a JSON line, git's default 3-way merge flags it as a conflict.
+# The `union` driver tells git to keep both sides, concatenating the
+# appended lines in order. This is exactly what we want for a run log.
+#
+# Applies to rebase and merge alike because both use the same merge
+# machinery. No git config needed beyond this file.
+logs/adapter_runs.jsonl merge=union

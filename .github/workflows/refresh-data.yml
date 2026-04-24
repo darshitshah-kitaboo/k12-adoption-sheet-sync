@@ -53,6 +53,8 @@ jobs:
           python scripts/adapters/test_ms.py
           python scripts/adapters/test_sc.py
           python scripts/adapters/test_va.py
+          python scripts/adapters/test_nc.py
+          python scripts/adapters/test_ut.py
 
       - name: Run coordinator
         id: coord

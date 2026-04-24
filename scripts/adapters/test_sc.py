@@ -75,12 +75,21 @@ def run():
         _fail(f"expected name South Carolina, got {data['name']}")
     _ok("wrapper fields populated")
 
-    # Newest adoption is "2025-26 Instructional Materials Adoption Information".
-    if data["cycle_year"] != 2025:
-        _fail(f"expected cycle_year 2025, got {data['cycle_year']}")
-    if data["cycle_label"] != "2025-26 Adoption":
+    # Newest adoption is the synthetic active call cycle built off the
+    # "2026 Call for Bid Information" link, so cycle_year rolls forward
+    # to 2026 and the label becomes 2026-27 Adoption.
+    if data["cycle_year"] != 2026:
+        _fail(f"expected cycle_year 2026, got {data['cycle_year']}")
+    if data["cycle_label"] != "2026-27 Adoption":
         _fail(f"cycle_label wrong: {data['cycle_label']}")
-    _ok("newest adoption stamped as 2025-26")
+    _ok("newest adoption stamped as 2026-27 (active call wins)")
+
+    # has_active_cycle is True because the landing page links a Call
+    # for Bids page. This is the signal downstream coordinators and
+    # promote_scraped use as a blunt state-level fallback.
+    if not data.get("has_active_cycle"):
+        _fail("has_active_cycle should be True when call_for_bids_url is present")
+    _ok("has_active_cycle flag flipped by Call for Bids anchor")
 
     # Publisher-facing wrappers.
     if "2026-call-for-bids" not in (data["call_for_bids_url"] or ""):
@@ -103,11 +112,12 @@ def run():
     _ok("HQIM overview and adoption webinars URLs captured")
 
     # Cycles: skip the bare "Comprehensive Materials List" (no year
-    # prefix), keep the 5 dated links.
-    if data["cycle_count"] != 5:
+    # prefix), keep the 5 dated links, plus 1 synthetic active call
+    # cycle built from the Call for Bids URL.
+    if data["cycle_count"] != 6:
         subjects = [(c["subject"], c["ay_start"]) for c in data["cycles"]]
-        _fail(f"expected 5 cycles, got {data['cycle_count']}: {subjects}")
-    _ok("5 dated adoption rows kept, undated wrapper skipped")
+        _fail(f"expected 6 cycles (5 historical + 1 active), got {data['cycle_count']}: {subjects}")
+    _ok("5 dated adoption rows + 1 synthetic active call cycle")
 
     # Sort order: newest ay_start first.
     ay_starts = [c["ay_start"] for c in data["cycles"]]
@@ -115,8 +125,25 @@ def run():
         _fail(f"cycles not sorted newest-first: {ay_starts}")
     _ok("cycles sorted newest AY first")
 
-    # Spot-check a row per shape: year range and single year.
-    math_row = next(c for c in data["cycles"]
+    # Synthetic active cycle sits at the top and carries the
+    # call_for_bids_url at cycle level so promote_scraped can match.
+    active_row = data["cycles"][0]
+    if active_row["subject"] != "Instructional Materials":
+        _fail(f"active cycle subject wrong: {active_row['subject']!r}")
+    if active_row["ay_start"] != 2026 or active_row["ay_end"] != 2027:
+        _fail(f"active cycle AY wrong: {active_row['ay_start']}-{active_row['ay_end']}")
+    if "2026-call-for-bids" not in (active_row.get("call_for_bids_url") or ""):
+        _fail(f"active cycle call_for_bids_url wrong: {active_row.get('call_for_bids_url')}")
+    if active_row.get("approved_materials_url") is not None:
+        _fail(f"active cycle approved_materials_url should be None, got {active_row.get('approved_materials_url')}")
+    _ok("synthetic active cycle carries call_for_bids_url at cycle level")
+
+    # Spot-check a row per shape: year range and single year. The
+    # synthetic active cycle has approved_materials_url=None so filter
+    # it out before substring matching.
+    dated_rows = [c for c in data["cycles"] if c.get("approved_materials_url")]
+
+    math_row = next(c for c in dated_rows
                     if "2025-comprehensive-listing-of-adopted-materials-for-math" in c["approved_materials_url"])
     if math_row["ay_start"] != 2025 or math_row["ay_end"] != 2026:
         _fail(f"math comprehensive AY wrong: {math_row['ay_start']}-{math_row['ay_end']}")
@@ -126,13 +153,13 @@ def run():
 
     # Adopted and ancillary math must be separate subject keys so the
     # coordinator diff treats them as different rows.
-    ancillary_row = next(c for c in data["cycles"]
+    ancillary_row = next(c for c in dated_rows
                          if "ancillary-materials-for-math" in c["approved_materials_url"])
     if ancillary_row["subject"] != "Math (Ancillary)":
         _fail(f"math ancillary subject wrong: {ancillary_row['subject']!r}")
     _ok("adopted vs ancillary modifier preserved on Math subject")
 
-    range_row = next(c for c in data["cycles"]
+    range_row = next(c for c in dated_rows
                      if "2025-26-approved-math-adoption" in c["approved_materials_url"])
     if range_row["ay_start"] != 2025 or range_row["ay_end"] != 2026:
         _fail(f"2025-26 row AY wrong: {range_row['ay_start']}-{range_row['ay_end']}")

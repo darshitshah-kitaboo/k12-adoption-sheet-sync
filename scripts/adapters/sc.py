@@ -14,13 +14,19 @@ bid artifacts.
 
 Per-subject fields emitted:
     subject, ay_start, ay_end, cycle_label,
-    approved_materials_url.
+    approved_materials_url, call_for_bids_url.
+
+When the landing page links a "Call for Bids" page, a synthetic
+"Instructional Materials" active cycle is also emitted so that
+promote_scraped has a cycle-level actionable URL to work with
+downstream. The year is extracted from the slug (e.g.
+"2026-call-for-bids" -> 2026).
 
 Wrapper fields emitted:
     call_for_bids_url, tentative_adoption_schedule_url,
     publisher_registration_url, imbp_registration_url,
     hqim_overview_url, adoption_webinars_url,
-    publisher_reps_list_url.
+    publisher_reps_list_url, has_active_cycle.
 
 Usage:
     python3 scripts/adapters/sc.py
@@ -55,6 +61,11 @@ YEAR_PREFIX_RE = re.compile(
 NON_SUBJECT_LINK_TERMS = (
     "comprehensive materials list",
 )
+
+# Match "2026-call-for-bid" or "2026-call-for-bids" inside the path of
+# the Call for Bids URL. The four-digit year is the adoption year the
+# call is targeting.
+CFB_YEAR_IN_PATH = re.compile(r"/(\d{4})-call-for-bid", re.IGNORECASE)
 
 
 def fetch_html(url=SOURCE_URL):
@@ -224,7 +235,32 @@ def parse(html, source_url=SOURCE_URL):
                 "ay_end": ay_end,
                 "cycle_label": cycle_label,
                 "approved_materials_url": href,
+                "call_for_bids_url": None,
             })
+
+    # Synthesize an active "Instructional Materials" cycle when the
+    # landing page links a Call for Bids page. SCDE runs a single
+    # statewide call that covers every subject in a given adoption
+    # year, so there is no per-subject breakdown on the landing page.
+    # Carrying the call_for_bids_url at the cycle level lets
+    # promote_scraped flip ac True and fill src for any matching
+    # adoption_data cycle downstream.
+    has_active_cycle = bool(call_for_bids_url)
+    if call_for_bids_url:
+        m_year = CFB_YEAR_IN_PATH.search(call_for_bids_url)
+        if m_year:
+            cfb_ay_start = int(m_year.group(1))
+            cfb_ay_end = cfb_ay_start + 1
+            cycles.append({
+                "subject": "Instructional Materials",
+                "ay_start": cfb_ay_start,
+                "ay_end": cfb_ay_end,
+                "cycle_label": f"{cfb_ay_start}-{str(cfb_ay_end)[-2:]} Adoption",
+                "approved_materials_url": None,
+                "call_for_bids_url": call_for_bids_url,
+            })
+            if newest_ay_start is None or cfb_ay_start > newest_ay_start:
+                newest_ay_start = cfb_ay_start
 
     # Stable order: newest cycle first, then subject alphabetical.
     cycles.sort(key=lambda c: (-c["ay_start"], c["subject"].lower()))
@@ -241,6 +277,7 @@ def parse(html, source_url=SOURCE_URL):
         "cycle_year": newest_ay_start,
         "cycle_label": newest_cycle_label,
         "cycle_count": len(cycles),
+        "has_active_cycle": has_active_cycle,
         "call_for_bids_url": call_for_bids_url,
         "tentative_adoption_schedule_url": tentative_adoption_schedule_url,
         "publisher_registration_url": publisher_registration_url,

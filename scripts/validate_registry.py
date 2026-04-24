@@ -1,5 +1,18 @@
 """
-Validate every URL in registry/sources.json by fetching it live.
+Validate every URL in registry/sources.json and in adoption_data.json by
+fetching each one live.
+
+Two pools of URLs get checked:
+
+1.  Registry URLs (registry/sources.json). These are the top-level state DOE
+    pages, SBE agenda pages, and procurement portals the pipeline uses as
+    entry points. Priority-1 failures are fatal and cause a nonzero exit.
+
+2.  Dashboard URLs (adoption_data.json). Every cycle carries a primary `src`
+    and a list of `src2` secondary sources. These are what a publisher sees
+    on the front end, so a rot here is visible to end users. Failures are
+    reported but do not exit nonzero, so one flaky PDF cannot gate the
+    weekly run.
 
 Uses the `requests` library with browser-realistic headers, cookie persistence,
 and automatic redirect handling. This matches how a real user's browser would
@@ -11,20 +24,23 @@ Install once:
     pip3 install requests
 
 Exit codes:
-    0   all priority-1 (active adoption) state URLs returned 200
-    1   one or more priority-1 URLs failed
+    0   all priority-1 registry URLs returned 200
+    1   one or more priority-1 registry URLs failed
     2   unexpected error (registry file missing, malformed, etc.)
 
 Outputs:
     registry/verification_report.json   per-URL status, timestamp, response time
+                                        for both registry and dashboard URLs
     registry/sources.json (in-place)    last_verified stamped on each state that
-                                         had every non-null URL return 200
+                                        had every non-null URL return 200
 
 Usage:
     python3 scripts/validate_registry.py              # verify + stamp
     python3 scripts/validate_registry.py --dry        # verify without stamping
     python3 scripts/validate_registry.py --quiet      # only print failures
     python3 scripts/validate_registry.py --verbose    # print every URL attempt
+    python3 scripts/validate_registry.py --skip-dashboard
+                                                      # registry only, legacy mode
 """
 
 import argparse
@@ -47,6 +63,7 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 REGISTRY = ROOT / "registry" / "sources.json"
 REPORT = ROOT / "registry" / "verification_report.json"
+DATA = ROOT / "adoption_data.json"
 
 # Browser-realistic headers. State DOE sites routinely 403 anything that looks
 # scripted. This matches Chrome 120 on macOS. Do not get creative here, the
@@ -177,6 +194,32 @@ def collect_urls(registry):
     return jobs
 
 
+def collect_dashboard_urls(data):
+    """Flatten adoption_data.json into (state_code, field_label, url) tuples.
+
+    Walks every cycle's `src` primary source and every `src2[].u` secondary
+    source. The field label encodes the cycle id so a failing row can be
+    traced back to the exact cycle record. Dashboard URLs carry no
+    skip_validation flag: they are curated sources promoted only after a
+    human review, so any failure is worth surfacing.
+    """
+    jobs = []
+    for state in data.get("states", []):
+        code = state.get("code")
+        if not code:
+            continue
+        for cycle in state.get("cycles", []):
+            cid = cycle.get("id", "?")
+            src = cycle.get("src")
+            if src:
+                jobs.append((code, f"{cid}:src", src))
+            for i, sec in enumerate(cycle.get("src2", []) or []):
+                u = sec.get("u")
+                if u:
+                    jobs.append((code, f"{cid}:src2[{i}]", u))
+    return jobs
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry", action="store_true",
@@ -185,6 +228,8 @@ def main():
                     help="Only print failures, suppress per-URL 200s")
     ap.add_argument("--verbose", action="store_true",
                     help="Print every URL attempt with full context")
+    ap.add_argument("--skip-dashboard", action="store_true",
+                    help="Skip the adoption_data.json URL sweep (legacy mode)")
     args = ap.parse_args()
 
     if not REGISTRY.exists():
@@ -274,6 +319,55 @@ def main():
                     priority_one_failures.append((code, stype, r))
         per_state_pass[code] = state_pass
 
+    # ----- Dashboard URL sweep (adoption_data.json) -----
+    # Runs after the registry sweep so the registry summary stays first in
+    # the log output. Sharing the fetch pool would tangle progress lines, and
+    # the dashboard set is small (~70 URLs), so a second serial pass is fine.
+    dashboard_results = {}
+    dashboard_ok = 0
+    dashboard_fail = 0
+    dashboard_failures = []
+    dashboard_total = 0
+    if not args.skip_dashboard and DATA.exists():
+        try:
+            with DATA.open() as f:
+                data = json.load(f)
+        except json.JSONDecodeError as e:
+            print(f"\nWARN: {DATA} is not valid JSON, skipping dashboard sweep: {e}",
+                  file=sys.stderr)
+            data = None
+
+        if data is not None:
+            dash_jobs = collect_dashboard_urls(data)
+            dashboard_total = len(dash_jobs)
+            if dash_jobs:
+                print(f"\nVerifying {dashboard_total} dashboard URLs from adoption_data.json")
+                with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
+                    futures = {ex.submit(fetch_status, url): (code, field, url)
+                               for code, field, url in dash_jobs}
+                    for fut in as_completed(futures):
+                        code, field, url = futures[fut]
+                        status, final, elapsed, err = fut.result()
+                        row = {
+                            "field": field,
+                            "url": url,
+                            "final_url": final if final != url else None,
+                            "status": status,
+                            "elapsed_ms": elapsed,
+                            "error": err,
+                        }
+                        dashboard_results.setdefault(code, []).append(row)
+                        if status == 200:
+                            dashboard_ok += 1
+                        else:
+                            dashboard_fail += 1
+                            dashboard_failures.append((code, row))
+                        if args.verbose or (not args.quiet) or status != 200:
+                            tag = f"{status:>3}" if isinstance(status, int) else "ERR"
+                            redir = f"  -> {final}" if (final and final != url) else ""
+                            err_str = f"  {err}" if err else ""
+                            print(f"  {code:3s} {field:20s} {tag} {elapsed:>5}ms{redir}{err_str}")
+
     # Write verification report
     report = {
         "generated_at": started_at,
@@ -283,8 +377,14 @@ def main():
             "failed": total_fail,
             "skipped": total_skipped,
             "priority_one_failures": len(priority_one_failures),
+            "dashboard": {
+                "total_urls": dashboard_total,
+                "ok": dashboard_ok,
+                "failed": dashboard_fail,
+            },
         },
         "per_state": results,
+        "dashboard": dashboard_results,
     }
     if not args.dry:
         REPORT.write_text(json.dumps(report, indent=2))
@@ -303,9 +403,12 @@ def main():
         print(f"Stamped last_verified={today} on {stamped} fully-passing states")
 
     print(f"\n{'='*60}")
-    print(f"Total URLs: {len(jobs)}   OK: {total_ok}   "
-          f"Failed: {total_fail}   Skipped: {total_skipped}")
-    print(f"Priority-1 failures: {len(priority_one_failures)}")
+    print(f"Registry   Total: {len(jobs):>3}   OK: {total_ok:>3}   "
+          f"Failed: {total_fail:>3}   Skipped: {total_skipped:>3}")
+    if dashboard_total:
+        print(f"Dashboard  Total: {dashboard_total:>3}   OK: {dashboard_ok:>3}   "
+              f"Failed: {dashboard_fail:>3}")
+    print(f"Priority-1 registry failures: {len(priority_one_failures)}")
     print(f"{'='*60}")
 
     if priority_one_failures:
@@ -313,6 +416,18 @@ def main():
         for code, stype, r in priority_one_failures:
             print(f"  {code} {stype}: {r['status']} {r['error']}")
             print(f"    url: {r['url']}")
+
+    if dashboard_failures:
+        # Print but do not exit nonzero. Dashboard URLs are curated sources
+        # and a single bad PDF should not gate the weekly run.
+        print(f"\nDASHBOARD URL FAILURES ({len(dashboard_failures)}):")
+        for code, r in dashboard_failures:
+            status_str = r["status"] if r["status"] is not None else "ERR"
+            err_str = f" {r['error']}" if r["error"] else ""
+            print(f"  {code} {r['field']}: {status_str}{err_str}")
+            print(f"    url: {r['url']}")
+
+    if priority_one_failures:
         sys.exit(1)
 
     sys.exit(0)

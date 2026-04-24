@@ -33,6 +33,7 @@ import json
 import re
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
@@ -155,17 +156,54 @@ def parse(html, source_url=SOURCE_URL):
         all_links, "publisher representatives")
 
     # Find the "Current Approved Adoptions" section and walk every
-    # sub-link under it. The heading is rendered as an h3 that also
-    # acts as a link to the landing page.
+    # sub-link under it. The SCDE site uses a feature-boxes card grid
+    # where each section is a <div class="fb-item"> containing a title
+    # block (the h3) and a sibling content block (<div class="fb-content">)
+    # that holds the <ul> of links. The h3 is deeply nested inside an
+    # <a> wrapper, so find_next_siblings() from the h3 returns nothing.
+    # To reach the links we walk up to the enclosing fb-item and read
+    # its fb-content.
     current_heading = base.find_heading_containing(
         soup, "current approved adoptions", tag_names=("h2", "h3", "h4"))
+
+    def _links_in_card(heading):
+        """Return (text, absolute_href) pairs inside the heading's fb-item card."""
+        cur = heading
+        card = None
+        for _ in range(6):
+            p = getattr(cur, "parent", None)
+            if p is None:
+                break
+            klass = p.get("class") or []
+            if "fb-item" in klass:
+                card = p
+                break
+            cur = p
+        if card is None:
+            return []
+        content = card.find("div", class_="fb-content")
+        if content is None:
+            return []
+        pairs = []
+        for a in content.find_all("a"):
+            href = a.get("href", "") or ""
+            if not href:
+                continue
+            txt = a.get_text(" ", strip=True)
+            pairs.append((txt, urljoin(source_url, href)))
+        return pairs
 
     cycles = []
     newest_ay_start = None
     if current_heading:
-        for link_text, href in base.collect_links_under(
+        # Try the fb-item card pattern first (real page), then fall back
+        # to the legacy sibling walk that the smoke test fixture uses.
+        section_links = _links_in_card(current_heading)
+        if not section_links:
+            section_links = base.collect_links_under(
                 current_heading, source_url,
-                stop_tags=("h1", "h2", "h3")):
+                stop_tags=("h1", "h2", "h3"))
+        for link_text, href in section_links:
             low = link_text.lower()
             # Skip the Comprehensive Materials List wrapper link, which
             # points at an umbrella page rather than a dated adoption.

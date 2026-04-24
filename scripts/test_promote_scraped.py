@@ -49,7 +49,12 @@ def run():
            "call_for_bids_url": "https://x/cfb"}
     if actionable_url(cyc) != "https://x/cfb":
         _fail("actionable_url should prefer call_for_bids_url")
-    _ok("actionable_url prefers call_for_bids_url then invitation then review")
+    # rfim_url is the Texas-specific actionable key. It should be
+    # picked up when nothing higher-priority is present.
+    rfim_only = {"rfim_url": "https://tea.texas.gov/imra/imra26-rfim.pdf"}
+    if actionable_url(rfim_only) != "https://tea.texas.gov/imra/imra26-rfim.pdf":
+        _fail("actionable_url should return rfim_url when it's the only actionable URL")
+    _ok("actionable_url prefers call_for_bids_url, then invitation, then rfim, then review")
 
     # is_more_specific: PDF beats landing page, deeper path beats shallower.
     if not is_more_specific(
@@ -233,6 +238,26 @@ def run():
                     },
                 ],
             },
+            # TN: Texas-style actionable plumbing. Adoption cycle is
+            # already ac=True with src pointing at a landing page.
+            # Scraped side carries only rfim_url (no call_for_bids_url
+            # or invitation_to_submit_url). Rule 4b must still fire
+            # because rfim_url is in ACTIONABLE_CYCLE_KEYS, so src is
+            # replaced with the RFIM PDF and no conflict is logged.
+            {
+                "code": "TN",
+                "name": "Tennessee",
+                "last_verified": "2026-04-15",
+                "cycles": [
+                    {
+                        "id": "TN1",
+                        "su": "Fine Arts",
+                        "src": "https://tea.texas.gov/imra/landing",
+                        "v": "2026-04-15",
+                        "ac": True,
+                    },
+                ],
+            },
         ],
     }
 
@@ -289,6 +314,18 @@ def run():
                 "subject": "Mathematics",
                 "call_for_bids_url":
                     "https://doe.nv.gov/textbooks/call-for-bids-math-2026.pdf",
+            }],
+        },
+        # TN: only an rfim_url at cycle level, which actionable_url
+        # must still recognize.
+        "TN": {
+            "state": "TN",
+            "source_url": "https://tea.texas.gov/imra/landing",
+            "cycle_count": 1,
+            "cycles": [{
+                "subject": "Fine Arts",
+                "rfim_url":
+                    "https://tea.texas.gov/imra/imra26-rfim.pdf",
             }],
         },
         # OK intentionally absent to confirm no-op path.
@@ -402,9 +439,26 @@ def run():
         _fail(f"NV cycle dl should remain 'TBD', got {c['dl']}")
     _ok("NV: ac stays False when dl is a non-ISO placeholder")
 
+    # TN: rfim_url alone triggers rule 4b because it's an actionable
+    # key. src is replaced with the RFIM PDF and no conflict logs.
+    tn = states_by_code["TN"]
+    c = tn["cycles"][0]
+    expected_tn_src = "https://tea.texas.gov/imra/imra26-rfim.pdf"
+    if c["src"] != expected_tn_src:
+        _fail(f"TN cycle src should be replaced with rfim_url, got {c['src']}")
+    if c["ac"] is not True:
+        _fail(f"TN cycle ac should stay True, got {c['ac']}")
+    tn_conflicts = [x for x in conflicts if x["state"] == "TN"]
+    if tn_conflicts:
+        _fail(f"TN should NOT log a conflict (rule 4b auto-applies), got {tn_conflicts}")
+    tn_change = next((x for x in changes if x["state"] == "TN"), None)
+    if not tn_change or tn_change["src_replaced_active"] != 1:
+        _fail(f"TN src_replaced_active should be 1, got {tn_change}")
+    _ok("TN: rfim_url alone triggers rule 4b via ACTIONABLE_CYCLE_KEYS")
+
     # Changes summary should have an entry for each state that actually moved.
     states_in_changes = {c["state"] for c in changes}
-    expected = {"NC", "UT", "TX", "VA", "ID"}
+    expected = {"NC", "UT", "TX", "VA", "ID", "TN"}
     if not expected.issubset(states_in_changes):
         _fail(f"changes missing states: expected superset of {expected}, got {states_in_changes}")
     if "OK" in states_in_changes:

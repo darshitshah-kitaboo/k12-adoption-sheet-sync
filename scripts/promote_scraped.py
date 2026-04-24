@@ -87,10 +87,14 @@ PENDING_REVIEW_PATH = ROOT / "logs" / "pending_review.json"
 SRC_EMPTY_MARKERS = {"", "tbd", "n/a", "none", "null"}
 
 # Keys on a scraped cycle that point to actionable URLs a publisher
-# would use during an open call. Checked in priority order.
+# would use during an open call. Checked in priority order. rfim_url
+# is Texas-specific ("Request for Instructional Materials" PDF), which
+# plays the same publisher-submission role as call_for_bids_url and
+# invitation_to_submit_url in other states.
 ACTIONABLE_CYCLE_KEYS = (
     "call_for_bids_url",
     "invitation_to_submit_url",
+    "rfim_url",
     "current_review_url",
 )
 

@@ -97,11 +97,29 @@ def _subject_from_heading(text):
 
 
 def _section_items(h3, source_url):
-    """Walk forward siblings of `h3` until the next h2/h3, collecting anchors
-    and the paragraph text that follows each one.
+    """Collect anchor-and-description items for the section that starts at h3.
 
-    Returns a list of dicts with keys: text, href, description.
+    Two shapes are supported:
+      (a) Simple HTML used by the smoke test fixture. The h3 sits at the
+          top level with <p> sibling elements following it.
+      (b) The real alabamaachieves.org page uses a WPBakery VC_composer
+          grid. The subject h3 is deeply nested inside a <div class="vc_row">
+          wrapper, so h3.find_next_siblings() returns nothing. The data
+          rows are vc_row siblings of the subject's vc_row, each with a
+          two-column grid (left column holds the anchor, right column
+          holds the description paragraph).
     """
+    items = _section_items_siblings(h3, source_url)
+    if items:
+        return items
+    vc_row = _enclosing_vc_row(h3)
+    if vc_row is None:
+        return items
+    return _section_items_vcrow(vc_row, source_url)
+
+
+def _section_items_siblings(h3, source_url):
+    """Simple sibling walk used by the smoke test fixture."""
     items = []
     for sib in h3.find_next_siblings():
         name = getattr(sib, "name", None)
@@ -132,6 +150,64 @@ def _section_items(h3, source_url):
                 items[-1]["description"] = (
                     items[-1]["description"] + " " + desc
                 ).strip()
+    return items
+
+
+def _enclosing_vc_row(node):
+    """Walk up parents until we find a div with class 'vc_row'. Returns
+    None for top-level fixture HTML that has no WPBakery wrappers."""
+    cur = node
+    for _ in range(12):
+        p = getattr(cur, "parent", None)
+        if p is None:
+            return None
+        klass = p.get("class") or [] if hasattr(p, "get") else []
+        if "vc_row" in klass:
+            return p
+        cur = p
+    return None
+
+
+def _section_items_vcrow(subject_row, source_url):
+    """Walk vc_row siblings of `subject_row`, pairing each anchor in the
+    left column with the description paragraph in the right column of
+    the same row. Stops at the next vc_row that contains an h3 (which
+    marks the start of the next subject or the start of the Adoption
+    Process / Publishers blocks)."""
+    items = []
+    for sib in subject_row.find_next_siblings():
+        if not hasattr(sib, "find_all"):
+            continue
+        # Any h3 inside this row means we've walked into the next section.
+        if sib.find("h3") is not None:
+            break
+        anchors = [
+            a for a in sib.find_all("a")
+            if (a.get("href") or "").strip()
+        ]
+        # Description text lives in <p> elements that are NOT wrapping the
+        # anchor. In the two-column grid, the left column's <p> holds the
+        # anchor and the right column's <p> holds the description.
+        descriptions = []
+        for p in sib.find_all("p"):
+            if p.find("a"):
+                continue
+            desc = p.get_text(" ", strip=True)
+            if desc:
+                descriptions.append(desc)
+        row_items = []
+        for a in anchors:
+            href = a.get("href", "") or ""
+            text = a.get("title") or a.get_text(" ", strip=True)
+            row_items.append({
+                "text": text,
+                "href": urljoin(source_url, href),
+                "description": "",
+            })
+        for i, it in enumerate(row_items):
+            if i < len(descriptions):
+                it["description"] = descriptions[i]
+        items.extend(row_items)
     return items
 
 
@@ -197,16 +273,25 @@ def parse(html, source_url=SOURCE_URL):
     scraped_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     all_links = base.all_links(soup, source_url)
+    # Drop the in-page TOC anchors (luckywp-table-of-contents on the real
+    # Alabama page). Those links share their anchor text with the real
+    # section headings lower on the page, so without this filter the
+    # wrapper searches below return #-fragments instead of actual PDFs.
+    external_links = [
+        (t, h) for (t, h) in all_links
+        if h.split("#", 1)[0] and h.split("#", 1)[0] != source_url.rstrip("/")
+        and h.split("#", 1)[0].rstrip("/") != source_url.rstrip("/")
+    ]
 
     # Wrapper URLs. The adoption cycle PDF lives under an "Adoption
     # Process - Schedule" heading. The title "Alabama Courses of Study
     # Standards and State Textbook Adoption Cycle" is stable.
     _, adoption_cycle_schedule_url = base.first_link_matching(
-        all_links, "courses of study", "textbook adoption cycle")
+        external_links, "courses of study", "textbook adoption cycle")
     _, adoption_process_forms_url = base.first_link_matching(
-        all_links, "alabama state textbooks adoption process forms")
+        external_links, "alabama state textbooks adoption process forms")
     _, publishers_documents_url = base.first_link_matching_any(
-        all_links, [
+        external_links, [
             ["publisher", "documents"],
             ["publisher's", "documents"],
         ])

@@ -1,18 +1,25 @@
 name: refresh-data
 
-# Runs the state adapter coordinator from GitHub's US-based runner.
-# Each adapter fetches its state's DOE page, parses it, and writes a
-# fresh snapshot to scraped/<STATE>.json. If any meaningful field changed
-# since the previous snapshot, a change log is written to logs/changes/.
+# Runs the state adapter coordinator from GitHub's US-based runner, then
+# promotes safe findings into adoption_data.json and pushes the result
+# to the Google Sheet in the same run.
 #
-# The coordinator does NOT touch adoption_data.json. That is the canonical
-# human-curated file. The pipeline is deliberately read-only against it;
-# a human reviews logs/changes/ and promotes confirmed updates.
+# Pipeline:
+#   1. Coordinator runs every adapter and writes scraped/<STATE>.json
+#      + logs/changes/<STATE>-<date>.json for any meaningful diff.
+#   2. promote_scraped.py applies conservative rules to adoption_data.json:
+#      bump last_verified, fill null src fields, flip ac False->True on
+#      active-cycle signals. Anything risky lands in logs/pending_review.json
+#      instead of being auto-applied.
+#   3. Everything gets committed in one commit.
+#   4. refresh_and_push.py pushes the updated adoption_data.json into the
+#      Google Sheet. This runs in the same workflow because GitHub's default
+#      bot token cannot trigger other workflows on commit, so we cannot
+#      rely on nightly-push.yml to fire after the promotion commit.
 #
 # Triggers:
 #   - Manual run from the Actions tab (workflow_dispatch)
-#   - Daily at 13:00 UTC (6:30 PM IST, 9:00 AM ET) — same window as the
-#     registry validator, different day slots to spread load.
+#   - Daily at 13:00 UTC (6:30 PM IST, 9:00 AM ET)
 #   - On any push that changes the coordinator, an adapter, or this file
 
 on:
@@ -40,7 +47,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4
+        run: pip install requests beautifulsoup4 google-api-python-client google-auth
 
       - name: Run adapter smoke tests
         run: |
@@ -55,23 +62,38 @@ jobs:
           python scripts/adapters/test_va.py
           python scripts/adapters/test_nc.py
           python scripts/adapters/test_ut.py
+          python scripts/test_promote_scraped.py
+
+      - name: Validate adoption_data.json
+        run: python scripts/validate.py
 
       - name: Run coordinator
         id: coord
         run: python scripts/run_adapters.py
         continue-on-error: true
 
-      - name: Commit snapshots and change logs
+      - name: Promote scraped findings to adoption_data.json
+        # Runs even when the coordinator had a partial failure. Promotion
+        # only touches states whose snapshots exist and are non-empty, so
+        # it is safe to run after a red coordinator step.
+        if: always()
+        run: python scripts/promote_scraped.py
+
+      - name: Commit snapshots, logs, and promoted dashboard
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add scraped/ logs/adapter_runs.jsonl logs/changes/ 2>/dev/null || true
+          git add scraped/ logs/ adoption_data.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
-          git commit -m "chore: refresh state adapter snapshots [skip ci]"
+          # The sheet push runs in a later step in this same workflow, so
+          # this commit does not need to fan out to nightly-push.yml. We
+          # still omit [skip ci] because refresh-data.yml does not watch
+          # adoption_data.json, so there is no re-run loop.
+          git commit -m "chore: refresh state adapter snapshots"
           # Retry push with rebase when the runner's HEAD is behind main.
           # Happens when a human pushed while the workflow was running.
           for attempt in 1 2 3; do
@@ -84,6 +106,19 @@ jobs:
           done
           echo "Push still failing after 3 rebase attempts" >&2
           exit 1
+
+      - name: Push adoption_data.json to Google Sheet
+        # Runs in the same workflow because GitHub's default bot token
+        # cannot trigger other workflows on commit, so we cannot rely on
+        # nightly-push.yml firing after the promotion commit above.
+        # if: always() so a red coordinator step does not block the sheet
+        # refresh; the push script reads adoption_data.json off disk and
+        # does not depend on the coordinator's exit status.
+        if: always()
+        env:
+          ADOPTION_SHEET_ID: ${{ secrets.ADOPTION_SHEET_ID }}
+          ADOPTION_SA_JSON: ${{ secrets.ADOPTION_SA_JSON }}
+        run: python scripts/refresh_and_push.py
 
       - name: Fail the job if a required adapter failed
         if: steps.coord.outcome == 'failure'

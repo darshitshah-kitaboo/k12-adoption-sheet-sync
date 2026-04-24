@@ -71,9 +71,19 @@ SUBJECT_FAMILIES = [
 ]
 
 
+WARMUP_URL = "https://www.doe.virginia.gov/"
+
+
 def fetch_html(url=SOURCE_URL):
-    """Fetch the VDOE textbooks page via the shared helper."""
-    return base.fetch_html(url)
+    """Fetch the VDOE textbooks page with a warmup hit to the site root.
+
+    doe.virginia.gov returns HTTP 403 to plain requests coming from
+    GitHub's runners even with the full Chrome header set. The warmup
+    pattern (used by TN and OK) opens a session, hits the domain root
+    so any WAF challenge cookie lands, then requests the textbooks page
+    with Sec-Fetch-Site: same-origin and a Referer pointing at the root.
+    """
+    return base.fetch_html(url, warmup_url=WARMUP_URL)
 
 
 def _parse_announcement_date(text):

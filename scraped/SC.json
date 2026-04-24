@@ -1,0 +1,53 @@
+{
+  "state": "SC",
+  "name": "South Carolina",
+  "source_url": "https://ed.sc.gov/instruction/instructional-materials/",
+  "scraped_at": "2026-04-24T05:24:14+00:00",
+  "cycle_year": 2025,
+  "cycle_label": "2025-26 Adoption",
+  "cycle_count": 5,
+  "call_for_bids_url": "https://ed.sc.gov/instruction/instructional-materials/information-for-publishers/2026-call-for-bids-for-instructional-materials/",
+  "tentative_adoption_schedule_url": "https://docs.google.com/document/d/1OZUFOXYed66FdzQH9mD8vou-XkmqOEANzpN7m5-OBHI/view?tab=t.0",
+  "publisher_registration_url": "https://ed.sc.gov/instruction/instructional-materials/information-for-publishers/publisher-and-vendor-registration/",
+  "imbp_registration_url": "https://ed.sc.gov/instruction/instructional-materials/information-for-publishers/publisher-vendor-registration-for-the-instructional-materials-bid-portal-imbp/",
+  "hqim_overview_url": "https://ed.sc.gov/instruction/instructional-materials/high-quality-instructional-materials-hqim/",
+  "adoption_webinars_url": "https://ed.sc.gov/instruction/instructional-materials/high-quality-instructional-materials-hqim/statewide-webinars-for-the-textbook-adoption-process/",
+  "publisher_reps_list_url": "https://docs.google.com/document/d/1AcoWV8_NrsyaNC1wp-oTaUx9DOJBMnLQ_lpjPbzm_ik/edit?usp=sharing",
+  "cycles": [
+    {
+      "subject": "Computer Education",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "2025-26 Adoption",
+      "approved_materials_url": "https://ed.sc.gov/instruction/instructional-materials/current-approved-adoptions/2024-computer-education-adopted-programs/"
+    },
+    {
+      "subject": "Instructional Materials",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "2025-26 Adoption",
+      "approved_materials_url": "https://ed.sc.gov/instruction/instructional-materials/current-approved-adoptions/2025-26-approved-math-adoption/"
+    },
+    {
+      "subject": "Math (Adopted)",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "2025-26 Adoption",
+      "approved_materials_url": "https://ed.sc.gov/instruction/instructional-materials/current-approved-adoptions/supplemental-instructional-materials/2025-comprehensive-listing-of-adopted-materials-for-math/"
+    },
+    {
+      "subject": "Math (Ancillary)",
+      "ay_start": 2025,
+      "ay_end": 2026,
+      "cycle_label": "2025-26 Adoption",
+      "approved_materials_url": "https://ed.sc.gov/instruction/instructional-materials/current-approved-adoptions/supplemental-instructional-materials/2025-comprehensive-listing-of-ancillary-materials-for-math/"
+    },
+    {
+      "subject": "Instructional Materials",
+      "ay_start": 2024,
+      "ay_end": 2025,
+      "cycle_label": "2024-25 Adoption",
+      "approved_materials_url": "https://ed.sc.gov/instruction/instructional-materials/current-approved-adoptions/2024-25-instructional-materials-adoption-information/"
+    }
+  ]
+}

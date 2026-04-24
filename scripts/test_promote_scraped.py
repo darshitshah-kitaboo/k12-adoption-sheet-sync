@@ -12,7 +12,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from scripts.promote_scraped import promote, is_src_empty  # noqa: E402
+from scripts.promote_scraped import (  # noqa: E402
+    actionable_url,
+    find_scraped_cycle,
+    is_src_empty,
+    promote,
+)
 
 
 def _fail(msg):
@@ -33,6 +38,30 @@ def run():
         if is_src_empty(full):
             _fail(f"is_src_empty should be False for {full!r}")
     _ok("is_src_empty recognizes empty, TBD, and real URLs")
+
+    # actionable_url picks first non-empty in priority order.
+    if actionable_url(None) is not None:
+        _fail("actionable_url(None) should return None")
+    if actionable_url({}) is not None:
+        _fail("actionable_url({}) should return None")
+    cyc = {"invitation_to_submit_url": "https://x/its",
+           "call_for_bids_url": "https://x/cfb"}
+    if actionable_url(cyc) != "https://x/cfb":
+        _fail("actionable_url should prefer call_for_bids_url")
+    _ok("actionable_url prefers call_for_bids_url then invitation then review")
+
+    # find_scraped_cycle matches by subject with exact + loose fallback.
+    snap_cycles = [{"subject": "Mathematics"},
+                   {"subject": "ELA Standards Revision"}]
+    m = find_scraped_cycle(snap_cycles, {"su": "mathematics"})
+    if not m or m["subject"] != "Mathematics":
+        _fail("exact subject match failed")
+    m = find_scraped_cycle(snap_cycles, {"su": "ELA"})
+    if not m or "ELA" not in m["subject"]:
+        _fail("loose substring match failed")
+    if find_scraped_cycle(snap_cycles, {"su": "Chemistry"}) is not None:
+        _fail("non-matching subject should return None")
+    _ok("find_scraped_cycle handles exact and loose subject matches")
 
     today = "2026-04-24"
 
@@ -71,8 +100,9 @@ def run():
                     },
                 ],
             },
-            # TX: src is present but differs from scraped source_url;
-            # should queue a conflict, not overwrite.
+            # TX: src is present but differs from scraped source_url, and
+            # scraper did NOT provide a cycle-level actionable URL. This
+            # should queue a conflict, not overwrite. ac stays True.
             {
                 "code": "TX",
                 "name": "Texas",
@@ -83,7 +113,7 @@ def run():
                         "su": "English / K-12",
                         "src": "https://tea.texas.gov/other-url",
                         "v": "2026-04-15",
-                        "ac": True,  # already True; must stay True
+                        "ac": True,
                     },
                 ],
             },
@@ -119,6 +149,23 @@ def run():
                     },
                 ],
             },
+            # ID: existing src points at a landing page and scraper has a
+            # cycle-level call_for_bids_url. Rule 4b should flip ac True
+            # AND replace src with the actionable URL. No conflict.
+            {
+                "code": "ID",
+                "name": "Idaho",
+                "last_verified": "2026-04-15",
+                "cycles": [
+                    {
+                        "id": "ID1",
+                        "su": "Science",
+                        "src": "https://www.sde.idaho.gov/instructional-materials/",
+                        "v": "2026-04-15",
+                        "ac": False,
+                    },
+                ],
+            },
         ],
     }
 
@@ -148,6 +195,16 @@ def run():
             "source_url": "https://www.doe.virginia.gov/textbooks",
             "cycle_count": 1,
             "cycles": [{"subject": "English"}],
+        },
+        "ID": {
+            "state": "ID",
+            "source_url": "https://www.sde.idaho.gov/instructional-materials/",
+            "cycle_count": 1,
+            "cycles": [{
+                "subject": "Science",
+                "call_for_bids_url":
+                    "https://www.sde.idaho.gov/im/call-for-bids-2026-science.pdf",
+            }],
         },
         # OK intentionally absent to confirm no-op path.
     }
@@ -219,11 +276,31 @@ def run():
         _fail(f"VA cycle src should be filled, got {c['src']}")
     _ok("VA: TBD placeholder src replaced with scraped source_url")
 
+    # ID: active cycle rule replaces landing page with bid packet URL.
+    idaho = states_by_code["ID"]
+    c = idaho["cycles"][0]
+    if c["ac"] is not True:
+        _fail(f"ID cycle ac should flip to True on cycle-level URL, got {c['ac']}")
+    expected_id_src = "https://www.sde.idaho.gov/im/call-for-bids-2026-science.pdf"
+    if c["src"] != expected_id_src:
+        _fail(f"ID cycle src should be replaced with bid packet URL, got {c['src']}")
+    id_conflicts = [x for x in conflicts if x["state"] == "ID"]
+    if id_conflicts:
+        _fail(f"ID should NOT have a conflict (rule 4b auto-applies), got {id_conflicts}")
+    id_change = next((x for x in changes if x["state"] == "ID"), None)
+    if not id_change:
+        _fail("ID should appear in changes")
+    if id_change["src_replaced_active"] != 1:
+        _fail(f"ID src_replaced_active should be 1, got {id_change['src_replaced_active']}")
+    if id_change["ac_flipped"] != 1:
+        _fail(f"ID ac_flipped should be 1, got {id_change['ac_flipped']}")
+    _ok("ID: active-cycle URL replaces landing page, ac flipped, no conflict")
+
     # Changes summary should have an entry for each state that actually moved.
     states_in_changes = {c["state"] for c in changes}
-    expected = {"NC", "UT", "TX", "VA"}
+    expected = {"NC", "UT", "TX", "VA", "ID"}
     if not expected.issubset(states_in_changes):
-        _fail(f"changes missing states: expected ⊇ {expected}, got {states_in_changes}")
+        _fail(f"changes missing states: expected superset of {expected}, got {states_in_changes}")
     if "OK" in states_in_changes:
         _fail("OK should not appear in changes (no snapshot)")
     _ok("change summary lists only states that were updated")

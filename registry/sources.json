@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-04-24",
+  "last_updated": "2026-04-23",
   "description": "Authoritative URLs for K12 adoption intelligence discovery. One entry per state + DC. Each entry lists stable primary and secondary sources. Used as input to scraper/ in Phases 2 and 3.",
   "source_types": {
     "doe_instructional_materials": "Primary DOE page listing current and upcoming adoption cycles",
@@ -20,7 +20,7 @@
       "name": "Alabama",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.alabamaachieves.org/content-areas-specialty/textbook-adoption-and-procurement/",
@@ -47,7 +47,7 @@
       "name": "Arkansas",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://dese.ade.arkansas.gov/Offices/learning-services/curriculum-support/arkansas-initiative-for-instructional-materials-aiim",
@@ -74,7 +74,7 @@
       "name": "California",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.cde.ca.gov/ci/cr/cf/",
@@ -101,7 +101,7 @@
       "name": "Florida",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.fldoe.org/academics/standards/instructional-materials/",
@@ -128,7 +128,7 @@
       "name": "Georgia",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://gadoe.org/learning",
@@ -155,7 +155,7 @@
       "name": "Indiana",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
@@ -182,7 +182,7 @@
       "name": "Kentucky",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.education.ky.gov/curriculum/books/Pages/default.aspx",
@@ -209,7 +209,7 @@
       "name": "Louisiana",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://doe.louisiana.gov/school-system-leaders/instructional-materials-reviews",
@@ -236,7 +236,7 @@
       "name": "Mississippi",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://msinstructionalmaterials.org/resources/adoption/",
@@ -263,7 +263,7 @@
       "name": "North Carolina",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.dpi.nc.gov/districts-schools/district-operations/instructional-materialstextbook-adoption",
@@ -290,7 +290,7 @@
       "name": "New Mexico",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://web.ped.nm.gov/bureaus/instructional-materials/",
@@ -321,7 +321,7 @@
       "name": "Oklahoma",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://oklahoma.gov/education/services/hqim.html",
@@ -348,7 +348,7 @@
       "name": "Oregon",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/default.aspx",
@@ -375,7 +375,7 @@
       "name": "South Carolina",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://ed.sc.gov/instruction/instructional-materials/",
@@ -402,7 +402,7 @@
       "name": "Tennessee",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.tn.gov/textbook-commission.html",
@@ -429,7 +429,7 @@
       "name": "Texas",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://tea.texas.gov/academics/instructional-materials/review-and-adoption-process/instructional-materials-review-and-approval-resources",
@@ -456,7 +456,7 @@
       "name": "Utah",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://schools.utah.gov/curr/imc",
@@ -483,7 +483,7 @@
       "name": "Virginia",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.doe.virginia.gov/teaching-learning-assessment/instructional-resources-support/textbooks-instructional-materials",
@@ -514,7 +514,7 @@
       "name": "West Virginia",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-24",
+      "last_verified": null,
       "sources": {
         "doe_instructional_materials": {
           "url": "https://wvde.us/middle-secondary-learning/resources/instructional-resources-review-and-adoption/adoption-schedule-law-code-and-policies/",
@@ -541,11 +541,11 @@
       "name": "Alaska",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://education.alaska.gov/standards",
+          "notes": "Alaska DEED Standards & Instructional Support hub. Local districts adopt; this page lists state-published academic standards and supporting materials."
         },
         "sbe_agenda": {
           "url": null,
@@ -568,11 +568,11 @@
       "name": "Arizona",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.azed.gov/standards-practices",
+          "notes": "Arizona DOE Standards & Practices. Local districts pick materials; AZED publishes content-area standards and curriculum guidance here."
         },
         "sbe_agenda": {
           "url": null,
@@ -595,11 +595,11 @@
       "name": "Colorado",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.cde.state.co.us/standardsandinstruction",
+          "notes": "CDE Standards and Instructional Support. CO is local-control; CDE posts standards, sample units, and HQIM resources here."
         },
         "sbe_agenda": {
           "url": null,
@@ -622,11 +622,11 @@
       "name": "Connecticut",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://portal.ct.gov/sde/academic-office/academic-office",
+          "notes": "CT SDE Academic Office hub. Districts select; SDE Academic Office publishes content-area guidance and the model curriculum repository."
         },
         "sbe_agenda": {
           "url": null,
@@ -649,11 +649,11 @@
       "name": "District of Columbia",
       "governance": "Local Control",
       "priority": 3,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://osse.dc.gov/service/teaching-and-learning",
+          "notes": "OSSE Teaching and Learning. DC LEAs pick materials; OSSE publishes academic standards and HQIM guidance here."
         },
         "sbe_agenda": {
           "url": null,
@@ -676,11 +676,11 @@
       "name": "Delaware",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.doe.k12.de.us/domain/468",
+          "notes": "Delaware DOE Curriculum, Instruction & Professional Development. Local districts adopt; DDOE publishes standards and recommended resources here."
         },
         "sbe_agenda": {
           "url": null,
@@ -703,7 +703,7 @@
       "name": "Hawaii",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": null,
@@ -730,11 +730,11 @@
       "name": "Iowa",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://educate.iowa.gov/pk-12/standards",
+          "notes": "Iowa Department of Education Standards. Local districts pick materials; DOE publishes standards and content-area guidance here."
         },
         "sbe_agenda": {
           "url": null,
@@ -757,7 +757,7 @@
       "name": "Idaho",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": null,
@@ -784,11 +784,11 @@
       "name": "Illinois",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.isbe.net/Pages/Learning-Standards.aspx",
+          "notes": "ISBE Learning Standards. IL is local-control; ISBE publishes standards and HQIM rubrics here. The IL Classroom Curriculum Connection (IC3) is the state's adoption-adjacent catalog."
         },
         "sbe_agenda": {
           "url": null,
@@ -811,11 +811,11 @@
       "name": "Kansas",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.ksde.org/Default.aspx?tabid=141",
+          "notes": "Kansas SDE Academic Standards. Local districts adopt; KSDE publishes standards and curriculum frameworks here."
         },
         "sbe_agenda": {
           "url": null,
@@ -838,11 +838,11 @@
       "name": "Massachusetts",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.doe.mass.edu/instruction/",
+          "notes": "Massachusetts ESE Curriculum and Instruction. Local districts pick; ESE runs the Massachusetts CURATE evaluation program from this hub."
         },
         "sbe_agenda": {
           "url": null,
@@ -865,11 +865,11 @@
       "name": "Maryland",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://marylandpublicschools.org/about/Pages/DCAA/index.aspx",
+          "notes": "MSDE Curriculum, Assessment, and Accountability. Local districts adopt; MSDE publishes College and Career-Ready Standards and HQIM guidance here."
         },
         "sbe_agenda": {
           "url": null,
@@ -892,11 +892,11 @@
       "name": "Maine",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.maine.gov/doe/learning/curriculum",
+          "notes": "Maine DOE Curriculum. Local districts pick; DOE publishes content-area standards and resources here."
         },
         "sbe_agenda": {
           "url": null,
@@ -919,11 +919,11 @@
       "name": "Michigan",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.michigan.gov/mde/services/academic-standards",
+          "notes": "MDE Academic Standards. Local districts adopt; MDE publishes K-12 standards and HQIM resources here."
         },
         "sbe_agenda": {
           "url": null,
@@ -946,11 +946,11 @@
       "name": "Minnesota",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://education.mn.gov/MDE/dse/stds/",
+          "notes": "Minnesota Department of Education Academic Standards. Local districts adopt; MDE posts standards, frameworks, and review materials here."
         },
         "sbe_agenda": {
           "url": null,
@@ -973,11 +973,11 @@
       "name": "Missouri",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://dese.mo.gov/college-career-readiness/curriculum",
+          "notes": "Missouri DESE Curriculum. Local districts adopt; DESE publishes Missouri Learning Standards and curriculum resources here."
         },
         "sbe_agenda": {
           "url": null,
@@ -1000,11 +1000,11 @@
       "name": "Montana",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://opi.mt.gov/Educators/Teaching-Learning",
+          "notes": "Montana OPI Teaching and Learning. Local districts adopt; OPI publishes content-area standards and Indian Education for All resources here."
         },
         "sbe_agenda": {
           "url": null,
@@ -1027,11 +1027,11 @@
       "name": "North Dakota",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.nd.gov/dpi/educators/academic-content-standards",
+          "notes": "North Dakota DPI Academic Content Standards. Local districts adopt; DPI publishes content standards and curriculum guidance here."
         },
         "sbe_agenda": {
           "url": null,
@@ -1054,11 +1054,11 @@
       "name": "Nebraska",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.education.ne.gov/contentareastandards/",
+          "notes": "Nebraska DOE Content Area Standards. Local districts adopt; NDE publishes K-12 standards and curriculum resources here."
         },
         "sbe_agenda": {
           "url": null,
@@ -1081,11 +1081,11 @@
       "name": "New Hampshire",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.education.nh.gov/who-we-are/division-of-learner-support/bureau-of-instructional-support",
+          "notes": "New Hampshire DOE Bureau of Instructional Support. Local districts adopt; the Bureau publishes content-area frameworks and HQIM resources here."
         },
         "sbe_agenda": {
           "url": null,
@@ -1108,11 +1108,11 @@
       "name": "New Jersey",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.nj.gov/education/standards/",
+          "notes": "NJ DOE Student Learning Standards. Local districts adopt; NJDOE publishes NJSLS and curriculum resources here."
         },
         "sbe_agenda": {
           "url": null,
@@ -1135,7 +1135,7 @@
       "name": "Nevada",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
           "url": null,
@@ -1162,11 +1162,11 @@
       "name": "New York",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.nysed.gov/curriculum-instruction",
+          "notes": "NYSED Office of Curriculum and Instruction. Local districts adopt; NYSED runs Next Generation Learning Standards and curriculum resources from here."
         },
         "sbe_agenda": {
           "url": null,
@@ -1189,11 +1189,11 @@
       "name": "Ohio",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://education.ohio.gov/Topics/Learning-in-Ohio",
+          "notes": "Ohio DOE Learning in Ohio. Local districts adopt; ODE publishes Learning Standards and HQIM rubrics here."
         },
         "sbe_agenda": {
           "url": null,
@@ -1216,11 +1216,11 @@
       "name": "Pennsylvania",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.education.pa.gov/K-12/Curriculum%20and%20Instruction/Pages/default.aspx",
+          "notes": "PDE Curriculum and Instruction. Local districts adopt; PDE publishes Academic Standards and curriculum frameworks here."
         },
         "sbe_agenda": {
           "url": null,
@@ -1243,11 +1243,11 @@
       "name": "Rhode Island",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://www.ride.ri.gov/InstructionAssessment/CurriculumInstruction.aspx",
+          "notes": "RIDE Curriculum & Instruction. Local districts adopt; RIDE runs the Rhode Island Quality Curriculum List from this section."
         },
         "sbe_agenda": {
           "url": null,
@@ -1270,11 +1270,11 @@
       "name": "South Dakota",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://doe.sd.gov/contentstandards/",
+          "notes": "South Dakota DOE Content Standards. Local districts adopt; DOE publishes K-12 content standards and supporting resources here."
         },
         "sbe_agenda": {
           "url": null,
@@ -1297,11 +1297,11 @@
       "name": "Vermont",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://education.vermont.gov/student-learning/content-areas",
+          "notes": "Vermont AOE Content Areas. Local districts adopt; AOE publishes content-area standards and proficiency-based resources here."
         },
         "sbe_agenda": {
           "url": null,
@@ -1324,11 +1324,11 @@
       "name": "Washington",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials",
+          "notes": "OSPI Learning Standards & Instructional Materials. Local districts adopt; OSPI runs the OER Project and OSPI-reviewed materials lists from this hub."
         },
         "sbe_agenda": {
           "url": null,
@@ -1351,11 +1351,11 @@
       "name": "Wisconsin",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://dpi.wi.gov/standards",
+          "notes": "Wisconsin DPI Academic Standards. Local districts adopt; DPI publishes content-area standards and curriculum resources here."
         },
         "sbe_agenda": {
           "url": null,
@@ -1378,11 +1378,11 @@
       "name": "Wyoming",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-24",
+      "last_verified": "2026-04-23",
       "sources": {
         "doe_instructional_materials": {
-          "url": null,
-          "notes": ""
+          "url": "https://edu.wyoming.gov/for-district-leadership/standards/",
+          "notes": "Wyoming DOE Standards. Local districts adopt; WDE publishes Wyoming Content and Performance Standards here."
         },
         "sbe_agenda": {
           "url": null,

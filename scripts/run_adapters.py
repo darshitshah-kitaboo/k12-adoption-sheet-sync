@@ -76,6 +76,44 @@ ADAPTERS = {
     # failure. Promote to required=True once the live shape is stable.
     "NC": {"module": "scripts.adapters.nc", "required": False},
     "UT": {"module": "scripts.adapters.ut", "required": False},
+    # Local-control rollout. Every state below uses the shared
+    # scripts.adapters.localctl module via a thin per-state stub. URLs
+    # are seeded from training knowledge and have not yet been live-
+    # verified end to end, so all 31 are required=False during rollout.
+    # Promote individuals to required=True once their live page is
+    # stable. Keep CA and KY at the front because they had pre-existing
+    # registry URLs and richer adoption_data context.
+    "CA": {"module": "scripts.adapters.ca", "required": False},
+    "KY": {"module": "scripts.adapters.ky", "required": False},
+    "AK": {"module": "scripts.adapters.ak", "required": False},
+    "AZ": {"module": "scripts.adapters.az", "required": False},
+    "CO": {"module": "scripts.adapters.co", "required": False},
+    "CT": {"module": "scripts.adapters.ct", "required": False},
+    "DC": {"module": "scripts.adapters.dc", "required": False},
+    "DE": {"module": "scripts.adapters.de", "required": False},
+    "IA": {"module": "scripts.adapters.ia", "required": False},
+    "IL": {"module": "scripts.adapters.il", "required": False},
+    "KS": {"module": "scripts.adapters.ks", "required": False},
+    "MA": {"module": "scripts.adapters.ma", "required": False},
+    "MD": {"module": "scripts.adapters.md", "required": False},
+    "ME": {"module": "scripts.adapters.me", "required": False},
+    "MI": {"module": "scripts.adapters.mi", "required": False},
+    "MN": {"module": "scripts.adapters.mn", "required": False},
+    "MO": {"module": "scripts.adapters.mo", "required": False},
+    "MT": {"module": "scripts.adapters.mt", "required": False},
+    "ND": {"module": "scripts.adapters.nd", "required": False},
+    "NE": {"module": "scripts.adapters.ne", "required": False},
+    "NH": {"module": "scripts.adapters.nh", "required": False},
+    "NJ": {"module": "scripts.adapters.nj", "required": False},
+    "NY": {"module": "scripts.adapters.ny", "required": False},
+    "OH": {"module": "scripts.adapters.oh", "required": False},
+    "PA": {"module": "scripts.adapters.pa", "required": False},
+    "RI": {"module": "scripts.adapters.ri", "required": False},
+    "SD": {"module": "scripts.adapters.sd", "required": False},
+    "VT": {"module": "scripts.adapters.vt", "required": False},
+    "WA": {"module": "scripts.adapters.wa", "required": False},
+    "WI": {"module": "scripts.adapters.wi", "required": False},
+    "WY": {"module": "scripts.adapters.wy", "required": False},
 }
 
 # Fields in a cycle record that count as meaningful when diffing. Changes
@@ -141,6 +179,14 @@ MEANINGFUL_FIELDS = (
     "imc_calendar_url",
     "publisher_submission_url",
     "subject_landing_url",
+    # Local-control fields. localctl emits one record per tracked
+    # document; the title and url uniquely identify what changed.
+    # section is the nearest preceding heading (descriptive only),
+    # category is the coarse subject bucket (HQIM, Framework, etc).
+    "title",
+    "section",
+    "document_url",
+    "document_index",
 )
 
 
@@ -248,15 +294,18 @@ def write_debug_html(state_code, html):
 def diff_snapshots(old, new):
     """Compare two snapshots on MEANINGFUL_FIELDS. Returns list of change dicts.
 
-    Cycles are matched by (subject, ay_start, ay_end). New and removed cycles
-    are reported as well.
+    Cycles are matched by (subject, ay_start, ay_end, tier, document_url).
+    New and removed cycles are reported as well.
     """
     def key(c):
         # Tier distinguishes TX records where the same subject string can
         # appear in multiple tiers (e.g. "K-12 English mathematics" shows
         # up in both Full-subject and Supplemental). FL records have no
-        # tier field so the component is None for them.
-        return (c.get("subject"), c.get("ay_start"), c.get("ay_end"), c.get("tier"))
+        # tier field so the component is None for them. document_url
+        # disambiguates local-control records where many docs share a
+        # category (e.g. several "Framework" PDFs under one state).
+        return (c.get("subject"), c.get("ay_start"), c.get("ay_end"),
+                c.get("tier"), c.get("document_url"))
 
     old_by_key = {key(c): c for c in (old or {}).get("cycles", [])}
     new_by_key = {key(c): c for c in (new or {}).get("cycles", [])}

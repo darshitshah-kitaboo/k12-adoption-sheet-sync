@@ -1,0 +1,434 @@
+{
+  "state": "WI",
+  "name": "Wisconsin",
+  "source_url": "https://dpi.wi.gov/standards",
+  "scraped_at": "2026-04-25T15:45:31+00:00",
+  "page_title": "Academic Standards",
+  "document_count": 60,
+  "content_hash": "38ccff2b9565cb3c",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 60,
+  "cycles": [
+    {
+      "subject": "Framework",
+      "title": "Standards",
+      "section": "Health Education",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/cal/pdf/health-stds.pdf",
+      "document_index": 1
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2021)",
+      "section": "Essential Elements: Social Studies",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/literacy-mathematics/pdf/Essential_Elements_for_Social_Studies_2022.pdf",
+      "document_index": 2
+    },
+    {
+      "subject": "Framework",
+      "title": "Wisconsin Academic Standards Review Timeline 2023\u00a0- 2031",
+      "section": "Academic Standards Under Review and Revision",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/2023-2031_Timeline_for_Standards_Review_2.pdf",
+      "document_index": 3
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2024)",
+      "section": "Agriculture, Food and Natural Resources",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/AFNR_Standards_FINAL.pdf",
+      "document_index": 4
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2024)",
+      "section": "Business and Information Technology",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/BIT_Standards_FINAL.pdf.pdf",
+      "document_index": 5
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards",
+      "section": "Family and Consumer Sciences",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/FCS_standards_FINAL.pdf",
+      "document_index": 6
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2024)",
+      "section": "Health Science",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/HS_Standards_FINAL.pdf",
+      "document_index": 7
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2024)",
+      "section": "Marketing, Management, and Entrepreneurship",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/MMEE_Standards_FINAL.pdf",
+      "document_index": 8
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2019)",
+      "section": "Art & Design Education",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/ArtDesign2019.pdf",
+      "document_index": 9
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2017)",
+      "section": "Computer Science",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/ComputerScienceStandards2016.pdf",
+      "document_index": 10
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2019)",
+      "section": "Dance",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/DanceStandards2019.pdf",
+      "document_index": 11
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2022)",
+      "section": "Essential Elements: Mathematics",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/ee-mathematics_final_2022.pdf",
+      "document_index": 12
+    },
+    {
+      "subject": "General",
+      "title": "tandards (2020)",
+      "section": "English Language Arts",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/ELA-Standards-23.pdf",
+      "document_index": 13
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2020)",
+      "section": "Reading",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/ELAStandards2020.pdf",
+      "document_index": 14
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2018)",
+      "section": "Environmental Literacy & Sustainability",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/EnvironmentalLiteracySustainabilityStandards2018.pdf",
+      "document_index": 15
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2022)",
+      "section": "English Language Arts",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/EssentialElementsELA2022.pdf",
+      "document_index": 16
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2017)",
+      "section": "Information and Technology Literacy",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/InformationTechnologyLiteracyStandards2017.pdf",
+      "document_index": 17
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2017)",
+      "section": "Music Education",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/MusicStandards2017.pdf",
+      "document_index": 18
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2022)",
+      "section": "Nutrition Education",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/NutritionStandards2022-Final.pdf",
+      "document_index": 19
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2020)",
+      "section": "Wisconsin Academic Standards",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/PersonalFinancialLiteracyStandards2020.pdf",
+      "document_index": 20
+    },
+    {
+      "subject": "General",
+      "title": "See our Phase-by-Phase Rollout plan",
+      "section": "What Informs the Implementation of Academic Standards?",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/Phase-by-Phase_Standards_Rollout_Graphic.pdf",
+      "document_index": 21
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2020)",
+      "section": "Physical Education",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/physical-education-standards.pdf",
+      "document_index": 22
+    },
+    {
+      "subject": "Framework",
+      "title": "Checklist used for review of existing/new academic standards to determine if revision or development is needed",
+      "section": "Academic Standards Under Review and Revision",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/Proposed_Standards_Revision_and_Review_Checklist.pdf",
+      "document_index": 23
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2018)",
+      "section": "Social Studies",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/SocialStudiesStandards2018.pdf",
+      "document_index": 24
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2018)",
+      "section": "Theatre Education",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/TheatreStandards2018.pdf",
+      "document_index": 25
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2019)",
+      "section": "World Languages",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/WorldLanguagesStandards2019.pdf",
+      "document_index": 26
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards",
+      "section": "Literacy in All Subjects",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/pdf/las-stds.pdf",
+      "document_index": 27
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2017)",
+      "section": "Science",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/ScienceStandards2017.pdf",
+      "document_index": 28
+    },
+    {
+      "subject": "Framework",
+      "title": "State Superintendent's Academic Standards Review Council",
+      "section": "Academic Standards Under Review and Revision",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/SSASRC_Roster_January_2025.pdf",
+      "document_index": 29
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2024)",
+      "section": "Technology and Engineering",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/TEE_standards_FINAL.pdf",
+      "document_index": 30
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Wisconsin Academic Standards",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/2020_pfl_standards.docx",
+      "document_index": 31
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Business and Information Technology",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/2024_bit_standards.docx",
+      "document_index": 32
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Family and Consumer Sciences",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/2024_fcs_standards.docx",
+      "document_index": 33
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Health Science",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/2024_hs_standards_1.docx",
+      "document_index": 34
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Marketing, Management, and Entrepreneurship",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/2024_mmee_standards.docx",
+      "document_index": 35
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Technology and Engineering",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/2024_tee_standards.docx",
+      "document_index": 36
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Wisconsin Academic Standards",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/2024_wcr_standards.docx",
+      "document_index": 37
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Agriculture, Food and Natural Resources",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Ag_Standards_2024.docx",
+      "document_index": 38
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Art & Design Education",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Art_Design.docx",
+      "document_index": 39
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Computer Science",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/CS_STANDARDS_DEC_2025_COMMS_FINAL.docx",
+      "document_index": 40
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Dance",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Dance1.docx",
+      "document_index": 41
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Essential Elements: Mathematics",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/ee-mathematics.docx",
+      "document_index": 42
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "English Language Arts",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/EE_ELA_Standards_5-27-22.docx",
+      "document_index": 43
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "English Language Arts",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/ELA_Standards_final_w._Braille_Considerations_Appendix_.docx",
+      "document_index": 44
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Environmental Literacy & Sustainability",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/EnvironmentalLiteracySustainabilityStandards2018_9-8-2021.docx",
+      "document_index": 45
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Health Education",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Health_Ed_Standards_JAN_26_comms.docx",
+      "document_index": 46
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Information and Technology Literacy",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/ITL_Standards_COMMS_1.docx",
+      "document_index": 47
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Music Education",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Music.docx",
+      "document_index": 48
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Nutrition Education",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/NutritionStandards2022-Final.docx",
+      "document_index": 49
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Physical Education",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Physical_Education_Standards_final_2020.docx",
+      "document_index": 50
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Science",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Science_Standards_12-5-23.docx",
+      "document_index": 51
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Social Studies",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/social_studies_standards.docx",
+      "document_index": 52
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Theatre Education",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Theatre.docx",
+      "document_index": 53
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Essential Elements: Social Studies",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/WI_Essential_Elements_for_Social_Studies_Appendix_A_-_Indicators_Ideas_for_Instruction_and_Attainment.docx",
+      "document_index": 54
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "Wisconsin Model Early Learning Standards (WMELS)",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/wmels_5thedition_accessible.docx",
+      "document_index": 55
+    },
+    {
+      "subject": "Framework",
+      "title": "WCAG 2.2 Accessible Word document of the standards",
+      "section": "World Languages",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/WorldLanguagesStandards_2-8-22.docx",
+      "document_index": 56
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards",
+      "section": "Essential Elements: Science",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_PDFs/EE_Science_WCAG_2-2_Compl_PDF_-_Copy.pdf",
+      "document_index": 57
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2021)",
+      "section": "Mathematics",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_PDFs/MathematicsStandards_WCAG_2-2_compl_PDF_-_Copy.pdf",
+      "document_index": 58
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards",
+      "section": "Wisconsin Model Early Learning Standards (WMELS)",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_PDFs/Wisconsin_Model_Early_Learning_Standards_Fifth_Edition_WCAG_2-2_compl_PDF.pdf",
+      "document_index": 59
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards (2024)",
+      "section": "Wisconsin Academic Standards",
+      "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/WCR_standards_FINAL.pdf",
+      "document_index": 60
+    }
+  ]
+}

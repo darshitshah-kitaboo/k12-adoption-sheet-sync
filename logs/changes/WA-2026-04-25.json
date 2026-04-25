@@ -1,0 +1,92 @@
+{
+  "state": "WA",
+  "date": "2026-04-25",
+  "change_count": 5,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://ospi.k12.wa.us/sites/default/files/2026-01/2026-wa-oer-hub-introduction-and-highlights.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Learn more about these webinars",
+        "section": "Washington OER Hub Webinars",
+        "document_url": "https://ospi.k12.wa.us/sites/default/files/2026-01/2026-wa-oer-hub-introduction-and-highlights.pdf",
+        "document_index": 5
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://ospi.k12.wa.us/sites/default/files/2023-08/fek-12learningstandardsoct2016.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Financial Education",
+        "section": "Learning Standards & Year of Adoption",
+        "document_url": "https://ospi.k12.wa.us/sites/default/files/2023-08/fek-12learningstandardsoct2016.pdf",
+        "document_index": 1
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://ospi.k12.wa.us/sites/default/files/2024-10/standards-instructionalmaterials.pdf"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Learning Standards vs. Instructional Materials: Key Differences",
+        "section": "Learning Standards",
+        "document_url": "https://ospi.k12.wa.us/sites/default/files/2024-10/standards-instructionalmaterials.pdf",
+        "document_index": 4
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://ospi.k12.wa.us/sites/default/files/2023-08/selstandardsbenchmarksindicatorslongform_0.pdf"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Social Emotional Learning Standards and Benchmarks",
+        "section": "Learning Standards & Year of Adoption",
+        "document_url": "https://ospi.k12.wa.us/sites/default/files/2023-08/selstandardsbenchmarksindicatorslongform_0.pdf",
+        "document_index": 2
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://ospi.k12.wa.us/sites/default/files/2023-08/wa-screeningforbiasedcontent-form.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Screening for Biased Content Tool",
+        "section": "Instructional Materials",
+        "document_url": "https://ospi.k12.wa.us/sites/default/files/2023-08/wa-screeningforbiasedcontent-form.pdf",
+        "document_index": 3
+      }
+    }
+  ]
+}

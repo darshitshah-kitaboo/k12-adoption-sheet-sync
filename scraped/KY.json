@@ -1,0 +1,56 @@
+{
+  "state": "KY",
+  "name": "Kentucky",
+  "source_url": "https://www.education.ky.gov/curriculum/books/Pages/default.aspx",
+  "scraped_at": "2026-04-25T15:44:53+00:00",
+  "page_title": "High-Quality Instructional Resource Adoption",
+  "document_count": 6,
+  "content_hash": "a5cd9d03ce91db74",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 6,
+  "cycles": [
+    {
+      "subject": "General",
+      "title": "704 KAR 3:455",
+      "section": "Digital Learning Guidelines",
+      "document_url": "https://apps.legislature.ky.gov/law/kar/704/003/455.pdf",
+      "document_index": 1
+    },
+    {
+      "subject": "Subject",
+      "title": "2026 KY Recommended\u00a0HQIR\u00a0List for Science\u200b",
+      "section": "\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200bSelection and Use of Instructional Resources/Materials",
+      "document_url": "https://education.ky.gov/curriculum/standards/kyacadstand/Documents/2026_Recommended_K-12_High-Quality_Instructional_Resources_for_Science.pdf",
+      "document_index": 2
+    },
+    {
+      "subject": "General",
+      "title": "2026\u00a0KY Approved\u00a0HQIR List for Mathematics",
+      "section": "\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200bSelection and Use of Instructional Resources/Materials",
+      "document_url": "https://education.ky.gov/curriculum/standards/kyacadstand/Documents/KY_HQIR_List_Mathematics.pdf",
+      "document_index": 3
+    },
+    {
+      "subject": "Subject",
+      "title": "2026\u00a0KY Approved\u00a0HQIR List for Reading and Writing\u200b",
+      "section": "\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200bSelection and Use of Instructional Resources/Materials",
+      "document_url": "https://education.ky.gov/curriculum/standards/kyacadstand/Documents/KY_HQIR_List_Reading_and_Writing.pdf",
+      "document_index": 4
+    },
+    {
+      "subject": "HQIM",
+      "title": "high-quality instructional resources (HQIRs)",
+      "section": "\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200bSelection and Use of Instructional Resources/Materials",
+      "document_url": "https://www.education.ky.gov/curriculum/standards/kyacadstand/Documents/High-Quality_Instructional_Resources.pdf",
+      "document_index": 5
+    },
+    {
+      "subject": "General",
+      "title": "Kentucky Digital Learning Guidelines",
+      "section": "Digital Learning Guidelines",
+      "document_url": "https://www.education.ky.gov/districts/tech/Documents/KYDLG2025.pdf",
+      "document_index": 6
+    }
+  ]
+}

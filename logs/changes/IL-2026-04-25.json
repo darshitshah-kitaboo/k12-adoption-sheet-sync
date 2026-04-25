@@ -1,0 +1,568 @@
+{
+  "state": "IL",
+  "date": "2026-04-25",
+  "change_count": 33,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/2025-Driver-Education-Cost-Report.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Cost Report 2023-24\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/2025-Driver-Education-Cost-Report.pdf",
+        "document_index": 6
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/driver_ed_faq.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Frequently Asked Questions \u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/driver_ed_faq.pdf",
+        "document_index": 19
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/TEAACHing-For-Change-Pres.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "TEAACHing for Change Presentation\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/TEAACHing-For-Change-Pres.pdf",
+        "document_index": 31
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/driver-ed-cost-rpt-14-15.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Cost Report 2014-15",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/driver-ed-cost-rpt-14-15.pdf",
+        "document_index": 17
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/TEAACHing-With-Pushback-Presentation.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "TEAACHing With Pushback Presentation",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/TEAACHing-With-Pushback-Presentation.pdf",
+        "document_index": 33
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/252ARK.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Administrative Rules",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/252ARK.pdf",
+        "document_index": 7
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/FY21-Drivers-Ed-Cost-Report.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Cost Report 2020-21\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/FY21-Drivers-Ed-Cost-Report.pdf",
+        "document_index": 22
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/Bicycle-Safety-Safe-Routes-School.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Bicycle Safety and Safe Routes to Schools\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/Bicycle-Safety-Safe-Routes-School.pdf",
+        "document_index": 13
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/FY22-Drivers-Ed-Cost-Report.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Cost Report 2021-22",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/FY22-Drivers-Ed-Cost-Report.pdf",
+        "document_index": 23
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/Nonpublic-Driver-Ed-Prog-Application.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Nonpublic High School Driver Education Program Application\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/Nonpublic-Driver-Ed-Prog-Application.pdf",
+        "document_index": 28
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/driver-ed-cost-rpt-15-16.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Cost Report 2015-16",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/driver-ed-cost-rpt-15-16.pdf",
+        "document_index": 18
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/Declaration-of-Intent.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Student Enrollment Declaration of Intent\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/Declaration-of-Intent.pdf",
+        "document_index": 15
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/Charting-Path-Teaching-FAQ.pdf"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "\u200b \u200bCharting a Path for Teaching the Revised IL Learning Standards for Social Science FAQ",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/Charting-Path-Teaching-FAQ.pdf",
+        "document_index": 14
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/How-to-TEAACH-Webinar.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "\u200b How to TEAACH Webinar Presentation\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/How-to-TEAACH-Webinar.pdf",
+        "document_index": 25
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/2018-19-Dr-Ed-Cost-Report.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Cost Report 2018-19\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/2018-19-Dr-Ed-Cost-Report.pdf",
+        "document_index": 4
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/IL-Mandated-Units-of-Study.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "\u200bCompliance/Monitoring/Mandates\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/IL-Mandated-Units-of-Study.pdf",
+        "document_index": 26
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/TEAACH-Act-Now-presentation.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "TEAACH (Act) Now Webinar Presentation\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/TEAACH-Act-Now-presentation.pdf",
+        "document_index": 30
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/TEAACHing-For-Inclusion-Webinar.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "TEAACHing For Inclusion Presentation\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/TEAACHing-For-Inclusion-Webinar.pdf",
+        "document_index": 32
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/FY20-Drivers-Ed-Cost-Report.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Cost Report 2019-20\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/FY20-Drivers-Ed-Cost-Report.pdf",
+        "document_index": 21
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/2017-18-Dr-Ed-Cost-Report-Web.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Cost Report 2017-18\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/2017-18-Dr-Ed-Cost-Report-Web.pdf",
+        "document_index": 3
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/Accelerated-Placement-Act-Update.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "\u200bAccelerated Placement Update \u200bPresentation",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/Accelerated-Placement-Act-Update.pdf",
+        "document_index": 11
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Guidance",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/grad_require.pdf"
+      ],
+      "cycle": {
+        "subject": "Guidance",
+        "title": "\u200bHigh School Graduation Guidance\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/grad_require.pdf",
+        "document_index": 24
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/TEAACH-Act-Fact-Sheet.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "TEAACH Act",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/TEAACH-Act-Fact-Sheet.pdf",
+        "document_index": 29
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/50-56-commercial-driver-training.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Commercial Driver Training School Contract Reporting Form (50-56)",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/50-56-commercial-driver-training.pdf",
+        "document_index": 10
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/driver_ed_stats.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Yearly Driver's Education Statistics\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/driver_ed_stats.pdf",
+        "document_index": 20
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/driver-ed-cost-rpt-13-14.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Cost Report 2013-14",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/driver-ed-cost-rpt-13-14.pdf",
+        "document_index": 16
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/34-10_driver_ed.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Inter-District Driver Education Reimbursement Form (34-10)",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/34-10_driver_ed.pdf",
+        "document_index": 9
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/2024-Driver-Ed-Cost-Report.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Cost Report 2022-23\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/2024-Driver-Ed-Cost-Report.pdf",
+        "document_index": 5
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/illinois-inclusive-calendar.pdf"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Illinois Inclusive History Calendar 2025-2026",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/illinois-inclusive-calendar.pdf",
+        "document_index": 27
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/2016-17-Dr-Ed-Per-Cap-Report.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Cost Report 2016-17\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/2016-17-Dr-Ed-Per-Cap-Report.pdf",
+        "document_index": 2
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/App-High-School-Driver-Ed-Prog-IL.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Approved High School Driver Education Programs in Illinois\u200b",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/App-High-School-Driver-Ed-Prog-IL.pdf",
+        "document_index": 12
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/092622-Charting-Path-Teaching.pdf"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Presentation\u200b \u200bCharting a Path for Teaching the Revised IL Learning Standards for Social Science",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/092622-Charting-Path-Teaching.pdf",
+        "document_index": 1
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/34-06_driver_ed.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Driver Education Record Card (34-06)",
+        "section": null,
+        "document_url": "https://www.isbe.net/Documents/34-06_driver_ed.pdf",
+        "document_index": 8
+      }
+    }
+  ]
+}

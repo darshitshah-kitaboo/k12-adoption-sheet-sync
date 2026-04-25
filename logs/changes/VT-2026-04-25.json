@@ -1,0 +1,41 @@
+{
+  "state": "VT",
+  "date": "2026-04-25",
+  "change_count": 2,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.socialstudies.org/sites/default/files/c3/c3-framework-for-social-studies-rev0617.pdf"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "College, Career and Civic Life (C3) Framework for Social Studies State Standards",
+        "section": "Vermont State Board Adopted Standards",
+        "document_url": "https://www.socialstudies.org/sites/default/files/c3/c3-framework-for-social-studies-rev0617.pdf",
+        "document_index": 2
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.jumpstart.org/wp-content/uploads/2023/04/2021_Natl_Standards_Downloadable_final.pdf"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Jump$tart Standards in K-12 Personal Finance Education",
+        "section": "Vermont State Board Adopted Standards",
+        "document_url": "https://www.jumpstart.org/wp-content/uploads/2023/04/2021_Natl_Standards_Downloadable_final.pdf",
+        "document_index": 1
+      }
+    }
+  ]
+}

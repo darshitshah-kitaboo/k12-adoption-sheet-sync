@@ -1,0 +1,262 @@
+{
+  "state": "AK",
+  "date": "2026-04-25",
+  "change_count": 15,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://education.alaska.gov/akstandards/computerscience/Alaska-Computer-Science-Standards.pdf"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Computer Science",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://education.alaska.gov/akstandards/computerscience/Alaska-Computer-Science-Standards.pdf",
+        "document_index": 4
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://education.alaska.gov/akstandards/Employability.pdf"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Employability Standards",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://education.alaska.gov/akstandards/Employability.pdf",
+        "document_index": 7
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://education.alaska.gov/akstandards/Alaska_Library_Standards_2020Edition.pdf"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Alaska Library Standards",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://education.alaska.gov/akstandards/Alaska_Library_Standards_2020Edition.pdf",
+        "document_index": 2
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://education.alaska.gov/akstandards/Skills-for-Healthy-Life.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Skills for a Healthy Life",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://education.alaska.gov/akstandards/Skills-for-Healthy-Life.pdf",
+        "document_index": 10
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://education.alaska.gov/State_Board/october-2025/6.2B_DRAFT_EEP%20Standards_September2025%20dr%20version%20CLEAN%20(002).pdf"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Early Education Program Standards",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://education.alaska.gov/State_Board/october-2025/6.2B_DRAFT_EEP%20Standards_September2025%20dr%20version%20CLEAN%20(002).pdf",
+        "document_index": 14
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://education.alaska.gov/akstandards/science/science-standards-for-alaska.pdf"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Science Standards of Alaska",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://education.alaska.gov/akstandards/science/science-standards-for-alaska.pdf",
+        "document_index": 9
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://education.alaska.gov/akstandards/Arts.pdf?v=2"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Alaska Arts Standards",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://education.alaska.gov/akstandards/Arts.pdf?v=2",
+        "document_index": 3
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://education.alaska.gov/Media/Default/akreads/ANLARS%20%20Final.pdf"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Alaska Native Language Arts K-3 Reading Standards",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://education.alaska.gov/Media/Default/akreads/ANLARS%20%20Final.pdf",
+        "document_index": 12
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://wida.wisc.edu/sites/default/files/resource/WIDA-ELD-Standards-Framework-2020.pdf"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "WIDA English Language Development Proficiency Standards",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://wida.wisc.edu/sites/default/files/resource/WIDA-ELD-Standards-Framework-2020.pdf",
+        "document_index": 15
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://education.alaska.gov/akstandards/ela/Adopted_ELA.pdf"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "English Language Arts Standards",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://education.alaska.gov/akstandards/ela/Adopted_ELA.pdf",
+        "document_index": 6
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://education.alaska.gov/akstandards/digitallit/alaska%20digital%20literacy%20standards.pdf"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Digital Literacy",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://education.alaska.gov/akstandards/digitallit/alaska%20digital%20literacy%20standards.pdf",
+        "document_index": 5
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://education.alaska.gov/akstandards/math/adopted_math.pdf"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Mathematics Standards",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://education.alaska.gov/akstandards/math/adopted_math.pdf",
+        "document_index": 8
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://education.alaska.gov/State_Board/january2021/6A.2%20Early%20Learning%20Guidelines%209-4-2020.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Early Learning Guidelines",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://education.alaska.gov/State_Board/january2021/6A.2%20Early%20Learning%20Guidelines%209-4-2020.pdf",
+        "document_index": 13
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://education.alaska.gov/akstandards/Adopted-AK-SS-Standards-2024.pdf"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Social Studies",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://education.alaska.gov/akstandards/Adopted-AK-SS-Standards-2024.pdf",
+        "document_index": 1
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://education.alaska.gov/akstandards/World-Languages.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "World Languages",
+        "section": "Alaska Content Standards and Associated Webpages",
+        "document_url": "https://education.alaska.gov/akstandards/World-Languages.pdf",
+        "document_index": 11
+      }
+    }
+  ]
+}

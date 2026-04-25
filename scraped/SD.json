@@ -1,0 +1,147 @@
+{
+  "state": "SD",
+  "name": "South Dakota",
+  "source_url": "https://doe.sd.gov/contentstandards/",
+  "scraped_at": "2026-04-25T15:45:23+00:00",
+  "page_title": "South Dakota Content Standards",
+  "document_count": 19,
+  "content_hash": "4a91b68a6ba1f00f",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 19,
+  "cycles": [
+    {
+      "subject": "Framework",
+      "title": "World Language Standards - Adopted 2019",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/0319-WorldLanguage.pdf",
+      "document_index": 1
+    },
+    {
+      "subject": "Framework",
+      "title": "Mathematics Standards - Adopted 2018",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/0521-Math-Standards.pdf",
+      "document_index": 2
+    },
+    {
+      "subject": "Framework",
+      "title": "Science Standards - Adopted 2024",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/24-SciStandards.pdf",
+      "document_index": 3
+    },
+    {
+      "subject": "Framework",
+      "title": "English Language Arts Standards - Adopted 2018",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/25-ELA-Standards.pdf",
+      "document_index": 4
+    },
+    {
+      "subject": "Framework",
+      "title": "Oceti Sakowin Essential Understandings and Standards - Adopted 2018",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/25-OSEUs.pdf",
+      "document_index": 5
+    },
+    {
+      "subject": "Subject",
+      "title": "Computer Science-Adopted 2025",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/Adopted-ComputerScience-0425.pdf",
+      "document_index": 6
+    },
+    {
+      "subject": "Framework",
+      "title": "Oceti Sakowin Essential Understandings and Standards-Adopted 2025",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/Adopted-OSEU-0425.pdf",
+      "document_index": 7
+    },
+    {
+      "subject": "Framework",
+      "title": "Educational Technology Standards - Adopted 2021",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/EdTechStandards-032621.pdf",
+      "document_index": 8
+    },
+    {
+      "subject": "Framework",
+      "title": "English Language Arts Standards - Adopted 2025",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/ELAStandards-25.pdf",
+      "document_index": 9
+    },
+    {
+      "subject": "Framework",
+      "title": "Fine Arts Standards - Adopted 2022",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/FineArts-051822.pdf",
+      "document_index": 10
+    },
+    {
+      "subject": "Framework",
+      "title": "Fine Arts Standards arranged by Grade Level - 2022",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/FineArts-GradeLevels.pdf",
+      "document_index": 11
+    },
+    {
+      "subject": "Framework",
+      "title": "Physical Education Standards - Adopted 2021",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/PE-Standards-20.pdf",
+      "document_index": 12
+    },
+    {
+      "subject": "Framework",
+      "title": "School Library Content Standards - Adopted 2019",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/SchoolLibrary-20.pdf",
+      "document_index": 13
+    },
+    {
+      "subject": "Framework",
+      "title": "Health Education Standards - Adopted 2018",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/SD-HealthEducationStandards-18.pdf",
+      "document_index": 14
+    },
+    {
+      "subject": "Guidance",
+      "title": "Instructional Materials Selection Guide",
+      "section": "South Dakota Content Standards",
+      "document_url": "https://doe.sd.gov/contentstandards/documents/SD-IMSG-2.pdf",
+      "document_index": 15
+    },
+    {
+      "subject": "Framework",
+      "title": "Science Standards - Adopted 2015",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/sdSciStnd.pdf",
+      "document_index": 16
+    },
+    {
+      "subject": "Framework",
+      "title": "South Dakota Social Studies Standards - Adopted 2023",
+      "section": null,
+      "document_url": "https://doe.sd.gov/contentstandards/documents/SS-Standards-2023.pdf",
+      "document_index": 17
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards Revision Timeline",
+      "section": "South Dakota Content Standards",
+      "document_url": "https://doe.sd.gov/contentstandards/documents/StandardsTimeline-1025.pdf",
+      "document_index": 18
+    },
+    {
+      "subject": "Framework",
+      "title": "Personal Finance Standards - Adopted 2022",
+      "section": null,
+      "document_url": "https://doe.sd.gov/cte/documents/standards/19262-PerFinance.pdf",
+      "document_index": 19
+    }
+  ]
+}

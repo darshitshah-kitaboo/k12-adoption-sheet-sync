@@ -1,0 +1,92 @@
+{
+  "state": "CA",
+  "date": "2026-04-25",
+  "change_count": 5,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.cde.ca.gov/ci/cr/cf/documents/frmwrkflowchartv2.doc"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Curriculum Framework Development\r\nand Approval Process (DOC)",
+        "section": "Standards and Curricular Guidance",
+        "document_url": "https://www.cde.ca.gov/ci/cr/cf/documents/frmwrkflowchartv2.doc",
+        "document_index": 3
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.cde.ca.gov/ci/cr/cf/documents/cfirdtimelines.docx"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Standards, Curriculum\r\nFrameworks, and Instructional Materials Adoptions (DOCX)",
+        "section": "Curriculum Frameworks and Instructional Materials Highlights",
+        "document_url": "https://www.cde.ca.gov/ci/cr/cf/documents/cfirdtimelines.docx",
+        "document_index": 1
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.cde.ca.gov/re/pn/sm/documents/imodsmemform.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "New Account Form (PDF)",
+        "section": "Accessibility",
+        "document_url": "https://www.cde.ca.gov/re/pn/sm/documents/imodsmemform.pdf",
+        "document_index": 5
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.cde.ca.gov/ci/cr/cf/documents/currcoordinatorsdirect.xlsx"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Curriculum Coordinators Directory (XLSX)",
+        "section": "Curriculum Frameworks and Instructional Materials Highlights",
+        "document_url": "https://www.cde.ca.gov/ci/cr/cf/documents/currcoordinatorsdirect.xlsx",
+        "document_index": 2
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.cde.ca.gov/ci/cr/cf/documents/pubfreeinstrmatlst.doc"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Free Instructional Materials Template for  Publishers (DOC)",
+        "section": "Guidance",
+        "document_url": "https://www.cde.ca.gov/ci/cr/cf/documents/pubfreeinstrmatlst.doc",
+        "document_index": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "state": "ND",
+  "name": "North Dakota",
+  "source_url": "https://www.nd.gov/dpi/",
+  "scraped_at": "2026-04-27T10:10:43+00:00",
+  "page_title": "North Dakota Department of Public Instruction",
+  "document_count": 16,
+  "content_hash": "0f00bc776f5ec52f",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 16,
+  "cycles": [
+    {
+      "subject": "Framework",
+      "title": "Education Standards",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/districtsschools/north-dakota-education-content-standards",
+      "document_index": 1
+    },
+    {
+      "subject": "Subject",
+      "title": "Computer Science & Cybersecurity",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/districtsschools/north-dakota-education-content-standards/computer-science-cybersecurity",
+      "document_index": 2
+    },
+    {
+      "subject": "Subject",
+      "title": "English Language Arts",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/districtsschools/north-dakota-education-content-standards/english-language-arts",
+      "document_index": 3
+    },
+    {
+      "subject": "Subject",
+      "title": "Fine Arts",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/districtsschools/north-dakota-education-content-standards/fine-arts",
+      "document_index": 4
+    },
+    {
+      "subject": "General",
+      "title": "Indigenous & World Languages",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/districtsschools/north-dakota-education-content-standards/indigenous-world-languages",
+      "document_index": 5
+    },
+    {
+      "subject": "General",
+      "title": "Mathematics",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/districtsschools/north-dakota-education-content-standards/mathematics",
+      "document_index": 6
+    },
+    {
+      "subject": "Subject",
+      "title": "Physical Education",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/districtsschools/north-dakota-education-content-standards/physical-education",
+      "document_index": 7
+    },
+    {
+      "subject": "Subject",
+      "title": "Social Studies",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/districtsschools/north-dakota-education-content-standards/social-studies",
+      "document_index": 8
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards Review",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/districtsschools/north-dakota-education-content-standards/standards-review",
+      "document_index": 9
+    },
+    {
+      "subject": "Subject",
+      "title": "Computer Science and Cybersecurity",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/education-programs/computer-science-and-cybersecurity",
+      "document_index": 10
+    },
+    {
+      "subject": "Framework",
+      "title": "ELD Standards",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/education-programs/english-learnermulticultural-education/english-language-development-eld",
+      "document_index": 11
+    },
+    {
+      "subject": "General",
+      "title": "Mathematics",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/education-programs/mathematics",
+      "document_index": 12
+    },
+    {
+      "subject": "General",
+      "title": "Mathematics Legislation",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/education-programs/mathematics/nd-counts/mathematics-legislation",
+      "document_index": 13
+    },
+    {
+      "subject": "Subject",
+      "title": "Computer Science and Cybersecurity Credentials",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/educators/credentials-and-certificates/computer-science-and-cybersecurity-credentials",
+      "document_index": 14
+    },
+    {
+      "subject": "Framework",
+      "title": "ND PK-12 Education Strategic Vision Framework",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/nd-pk-12-education-strategic-vision-framework",
+      "document_index": 15
+    },
+    {
+      "subject": "Framework",
+      "title": "North Dakota K-12 AI Guidance Framework",
+      "section": null,
+      "document_url": "https://www.nd.gov/dpi/policyguidelines/north-dakota-k-12-ai-guidance-framework",
+      "document_index": 16
+    }
+  ]
+}

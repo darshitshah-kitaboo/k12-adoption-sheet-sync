@@ -1,0 +1,58 @@
+{
+  "state": "RI",
+  "date": "2026-04-27",
+  "change_count": 3,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.ride.ri.gov/instruction-assessment/mathematics"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Mathematics",
+        "section": null,
+        "document_url": "https://www.ride.ri.gov/instruction-assessment/mathematics",
+        "document_index": 2
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.ride.ri.gov/instruction-assessment/content-standards"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Content Standards",
+        "section": null,
+        "document_url": "https://www.ride.ri.gov/instruction-assessment/content-standards",
+        "document_index": 1
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://www.ride.ri.gov/instruction-assessment/social-studies"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Social Studies",
+        "section": null,
+        "document_url": "https://www.ride.ri.gov/instruction-assessment/social-studies",
+        "document_index": 3
+      }
+    }
+  ]
+}

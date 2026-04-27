@@ -1,0 +1,21 @@
+{
+  "state": "MD",
+  "name": "Maryland",
+  "source_url": "https://marylandpublicschools.org/",
+  "scraped_at": "2026-04-27T10:10:38+00:00",
+  "page_title": "Committed to a transformative path forward in support of every Maryland student",
+  "document_count": 1,
+  "content_hash": "0b7f6ca810a4e43a",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 1,
+  "cycles": [
+    {
+      "subject": "General",
+      "title": "ARP ESSER State Plan",
+      "section": null,
+      "document_url": "https://marylandpublicschools.org/about/Documents/ARP-ESSER/ARP_ESSER_StatePlan.pdf",
+      "document_index": 1
+    }
+  ]
+}

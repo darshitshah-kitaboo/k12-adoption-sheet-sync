@@ -422,8 +422,8 @@
       "governance": "Hybrid state/local",
       "status": "Active",
       "priority": 6,
-      "last_verified": "2026-04-23",
-      "summary": "California is hybrid: K-8 state-level through SBE/IQC, 9-12 is local. The 2026 ELA/ELD follow-up adoption is active with an SBE-approved timeline. This is a follow-up to the 2015 primary adoption \u2014 materials will be added to the existing list.",
+      "last_verified": "2026-04-27",
+      "summary": "California is hybrid: K-8 state-level through SBE/IQC, 9-12 is local. The 2026 ELA/ELD follow-up adoption is active with an SBE-approved timeline. This is a follow-up to the 2015 primary adoption — materials will be added to the existing list.",
       "authority": "CDE administers, IQC recommends, SBE approves (K-8). Local authority (9-12).",
       "cycles": [
         {
@@ -441,7 +441,7 @@
           "dlL": "Complete programs due",
           "ac": true,
           "src": "https://www.cde.ca.gov/ci/rl/im/elaeldfupsigevents.asp",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -576,7 +576,7 @@
           "dlL": "First classroom implementation",
           "ac": false,
           "src": "https://www.cde.ca.gov/ci/ma/im/evalmapinstructmath2025.asp",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -638,7 +638,7 @@
             },
             {
               "cat": "If You Missed It",
-              "note": "If you didn't submit for this cycle, the window is closed. Focus on the next California math opportunity \u2014 likely a future primary or follow-up adoption. Watch the CDE frameworks page for scheduling."
+              "note": "If you didn't submit for this cycle, the window is closed. Focus on the next California math opportunity — likely a future primary or follow-up adoption. Watch the CDE frameworks page for scheduling."
             },
             {
               "cat": "Data Note",
@@ -655,7 +655,7 @@
       "governance": "State adoption",
       "status": "Active",
       "priority": 3,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "summary": "Florida has a published multi-year cycle through 2030-31. Contracts run April 1-March 31. SB 7004 requires approved lists by July 31 of the prior year.",
       "authority": "Commissioner publishes approved list. Districts select and adopt.",
       "cycles": [
@@ -674,7 +674,7 @@
           "dlL": "Approved list due (SB 7004)",
           "ac": true,
           "src": "https://www.fldoe.org/academics/standards/instructional-materials/",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -799,7 +799,7 @@
           "dlL": "Specs available (Jan 2026)",
           "ac": false,
           "src": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -832,7 +832,7 @@
           "dlL": "Specs (est.)",
           "ac": false,
           "src": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -860,7 +860,7 @@
           "dlL": "Specs (est.)",
           "ac": false,
           "src": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -893,7 +893,7 @@
           "dlL": "Specs (est.)",
           "ac": false,
           "src": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -923,7 +923,7 @@
       "governance": "State adoption",
       "status": "Upcoming",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "summary": "Idaho has state curricular materials adoption through SDE. Active program with defined review cycles.",
       "authority": "State adoption with local selection",
       "cycles": [
@@ -942,7 +942,7 @@
           "dlL": "Check SDE for current cycle",
           "ac": false,
           "src": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/curricular-materials/",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": false,
@@ -961,7 +961,7 @@
           "tips": [
             {
               "cat": "Discovery",
-              "note": "Idaho's SDE page lists current adoption subjects and requirements. Check it now \u2014 we're still parsing the full details. If you sell materials in Idaho, confirm the active cycle directly with SDE."
+              "note": "Idaho's SDE page lists current adoption subjects and requirements. Check it now — we're still parsing the full details. If you sell materials in Idaho, confirm the active cycle directly with SDE."
             },
             {
               "cat": "Data Note",
@@ -982,7 +982,7 @@
       "governance": "Local control",
       "status": "District watch",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "summary": "Kentucky is local-control. KDE provides guidance but districts decide independently.",
       "authority": "District authority",
       "cycles": [
@@ -1001,7 +1001,7 @@
           "dlL": "District decisions",
           "ac": false,
           "src": "https://www.education.ky.gov/curriculum/books/Pages/default.aspx",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": false,
@@ -1014,7 +1014,7 @@
           "tips": [
             {
               "cat": "Strategy",
-              "note": "There is no statewide calendar here. You need to track individual districts \u2014 board agendas, procurement portals, and local curriculum review committees. Think of Kentucky as 170+ separate opportunities, not one state adoption."
+              "note": "There is no statewide calendar here. You need to track individual districts — board agendas, procurement portals, and local curriculum review committees. Think of Kentucky as 170+ separate opportunities, not one state adoption."
             },
             {
               "cat": "Data Note",
@@ -1337,7 +1337,7 @@
             },
             {
               "cat": "Also Coming",
-              "note": "NM also has ELA & WL 9-12 coming \u2014 State Committee samples expected March 2026, Call for Bids August 2026, Intent to Bid September, Bid Submission November. K-8 ELA & WL follows with Call for Bids August 2026."
+              "note": "NM also has ELA & WL 9-12 coming — State Committee samples expected March 2026, Call for Bids August 2026, Intent to Bid September, Bid Submission November. K-8 ELA & WL follows with Call for Bids August 2026."
             },
             {
               "cat": "Packaging",
@@ -1428,7 +1428,7 @@
       "governance": "State adoption",
       "status": "Monitoring",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "summary": "North Carolina has a state adoption process through the NC Textbook Commission. The Commission's last recorded meeting was September 2024, and multiple commissioner seats have been vacant since the term ended April 1, 2025. NC adopted new ELA Standard Course of Study (Draft 4) on January 8, 2026 for 2027-28 implementation. No active Call for Bids at present.",
       "authority": "Textbook Commission recommends, State Board approves, districts select.",
       "cycles": [
@@ -1447,7 +1447,7 @@
           "dlL": "Adoption cycle TBD",
           "ac": false,
           "src": "https://www.dpi.nc.gov/districts-schools/classroom-resources/office-teaching-and-learning",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -1515,7 +1515,7 @@
       "governance": "State adoption",
       "status": "Upcoming",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "summary": "Oklahoma publishes subject cycles. Some subjects may be affected by pending legislation.",
       "authority": "State-approved with local selection",
       "cycles": [
@@ -1534,7 +1534,7 @@
           "dlL": "Committee review (est.)",
           "ac": false,
           "src": "https://oklahoma.gov/content/dam/ok/en/osde/documents/services/standards-learning/hqim/oklahoma-state-textbook-committee/Subject%20Material%20Adoption%20Cycle%202026.pdf",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": false,
@@ -1583,7 +1583,7 @@
       "governance": "State adoption",
       "status": "Active",
       "priority": 4,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "summary": "Oregon has a structured multi-year adoption schedule. Current cycle: PE, World Languages, Arts (2026). Social Science completed 2025. ODE manages review with published criteria.",
       "authority": "State Board adopts. Districts select from adopted list or conduct independent adoption.",
       "cycles": [
@@ -1602,7 +1602,7 @@
           "dlL": "PDF submissions due to ODE.InstructionalMaterials",
           "ac": true,
           "src": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/announcements-and-notices.aspx",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -1678,7 +1678,7 @@
             },
             {
               "cat": "PE/Arts",
-              "note": "The PE Publisher Briefing happened Feb 13 and Info Request Form was due Feb 20. If you missed these, contact ODE's Instructional Materials Coordinator directly \u2014 you may still have a path in for PE and Arts."
+              "note": "The PE Publisher Briefing happened Feb 13 and Info Request Form was due Feb 20. If you missed these, contact ODE's Instructional Materials Coordinator directly — you may still have a path in for PE and Arts."
             },
             {
               "cat": "Standards",
@@ -1714,7 +1714,7 @@
           "dlL": "Publisher Briefing (est.)",
           "ac": false,
           "src": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/announcements-and-notices.aspx",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -1836,7 +1836,7 @@
       "governance": "State adoption",
       "status": "Active",
       "priority": 4,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "summary": "Tennessee adopts through the Textbook Commission using labeled schedules (A through H+). Schedule E (PE/Health, CTE) is active. Schedule F (Social Studies, CTE: Business) is upcoming. Schedule G (World Languages) and H (ELA) are verified for 2026-28. Full cycle through Math in 2029-30. Six-year contracts.",
       "authority": "Commission recommends, SBE approves, districts select.",
       "cycles": [
@@ -1855,7 +1855,7 @@
           "dlL": "Commission review meeting",
           "ac": true,
           "src": "https://www.tn.gov/textbook-commission/textbook-information-for-publishers.html",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -1917,7 +1917,7 @@
             },
             {
               "cat": "Process",
-              "note": "The Commission uses state advisory panels to review materials against a screening instrument. Public review happens simultaneously \u2014 parents and community members can view and comment on your materials online."
+              "note": "The Commission uses state advisory panels to review materials against a screening instrument. Public review happens simultaneously — parents and community members can view and comment on your materials online."
             },
             {
               "cat": "Contract",
@@ -1945,7 +1945,7 @@
           "dlL": "Schedule F cycle opens (est.)",
           "ac": false,
           "src": "https://www.tn.gov/content/dam/tn/textbook-commission/documents/schedule-f/Schedule_F_Calendar.pdf",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -1986,7 +1986,7 @@
           "dlL": "Bids expected Oct 2026",
           "ac": false,
           "src": "https://www.tn.gov/content/dam/tn/education/textbook/Instructional_Materials_Adoption_Schedule.pdf",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -2048,7 +2048,7 @@
           "dlL": "Bids expected Oct 2027",
           "ac": false,
           "src": "https://www.tn.gov/content/dam/tn/education/textbook/Instructional_Materials_Adoption_Schedule.pdf",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -2085,7 +2085,7 @@
           "dlL": "Bids expected Oct 2029",
           "ac": false,
           "src": "https://www.tn.gov/content/dam/tn/education/textbook/Instructional_Materials_Adoption_Schedule.pdf",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -2102,7 +2102,7 @@
             },
             {
               "cat": "Planning",
-              "note": "Four years out. Use this for strategic product planning only \u2014 don't commit production resources yet. Standards may change before this cycle opens."
+              "note": "Four years out. Use this for strategic product planning only — don't commit production resources yet. Standards may change before this cycle opens."
             }
           ],
           "students": 1004625
@@ -2307,7 +2307,7 @@
       "governance": "State adoption",
       "status": "Upcoming",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "summary": "Utah IMC reviews by subject. Districts select from recommended lists.",
       "authority": "IMC reviews, SBE recommends, districts select.",
       "cycles": [
@@ -2326,7 +2326,7 @@
           "dlL": "Review cycle begins",
           "ac": false,
           "src": "https://schools.utah.gov/curr/imc",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -2349,7 +2349,7 @@
             },
             {
               "cat": "Standards",
-              "note": "Align to Utah Core Standards. Check whether they've been recently updated \u2014 Utah has made revisions that could affect your alignment work."
+              "note": "Align to Utah Core Standards. Check whether they've been recently updated — Utah has made revisions that could affect your alignment work."
             },
             {
               "cat": "Data Note",
@@ -2370,7 +2370,7 @@
       "governance": "State adoption",
       "status": "Upcoming",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "summary": "WV groups adoptions with defined review and introduction years.",
       "authority": "State-approved with local selection",
       "cycles": [
@@ -2389,7 +2389,7 @@
           "dlL": "Review window opens",
           "ac": false,
           "src": "https://wvde.us/academics/middle-secondary-education/adopting-instructional-resources/instructional-resources-review-adoption/adoption-schedule-law-code-policies",
-          "v": "2026-04-23",
+          "v": "2026-04-27",
           "acc": true,
           "nim": true,
           "dig": true,
@@ -2437,7 +2437,7 @@
             },
             {
               "cat": "Events",
-              "note": "WV runs caravans (publisher showcase events) \u2014 expected February 2027 for this ELA cycle. Plan your demo materials."
+              "note": "WV runs caravans (publisher showcase events) — expected February 2027 for this ELA cycle. Plan your demo materials."
             },
             {
               "cat": "Structure",
@@ -2462,7 +2462,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "Alaska is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -2470,7 +2470,7 @@
           "id": "AK1",
           "src": "https://education.alaska.gov/standards",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "Alaska is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -2612,7 +2612,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "District of Columbia is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -2620,7 +2620,7 @@
           "id": "DC1",
           "src": "https://osse.dc.gov/",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "District of Columbia is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -2677,7 +2677,7 @@
           "src": "https://www.hawaiipublicschools.org/TeachingAndLearning/StudentLearning/Pages/home.aspx",
           "src2": [],
           "v": "2026-04-27",
-          "note": "Hawaii is single-district state-adoption \u2014 the entire state is one school district under HIDOE. Adoption decisions are centralized; subject-area committees lead reviews periodically."
+          "note": "Hawaii is single-district state-adoption — the entire state is one school district under HIDOE. Adoption decisions are centralized; subject-area committees lead reviews periodically."
         }
       ]
     },
@@ -2687,7 +2687,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "Illinois is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -2695,7 +2695,7 @@
           "id": "IL1",
           "src": "https://www.isbe.net/Pages/Learning-Standards.aspx",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "Illinois is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -2776,7 +2776,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "Iowa is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -2784,7 +2784,7 @@
           "id": "IA1",
           "src": "https://educate.iowa.gov/pk-12/standards",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "Iowa is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -2826,7 +2826,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "Maine is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -2834,7 +2834,7 @@
           "id": "ME1",
           "src": "https://www.maine.gov/doe/learning",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "Maine is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -2851,7 +2851,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "Maryland is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -2859,7 +2859,7 @@
           "id": "MD1",
           "src": "https://marylandpublicschools.org/",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "Maryland is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -2876,7 +2876,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "Massachusetts is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -2884,7 +2884,7 @@
           "id": "MA1",
           "src": "https://www.doe.mass.edu/instruction/",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "Massachusetts is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -2951,7 +2951,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "Missouri is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -2959,7 +2959,7 @@
           "id": "MO1",
           "src": "https://dese.mo.gov/college-career-readiness/curriculum",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "Missouri is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -2976,7 +2976,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "Montana is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -2984,7 +2984,7 @@
           "id": "MT1",
           "src": "https://opi.mt.gov/Educators/Teaching-Learning",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "Montana is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -3076,7 +3076,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "New York is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -3084,7 +3084,7 @@
           "id": "NY1",
           "src": "https://www.nysed.gov/curriculum-instruction",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "New York is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -3101,7 +3101,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "North Dakota is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -3109,7 +3109,7 @@
           "id": "ND1",
           "src": "https://www.nd.gov/dpi/",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "North Dakota is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -3126,7 +3126,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "Ohio is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -3134,7 +3134,7 @@
           "id": "OH1",
           "src": "https://education.ohio.gov/Topics/Learning-in-Ohio",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "Ohio is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -3151,7 +3151,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "Pennsylvania is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -3159,7 +3159,7 @@
           "id": "PA1",
           "src": "https://www.education.pa.gov/K-12/Curriculum%20and%20Instruction/Pages/default.aspx",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "Pennsylvania is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -3176,7 +3176,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "Rhode Island is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -3184,7 +3184,7 @@
           "id": "RI1",
           "src": "https://www.ride.ri.gov/",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "Rhode Island is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -3201,7 +3201,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "South Dakota is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -3209,7 +3209,7 @@
           "id": "SD1",
           "src": "https://doe.sd.gov/contentstandards/",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "South Dakota is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -3226,7 +3226,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "Vermont is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -3234,7 +3234,7 @@
           "id": "VT1",
           "src": "https://education.vermont.gov/student-learning/content-areas",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "Vermont is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -3315,7 +3315,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "Washington is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -3323,7 +3323,7 @@
           "id": "WA1",
           "src": "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "Washington is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",
@@ -3340,7 +3340,7 @@
       "governance": "Local control",
       "status": "Monitoring",
       "priority": 0,
-      "last_verified": "2026-04-25",
+      "last_verified": "2026-04-27",
       "summary": "Wisconsin is local-control.",
       "authority": "District authority",
       "cycles": [
@@ -3348,7 +3348,7 @@
           "id": "WI1",
           "src": "https://dpi.wi.gov/standards",
           "src2": [],
-          "v": "2026-04-25",
+          "v": "2026-04-27",
           "ac": false,
           "dl": "TBD",
           "note": "Wisconsin is local-control. Districts select materials; state DOE publishes frameworks and HQIM resources here.",

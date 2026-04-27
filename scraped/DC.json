@@ -1,0 +1,21 @@
+{
+  "state": "DC",
+  "name": "District of Columbia",
+  "source_url": "https://osse.dc.gov/",
+  "scraped_at": "2026-04-27T10:10:24+00:00",
+  "page_title": "osse",
+  "document_count": 1,
+  "content_hash": "c8516a414775b934",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 1,
+  "cycles": [
+    {
+      "subject": "Framework",
+      "title": "District of Columbia Standards of Learning",
+      "section": null,
+      "document_url": "https://osse.dc.gov/service/dc-standards-learning",
+      "document_index": 1
+    }
+  ]
+}

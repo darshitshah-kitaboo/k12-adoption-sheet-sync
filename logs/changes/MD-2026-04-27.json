@@ -1,0 +1,24 @@
+{
+  "state": "MD",
+  "date": "2026-04-27",
+  "change_count": 1,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://marylandpublicschools.org/about/Documents/ARP-ESSER/ARP_ESSER_StatePlan.pdf"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "ARP ESSER State Plan",
+        "section": null,
+        "document_url": "https://marylandpublicschools.org/about/Documents/ARP-ESSER/ARP_ESSER_StatePlan.pdf",
+        "document_index": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "state": "RI",
+  "name": "Rhode Island",
+  "source_url": "https://www.ride.ri.gov/",
+  "scraped_at": "2026-04-27T10:10:54+00:00",
+  "page_title": "Home | RI Department of Education",
+  "document_count": 3,
+  "content_hash": "f3fae8b5f40ead77",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 3,
+  "cycles": [
+    {
+      "subject": "Framework",
+      "title": "Content Standards",
+      "section": null,
+      "document_url": "https://www.ride.ri.gov/instruction-assessment/content-standards",
+      "document_index": 1
+    },
+    {
+      "subject": "General",
+      "title": "Mathematics",
+      "section": null,
+      "document_url": "https://www.ride.ri.gov/instruction-assessment/mathematics",
+      "document_index": 2
+    },
+    {
+      "subject": "Subject",
+      "title": "Social Studies",
+      "section": null,
+      "document_url": "https://www.ride.ri.gov/instruction-assessment/social-studies",
+      "document_index": 3
+    }
+  ]
+}

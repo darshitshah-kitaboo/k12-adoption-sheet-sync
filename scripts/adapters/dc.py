@@ -23,7 +23,8 @@ from scripts.adapters import localctl
 
 STATE_CODE = "DC"
 STATE_NAME = "District of Columbia"
-SOURCE_URL = "https://osse.dc.gov/service/teaching-and-learning"
+SOURCE_URL = "https://osse.dc.gov/page/elementary-and-secondary-education-osse"
+WARMUP_URL = "https://osse.dc.gov/"
 
 # Whitelisted offsite hosts. Add Airtable, Smartsheet, EdReports, or any
 # other domain the state publishes recommended materials on. localctl
@@ -33,7 +34,7 @@ EXTRA_HOSTS = ()
 
 def fetch_html(url=SOURCE_URL):
     """Fetch the District of Columbia curriculum hub through the shared helper."""
-    return localctl.fetch_html(url)
+    return localctl.fetch_html(url, warmup_url=WARMUP_URL)
 
 
 def parse(html, source_url=SOURCE_URL):

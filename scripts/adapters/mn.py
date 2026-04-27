@@ -23,7 +23,8 @@ from scripts.adapters import localctl
 
 STATE_CODE = "MN"
 STATE_NAME = "Minnesota"
-SOURCE_URL = "https://education.mn.gov/MDE/dse/stds/"
+SOURCE_URL = "https://education.mn.gov/"
+WARMUP_URL = "https://education.mn.gov/"
 
 # Whitelisted offsite hosts. Add Airtable, Smartsheet, EdReports, or any
 # other domain the state publishes recommended materials on. localctl
@@ -33,7 +34,7 @@ EXTRA_HOSTS = ()
 
 def fetch_html(url=SOURCE_URL):
     """Fetch the Minnesota curriculum hub through the shared helper."""
-    return localctl.fetch_html(url)
+    return localctl.fetch_html(url, warmup_url=WARMUP_URL)
 
 
 def parse(html, source_url=SOURCE_URL):

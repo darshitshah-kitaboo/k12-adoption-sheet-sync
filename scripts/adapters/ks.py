@@ -23,7 +23,8 @@ from scripts.adapters import localctl
 
 STATE_CODE = "KS"
 STATE_NAME = "Kansas"
-SOURCE_URL = "https://www.ksde.org/Default.aspx?tabid=141"
+SOURCE_URL = "https://www.ksde.gov/"
+WARMUP_URL = "https://www.ksde.org/"
 
 # Whitelisted offsite hosts. Add Airtable, Smartsheet, EdReports, or any
 # other domain the state publishes recommended materials on. localctl
@@ -33,7 +34,7 @@ EXTRA_HOSTS = ()
 
 def fetch_html(url=SOURCE_URL):
     """Fetch the Kansas curriculum hub through the shared helper."""
-    return localctl.fetch_html(url)
+    return localctl.fetch_html(url, warmup_url=WARMUP_URL)
 
 
 def parse(html, source_url=SOURCE_URL):

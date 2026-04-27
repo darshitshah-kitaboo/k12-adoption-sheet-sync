@@ -23,7 +23,8 @@ from scripts.adapters import localctl
 
 STATE_CODE = "RI"
 STATE_NAME = "Rhode Island"
-SOURCE_URL = "https://www.ride.ri.gov/InstructionAssessment/CurriculumInstruction.aspx"
+SOURCE_URL = "https://www.ride.ri.gov/InstructionAssessment.aspx"
+WARMUP_URL = "https://www.ride.ri.gov/"
 
 # Whitelisted offsite hosts. Add Airtable, Smartsheet, EdReports, or any
 # other domain the state publishes recommended materials on. localctl
@@ -33,7 +34,7 @@ EXTRA_HOSTS = ()
 
 def fetch_html(url=SOURCE_URL):
     """Fetch the Rhode Island curriculum hub through the shared helper."""
-    return localctl.fetch_html(url)
+    return localctl.fetch_html(url, warmup_url=WARMUP_URL)
 
 
 def parse(html, source_url=SOURCE_URL):

@@ -72,24 +72,59 @@ DEFAULT_DOCUMENT_EXTS = (
 # text matches a strong adoption-relevant phrase. The keywords are case-
 # insensitive and matched against the trimmed anchor text only.
 ADOPTION_KEYWORDS = (
+    # Core framework / standards / rubric vocabulary
     "framework",
     "rubric",
     "standards",
+    "academic standards",
+    "k-12 standards",
+    "grade level",
+    "grade-level",
+    "content standards",
+    # Approved / recommended lists
     "approved list",
     "approved materials",
+    "approved textbooks",
+    "recommended materials",
+    "recommended list",
+    "vetted",
+    "vetting",
+    # HQIM / curriculum
     "hqim",
     "high-quality instructional materials",
     "high quality instructional materials",
-    "recommended materials",
-    "recommended list",
     "curriculum guide",
     "curriculum framework",
+    "curriculum resources",
+    "curriculum map",
+    "scope and sequence",
     "instructional materials",
+    "instructional resources",
+    "instructional support",
+    # Review / evaluation tooling
     "review tool",
     "evaluation criteria",
+    "review process",
     "adoption schedule",
+    "adoption cycle",
     "review cycle",
     "selection criteria",
+    "selection process",
+    # Subject area entry points (used as bare nav links on many DOE
+    # hubs, e.g. "Mathematics", "English Language Arts")
+    "mathematics",
+    "english language arts",
+    "social studies",
+    "world languages",
+    "career and technical education",
+    "computer science",
+    "fine arts",
+    "physical education",
+    # Procurement-adjacent terms
+    "textbook",
+    "textbooks",
+    "open educational resources",
+    "oer",
 )
 
 # Bucket every captured link into one of these categories by inspecting

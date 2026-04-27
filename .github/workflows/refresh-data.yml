@@ -32,6 +32,17 @@ on:
       - 'scripts/adapters/**'
       - '.github/workflows/refresh-data.yml'
 
+# Serialise refresh-data runs. Two parallel runs racing on the commit
+# step (a manual dispatch overlapping with the cron, or two pushes
+# back-to-back) leave structured-JSON merge conflicts in
+# adoption_data.json that cannot auto-resolve. Holding a workflow-level
+# lock means a queued run waits for the active one to finish rather
+# than colliding on the commit. cancel-in-progress is false so we never
+# drop a run that already collected snapshots.
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -95,16 +106,47 @@ jobs:
           # adoption_data.json, so there is no re-run loop.
           git commit -m "chore: refresh state adapter snapshots"
           # Retry push with rebase when the runner's HEAD is behind main.
-          # Happens when a human pushed while the workflow was running.
+          # The workflow-level concurrency lock keeps two refresh runs
+          # from racing, but a human commit can still land while a run
+          # is in flight, so the rebase loop stays.
+          #
+          # If the rebase hits a conflict on adoption_data.json (the
+          # only structured-JSON file we commit), we cannot auto-merge.
+          # Recovery path: drop our local commit, accept main's version,
+          # re-run promote_scraped against the scraped/ snapshots from
+          # this run, and retry. This regenerates the dashboard cleanly
+          # rather than committing a file with merge markers in it.
           for attempt in 1 2 3; do
             if git push; then
               echo "Push succeeded on attempt $attempt"
               exit 0
             fi
             echo "Push rejected on attempt $attempt, rebasing and retrying..."
-            git pull --rebase origin main
+            if ! git pull --rebase origin main; then
+              echo "Rebase conflict, abandoning local diff and re-promoting..."
+              git rebase --abort || true
+              # Save scraped/ from this run so we don't lose them
+              git stash push -- scraped/ logs/ 2>/dev/null || true
+              git fetch origin main
+              git reset --hard origin/main
+              git stash pop 2>/dev/null || true
+              # Regenerate adoption_data.json from main + fresh scraped/
+              python scripts/promote_scraped.py || true
+              git add scraped/ logs/ adoption_data.json 2>/dev/null || true
+              if git diff --cached --quiet; then
+                echo "Nothing left to commit after rebuild; exiting clean."
+                exit 0
+              fi
+              # Validate before committing — refusing to push a corrupt
+              # adoption_data.json is the whole point of this branch.
+              if ! python -c "import json; json.load(open('adoption_data.json'))"; then
+                echo "adoption_data.json is not valid JSON after rebuild; abandoning push" >&2
+                exit 1
+              fi
+              git commit -m "chore: refresh state adapter snapshots (rebuilt after rebase conflict)"
+            fi
           done
-          echo "Push still failing after 3 rebase attempts" >&2
+          echo "Push still failing after 3 attempts" >&2
           exit 1
 
       - name: Push adoption_data.json to Google Sheet

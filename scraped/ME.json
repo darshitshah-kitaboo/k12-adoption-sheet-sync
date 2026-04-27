@@ -1,0 +1,21 @@
+{
+  "state": "ME",
+  "name": "Maine",
+  "source_url": "https://www.maine.gov/doe/learning",
+  "scraped_at": "2026-04-27T06:55:55+00:00",
+  "page_title": "Learning",
+  "document_count": 1,
+  "content_hash": "e2b90008c5465479",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 1,
+  "cycles": [
+    {
+      "subject": "Framework",
+      "title": "Content Standards",
+      "section": null,
+      "document_url": "https://www.maine.gov/doe/learning/content",
+      "document_index": 1
+    }
+  ]
+}

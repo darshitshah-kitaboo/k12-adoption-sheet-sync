@@ -2,13 +2,13 @@
   "state": "KY",
   "name": "Kentucky",
   "source_url": "https://www.education.ky.gov/curriculum/books/Pages/default.aspx",
-  "scraped_at": "2026-04-27T06:55:46+00:00",
+  "scraped_at": "2026-04-25T15:44:53+00:00",
   "page_title": "High-Quality Instructional Resource Adoption",
-  "document_count": 15,
-  "content_hash": "9cbedac4b02cd05c",
+  "document_count": 6,
+  "content_hash": "a5cd9d03ce91db74",
   "has_active_cycle": false,
   "call_for_bids_url": null,
-  "cycle_count": 15,
+  "cycle_count": 6,
   "cycles": [
     {
       "subject": "General",
@@ -39,81 +39,18 @@
       "document_index": 4
     },
     {
-      "subject": "General",
-      "title": "Instructional Resource Alignment Rubrics",
-      "section": "\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200bSelection and Use of Instructional Resources/Materials",
-      "document_url": "https://kystandards.org/standards-resources/inst-mats-align-rubrics/",
-      "document_index": 5
-    },
-    {
-      "subject": "Framework",
-      "title": "Model Curriculum Framework",
-      "section": "\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200bSelection and Use of Instructional Resources/Materials",
-      "document_url": "https://kystandards.org/standards-resources/model-curriculum-framework/",
-      "document_index": 6
-    },
-    {
-      "subject": "Subject",
-      "title": "Career and Technical Education End of Program Assessments",
-      "section": null,
-      "document_url": "https://www.education.ky.gov/CTE/endofprog/Pages/default.aspx",
-      "document_index": 7
-    },
-    {
-      "subject": "Subject",
-      "title": "Career and Technical Education",
-      "section": null,
-      "document_url": "https://www.education.ky.gov/CTE/Pages/default.aspx",
-      "document_index": 8
-    },
-    {
-      "subject": "General",
-      "title": "Textbooks",
-      "section": null,
-      "document_url": "https://www.education.ky.gov/curriculum/books/Pages/default.aspx",
-      "document_index": 9
-    },
-    {
-      "subject": "Framework",
-      "title": "Model Curriculum Framework",
-      "section": null,
-      "document_url": "https://www.education.ky.gov/curriculum/modcurrframe/Pages/default.aspx",
-      "document_index": 10
-    },
-    {
-      "subject": "Framework",
-      "title": "Standards/Content Areas",
-      "section": null,
-      "document_url": "https://www.education.ky.gov/curriculum/Pages/default.aspx",
-      "document_index": 11
-    },
-    {
       "subject": "HQIM",
       "title": "high-quality instructional resources (HQIRs)",
       "section": "\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200bSelection and Use of Instructional Resources/Materials",
       "document_url": "https://www.education.ky.gov/curriculum/standards/kyacadstand/Documents/High-Quality_Instructional_Resources.pdf",
-      "document_index": 12
-    },
-    {
-      "subject": "Framework",
-      "title": "Standards",
-      "section": null,
-      "document_url": "https://www.education.ky.gov/curriculum/standards/Pages/default.aspx",
-      "document_index": 13
+      "document_index": 5
     },
     {
       "subject": "General",
       "title": "Kentucky Digital Learning Guidelines",
       "section": "Digital Learning Guidelines",
       "document_url": "https://www.education.ky.gov/districts/tech/Documents/KYDLG2025.pdf",
-      "document_index": 14
-    },
-    {
-      "subject": "Framework",
-      "title": "Education Professional Standards Board",
-      "section": null,
-      "document_url": "https://www.education.ky.gov/epsb/Pages/default.aspx",
-      "document_index": 15
+      "document_index": 6
     }
   ]
 }

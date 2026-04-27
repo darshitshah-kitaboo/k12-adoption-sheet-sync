@@ -1,0 +1,586 @@
+{
+  "state": "IL",
+  "date": "2026-04-27",
+  "change_count": 36,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.eventbrite.com/e/si-summit-stronger-together-tickets-1987628627731"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Learn more and register to attend the 2026 ISBE Standards and Instruction Summer Summit.",
+        "section": "Upcoming Standards & Instruction Event",
+        "document_url": "https://www.eventbrite.com/e/si-summit-stronger-together-tickets-1987628627731",
+        "document_index": 2
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Pages/Standards-Courses.aspx"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Standards and Courses",
+        "section": null,
+        "document_url": "https://www.isbe.net/Pages/Standards-Courses.aspx",
+        "document_index": 36
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://attendee.gotowebinar.com/recording/8212271465644343041"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "\u200b \u200bCharting a Path for Teaching the Revised IL Learning Standards for Social Science Recording",
+        "section": null,
+        "document_url": "https://attendee.gotowebinar.com/recording/8212271465644343041",
+        "document_index": 1
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/driver-ed-cost-rpt-13-14.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 16,
+          "new": 18
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/TEAACHing-With-Pushback-Presentation.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 33,
+          "new": 35
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/2025-Driver-Education-Cost-Report.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 6,
+          "new": 8
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/TEAACHing-For-Change-Pres.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 31,
+          "new": 33
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/252ARK.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 7,
+          "new": 9
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/driver-ed-cost-rpt-15-16.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 18,
+          "new": 20
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/FY22-Drivers-Ed-Cost-Report.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 23,
+          "new": 25
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/illinois-inclusive-calendar.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 27,
+          "new": 29
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/TEAACH-Act-Now-presentation.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 30,
+          "new": 32
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/TEAACH-Act-Fact-Sheet.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 29,
+          "new": 31
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/App-High-School-Driver-Ed-Prog-IL.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 12,
+          "new": 14
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/FY21-Drivers-Ed-Cost-Report.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 22,
+          "new": 24
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/IL-Mandated-Units-of-Study.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 26,
+          "new": 28
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/Declaration-of-Intent.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 15,
+          "new": 17
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/Bicycle-Safety-Safe-Routes-School.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 13,
+          "new": 15
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/50-56-commercial-driver-training.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 10,
+          "new": 12
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/2016-17-Dr-Ed-Per-Cap-Report.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 2,
+          "new": 4
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/34-10_driver_ed.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 9,
+          "new": 11
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/How-to-TEAACH-Webinar.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 25,
+          "new": 27
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/driver_ed_stats.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 20,
+          "new": 22
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/FY20-Drivers-Ed-Cost-Report.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 21,
+          "new": 23
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/driver-ed-cost-rpt-14-15.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 17,
+          "new": 19
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Guidance",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/grad_require.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 24,
+          "new": 26
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/Nonpublic-Driver-Ed-Prog-Application.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 28,
+          "new": 30
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/Charting-Path-Teaching-FAQ.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 14,
+          "new": 16
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/2017-18-Dr-Ed-Cost-Report-Web.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 3,
+          "new": 5
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/driver_ed_faq.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 19,
+          "new": 21
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/TEAACHing-For-Inclusion-Webinar.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 32,
+          "new": 34
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/2024-Driver-Ed-Cost-Report.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 5,
+          "new": 7
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/2018-19-Dr-Ed-Cost-Report.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 4,
+          "new": 6
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/Accelerated-Placement-Act-Update.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 11,
+          "new": 13
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/092622-Charting-Path-Teaching.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 1,
+          "new": 3
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.isbe.net/Documents/34-06_driver_ed.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 8,
+          "new": 10
+        }
+      }
+    }
+  ]
+}

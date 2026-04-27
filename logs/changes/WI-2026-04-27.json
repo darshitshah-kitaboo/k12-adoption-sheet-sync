@@ -1,0 +1,1120 @@
+{
+  "state": "WI",
+  "date": "2026-04-27",
+  "change_count": 69,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/families-students/health-safety/phy-ed"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Physical Education",
+        "section": null,
+        "document_url": "https://dpi.wi.gov/families-students/health-safety/phy-ed",
+        "document_index": 1
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/literacy-mathematics/archived-academic-standards"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Archived Academic Standards",
+        "section": "Academic Standards",
+        "document_url": "https://dpi.wi.gov/literacy-mathematics/archived-academic-standards",
+        "document_index": 3
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/standards/council"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Academic Standards Review Council",
+        "section": "Academic Standards",
+        "document_url": "https://dpi.wi.gov/standards/council",
+        "document_index": 66
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/img/standards_review_process_chart.pptx.jpg"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Academic Standards Review Revision Process",
+        "section": "Academic Standards Under Review and Revision",
+        "document_url": "https://dpi.wi.gov/sites/default/files/imce/standards/img/standards_review_process_chart.pptx.jpg",
+        "document_index": 11
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://wida.wisc.edu/teach/standards/eld/2020"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Standards (2020)",
+        "section": "English Language Development",
+        "document_url": "https://wida.wisc.edu/teach/standards/eld/2020",
+        "document_index": 69
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/families-students/student-success/standards"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Academic Standards",
+        "section": null,
+        "document_url": "https://dpi.wi.gov/families-students/student-success/standards",
+        "document_index": 2
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "HQIM",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/standards/high-quality-instructional-materials-and-professional-learning"
+      ],
+      "cycle": {
+        "subject": "HQIM",
+        "title": "High-Quality Instructional Materials & Professional Learning",
+        "section": "Academic Standards",
+        "document_url": "https://dpi.wi.gov/standards/high-quality-instructional-materials-and-professional-learning",
+        "document_index": 67
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/standards/literacy-all-subjects/standards"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Understanding the Standards",
+        "section": "Academic Standards",
+        "document_url": "https://dpi.wi.gov/standards/literacy-all-subjects/standards",
+        "document_index": 68
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/standards"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Academic Standards",
+        "section": null,
+        "document_url": "https://dpi.wi.gov/standards",
+        "document_index": 65
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/MMEE_Standards_FINAL.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 8,
+          "new": 12
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/ELAStandards2020.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 14,
+          "new": 18
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Physical_Education_Standards_final_2020.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 50,
+          "new": 54
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/InformationTechnologyLiteracyStandards2017.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 17,
+          "new": 21
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Ag_Standards_2024.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 38,
+          "new": 42
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/Phase-by-Phase_Standards_Rollout_Graphic.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 21,
+          "new": 25
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/AFNR_Standards_FINAL.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 4,
+          "new": 7
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/HS_Standards_FINAL.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 7,
+          "new": 10
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_PDFs/MathematicsStandards_WCAG_2-2_compl_PDF_-_Copy.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 58,
+          "new": 62
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/EnvironmentalLiteracySustainabilityStandards2018.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 15,
+          "new": 19
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/TheatreStandards2018.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 25,
+          "new": 29
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/2024_mmee_standards.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 35,
+          "new": 39
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Health_Ed_Standards_JAN_26_comms.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 46,
+          "new": 50
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/FCS_standards_FINAL.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 6,
+          "new": 9
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Science_Standards_12-5-23.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 51,
+          "new": 55
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/WI_Essential_Elements_for_Social_Studies_Appendix_A_-_Indicators_Ideas_for_Instruction_and_Attainment.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 54,
+          "new": 58
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/NutritionStandards2022-Final.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 19,
+          "new": 23
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/Proposed_Standards_Revision_and_Review_Checklist.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 23,
+          "new": 27
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/BIT_Standards_FINAL.pdf.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 5,
+          "new": 8
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/2024_wcr_standards.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 37,
+          "new": 41
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_PDFs/Wisconsin_Model_Early_Learning_Standards_Fifth_Edition_WCAG_2-2_compl_PDF.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 59,
+          "new": 63
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/cal/pdf/health-stds.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 1,
+          "new": 4
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/EE_ELA_Standards_5-27-22.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 43,
+          "new": 47
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/wmels_5thedition_accessible.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 55,
+          "new": 59
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/2023-2031_Timeline_for_Standards_Review_2.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 3,
+          "new": 6
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/ComputerScienceStandards2016.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 10,
+          "new": 14
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Art_Design.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 39,
+          "new": 43
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/2024_bit_standards.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 32,
+          "new": 36
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/ELA_Standards_final_w._Braille_Considerations_Appendix_.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 44,
+          "new": 48
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/DanceStandards2019.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 11,
+          "new": 15
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Theatre.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 53,
+          "new": 57
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/ee-mathematics.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 42,
+          "new": 46
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/SSASRC_Roster_January_2025.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 29,
+          "new": 33
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/TEE_standards_FINAL.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 30,
+          "new": 34
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/2020_pfl_standards.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 31,
+          "new": 35
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/pdf/las-stds.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 27,
+          "new": 31
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Dance1.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 41,
+          "new": 45
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/ScienceStandards2017.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 28,
+          "new": 32
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/EnvironmentalLiteracySustainabilityStandards2018_9-8-2021.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 45,
+          "new": 49
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/NutritionStandards2022-Final.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 49,
+          "new": 53
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/ee-mathematics_final_2022.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 12,
+          "new": 16
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_PDFs/EE_Science_WCAG_2-2_Compl_PDF_-_Copy.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 57,
+          "new": 61
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/literacy-mathematics/pdf/Essential_Elements_for_Social_Studies_2022.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 2,
+          "new": 5
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/WorldLanguagesStandards2019.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 26,
+          "new": 30
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/SocialStudiesStandards2018.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 24,
+          "new": 28
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/physical-education-standards.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 22,
+          "new": 26
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/2024_fcs_standards.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 33,
+          "new": 37
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/ITL_Standards_COMMS_1.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 47,
+          "new": 51
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/MusicStandards2017.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 18,
+          "new": 22
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/PersonalFinancialLiteracyStandards2020.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 20,
+          "new": 24
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/Music.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 48,
+          "new": 52
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/WorldLanguagesStandards_2-8-22.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 56,
+          "new": 60
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/2024_tee_standards.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 36,
+          "new": 40
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/CS_STANDARDS_DEC_2025_COMMS_FINAL.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 40,
+          "new": 44
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/EssentialElementsELA2022.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 16,
+          "new": 20
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/ArtDesign2019.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 9,
+          "new": 13
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/2024_hs_standards_1.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 34,
+          "new": 38
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/New%20pdfs/ELA-Standards-23.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 13,
+          "new": 17
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCAG_Acc_Word_Docs/2026_Acc_Standards_Docs/social_studies_standards.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 52,
+          "new": 56
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://dpi.wi.gov/sites/default/files/imce/standards/WCR_standards_FINAL.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 60,
+          "new": 64
+        }
+      }
+    }
+  ]
+}

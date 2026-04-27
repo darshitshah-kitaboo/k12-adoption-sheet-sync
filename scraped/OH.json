@@ -1,0 +1,105 @@
+{
+  "state": "OH",
+  "name": "Ohio",
+  "source_url": "https://education.ohio.gov/Topics/Learning-in-Ohio",
+  "scraped_at": "2026-04-27T06:56:17+00:00",
+  "page_title": "Learning in Ohio",
+  "document_count": 13,
+  "content_hash": "4766e6378ed89425",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 13,
+  "cycles": [
+    {
+      "subject": "Framework",
+      "title": "Early Learning Standards",
+      "section": "Ohio\u2019s Educational System",
+      "document_url": "http://education.ohio.gov/Topics/Early-Learning/Early-Learning-Content-Standards",
+      "document_index": 1
+    },
+    {
+      "subject": "Framework",
+      "title": "Extended\u00a0Standards",
+      "section": "Ohio\u2019s Educational System",
+      "document_url": "http://education.ohio.gov/Topics/Special-Education/Educating-Students-with-Disabilities/Students-With-Disabilities-1",
+      "document_index": 2
+    },
+    {
+      "subject": "Subject",
+      "title": "STEM (Science, Technology, Engineering and Mathematics)",
+      "section": "Ohio\u2019s Educational System",
+      "document_url": "http://education.ohio.gov/Topics/STEM-Science-Technology-Engineering-and-Mathem",
+      "document_index": 3
+    },
+    {
+      "subject": "Adoption",
+      "title": "Adoption and Purchase of Textbooks",
+      "section": "Ohio\u2019s Educational System",
+      "document_url": "https://education.ohio.gov/Topics/Learning-in-Ohio/Adoption-and-Purchase-of-Textbooks",
+      "document_index": 4
+    },
+    {
+      "subject": "Subject",
+      "title": "Computer Science",
+      "section": "Ohio\u2019s Educational System",
+      "document_url": "https://education.ohio.gov/Topics/Learning-in-Ohio/Computer-Science",
+      "document_index": 5
+    },
+    {
+      "subject": "Subject",
+      "title": "English Language Arts",
+      "section": "Ohio\u2019s Educational System",
+      "document_url": "https://education.ohio.gov/Topics/Learning-in-Ohio/English-Language-Art",
+      "document_index": 6
+    },
+    {
+      "subject": "General",
+      "title": "Mathematics",
+      "section": "Ohio\u2019s Educational System",
+      "document_url": "https://education.ohio.gov/Topics/Learning-in-Ohio/Mathematics",
+      "document_index": 7
+    },
+    {
+      "subject": "Framework",
+      "title": "Find Ohio's Learning Standards?",
+      "section": null,
+      "document_url": "https://education.ohio.gov/Topics/Ohio-s-New-Learning-Standards",
+      "document_index": 8
+    },
+    {
+      "subject": "Subject",
+      "title": "Fine Arts",
+      "section": "Ohio\u2019s Educational System",
+      "document_url": "https://education.ohio.gov/Topics/Ohios-Learning-Standards/Fine-Arts",
+      "document_index": 9
+    },
+    {
+      "subject": "General",
+      "title": "World Languages",
+      "section": "Ohio\u2019s Educational System",
+      "document_url": "https://education.ohio.gov/Topics/Ohios-Learning-Standards/Foreign-Language",
+      "document_index": 10
+    },
+    {
+      "subject": "Subject",
+      "title": "Physical Education",
+      "section": "Ohio\u2019s Educational System",
+      "document_url": "https://education.ohio.gov/Topics/Ohios-Learning-Standards/Physical-Education",
+      "document_index": 11
+    },
+    {
+      "subject": "Subject",
+      "title": "Social Studies",
+      "section": "Ohio\u2019s Educational System",
+      "document_url": "https://education.ohio.gov/Topics/Ohios-Learning-Standards/Social-Studies",
+      "document_index": 12
+    },
+    {
+      "subject": "Framework",
+      "title": "Extended Standards",
+      "section": "Ohio\u2019s Educational System",
+      "document_url": "https://education.ohio.gov/Topics/Special-Education/Ohios-Learning-Standards-Extended",
+      "document_index": 13
+    }
+  ]
+}

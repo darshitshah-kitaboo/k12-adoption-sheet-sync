@@ -2,13 +2,13 @@
   "state": "SD",
   "name": "South Dakota",
   "source_url": "https://doe.sd.gov/contentstandards/",
-  "scraped_at": "2026-04-27T06:56:29+00:00",
+  "scraped_at": "2026-04-25T15:45:23+00:00",
   "page_title": "South Dakota Content Standards",
-  "document_count": 25,
-  "content_hash": "0654de70c6eb1071",
+  "document_count": 19,
+  "content_hash": "4a91b68a6ba1f00f",
   "has_active_cycle": false,
   "call_for_bids_url": null,
-  "cycle_count": 25,
+  "cycle_count": 19,
   "cycles": [
     {
       "subject": "Framework",
@@ -137,53 +137,11 @@
       "document_index": 18
     },
     {
-      "subject": "Subject",
-      "title": "English Language Arts webpage",
-      "section": null,
-      "document_url": "https://doe.sd.gov/contentstandards/ELA.aspx",
-      "document_index": 19
-    },
-    {
-      "subject": "General",
-      "title": "Mathematics webpage",
-      "section": null,
-      "document_url": "https://doe.sd.gov/contentstandards/math.aspx",
-      "document_index": 20
-    },
-    {
-      "subject": "Framework",
-      "title": "Oceti Sakowin Essential Understandings & Standards Revision Process",
-      "section": null,
-      "document_url": "https://doe.sd.gov/contentstandards/oseu-standards-revision.aspx",
-      "document_index": 21
-    },
-    {
-      "subject": "Framework",
-      "title": "Content Standards Under Review",
-      "section": "South Dakota Content Standards",
-      "document_url": "https://doe.sd.gov/contentstandards/review.aspx",
-      "document_index": 22
-    },
-    {
-      "subject": "Subject",
-      "title": "Social Studies webpage",
-      "section": null,
-      "document_url": "https://doe.sd.gov/contentstandards/socialstudies.aspx",
-      "document_index": 23
-    },
-    {
       "subject": "Framework",
       "title": "Personal Finance Standards - Adopted 2022",
       "section": null,
       "document_url": "https://doe.sd.gov/cte/documents/standards/19262-PerFinance.pdf",
-      "document_index": 24
-    },
-    {
-      "subject": "Framework",
-      "title": "Computer Science Standards",
-      "section": null,
-      "document_url": "javascript:void(0)",
-      "document_index": 25
+      "document_index": 19
     }
   ]
 }

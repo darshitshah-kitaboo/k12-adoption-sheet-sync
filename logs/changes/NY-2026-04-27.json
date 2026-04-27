@@ -1,0 +1,126 @@
+{
+  "state": "NY",
+  "date": "2026-04-27",
+  "change_count": 7,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.nysed.gov/next-generation-learning-standards"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Next Generation Learning Standards",
+        "section": "Popular Topics",
+        "document_url": "https://www.nysed.gov/next-generation-learning-standards",
+        "document_index": 2
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.nysed.gov/standards-instruction/about-p-12-learning-standards"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "About the NYS P-12 Learning Standards",
+        "section": "Learning Standards",
+        "document_url": "https://www.nysed.gov/standards-instruction/about-p-12-learning-standards",
+        "document_index": 5
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.nysed.gov/standards-instruction/nys-p-12-learning-standards-content-area"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Learning Standards by Content Area",
+        "section": "Learning Standards",
+        "document_url": "https://www.nysed.gov/standards-instruction/nys-p-12-learning-standards-content-area",
+        "document_index": 7
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.nysed.gov/standards-instruction"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Standards and Instruction",
+        "section": null,
+        "document_url": "https://www.nysed.gov/standards-instruction",
+        "document_index": 4
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://www.nysed.gov/career-technical-education"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Career and Technical Education",
+        "section": null,
+        "document_url": "https://www.nysed.gov/career-technical-education",
+        "document_index": 1
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.nysed.gov/standards-instruction/additional-resources-and-supports"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Standards Resources and Supports",
+        "section": "Learning Standards",
+        "document_url": "https://www.nysed.gov/standards-instruction/additional-resources-and-supports",
+        "document_index": 6
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.nysed.gov/program-offices/office-bilingual-education-and-world-languages-obewl"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Bilingual Education & World Languages",
+        "section": null,
+        "document_url": "https://www.nysed.gov/program-offices/office-bilingual-education-and-world-languages-obewl",
+        "document_index": 3
+      }
+    }
+  ]
+}

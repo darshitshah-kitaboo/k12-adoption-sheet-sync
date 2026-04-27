@@ -1,0 +1,49 @@
+{
+  "state": "WA",
+  "name": "Washington",
+  "source_url": "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials",
+  "scraped_at": "2026-04-25T15:45:31+00:00",
+  "page_title": "Learning Standards & Instructional Materials",
+  "document_count": 5,
+  "content_hash": "5115fe4fb7556d6e",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 5,
+  "cycles": [
+    {
+      "subject": "General",
+      "title": "Financial Education",
+      "section": "Learning Standards & Year of Adoption",
+      "document_url": "https://ospi.k12.wa.us/sites/default/files/2023-08/fek-12learningstandardsoct2016.pdf",
+      "document_index": 1
+    },
+    {
+      "subject": "Framework",
+      "title": "Social Emotional Learning Standards and Benchmarks",
+      "section": "Learning Standards & Year of Adoption",
+      "document_url": "https://ospi.k12.wa.us/sites/default/files/2023-08/selstandardsbenchmarksindicatorslongform_0.pdf",
+      "document_index": 2
+    },
+    {
+      "subject": "General",
+      "title": "Screening for Biased Content Tool",
+      "section": "Instructional Materials",
+      "document_url": "https://ospi.k12.wa.us/sites/default/files/2023-08/wa-screeningforbiasedcontent-form.pdf",
+      "document_index": 3
+    },
+    {
+      "subject": "Framework",
+      "title": "Learning Standards vs. Instructional Materials: Key Differences",
+      "section": "Learning Standards",
+      "document_url": "https://ospi.k12.wa.us/sites/default/files/2024-10/standards-instructionalmaterials.pdf",
+      "document_index": 4
+    },
+    {
+      "subject": "General",
+      "title": "Learn more about these webinars",
+      "section": "Washington OER Hub Webinars",
+      "document_url": "https://ospi.k12.wa.us/sites/default/files/2026-01/2026-wa-oer-hub-introduction-and-highlights.pdf",
+      "document_index": 5
+    }
+  ]
+}

@@ -2,13 +2,13 @@
   "state": "AK",
   "name": "Alaska",
   "source_url": "https://education.alaska.gov/standards",
-  "scraped_at": "2026-04-27T06:55:07+00:00",
+  "scraped_at": "2026-04-25T15:44:46+00:00",
   "page_title": "Alaska Standards and Instruction",
-  "document_count": 27,
-  "content_hash": "7a13441ac5b917c1",
+  "document_count": 15,
+  "content_hash": "ca755435b4e10f43",
   "has_active_cycle": false,
   "call_for_bids_url": null,
-  "cycle_count": 27,
+  "cycle_count": 15,
   "cycles": [
     {
       "subject": "Subject",
@@ -88,116 +88,32 @@
       "document_index": 11
     },
     {
-      "subject": "Subject",
-      "title": "Computer Science",
-      "section": null,
-      "document_url": "https://education.alaska.gov/computer-science",
-      "document_index": 12
-    },
-    {
-      "subject": "Subject",
-      "title": "Career and Technical Education",
-      "section": "Alaska Content Standards and Associated Webpages",
-      "document_url": "https://education.alaska.gov/cte",
-      "document_index": 13
-    },
-    {
       "subject": "Framework",
       "title": "Alaska Native Language Arts K-3 Reading Standards",
       "section": "Alaska Content Standards and Associated Webpages",
       "document_url": "https://education.alaska.gov/Media/Default/akreads/ANLARS%20%20Final.pdf",
-      "document_index": 14
-    },
-    {
-      "subject": "Framework",
-      "title": "Physical Education Standards",
-      "section": "Alaska Content Standards and Associated Webpages",
-      "document_url": "https://education.alaska.gov/schoolhealth/pestandards",
-      "document_index": 15
-    },
-    {
-      "subject": "Framework",
-      "title": "Alaska Standards",
-      "section": null,
-      "document_url": "https://education.alaska.gov/standards",
-      "document_index": 16
-    },
-    {
-      "subject": "Framework",
-      "title": "Standards & Assessments",
-      "section": null,
-      "document_url": "https://education.alaska.gov/standards-and-assessments",
-      "document_index": 17
-    },
-    {
-      "subject": "Subject",
-      "title": "Computer Science",
-      "section": "Alaska Content Standards and Associated Webpages",
-      "document_url": "https://education.alaska.gov/standards/computer-science",
-      "document_index": 18
-    },
-    {
-      "subject": "Framework",
-      "title": "Alaska Cultural Standards",
-      "section": "Alaska Content Standards and Associated Webpages",
-      "document_url": "https://education.alaska.gov/standards/cultural",
-      "document_index": 19
-    },
-    {
-      "subject": "Subject",
-      "title": "English Language Arts",
-      "section": "Alaska Content Standards and Associated Webpages",
-      "document_url": "https://education.alaska.gov/standards/english-language-arts",
-      "document_index": 20
-    },
-    {
-      "subject": "General",
-      "title": "Mathematics",
-      "section": "Alaska Content Standards and Associated Webpages",
-      "document_url": "https://education.alaska.gov/standards/mathematics",
-      "document_index": 21
-    },
-    {
-      "subject": "Subject",
-      "title": "Social Studies",
-      "section": "Alaska Content Standards and Associated Webpages",
-      "document_url": "https://education.alaska.gov/standards/social",
-      "document_index": 22
+      "document_index": 12
     },
     {
       "subject": "General",
       "title": "Early Learning Guidelines",
       "section": "Alaska Content Standards and Associated Webpages",
       "document_url": "https://education.alaska.gov/State_Board/january2021/6A.2%20Early%20Learning%20Guidelines%209-4-2020.pdf",
-      "document_index": 23
+      "document_index": 13
     },
     {
       "subject": "Framework",
       "title": "Early Education Program Standards",
       "section": "Alaska Content Standards and Associated Webpages",
       "document_url": "https://education.alaska.gov/State_Board/october-2025/6.2B_DRAFT_EEP%20Standards_September2025%20dr%20version%20CLEAN%20(002).pdf",
-      "document_index": 24
-    },
-    {
-      "subject": "Framework",
-      "title": "Alaska Standards and Instruction Updates",
-      "section": null,
-      "document_url": "https://public.govdelivery.com/accounts/AKDEED/subscriber/new",
-      "document_index": 25
-    },
-    {
-      "subject": "Framework",
-      "title": "Alaska Cultural Standards",
-      "section": "Alaska Content Standards and Associated Webpages",
-      "document_url": "https://uaf.edu/ankn/publications/guides/alaska-standards-for-cult/",
-      "document_index": 26
+      "document_index": 14
     },
     {
       "subject": "Framework",
       "title": "WIDA English Language Development Proficiency Standards",
       "section": "Alaska Content Standards and Associated Webpages",
       "document_url": "https://wida.wisc.edu/sites/default/files/resource/WIDA-ELD-Standards-Framework-2020.pdf",
-      "document_index": 27
+      "document_index": 15
     }
   ]
 }

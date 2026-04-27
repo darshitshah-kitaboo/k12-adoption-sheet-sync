@@ -2,48 +2,468 @@
   "state": "WA",
   "name": "Washington",
   "source_url": "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials",
-  "scraped_at": "2026-04-25T15:45:31+00:00",
+  "scraped_at": "2026-04-27T06:56:38+00:00",
   "page_title": "Learning Standards & Instructional Materials",
-  "document_count": 5,
-  "content_hash": "5115fe4fb7556d6e",
+  "document_count": 65,
+  "content_hash": "4e4293c6a7dbac90",
   "has_active_cycle": false,
   "call_for_bids_url": null,
-  "cycle_count": 5,
+  "cycle_count": 65,
   "cycles": [
+    {
+      "subject": "Framework",
+      "title": "K-12 Education Vision & McCleary Framework",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/about-ospi/superintendent-chris-reykdal/superintendents-vision-priorities/superintendent-reykdals-k-12-education-vision-mccleary-framework",
+      "document_index": 1
+    },
+    {
+      "subject": "Framework",
+      "title": "Family Engagement Framework Workgroup",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/about-ospi/workgroups-committees/concluded-workgroups/family-engagement-framework-workgroup",
+      "document_index": 2
+    },
+    {
+      "subject": "Subject",
+      "title": "Statewide Career and Technical Education (CTE) Task Force",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/about-ospi/workgroups-committees/currently-meeting-workgroups/statewide-career-and-technical-education-cte-task-force",
+      "document_index": 3
+    },
+    {
+      "subject": "Framework",
+      "title": "Contact Information Certification office, Standards board, more",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/certification/contact-information",
+      "document_index": 4
+    },
+    {
+      "subject": "Subject",
+      "title": "Career and Technical Education Applicants",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/certification/teacher-certificate/career-and-technical-education-applicants",
+      "document_index": 5
+    },
+    {
+      "subject": "Subject",
+      "title": "Presidential Awards for Excellence in Mathematics and Science Teaching (PAEMST)",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/awards-recognition/educator-awards/presidential-awards-excellence-mathematics-and-science-teaching-paemst",
+      "document_index": 6
+    },
+    {
+      "subject": "Framework",
+      "title": "Beginning Educator Support Team Standards, events, training, more...",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/beginning-educator-support-team",
+      "document_index": 7
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards for Beginning Educator Induction",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/beginning-educator-support-team/standards-beginning-educator-induction",
+      "document_index": 8
+    },
+    {
+      "subject": "Framework",
+      "title": "Washington State Standards for Mentoring",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/beginning-educator-support-team/washington-state-standards-mentoring",
+      "document_index": 9
+    },
+    {
+      "subject": "Guidance",
+      "title": "Continuing Education Clock Hours Approved lists, requirements, guidance, more...",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/continuing-education-clock-hours",
+      "document_index": 10
+    },
+    {
+      "subject": "Framework",
+      "title": "School Library Programs - Standards and LIT Framework",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/education-staff-associate-esa/librarians/school-library-programs-standards-and-lit-framework",
+      "document_index": 11
+    },
+    {
+      "subject": "General",
+      "title": "Teacher/Principal Evaluation Program Core principles, frameworks, more...",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/teacherprincipal-evaluation-program",
+      "document_index": 12
+    },
+    {
+      "subject": "General",
+      "title": "Frameworks and Rubrics",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/teacherprincipal-evaluation-program/frameworks-and-rubrics",
+      "document_index": 13
+    },
+    {
+      "subject": "Framework",
+      "title": "AWSP Leadership Framework",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/teacherprincipal-evaluation-program/frameworks-and-rubrics/awsp-leadership-framework",
+      "document_index": 14
+    },
+    {
+      "subject": "Rubric",
+      "title": "CEL 5D+ Teacher Evaluation Rubric 3.0",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/teacherprincipal-evaluation-program/frameworks-and-rubrics/cel-5d-teacher-evaluation-rubric",
+      "document_index": 15
+    },
+    {
+      "subject": "Framework",
+      "title": "Charlotte Danielson\u2019s Framework for Teaching",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/teacherprincipal-evaluation-program/frameworks-and-rubrics/charlotte-danielsons-framework-teaching",
+      "document_index": 16
+    },
+    {
+      "subject": "General",
+      "title": "Frameworks and Student Growth",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/teacherprincipal-evaluation-program/frameworks-and-student-growth",
+      "document_index": 17
+    },
+    {
+      "subject": "Framework",
+      "title": "Framework Trainings",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/teacherprincipal-evaluation-program/tpep-professional-learning-events",
+      "document_index": 18
+    },
+    {
+      "subject": "Framework",
+      "title": "AWSP Leadership Framework",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/teacherprincipal-evaluation-program/tpep-professional-learning-events/awsp-leadership-framework",
+      "document_index": 19
+    },
+    {
+      "subject": "Framework",
+      "title": "CEL 5D+ Instructional Framework",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/teacherprincipal-evaluation-program/tpep-professional-learning-events/cel-5d-instructional-framework",
+      "document_index": 20
+    },
+    {
+      "subject": "Framework",
+      "title": "Danielson Instructional Framework",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/teacherprincipal-evaluation-program/tpep-professional-learning-events/danielson-instructional-framework",
+      "document_index": 21
+    },
+    {
+      "subject": "Framework",
+      "title": "Marzano Instructional Framework",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/educator-support/teacherprincipal-evaluation-program/tpep-professional-learning-events/marzano-instructional-framework",
+      "document_index": 22
+    },
+    {
+      "subject": "Framework",
+      "title": "Washington School Improvement Framework",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/policy-funding/grants-management/every-student-succeeds-act-essa/washington-school-improvement-framework",
+      "document_index": 23
+    },
+    {
+      "subject": "General",
+      "title": "OER Project Grants",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/policy-funding/grants-management/oer-project-grants",
+      "document_index": 24
+    },
     {
       "subject": "General",
       "title": "Financial Education",
       "section": "Learning Standards & Year of Adoption",
       "document_url": "https://ospi.k12.wa.us/sites/default/files/2023-08/fek-12learningstandardsoct2016.pdf",
-      "document_index": 1
+      "document_index": 25
     },
     {
       "subject": "Framework",
       "title": "Social Emotional Learning Standards and Benchmarks",
       "section": "Learning Standards & Year of Adoption",
       "document_url": "https://ospi.k12.wa.us/sites/default/files/2023-08/selstandardsbenchmarksindicatorslongform_0.pdf",
-      "document_index": 2
+      "document_index": 26
     },
     {
       "subject": "General",
       "title": "Screening for Biased Content Tool",
       "section": "Instructional Materials",
       "document_url": "https://ospi.k12.wa.us/sites/default/files/2023-08/wa-screeningforbiasedcontent-form.pdf",
-      "document_index": 3
+      "document_index": 27
     },
     {
       "subject": "Framework",
       "title": "Learning Standards vs. Instructional Materials: Key Differences",
       "section": "Learning Standards",
       "document_url": "https://ospi.k12.wa.us/sites/default/files/2024-10/standards-instructionalmaterials.pdf",
-      "document_index": 4
+      "document_index": 28
     },
     {
       "subject": "General",
       "title": "Learn more about these webinars",
       "section": "Washington OER Hub Webinars",
       "document_url": "https://ospi.k12.wa.us/sites/default/files/2026-01/2026-wa-oer-hub-introduction-and-highlights.pdf",
-      "document_index": 5
+      "document_index": 29
+    },
+    {
+      "subject": "Framework",
+      "title": "Learning Standards & Instructional Materials Course design, best practices, more...",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials",
+      "document_index": 30
+    },
+    {
+      "subject": "General",
+      "title": "Course Design & Instructional Materials",
+      "section": "Student Success",
+      "document_url": "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials/course-design-instructional-materials",
+      "document_index": 31
+    },
+    {
+      "subject": "General",
+      "title": "Open Educational Resources",
+      "section": "Student Success",
+      "document_url": "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials/open-educational-resources",
+      "document_index": 32
+    },
+    {
+      "subject": "Framework",
+      "title": "Washington State Learning Standards Review",
+      "section": "Student Success",
+      "document_url": "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials/washington-state-learning-standards-review",
+      "document_index": 33
+    },
+    {
+      "subject": "Framework",
+      "title": "Learning Standards Review FAQs",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials/washington-state-learning-standards-review/learning-standards-review-faqs",
+      "document_index": 34
+    },
+    {
+      "subject": "Framework",
+      "title": "Learning Standards",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/arts/arts-k-12-learning-standards",
+      "document_index": 35
+    },
+    {
+      "subject": "Subject",
+      "title": "Computer Science",
+      "section": "Student Success",
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/computer-science",
+      "document_index": 36
+    },
+    {
+      "subject": "Subject",
+      "title": "Computer Science Grants",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/computer-science/computer-science-grants",
+      "document_index": 37
+    },
+    {
+      "subject": "Framework",
+      "title": "K-12 Learning Standards",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/computer-science/computer-science-k-12-learning-standards",
+      "document_index": 38
+    },
+    {
+      "subject": "Framework",
+      "title": "Learning Standards",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/educational-technology-edtech/educational-technology-learning-standards",
+      "document_index": 39
+    },
+    {
+      "subject": "Subject",
+      "title": "English Language Arts",
+      "section": "Student Success",
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/english-language-arts",
+      "document_index": 40
+    },
+    {
+      "subject": "Framework",
+      "title": "Learning Standards and Best Practices for Instruction",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/english-language-arts/english-language-arts-learning-standards",
+      "document_index": 41
+    },
+    {
+      "subject": "Framework",
+      "title": "Learning Standards",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/environment-sustainability/integrated-environmental-and-sustainability-k-12-learning-standards",
+      "document_index": 42
+    },
+    {
+      "subject": "Subject",
+      "title": "Health and Physical Education",
+      "section": "Student Success",
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/health-and-physical-education",
+      "document_index": 43
+    },
+    {
+      "subject": "Framework",
+      "title": "Learning Standards",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/health-and-physical-education/health-and-pe-learning-standards",
+      "document_index": 44
+    },
+    {
+      "subject": "General",
+      "title": "Tribal Sovereignty Curriculum Resources",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/john-mccoy-lulilas-time-immemorial-tribal-sovereignty-washington-state/tribal-sovereignty-curriculum-resources",
+      "document_index": 45
+    },
+    {
+      "subject": "Framework",
+      "title": "Indigenous Historical Conceptual Framework",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/john-mccoy-lulilas-time-immemorial-tribal-sovereignty-washington-state/tribal-sovereignty-curriculum-resources/indigenous-historical-conceptual-framework",
+      "document_index": 46
+    },
+    {
+      "subject": "General",
+      "title": "Mathematics",
+      "section": "Student Success",
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/mathematics",
+      "document_index": 47
+    },
+    {
+      "subject": "General",
+      "title": "Modeling Our World with Mathematics",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/mathematics/educator-resources/modeling-our-world-mathematics",
+      "document_index": 48
+    },
+    {
+      "subject": "Framework",
+      "title": "Learning Standards",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/mathematics/mathematics-k-12-learning-standards",
+      "document_index": 49
+    },
+    {
+      "subject": "Framework",
+      "title": "Learning Standards",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/science/science-k-12-learning-standards",
+      "document_index": 50
+    },
+    {
+      "subject": "Framework",
+      "title": "Sexual Health Education Standards Comparison",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/sexual-health-education/hiv-and-sexual-health-education-resources/sexual-health-education-standards-comparison",
+      "document_index": 51
+    },
+    {
+      "subject": "Review",
+      "title": "Instructional Materials, Review Reports, and Tools",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/sexual-health-education/instructional-materials-review-reports-and-tools",
+      "document_index": 52
+    },
+    {
+      "subject": "Review",
+      "title": "Sexual Health Curriculum Review Tools",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/sexual-health-education/instructional-materials-review-reports-and-tools/sexual-health-curriculum-review-tools",
+      "document_index": 53
+    },
+    {
+      "subject": "Subject",
+      "title": "Social Studies",
+      "section": "Student Success",
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/social-studies",
+      "document_index": 54
+    },
+    {
+      "subject": "Subject",
+      "title": "OSPI-Developed Social Studies Assessments",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/social-studies/ospi-developed-social-studies-assessments",
+      "document_index": 55
+    },
+    {
+      "subject": "Subject",
+      "title": "Resources for K-12 Social Studies",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/social-studies/resources-k-12-social-studies",
+      "document_index": 56
+    },
+    {
+      "subject": "Subject",
+      "title": "Social Studies Cadre of Educators",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/social-studies/social-studies-cadre-educators",
+      "document_index": 57
+    },
+    {
+      "subject": "Subject",
+      "title": "Social Studies Grant Opportunities",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/social-studies/social-studies-grant-opportunities",
+      "document_index": 58
+    },
+    {
+      "subject": "Subject",
+      "title": "Social Studies Laws and Regulations",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/social-studies/social-studies-laws-graduation-requirements-and-civic-observances",
+      "document_index": 59
+    },
+    {
+      "subject": "Framework",
+      "title": "Learning Standards & Graduation Requirements",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/social-studies/social-studies-learning-standards-graduation-requirements",
+      "document_index": 60
+    },
+    {
+      "subject": "General",
+      "title": "World Languages",
+      "section": "Student Success",
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/world-languages",
+      "document_index": 61
+    },
+    {
+      "subject": "Framework",
+      "title": "Learning Standards",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/resources-subject-area/world-languages/world-languages-k-12-learning-standards",
+      "document_index": 62
+    },
+    {
+      "subject": "General",
+      "title": "Access Point Frameworks and Performance Tasks",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/testing/state-testing/assessment-students-cognitive-disabilities-wa-aim/wa-aim-access-point-frameworks-and-performance-tasks",
+      "document_index": 63
+    },
+    {
+      "subject": "General",
+      "title": "Mathematics Assessment",
+      "section": null,
+      "document_url": "https://ospi.k12.wa.us/student-success/testing/state-testing/washington-state-smarter-balanced-assessment-consortium/mathematics-assessment",
+      "document_index": 64
+    },
+    {
+      "subject": "Adoption",
+      "title": "Course Design, Selection, and Adoption of Instructional Materials policy",
+      "section": "Instructional Materials",
+      "document_url": "https://wssda.org/member-services/legal-resources/featured-policy/",
+      "document_index": 65
     }
   ]
 }

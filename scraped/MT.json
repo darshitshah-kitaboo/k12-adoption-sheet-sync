@@ -1,0 +1,28 @@
+{
+  "state": "MT",
+  "name": "Montana",
+  "source_url": "https://opi.mt.gov/Educators/Teaching-Learning",
+  "scraped_at": "2026-04-27T06:56:00+00:00",
+  "page_title": "Educators",
+  "document_count": 2,
+  "content_hash": "3c4c1b71a88e0c34",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 2,
+  "cycles": [
+    {
+      "subject": "Framework",
+      "title": "K-12 Content Standards & Revision",
+      "section": null,
+      "document_url": "https://opi.mt.gov/Educators/Teaching-Learning/K-12-Content-Standards",
+      "document_index": 1
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards Instruction & Professional Learning",
+      "section": null,
+      "document_url": "https://opi.mt.gov/Educators/Teaching-Learning/Standards-Instruction-Professional-Learning",
+      "document_index": 2
+    }
+  ]
+}

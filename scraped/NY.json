@@ -1,0 +1,63 @@
+{
+  "state": "NY",
+  "name": "New York",
+  "source_url": "https://www.nysed.gov/curriculum-instruction",
+  "scraped_at": "2026-04-27T06:56:17+00:00",
+  "page_title": "Standards and Instruction",
+  "document_count": 7,
+  "content_hash": "f1af7f564b23dfef",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 7,
+  "cycles": [
+    {
+      "subject": "Subject",
+      "title": "Career and Technical Education",
+      "section": null,
+      "document_url": "https://www.nysed.gov/career-technical-education",
+      "document_index": 1
+    },
+    {
+      "subject": "Framework",
+      "title": "Next Generation Learning Standards",
+      "section": "Popular Topics",
+      "document_url": "https://www.nysed.gov/next-generation-learning-standards",
+      "document_index": 2
+    },
+    {
+      "subject": "General",
+      "title": "Bilingual Education & World Languages",
+      "section": null,
+      "document_url": "https://www.nysed.gov/program-offices/office-bilingual-education-and-world-languages-obewl",
+      "document_index": 3
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards and Instruction",
+      "section": null,
+      "document_url": "https://www.nysed.gov/standards-instruction",
+      "document_index": 4
+    },
+    {
+      "subject": "Framework",
+      "title": "About the NYS P-12 Learning Standards",
+      "section": "Learning Standards",
+      "document_url": "https://www.nysed.gov/standards-instruction/about-p-12-learning-standards",
+      "document_index": 5
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards Resources and Supports",
+      "section": "Learning Standards",
+      "document_url": "https://www.nysed.gov/standards-instruction/additional-resources-and-supports",
+      "document_index": 6
+    },
+    {
+      "subject": "Framework",
+      "title": "Learning Standards by Content Area",
+      "section": "Learning Standards",
+      "document_url": "https://www.nysed.gov/standards-instruction/nys-p-12-learning-standards-content-area",
+      "document_index": 7
+    }
+  ]
+}

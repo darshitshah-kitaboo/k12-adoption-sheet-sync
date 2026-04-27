@@ -2,48 +2,258 @@
   "state": "CA",
   "name": "California",
   "source_url": "https://www.cde.ca.gov/ci/cr/cf/",
-  "scraped_at": "2026-04-25T15:44:48+00:00",
+  "scraped_at": "2026-04-27T06:55:16+00:00",
   "page_title": "Curriculum Frameworks & Instructional Materials",
-  "document_count": 5,
-  "content_hash": "c87f4994daf3d147",
+  "document_count": 35,
+  "content_hash": "67229a7cdd8ef120",
   "has_active_cycle": false,
   "call_for_bids_url": null,
-  "cycle_count": 5,
+  "cycle_count": 35,
   "cycles": [
+    {
+      "subject": "Framework",
+      "title": "Standards & Frameworks",
+      "section": "Popular Content",
+      "document_url": "https://www.cde.ca.gov/be/st/",
+      "document_index": 1
+    },
+    {
+      "subject": "Framework",
+      "title": "Content Standards",
+      "section": "Popular Content",
+      "document_url": "https://www.cde.ca.gov/be/st/ss/",
+      "document_index": 2
+    },
+    {
+      "subject": "Framework",
+      "title": "All Content Standards, K\u201312",
+      "section": "Standards and Curricular Guidance",
+      "document_url": "https://www.cde.ca.gov/be/st/ss/index.asp",
+      "document_index": 3
+    },
+    {
+      "subject": "General",
+      "title": "Curriculum Resources",
+      "section": "Popular Content",
+      "document_url": "https://www.cde.ca.gov/ci/cr/",
+      "document_index": 4
+    },
+    {
+      "subject": "General",
+      "title": "Curriculum Frameworks & Instructional Materials",
+      "section": null,
+      "document_url": "https://www.cde.ca.gov/ci/cr/cf/",
+      "document_index": 5
+    },
+    {
+      "subject": "General",
+      "title": "All Curriculum Frameworks",
+      "section": "Standards and Curricular Guidance",
+      "document_url": "https://www.cde.ca.gov/ci/cr/cf/allfwks.asp",
+      "document_index": 6
+    },
+    {
+      "subject": "General",
+      "title": "Arts, Music, and Instructional Materials Discretionary Block Grant\u2014AB 185, Sec. 56",
+      "section": "Curricular Initiatives",
+      "document_url": "https://www.cde.ca.gov/ci/cr/cf/artsmusicimblockgrant.asp",
+      "document_index": 7
+    },
+    {
+      "subject": "General",
+      "title": "California\u2013Adopted Instructional Materials Programs",
+      "section": "Guidance",
+      "document_url": "https://www.cde.ca.gov/ci/cr/cf/caadoptinstrmaterials.asp",
+      "document_index": 8
+    },
+    {
+      "subject": "Framework",
+      "title": "Curriculum Framework Adoption Process - CalEdFacts",
+      "section": "Standards and Curricular Guidance",
+      "document_url": "https://www.cde.ca.gov/ci/cr/cf/cefcfadoptprocess.asp",
+      "document_index": 9
+    },
+    {
+      "subject": "Adoption",
+      "title": "Instructional Materials Evaluation and  Adoption Process - CalEdFacts",
+      "section": "Guidance",
+      "document_url": "https://www.cde.ca.gov/ci/cr/cf/cefimadoptprocess.asp",
+      "document_index": 10
+    },
+    {
+      "subject": "Framework",
+      "title": "Digital Learning Integration and Standards Guidance (DLISG)",
+      "section": "Standards and Curricular Guidance",
+      "document_url": "https://www.cde.ca.gov/ci/cr/cf/diglrngintegstdsguidance.asp",
+      "document_index": 11
+    },
     {
       "subject": "Framework",
       "title": "Standards, Curriculum\r\nFrameworks, and Instructional Materials Adoptions (DOCX)",
       "section": "Curriculum Frameworks and Instructional Materials Highlights",
       "document_url": "https://www.cde.ca.gov/ci/cr/cf/documents/cfirdtimelines.docx",
-      "document_index": 1
+      "document_index": 12
     },
     {
       "subject": "General",
       "title": "Curriculum Coordinators Directory (XLSX)",
       "section": "Curriculum Frameworks and Instructional Materials Highlights",
       "document_url": "https://www.cde.ca.gov/ci/cr/cf/documents/currcoordinatorsdirect.xlsx",
-      "document_index": 2
+      "document_index": 13
     },
     {
       "subject": "Framework",
       "title": "Curriculum Framework Development\r\nand Approval Process (DOC)",
       "section": "Standards and Curricular Guidance",
       "document_url": "https://www.cde.ca.gov/ci/cr/cf/documents/frmwrkflowchartv2.doc",
-      "document_index": 3
+      "document_index": 14
     },
     {
       "subject": "General",
       "title": "Free Instructional Materials Template for  Publishers (DOC)",
       "section": "Guidance",
       "document_url": "https://www.cde.ca.gov/ci/cr/cf/documents/pubfreeinstrmatlst.doc",
-      "document_index": 4
+      "document_index": 15
+    },
+    {
+      "subject": "General",
+      "title": "Clarification of the Requirements for Free  Instructional Materials Offerings: Letter to School Districts",
+      "section": "Guidance",
+      "document_url": "https://www.cde.ca.gov/ci/cr/cf/freeimofferltrschool.asp",
+      "document_index": 16
+    },
+    {
+      "subject": "General",
+      "title": "Clarification of the Requirements for Free  Instructional Materials Offerings: Letter to Publishers",
+      "section": "Guidance",
+      "document_url": "https://www.cde.ca.gov/ci/cr/cf/freeimofferltrtopub.asp",
+      "document_index": 17
+    },
+    {
+      "subject": "General",
+      "title": "Funding for Instructional Materials",
+      "section": "Guidance",
+      "document_url": "https://www.cde.ca.gov/ci/cr/cf/funding4im.asp",
+      "document_index": 18
+    },
+    {
+      "subject": "General",
+      "title": "Instructional Materials Adoptions General Information",
+      "section": "Guidance",
+      "document_url": "https://www.cde.ca.gov/ci/cr/cf/imagen.asp",
+      "document_index": 19
+    },
+    {
+      "subject": "General",
+      "title": "Instructional Materials Frequently Asked Questions",
+      "section": "Guidance",
+      "document_url": "https://www.cde.ca.gov/ci/cr/cf/imfrpfaq1.asp",
+      "document_index": 20
+    },
+    {
+      "subject": "General",
+      "title": "Instructional Materials Survey Forms",
+      "section": "Guidance",
+      "document_url": "https://www.cde.ca.gov/ci/cr/cf/imsurveyfrms.asp",
+      "document_index": 21
+    },
+    {
+      "subject": "Guidance",
+      "title": "Guidance on Removal of Instruction or Instructional Materials",
+      "section": "Guidance",
+      "document_url": "https://www.cde.ca.gov/ci/cr/cf/removalinstruandim.asp",
+      "document_index": 22
+    },
+    {
+      "subject": "General",
+      "title": "Curriculum Resources",
+      "section": null,
+      "document_url": "https://www.cde.ca.gov/ci/cr/index.asp",
+      "document_index": 23
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards & Framework",
+      "section": null,
+      "document_url": "https://www.cde.ca.gov/ci/ct/sf/",
+      "document_index": 24
+    },
+    {
+      "subject": "General",
+      "title": "World Languages",
+      "section": null,
+      "document_url": "https://www.cde.ca.gov/ci/fl/",
+      "document_index": 25
+    },
+    {
+      "subject": "General",
+      "title": "Mathematics",
+      "section": null,
+      "document_url": "https://www.cde.ca.gov/ci/ma/",
+      "document_index": 26
+    },
+    {
+      "subject": "Subject",
+      "title": "Physical Education",
+      "section": null,
+      "document_url": "https://www.cde.ca.gov/ci/pe/",
+      "document_index": 27
+    },
+    {
+      "subject": "Subject",
+      "title": "Computer Science",
+      "section": null,
+      "document_url": "https://www.cde.ca.gov/ci/pl/computerscience.asp",
+      "document_index": 28
+    },
+    {
+      "subject": "Framework",
+      "title": "Professional Standards",
+      "section": null,
+      "document_url": "https://www.cde.ca.gov/ci/pl/professionalstandards.asp",
+      "document_index": 29
+    },
+    {
+      "subject": "Subject",
+      "title": "English Language Arts",
+      "section": null,
+      "document_url": "https://www.cde.ca.gov/ci/rl/",
+      "document_index": 30
+    },
+    {
+      "subject": "Adoption",
+      "title": "English Language Arts/English Language Development (ELA/ELD) Instructional Materials Adoption Guidance Funding Results",
+      "section": "Curricular Initiatives",
+      "document_url": "https://www.cde.ca.gov/fg/fo/r4/ganfundingresults.asp",
+      "document_index": 31
+    },
+    {
+      "subject": "Framework",
+      "title": "Quality Schooling Framework",
+      "section": null,
+      "document_url": "https://www.cde.ca.gov/qs/",
+      "document_index": 32
+    },
+    {
+      "subject": "Framework",
+      "title": "Common Core State Standards",
+      "section": null,
+      "document_url": "https://www.cde.ca.gov/re/cc/",
+      "document_index": 33
     },
     {
       "subject": "General",
       "title": "New Account Form (PDF)",
       "section": "Accessibility",
       "document_url": "https://www.cde.ca.gov/re/pn/sm/documents/imodsmemform.pdf",
-      "document_index": 5
+      "document_index": 34
+    },
+    {
+      "subject": "Framework",
+      "title": "English Language Development Standards",
+      "section": "Popular Content",
+      "document_url": "https://www.cde.ca.gov/sp/el/er/eldstandards.asp",
+      "document_index": 35
     }
   ]
 }

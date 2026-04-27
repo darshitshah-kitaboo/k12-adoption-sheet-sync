@@ -1,0 +1,49 @@
+{
+  "state": "AR",
+  "name": "Arkansas",
+  "source_url": "https://aredreports.ade.arkansas.gov/",
+  "scraped_at": "2026-04-27T06:55:09+00:00",
+  "page_title": "What is the Arkansas Initiative for Instructional Materials (AIIM)?",
+  "document_count": 5,
+  "content_hash": "58ac2a21a688c82c",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 5,
+  "cycles": [
+    {
+      "subject": "Subject",
+      "title": "English Language Arts Instructional Materials Reviews Read independent reviews of English Language Arts materials.",
+      "section": null,
+      "document_url": "https://aredreports.ade.arkansas.gov/Reviews/ela",
+      "document_index": 1
+    },
+    {
+      "subject": "Subject",
+      "title": "Math Instructional Materials Reviews Read independent reviews of Math materials.",
+      "section": null,
+      "document_url": "https://aredreports.ade.arkansas.gov/Reviews/math",
+      "document_index": 2
+    },
+    {
+      "subject": "Subject",
+      "title": "Science Instructional Materials Reviews Read independent reviews of Science materials.",
+      "section": null,
+      "document_url": "https://aredreports.ade.arkansas.gov/Reviews/science",
+      "document_index": 3
+    },
+    {
+      "subject": "HQIM",
+      "title": "How Do HQIM fit in with PLCs and HRS?",
+      "section": null,
+      "document_url": "https://drive.google.com/file/d/14HskJMF5M6x68NUCnjIFaAGu2RN8bbMV/view?usp=sharing",
+      "document_index": 4
+    },
+    {
+      "subject": "Rubric",
+      "title": "Arkansas EdReport Rubric (ELA)",
+      "section": null,
+      "document_url": "https://drive.google.com/file/d/1WH1zSkanN6EVayU_8_sOL0yHo6Mnq-JZ/view?usp=sharing",
+      "document_index": 5
+    }
+  ]
+}

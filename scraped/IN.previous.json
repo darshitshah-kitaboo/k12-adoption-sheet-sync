@@ -1,0 +1,98 @@
+{
+  "state": "IN",
+  "name": "Indiana",
+  "source_url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
+  "scraped_at": "2026-04-27T05:42:44+00:00",
+  "page_title": "High-Quality Curricular Materials Advisory Lists",
+  "document_count": 12,
+  "content_hash": "2097a5bff8b11675",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 12,
+  "cycles": [
+    {
+      "subject": "Subject",
+      "title": "6-8 Core Reading",
+      "section": null,
+      "document_url": "https://www.in.gov/doe/files/2024-2025-HQCM-Evaluation-Rubric_-6-8-Reading.docx",
+      "document_index": 1
+    },
+    {
+      "subject": "General",
+      "title": "Cost Sheet",
+      "section": "Vendor Materials",
+      "document_url": "https://www.in.gov/doe/files/2024-cost-sheet_full.xlsx",
+      "document_index": 2
+    },
+    {
+      "subject": "General",
+      "title": "Early Learning Comprehensive Curriculum",
+      "section": null,
+      "document_url": "https://www.in.gov/doe/files/2024-HQCM-Evaluation-Rubric_-Early-Learning.docx.pdf",
+      "document_index": 3
+    },
+    {
+      "subject": "Subject",
+      "title": "K-5 Core Reading",
+      "section": null,
+      "document_url": "https://www.in.gov/doe/files/2024-HQCM-Evaluation-Rubric_-K-5-Reading.docx",
+      "document_index": 4
+    },
+    {
+      "subject": "General",
+      "title": "K-12 STEM",
+      "section": null,
+      "document_url": "https://www.in.gov/doe/files/2025-2026-HQCM-Evaluation-Rubric_-K-12-STEM.docx",
+      "document_index": 5
+    },
+    {
+      "subject": "Guidance",
+      "title": "Vendor Submission Guide",
+      "section": "Vendor Materials",
+      "document_url": "https://www.in.gov/doe/files/2025-2026-HQCM-Vendor-Submission-Guide.pdf",
+      "document_index": 6
+    },
+    {
+      "subject": "General",
+      "title": "Cost Sheet",
+      "section": null,
+      "document_url": "https://www.in.gov/doe/files/earlylearning_elm_february2024.pdf",
+      "document_index": 7
+    },
+    {
+      "subject": "General",
+      "title": "Cost Sheet",
+      "section": null,
+      "document_url": "https://www.in.gov/doe/files/earlylearning_hs_february2024.pdf",
+      "document_index": 8
+    },
+    {
+      "subject": "General",
+      "title": "Cost Sheet",
+      "section": null,
+      "document_url": "https://www.in.gov/doe/files/earlylearning_kaplan_february2024.pdf",
+      "document_index": 9
+    },
+    {
+      "subject": "General",
+      "title": "Cost Sheet",
+      "section": null,
+      "document_url": "https://www.in.gov/doe/files/earlylearning_scholastic_february2024.pdf",
+      "document_index": 10
+    },
+    {
+      "subject": "General",
+      "title": "here",
+      "section": "Review Process",
+      "document_url": "https://www.in.gov/doe/files/HQCM-FAQ.pdf",
+      "document_index": 11
+    },
+    {
+      "subject": "General",
+      "title": "Sample Complete Evaluation Tool",
+      "section": "Vendor Materials",
+      "document_url": "https://www.in.gov/doe/files/Sample-Evaluation-Tool.docx.pdf",
+      "document_index": 12
+    }
+  ]
+}

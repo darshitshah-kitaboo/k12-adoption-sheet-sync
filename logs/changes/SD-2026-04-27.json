@@ -1,0 +1,125 @@
+{
+  "state": "SD",
+  "date": "2026-04-27",
+  "change_count": 7,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://doe.sd.gov/contentstandards/socialstudies.aspx"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Social Studies webpage",
+        "section": null,
+        "document_url": "https://doe.sd.gov/contentstandards/socialstudies.aspx",
+        "document_index": 23
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://doe.sd.gov/contentstandards/oseu-standards-revision.aspx"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Oceti Sakowin Essential Understandings & Standards Revision Process",
+        "section": null,
+        "document_url": "https://doe.sd.gov/contentstandards/oseu-standards-revision.aspx",
+        "document_index": 21
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://doe.sd.gov/contentstandards/review.aspx"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Content Standards Under Review",
+        "section": "South Dakota Content Standards",
+        "document_url": "https://doe.sd.gov/contentstandards/review.aspx",
+        "document_index": 22
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "javascript:void(0)"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Computer Science Standards",
+        "section": null,
+        "document_url": "javascript:void(0)",
+        "document_index": 25
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://doe.sd.gov/contentstandards/ELA.aspx"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "English Language Arts webpage",
+        "section": null,
+        "document_url": "https://doe.sd.gov/contentstandards/ELA.aspx",
+        "document_index": 19
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://doe.sd.gov/contentstandards/math.aspx"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Mathematics webpage",
+        "section": null,
+        "document_url": "https://doe.sd.gov/contentstandards/math.aspx",
+        "document_index": 20
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://doe.sd.gov/cte/documents/standards/19262-PerFinance.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 19,
+          "new": 24
+        }
+      }
+    }
+  ]
+}

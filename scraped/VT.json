@@ -2,27 +2,125 @@
   "state": "VT",
   "name": "Vermont",
   "source_url": "https://education.vermont.gov/student-learning/content-areas",
-  "scraped_at": "2026-04-25T15:45:30+00:00",
+  "scraped_at": "2026-04-27T06:56:38+00:00",
   "page_title": "Content Areas",
-  "document_count": 2,
-  "content_hash": "319bdce16fbcd4c5",
+  "document_count": 16,
+  "content_hash": "e99bdcb64089c195",
   "has_active_cycle": false,
   "call_for_bids_url": null,
-  "cycle_count": 2,
+  "cycle_count": 16,
   "cycles": [
+    {
+      "subject": "General",
+      "title": "Mathematics",
+      "section": "Vermont State Board Adopted Standards",
+      "document_url": "https://corestandards.org/mathematics-standards/",
+      "document_index": 1
+    },
+    {
+      "subject": "Framework",
+      "title": "Education Quality Standards",
+      "section": null,
+      "document_url": "https://education.vermont.gov/document/series-2000-education-quality-standards-effective-july-1-2025",
+      "document_index": 2
+    },
+    {
+      "subject": "Framework",
+      "title": "International Society for Technology Education (ISTE) Standards for Student Learning",
+      "section": "Vermont State Board Adopted Standards",
+      "document_url": "https://education.vermont.gov/documents/iste-standards-for-students",
+      "document_index": 3
+    },
+    {
+      "subject": "Subject",
+      "title": "English Language Arts",
+      "section": null,
+      "document_url": "https://education.vermont.gov/student-learning/content-areas/english-language-artsliteracy",
+      "document_index": 4
+    },
+    {
+      "subject": "Subject",
+      "title": "Social Studies",
+      "section": "Explore Content Areas",
+      "document_url": "https://education.vermont.gov/student-learning/content-areas/global-citizenship/social-studies",
+      "document_index": 5
+    },
+    {
+      "subject": "Subject",
+      "title": "English Language Arts",
+      "section": null,
+      "document_url": "https://education.vermont.gov/student-learning/content-areas/language-arts",
+      "document_index": 6
+    },
+    {
+      "subject": "General",
+      "title": "Mathematics",
+      "section": null,
+      "document_url": "https://education.vermont.gov/student-learning/content-areas/mathematics",
+      "document_index": 7
+    },
+    {
+      "subject": "Subject",
+      "title": "Physical Education",
+      "section": null,
+      "document_url": "https://education.vermont.gov/student-learning/content-areas/physical-education",
+      "document_index": 8
+    },
+    {
+      "subject": "Subject",
+      "title": "Career and Technical Education",
+      "section": null,
+      "document_url": "https://education.vermont.gov/student-learning/flexible-pathways/career-technical-education",
+      "document_index": 9
+    },
+    {
+      "subject": "General",
+      "title": "Lexile and Quantile Frameworks",
+      "section": null,
+      "document_url": "https://education.vermont.gov/student-learning/lexile-and-quantile-frameworks",
+      "document_index": 10
+    },
     {
       "subject": "Framework",
       "title": "Jump$tart Standards in K-12 Personal Finance Education",
       "section": "Vermont State Board Adopted Standards",
       "document_url": "https://www.jumpstart.org/wp-content/uploads/2023/04/2021_Natl_Standards_Downloadable_final.pdf",
-      "document_index": 1
+      "document_index": 11
+    },
+    {
+      "subject": "Framework",
+      "title": "National Core Arts Standards (NCAS)",
+      "section": "Vermont State Board Adopted Standards",
+      "document_url": "https://www.nationalartsstandards.org/",
+      "document_index": 12
+    },
+    {
+      "subject": "Framework",
+      "title": "Next Generation Science Standards (NGSS)",
+      "section": "Vermont State Board Adopted Standards",
+      "document_url": "https://www.nextgenscience.org/",
+      "document_index": 13
+    },
+    {
+      "subject": "Framework",
+      "title": "National Health Education Standards",
+      "section": "Vermont State Board Adopted Standards",
+      "document_url": "https://www.shapeamerica.org/MemberPortal/standards/health/default.aspx",
+      "document_index": 14
+    },
+    {
+      "subject": "Framework",
+      "title": "SHAPE America Physical Education Standards",
+      "section": "Vermont State Board Adopted Standards",
+      "document_url": "https://www.shapeamerica.org/MemberPortal/standards/pe/new-pe-standards.aspx",
+      "document_index": 15
     },
     {
       "subject": "Framework",
       "title": "College, Career and Civic Life (C3) Framework for Social Studies State Standards",
       "section": "Vermont State Board Adopted Standards",
       "document_url": "https://www.socialstudies.org/sites/default/files/c3/c3-framework-for-social-studies-rev0617.pdf",
-      "document_index": 2
+      "document_index": 16
     }
   ]
 }

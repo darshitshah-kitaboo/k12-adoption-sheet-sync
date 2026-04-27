@@ -1,0 +1,84 @@
+{
+  "state": "WV",
+  "name": "West Virginia",
+  "source_url": "https://wvde.us/middle-secondary-learning/resources/instructional-resources-review-and-adoption/adoption-schedule-law-code-and-policies/",
+  "scraped_at": "2026-04-27T06:56:39+00:00",
+  "page_title": "Adoption Schedule, Law, Code, and Policies",
+  "document_count": 10,
+  "content_hash": "c9efdb2fe6095b27",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 10,
+  "cycles": [
+    {
+      "subject": "Adoption",
+      "title": "18-2A-10. Transition to system of instructional resources adoption at county board level.",
+      "section": "West Virginia Code \u2013 2018 House Bill 3089",
+      "document_url": "http://www.wvlegislature.gov/Bill_Status/bills_text.cfm?billdoc=HB3089%20SUB%20ENR.htm&yr=2018&sesstype=RS&i=3089",
+      "document_index": 1
+    },
+    {
+      "subject": "General",
+      "title": "Policy 2445.40\u00a0\u2013\u00a0Instructional Resources",
+      "section": "WV State Board of Education Policy",
+      "document_url": "https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=55729&Format=PDF",
+      "document_index": 2
+    },
+    {
+      "subject": "Adoption",
+      "title": "18-2A-9. Gifts and bribes to influence adoption of books, instructional materials or learning technologies a felony; penalty.",
+      "section": "West Virginia Code \u2013 2018 House Bill 3089",
+      "document_url": "https://code.wvlegislature.gov/18-2A-9/",
+      "document_index": 3
+    },
+    {
+      "subject": "General",
+      "title": "\u201cThe Ethics Act\u201d Booklet (2019)",
+      "section": "West Virginia Ethics Commission \u2013 West Virginia Code\u00a06B",
+      "document_url": "https://ethics.wv.gov/SiteCollectionDocuments/Brochures_Booklets_Misc_Forms/The%20Ethics%20Act%20brochure%20for%206-24-2019.pdf",
+      "document_index": 4
+    },
+    {
+      "subject": "Framework",
+      "title": "Content Standards and Policies",
+      "section": "Main navigation",
+      "document_url": "https://wvde.us/academics/content-standards-policies",
+      "document_index": 5
+    },
+    {
+      "subject": "General",
+      "title": "Adopting Instructional Resources",
+      "section": "Breadcrumb",
+      "document_url": "https://wvde.us/academics/middle-secondary-education/adopting-instructional-resources",
+      "document_index": 6
+    },
+    {
+      "subject": "Adoption",
+      "title": "Instructional Resources Review and Adoption",
+      "section": "Breadcrumb",
+      "document_url": "https://wvde.us/academics/middle-secondary-education/adopting-instructional-resources/instructional-resources-review-adoption",
+      "document_index": 7
+    },
+    {
+      "subject": "Adoption",
+      "title": "Adoption Schedule, Law, Code, and Policies",
+      "section": "In This Section",
+      "document_url": "https://wvde.us/academics/middle-secondary-education/adopting-instructional-resources/instructional-resources-review-adoption/adoption-schedule-law-code-policies",
+      "document_index": 8
+    },
+    {
+      "subject": "Framework",
+      "title": "Professional Learning Framework",
+      "section": "Main navigation",
+      "document_url": "https://wvde.us/educator-staff-development/professional-learning-framework",
+      "document_index": 9
+    },
+    {
+      "subject": "Framework",
+      "title": "Professional Teaching Standards",
+      "section": "Main navigation",
+      "document_url": "https://wvde.us/educator-staff-development/professional-teaching-standards",
+      "document_index": 10
+    }
+  ]
+}

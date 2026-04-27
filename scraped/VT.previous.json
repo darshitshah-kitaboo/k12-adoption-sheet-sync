@@ -1,0 +1,28 @@
+{
+  "state": "VT",
+  "name": "Vermont",
+  "source_url": "https://education.vermont.gov/student-learning/content-areas",
+  "scraped_at": "2026-04-25T15:45:30+00:00",
+  "page_title": "Content Areas",
+  "document_count": 2,
+  "content_hash": "319bdce16fbcd4c5",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 2,
+  "cycles": [
+    {
+      "subject": "Framework",
+      "title": "Jump$tart Standards in K-12 Personal Finance Education",
+      "section": "Vermont State Board Adopted Standards",
+      "document_url": "https://www.jumpstart.org/wp-content/uploads/2023/04/2021_Natl_Standards_Downloadable_final.pdf",
+      "document_index": 1
+    },
+    {
+      "subject": "Framework",
+      "title": "College, Career and Civic Life (C3) Framework for Social Studies State Standards",
+      "section": "Vermont State Board Adopted Standards",
+      "document_url": "https://www.socialstudies.org/sites/default/files/c3/c3-framework-for-social-studies-rev0617.pdf",
+      "document_index": 2
+    }
+  ]
+}

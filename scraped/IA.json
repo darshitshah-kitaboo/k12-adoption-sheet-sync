@@ -1,0 +1,42 @@
+{
+  "state": "IA",
+  "name": "Iowa",
+  "source_url": "https://educate.iowa.gov/pk-12/standards",
+  "scraped_at": "2026-04-27T06:55:30+00:00",
+  "page_title": "Iowa Academic Standards, Instruction & Assessment",
+  "document_count": 4,
+  "content_hash": "61c94254d3b72748",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 4,
+  "cycles": [
+    {
+      "subject": "Framework",
+      "title": "Standards, Instruction & Assessment",
+      "section": "Main navigation",
+      "document_url": "https://educate.iowa.gov/pk-12/standards",
+      "document_index": 1
+    },
+    {
+      "subject": "Framework",
+      "title": "Iowa Academic Standards",
+      "section": null,
+      "document_url": "https://educate.iowa.gov/pk-12/standards/academics",
+      "document_index": 2
+    },
+    {
+      "subject": "General",
+      "title": "Mathematics Resources",
+      "section": null,
+      "document_url": "https://educate.iowa.gov/pk-12/standards/mathematics-resources-educators",
+      "document_index": 3
+    },
+    {
+      "subject": "Subject",
+      "title": "Social Studies Resources",
+      "section": null,
+      "document_url": "https://educate.iowa.gov/pk-12/standards/social-studies-resources-educators",
+      "document_index": 4
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "state": "MO",
+  "name": "Missouri",
+  "source_url": "https://dese.mo.gov/college-career-readiness/curriculum",
+  "scraped_at": "2026-04-27T06:55:57+00:00",
+  "page_title": "Missouri Department of Elementary and Secondary Education Home",
+  "document_count": 13,
+  "content_hash": "47eefa5c7a3eb3a9",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 13,
+  "cycles": [
+    {
+      "subject": "Subject",
+      "title": "Career and Technical Education",
+      "section": "College and Career Readiness",
+      "document_url": "https://dese.mo.gov/college-career-readiness/career-education",
+      "document_index": 1
+    },
+    {
+      "subject": "Framework",
+      "title": "Priority Standards",
+      "section": "Quick Links",
+      "document_url": "https://dese.mo.gov/college-career-readiness/curriculum/academic-standards/priority-standards",
+      "document_index": 2
+    },
+    {
+      "subject": "Subject",
+      "title": "Computer Science",
+      "section": "College and Career Readiness",
+      "document_url": "https://dese.mo.gov/college-career-readiness/curriculum/computer-science",
+      "document_index": 3
+    },
+    {
+      "subject": "Subject",
+      "title": "English Language Arts",
+      "section": "College and Career Readiness",
+      "document_url": "https://dese.mo.gov/college-career-readiness/curriculum/english-language-arts",
+      "document_index": 4
+    },
+    {
+      "subject": "Subject",
+      "title": "Fine Arts",
+      "section": "College and Career Readiness",
+      "document_url": "https://dese.mo.gov/college-career-readiness/curriculum/fine-arts",
+      "document_index": 5
+    },
+    {
+      "subject": "Subject",
+      "title": "Health & Physical Education",
+      "section": "College and Career Readiness",
+      "document_url": "https://dese.mo.gov/college-career-readiness/curriculum/health-physical-education",
+      "document_index": 6
+    },
+    {
+      "subject": "General",
+      "title": "Mathematics",
+      "section": "College and Career Readiness",
+      "document_url": "https://dese.mo.gov/college-career-readiness/curriculum/mathematics",
+      "document_index": 7
+    },
+    {
+      "subject": "Framework",
+      "title": "Missouri Learning Standards",
+      "section": "Quick Links",
+      "document_url": "https://dese.mo.gov/college-career-readiness/curriculum/missouri-learning-standards",
+      "document_index": 8
+    },
+    {
+      "subject": "Framework",
+      "title": "Show-Me Standards",
+      "section": "Quick Links",
+      "document_url": "https://dese.mo.gov/college-career-readiness/curriculum/show-me-standards",
+      "document_index": 9
+    },
+    {
+      "subject": "Subject",
+      "title": "Social Studies",
+      "section": "College and Career Readiness",
+      "document_url": "https://dese.mo.gov/college-career-readiness/curriculum/social-studies",
+      "document_index": 10
+    },
+    {
+      "subject": "Framework",
+      "title": "Curriculum Framework",
+      "section": "Quick Links",
+      "document_url": "https://dese.mo.gov/media/pdf/curr-framework-developing-curriculum",
+      "document_index": 11
+    },
+    {
+      "subject": "Framework",
+      "title": "Register for the Standards, Assessment, and Artificial Intelligence training here.",
+      "section": "DESE Summer Learning: Standards, Assessment, and Artificial Intelligence Training",
+      "document_url": "https://modese.wufoo.com/forms/s1j7gk6v1x0816c/",
+      "document_index": 12
+    },
+    {
+      "subject": "General",
+      "title": "Find the America 250 Curriculum Resources here.",
+      "section": null,
+      "document_url": "https://stateofmissouri.box.com/s/zhtwcrvrw8qflfc5nbx1gkuxyym2d8fj",
+      "document_index": 13
+    }
+  ]
+}

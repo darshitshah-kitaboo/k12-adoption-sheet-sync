@@ -1,0 +1,58 @@
+{
+  "state": "PA",
+  "date": "2026-04-27",
+  "change_count": 3,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://www.education.pa.gov/agencies/education/newsroom/shapiro-administration-investments-in-career-and-technical-education-give-students-hands-on-training-for-critical-jobs-in-high-school-bolster-workforce-across-the-commonwealth"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "April 22, 2026 Shapiro Administration Investments in Career and Technical Education Give Students Hands-On Training for Critical Jobs in High School, Bolster Workforce Across the Commonwealth",
+        "section": null,
+        "document_url": "https://www.education.pa.gov/agencies/education/newsroom/shapiro-administration-investments-in-career-and-technical-education-give-students-hands-on-training-for-critical-jobs-in-high-school-bolster-workforce-across-the-commonwealth",
+        "document_index": 1
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://www.education.pa.gov/agencies/education/programs-and-services/instruction/career-and-technical-education"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Career and Technical Education",
+        "section": "Department of Education",
+        "document_url": "https://www.education.pa.gov/agencies/education/programs-and-services/instruction/career-and-technical-education",
+        "document_index": 2
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.education.pa.gov/agencies/pspc"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Professional Standards and Practices Commission The Professional Standards and Practices Commission sets preparation, certification, practice, and conduct standards for teachers.",
+        "section": null,
+        "document_url": "https://www.education.pa.gov/agencies/pspc",
+        "document_index": 3
+      }
+    }
+  ]
+}

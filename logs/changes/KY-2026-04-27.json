@@ -1,0 +1,192 @@
+{
+  "state": "KY",
+  "date": "2026-04-27",
+  "change_count": 11,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.education.ky.gov/curriculum/Pages/default.aspx"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Standards/Content Areas",
+        "section": null,
+        "document_url": "https://www.education.ky.gov/curriculum/Pages/default.aspx",
+        "document_index": 11
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.education.ky.gov/epsb/Pages/default.aspx"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Education Professional Standards Board",
+        "section": null,
+        "document_url": "https://www.education.ky.gov/epsb/Pages/default.aspx",
+        "document_index": 15
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://kystandards.org/standards-resources/model-curriculum-framework/"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Model Curriculum Framework",
+        "section": "\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200bSelection and Use of Instructional Resources/Materials",
+        "document_url": "https://kystandards.org/standards-resources/model-curriculum-framework/",
+        "document_index": 6
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.education.ky.gov/curriculum/books/Pages/default.aspx"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Textbooks",
+        "section": null,
+        "document_url": "https://www.education.ky.gov/curriculum/books/Pages/default.aspx",
+        "document_index": 9
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://kystandards.org/standards-resources/inst-mats-align-rubrics/"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Instructional Resource Alignment Rubrics",
+        "section": "\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u200bSelection and Use of Instructional Resources/Materials",
+        "document_url": "https://kystandards.org/standards-resources/inst-mats-align-rubrics/",
+        "document_index": 5
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://www.education.ky.gov/CTE/endofprog/Pages/default.aspx"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Career and Technical Education End of Program Assessments",
+        "section": null,
+        "document_url": "https://www.education.ky.gov/CTE/endofprog/Pages/default.aspx",
+        "document_index": 7
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.education.ky.gov/curriculum/standards/Pages/default.aspx"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Standards",
+        "section": null,
+        "document_url": "https://www.education.ky.gov/curriculum/standards/Pages/default.aspx",
+        "document_index": 13
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://www.education.ky.gov/CTE/Pages/default.aspx"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Career and Technical Education",
+        "section": null,
+        "document_url": "https://www.education.ky.gov/CTE/Pages/default.aspx",
+        "document_index": 8
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Framework",
+        null,
+        null,
+        null,
+        "https://www.education.ky.gov/curriculum/modcurrframe/Pages/default.aspx"
+      ],
+      "cycle": {
+        "subject": "Framework",
+        "title": "Model Curriculum Framework",
+        "section": null,
+        "document_url": "https://www.education.ky.gov/curriculum/modcurrframe/Pages/default.aspx",
+        "document_index": 10
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "HQIM",
+        null,
+        null,
+        null,
+        "https://www.education.ky.gov/curriculum/standards/kyacadstand/Documents/High-Quality_Instructional_Resources.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 5,
+          "new": 12
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.education.ky.gov/districts/tech/Documents/KYDLG2025.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 6,
+          "new": 14
+        }
+      }
+    }
+  ]
+}

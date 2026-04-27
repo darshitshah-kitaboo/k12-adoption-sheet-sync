@@ -1,0 +1,35 @@
+{
+  "state": "PA",
+  "name": "Pennsylvania",
+  "source_url": "https://www.education.pa.gov/K-12/Curriculum%20and%20Instruction/Pages/default.aspx",
+  "scraped_at": "2026-04-27T06:56:19+00:00",
+  "page_title": "Pennsylvania Department of Education (PDE)",
+  "document_count": 3,
+  "content_hash": "a08b78931594e6fb",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 3,
+  "cycles": [
+    {
+      "subject": "Subject",
+      "title": "April 22, 2026 Shapiro Administration Investments in Career and Technical Education Give Students Hands-On Training for Critical Jobs in High School, Bolster Workforce Across the Commonwealth",
+      "section": null,
+      "document_url": "https://www.education.pa.gov/agencies/education/newsroom/shapiro-administration-investments-in-career-and-technical-education-give-students-hands-on-training-for-critical-jobs-in-high-school-bolster-workforce-across-the-commonwealth",
+      "document_index": 1
+    },
+    {
+      "subject": "Subject",
+      "title": "Career and Technical Education",
+      "section": "Department of Education",
+      "document_url": "https://www.education.pa.gov/agencies/education/programs-and-services/instruction/career-and-technical-education",
+      "document_index": 2
+    },
+    {
+      "subject": "Framework",
+      "title": "Professional Standards and Practices Commission The Professional Standards and Practices Commission sets preparation, certification, practice, and conduct standards for teachers.",
+      "section": null,
+      "document_url": "https://www.education.pa.gov/agencies/pspc",
+      "document_index": 3
+    }
+  ]
+}

@@ -2,706 +2,636 @@
   "state": "ID",
   "name": "Idaho",
   "source_url": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/curricular-materials/",
-  "scraped_at": "2026-04-27T06:55:30+00:00",
+  "scraped_at": "2026-04-27T05:42:43+00:00",
   "page_title": "Curricular Materials",
-  "document_count": 99,
-  "content_hash": "c9e068cab975a0ca",
+  "document_count": 89,
+  "content_hash": "3f5a9298974ce09b",
   "has_active_cycle": false,
   "call_for_bids_url": null,
-  "cycle_count": 99,
+  "cycle_count": 89,
   "cycles": [
-    {
-      "subject": "Guidance",
-      "title": "Guide to Quality Instructional Materials (both print & digital)",
-      "section": "Helpful Tools for a Successful Adoption",
-      "document_url": "http://qualitycontent.setda.org/",
-      "document_index": 1
-    },
     {
       "subject": "General",
       "title": "IDAPA 08.02.03.128",
       "section": "Adoption Consideration",
       "document_url": "https://adminrules.idaho.gov/rules/current/08/080203.pdf",
-      "document_index": 2
+      "document_index": 1
     },
     {
       "subject": "Guidance",
       "title": "IDAPA 08.02.03.128 \u2014 Curricular Materials Selection and Online Course Approval",
       "section": "Idaho Code and Rule",
       "document_url": "https://adminrules.idaho.gov/rules/current/08/080203.pdf#page=32",
-      "document_index": 3
+      "document_index": 2
     },
     {
       "subject": "General",
       "title": "Form B",
       "section": "Downloads",
       "document_url": "https://assets.noviams.com/novi-file-uploads/bmi/pdfs-and-documents/MSST7-17-2024-bdfde610.pdf#page=10",
-      "document_index": 4
+      "document_index": 3
     },
     {
       "subject": "General",
       "title": "Form M",
       "section": "Downloads",
       "document_url": "https://assets.noviams.com/novi-file-uploads/bmi/pdfs-and-documents/MSST7-17-2024-bdfde610.pdf#page=15",
-      "document_index": 5
-    },
-    {
-      "subject": "Adoption",
-      "title": "Adoption Schedule",
-      "section": "Adoption Cycle",
-      "document_url": "https://isde-my.sharepoint.com/:b:/g/personal/sbell_sde_idaho_gov/ESiclja_uhJFoVTl1DoLXuIBsg_XuZBHQLCOOg2r_keaWA?e=OYyTVC",
-      "document_index": 6
-    },
-    {
-      "subject": "General",
-      "title": "K-12 Instructional Materials Dashboard",
-      "section": "Helpful Tools for a Successful Adoption",
-      "document_url": "https://qualitycontent.setda.org/dashboard/",
-      "document_index": 7
-    },
-    {
-      "subject": "Review",
-      "title": "State Instructional Materials Review Association (SIMRA)",
-      "section": "Helpful Tools for a Successful Adoption",
-      "document_url": "https://sites.google.com/view/simraorg/home?authuser=0",
-      "document_index": 8
-    },
-    {
-      "subject": "Subject",
-      "title": "Computer Science",
-      "section": "C&C Divisions",
-      "document_url": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/computer-science/",
-      "document_index": 9
-    },
-    {
-      "subject": "Subject",
-      "title": "English Language Arts",
-      "section": "C&C Divisions",
-      "document_url": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/english-language-arts/",
-      "document_index": 10
-    },
-    {
-      "subject": "Framework",
-      "title": "Idaho Content Standards",
-      "section": "C&C Divisions",
-      "document_url": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/idaho-content-standards/",
-      "document_index": 11
-    },
-    {
-      "subject": "General",
-      "title": "Mathematics",
-      "section": "C&C Divisions",
-      "document_url": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/mathematics/",
-      "document_index": 12
-    },
-    {
-      "subject": "Subject",
-      "title": "Physical Education",
-      "section": "C&C Divisions",
-      "document_url": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/physical-education/",
-      "document_index": 13
-    },
-    {
-      "subject": "Subject",
-      "title": "Social Studies",
-      "section": "C&C Divisions",
-      "document_url": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/social-studies/",
-      "document_index": 14
+      "document_index": 4
     },
     {
       "subject": "Adoption",
       "title": "Driver Education Adoption Guide",
       "section": "Classification Definitions",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/08/Driver-Education-Adoption-Guide.pdf",
-      "document_index": 15
+      "document_index": 5
     },
     {
       "subject": "Adoption",
       "title": "Driver Education Extended Adoption Guide",
       "section": "Classification Definitions",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/08/Driver-Education-Extended-Adoption-Guide.pdf",
-      "document_index": 16
+      "document_index": 6
     },
     {
       "subject": "Adoption",
       "title": "2021 K-12 EL Extended Adoption Guide",
       "section": "Classification Definitions",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/2021-K-12-EL-Adoption-Guide-Extended.pdf",
-      "document_index": 17
+      "document_index": 7
     },
     {
       "subject": "Adoption",
       "title": "2022 K-12 EL Extended Adoption Guide",
       "section": "Classification Definitions",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/2022-K-12-EL-extended-adoption-guide.pdf",
-      "document_index": 18
+      "document_index": 8
     },
     {
       "subject": "Adoption",
       "title": "2023 K-12 Math Adoption Guide",
       "section": "2023",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/2023-K-12-math-adoption-guide.pdf",
-      "document_index": 19
+      "document_index": 9
     },
     {
       "subject": "Adoption",
       "title": "2023 K-12 Math Extended Adoption Guide",
       "section": "2023",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/2023-K-12-math-extended-adoption-guide.pdf",
-      "document_index": 20
+      "document_index": 10
     },
     {
       "subject": "General",
       "title": "2026 Submission Bid Form",
       "section": "Downloads",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/2025-2026-Submission-Bid-Form.xlsx",
-      "document_index": 21
+      "document_index": 11
     },
     {
       "subject": "General",
       "title": "2026 Brief Form",
       "section": "Downloads",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/2026-Brief-Form.docx",
-      "document_index": 22
+      "document_index": 12
     },
     {
       "subject": "General",
       "title": "2026 Call for Submission",
       "section": "Downloads",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/2026-Call-For-Submission.pdf",
-      "document_index": 23
+      "document_index": 13
     },
     {
       "subject": "Adoption",
       "title": "Grades 6-12 World Languages Adoption Guide (French) Extended Version",
       "section": "World Languages",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/6-12-World-Language-Adoption-Guide-Extended-French.pdf",
-      "document_index": 24
+      "document_index": 14
     },
     {
       "subject": "Adoption",
       "title": "Grades 6-12 World Languages Adoption Guide (French)",
       "section": "World Languages",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/6-12-World-Language-Adoption-Guide-French.pdf",
-      "document_index": 25
+      "document_index": 15
     },
     {
       "subject": "Adoption",
       "title": "2022 6-8 Math Extended Adoption Guide",
       "section": "2022",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/6-8-Math-Extended-Adoption-Guide.pdf",
-      "document_index": 26
+      "document_index": 16
     },
     {
       "subject": "Adoption",
       "title": "2022 9-12 Math Extended Adoption Guide",
       "section": "2022",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/9-12-Math-Extended-Adoption-Guide.pdf",
-      "document_index": 27
+      "document_index": 17
     },
     {
       "subject": "Adoption",
       "title": "2022 9-12 Advanced Math Extended Adoption Guide",
       "section": "2022",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/Advanced-9-12-Math-Extended-Adoption-Guide.pdf",
-      "document_index": 28
+      "document_index": 18
     },
     {
       "subject": "Adoption",
       "title": "American Government Extended Adoption Guide",
       "section": "American Government",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/American-government-adoption-guide-extended.pdf",
-      "document_index": 29
+      "document_index": 19
     },
     {
       "subject": "Adoption",
       "title": "American Government Adoption Guide",
       "section": "American Government",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/American-Government-Adoption-Guide.pdf",
-      "document_index": 30
+      "document_index": 20
     },
     {
       "subject": "General",
       "title": "Regional Centers",
       "section": "Regional Centers",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/Curricular-Materials-Regional-Centers.pdf",
-      "document_index": 31
+      "document_index": 21
     },
     {
       "subject": "Adoption",
       "title": "Economics Extended Adoption Guide",
       "section": "Economics",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/Economics-adoption-guide-extended.pdf",
-      "document_index": 32
+      "document_index": 22
     },
     {
       "subject": "Adoption",
       "title": "Economics Adoption Guide",
       "section": "Economics",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/Economics-Adoption-Guide.pdf",
-      "document_index": 33
+      "document_index": 23
     },
     {
       "subject": "Adoption",
       "title": "Grades K-12 ELA /Literacy Adoption Guide",
       "section": "Classification Definitions",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/ELA-K-12-Adoption-Guide.pdf",
-      "document_index": 34
+      "document_index": 24
     },
     {
       "subject": "General",
       "title": "Completed Submission Bid Form Example",
       "section": "Downloads",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/Example-2025-Submission-Bid-Form.xlsx",
-      "document_index": 35
+      "document_index": 25
     },
     {
       "subject": "Adoption",
       "title": "Geography Eastern Hemisphere Extended Adoption Guide",
       "section": "Geography",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/geography-eastern-hemisphere-adoption-guide-extended.pdf",
-      "document_index": 36
+      "document_index": 26
     },
     {
       "subject": "Adoption",
       "title": "Geography Eastern Hemisphere Adoption Guide",
       "section": "Geography",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/Geography-Eastern-Hemisphere-Adoption-Guide.pdf",
-      "document_index": 37
+      "document_index": 27
     },
     {
       "subject": "Adoption",
       "title": "Geography Western Hemisphere Extended Adoption Guide",
       "section": "Geography",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/geography-western-hemisphere-adoption-guide-extended.pdf",
-      "document_index": 38
+      "document_index": 28
     },
     {
       "subject": "Adoption",
       "title": "Geography Western Hemisphere Adoption Guide",
       "section": "Geography",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/Geography-Western-Hemisphere-Adoption-Guide.pdf",
-      "document_index": 39
+      "document_index": 29
     },
     {
       "subject": "Subject",
       "title": "HMH Into Math Grade K Response",
       "section": "Evaluation Feedback Publisher Responses",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/HMH-Into-Math-Grade-K-Response.pdf",
-      "document_index": 40
+      "document_index": 30
     },
     {
       "subject": "General",
       "title": "Arts and Humanities Position Statement",
       "section": "Classification Definitions",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/Humanities-Position-Statement.pdf",
-      "document_index": 41
+      "document_index": 31
     },
     {
       "subject": "Adoption",
       "title": "2022 Intervention Extended Adoption Guide",
       "section": "2022",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/Intervention-Extended-Adoption-Guide.pdf",
-      "document_index": 42
+      "document_index": 32
     },
     {
       "subject": "Adoption",
       "title": "K-12 2017-2018 Computer Applications Adoption Guide",
       "section": "2019",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/k-12-2017-2018-Computer-Applications-Adoption-Guide-Extended.pdf",
-      "document_index": 43
+      "document_index": 33
     },
     {
       "subject": "Adoption",
       "title": "2019 K-12 Computer Applications Adoption Guide",
       "section": "2019",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/k-12-2019-computer-applications-adoption-guide.pdf",
-      "document_index": 44
+      "document_index": 34
     },
     {
       "subject": "General",
       "title": "2019 K-12 Computer Applications Recommendations (Extended Version)",
       "section": "2019",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-12-2019-Computer-Applications-Recommendations-Extended-Version.xlsx",
-      "document_index": 45
+      "document_index": 35
     },
     {
       "subject": "Adoption",
       "title": "2020 K-12 Computer Applications Adoption Guide",
       "section": "2020",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-12-2020-Computer-Applications-Adoption-Guide.pdf",
-      "document_index": 46
+      "document_index": 36
     },
     {
       "subject": "Adoption",
       "title": "2020 K-12 Computer Applications Extended Adoption Guide",
       "section": "2020",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-12-2020-Computer-Applications-Extended-Adoption-Guide.xlsx",
-      "document_index": 47
+      "document_index": 37
     },
     {
       "subject": "Adoption",
       "title": "K-12 Computer Science Extended Adoption Guide",
       "section": "Classification Definitions",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-12-2020-Computer-Science-Extended-Adoption-Guide.xlsx",
-      "document_index": 48
+      "document_index": 38
     },
     {
       "subject": "Adoption",
       "title": "K-12 Computer Science Adoption Guide",
       "section": "Classification Definitions",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-12-Computer-Science-Adoption-Guide.pdf",
-      "document_index": 49
+      "document_index": 39
     },
     {
       "subject": "Adoption",
       "title": "K-12 EL Adoption Guide",
       "section": "Classification Definitions",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-12-EL-Adoption-Guide.pdf",
-      "document_index": 50
+      "document_index": 40
     },
     {
       "subject": "Adoption",
       "title": "K-12 Health Adoption Guide",
       "section": "Classification Definitions",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-12-Health-Adoption-Guide.pdf",
-      "document_index": 51
+      "document_index": 41
     },
     {
       "subject": "Adoption",
       "title": "2022 K-12 Math Adoption Guide",
       "section": "2022",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-12-Math-Adoption-Guide.pdf",
-      "document_index": 52
+      "document_index": 42
     },
     {
       "subject": "Adoption",
       "title": "Grades K-12 Music Adoption Guide Extended Version",
       "section": "Music",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/k-12-music-adoption-guide-extended.pdf",
-      "document_index": 53
+      "document_index": 43
     },
     {
       "subject": "Adoption",
       "title": "Grades K-12 Music Adoption Guide",
       "section": "Music",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-12-music-adoption-guide.pdf",
-      "document_index": 54
+      "document_index": 44
     },
     {
       "subject": "Adoption",
       "title": "K-12 PE Adoption Guide",
       "section": "Classification Definitions",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-12-PE-Adoption-Guide.pdf",
-      "document_index": 55
+      "document_index": 45
     },
     {
       "subject": "Adoption",
       "title": "Grades K-12 World Languages Adoption Guide (Chinese)",
       "section": "World Languages",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-12-World-Language-Adoption-Guide-Chinese.pdf",
-      "document_index": 56
+      "document_index": 46
     },
     {
       "subject": "Adoption",
       "title": "Grades K-12 World Languages Adoption Guide (Chinese) Extended Version",
       "section": "World Languages",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-12-World-Language-Adoption-Guide-Extended-Chinese.pdf",
-      "document_index": 57
+      "document_index": 47
     },
     {
       "subject": "Adoption",
       "title": "Grades K-12 World Languages Adoption Guide (Spanish) Extended Version",
       "section": "World Languages",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-12-World-Language-Adoption-Guide-Extended-Spanish.pdf",
-      "document_index": 58
+      "document_index": 48
     },
     {
       "subject": "Adoption",
       "title": "Grades K-12 World Languages Adoption Guide (Spanish)",
       "section": "World Languages",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-12-World-Language-Adoption-Guide-Spanish.pdf",
-      "document_index": 59
+      "document_index": 49
     },
     {
       "subject": "Adoption",
       "title": "2022 K-5 Math Extended Adoption Guide",
       "section": "2022",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-5-Math-Extended-Adoption-Guide.pdf",
-      "document_index": 60
+      "document_index": 50
     },
     {
       "subject": "Adoption",
       "title": "K-5 Social Studies Extended Adoption Guide",
       "section": "K-5 Social Studies",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-5-social-studies-adoption-guide-extended.pdf",
-      "document_index": 61
+      "document_index": 51
     },
     {
       "subject": "Adoption",
       "title": "K-5 Social Studies Adoption Guide",
       "section": "K-5 Social Studies",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/K-5-Social-Studies-Adoption-Guide.pdf",
-      "document_index": 62
+      "document_index": 52
     },
     {
       "subject": "General",
       "title": "New Edition Substitution",
       "section": "Downloads",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/New-Edition-Substitution.pdf",
-      "document_index": 63
+      "document_index": 53
     },
     {
       "subject": "General",
       "title": "Computer Applications Position Statement",
       "section": "2019",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/Postion-Statement-Computer-Applications-2019.pdf",
-      "document_index": 64
+      "document_index": 54
     },
     {
       "subject": "Subject",
       "title": "Social Studies Position Statement",
       "section": "Classification Definitions",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/Postion-Statement-Social-Studies.pdf",
-      "document_index": 65
+      "document_index": 55
     },
     {
       "subject": "General",
       "title": "Publisher Contact Information",
       "section": "Quick Links",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/Publisher-Contact-Information.pdf",
-      "document_index": 66
+      "document_index": 56
     },
     {
       "subject": "Guidance",
       "title": "SBOE Curricular Materials Selection Committee",
       "section": "Curricular Materials",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/State-Board-Education-Curricular-Materials-Selection-Committee.pdf",
-      "document_index": 67
+      "document_index": 57
     },
     {
       "subject": "Adoption",
       "title": "US History I Extended Adoption Guide",
       "section": "United States History",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/US-History-I-adoption-guide-extended.pdf",
-      "document_index": 68
+      "document_index": 58
     },
     {
       "subject": "Adoption",
       "title": "US History I Adoption Guide",
       "section": "United States History",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/US-History-I-Adoption-Guide.pdf",
-      "document_index": 69
+      "document_index": 59
     },
     {
       "subject": "Adoption",
       "title": "US History II Extended Adoption Guide",
       "section": "United States History",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/US-History-II-adoption-guide-extended.pdf",
-      "document_index": 70
+      "document_index": 60
     },
     {
       "subject": "Adoption",
       "title": "US History II Adoption Guide",
       "section": "United States History",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/US-History-II-Adoption-Guide.pdf",
-      "document_index": 71
+      "document_index": 61
     },
     {
       "subject": "Adoption",
       "title": "Grades 9-12 Visual Arts Adoption Guide Extended Version",
       "section": "Visual Arts",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/Visual-Arts-9-12-Adoption-Guide-Extended.pdf",
-      "document_index": 72
+      "document_index": 62
     },
     {
       "subject": "Adoption",
       "title": "Grades 9-12 Visual Arts Adoption Guide",
       "section": "Visual Arts",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/Visual-Arts-9-12-Adoption-Guide.pdf",
-      "document_index": 73
+      "document_index": 63
     },
     {
       "subject": "Adoption",
       "title": "World History & Civilizations Extended Adoption Guide",
       "section": "World History & Civilizations",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/World-History-and-Civilizations-adoption-guide-extended.pdf",
-      "document_index": 74
+      "document_index": 64
     },
     {
       "subject": "Adoption",
       "title": "World History & Civilizations Adoption Guide",
       "section": "World History & Civilizations",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/09/World-History-and-Civilizations-Adoption-Guide.pdf",
-      "document_index": 75
+      "document_index": 65
     },
     {
       "subject": "Review",
       "title": "2026 Review Timeline",
       "section": "Downloads",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/10/2026-Review-Timeline.pdf",
-      "document_index": 76
+      "document_index": 66
     },
     {
       "subject": "General",
       "title": "Curricular Materials Reviewer Invitation & Application",
       "section": "2026 Curricular Materials Committees",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/10/Curricular-Review-Invitation-and-Application-2026.pdf",
-      "document_index": 77
+      "document_index": 67
     },
     {
       "subject": "Adoption",
       "title": "CTE 2025 Adoption Guide",
       "section": "Classification Definitions",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/2025-CTE-Adoption-Guide.pdf",
-      "document_index": 78
+      "document_index": 68
     },
     {
       "subject": "Adoption",
       "title": "2025 K-12 Science Adoption Guide",
       "section": "2025",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/2025-K-12-Science-Adoption-Guide.pdf",
-      "document_index": 79
+      "document_index": 69
     },
     {
       "subject": "General",
       "title": "American Sign Language Evaluation Tool",
       "section": "World Languages",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/American-Sign-Language-Evaluation-Tool.pdf",
-      "document_index": 80
+      "document_index": 70
     },
     {
       "subject": "General",
       "title": "Classical Languages Evaluation Tool",
       "section": "World Languages",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Classical-Languages-Evaluation-Tool.pdf",
-      "document_index": 81
+      "document_index": 71
     },
     {
       "subject": "Subject",
       "title": "9-12 Computer Science Evaluation Tool",
       "section": "Computer Science",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Computer-Science-9-12-Evaluation-Tool.pdf",
-      "document_index": 82
+      "document_index": 72
     },
     {
       "subject": "General",
       "title": "Digital Caravan Instructions 2026",
       "section": "Downloads",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Digital-Caravan-Instructions-2026.pdf",
-      "document_index": 83
+      "document_index": 73
     },
     {
       "subject": "General",
       "title": "6-12 General Music Evaluation Tool",
       "section": "Music",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/General-Music-6-12-Evaluation-Tool.pdf",
-      "document_index": 84
+      "document_index": 74
     },
     {
       "subject": "General",
       "title": "K-5 General Music Evaluation Tool",
       "section": "Music",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/General-Music-K-5-Evaluation-Tool.pdf",
-      "document_index": 85
+      "document_index": 75
     },
     {
       "subject": "General",
       "title": "9-12 Information Technology and Communication Evaluation Form",
       "section": "Computer Science",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Information-Technology-Communication-9-12-Evaluation-Form.pdf",
-      "document_index": 86
+      "document_index": 76
     },
     {
       "subject": "General",
       "title": "Interdisciplinary Humanities Evaluation Tool",
       "section": "Interdisciplinary Humanities",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Interdisciplinary-Humanities-Evaluation-Tool.pdf",
-      "document_index": 87
+      "document_index": 77
     },
     {
       "subject": "General",
       "title": "Media Arts Evaluation Tool",
       "section": "Art",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Media-Arts-K-12-Evaluation-Tool.pdf",
-      "document_index": 88
+      "document_index": 78
     },
     {
       "subject": "General",
       "title": "Music Ensembles Evaluation Tool",
       "section": "Music",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Music-Ensembles-Evaluation-Tool.pdf",
-      "document_index": 89
+      "document_index": 79
     },
     {
       "subject": "General",
       "title": "Music Technology Evaluation Tool",
       "section": "Music",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Music-Technology-Evaluation-Tool.pdf",
-      "document_index": 90
+      "document_index": 80
     },
     {
       "subject": "General",
       "title": "Music Theory Evaluation Tool",
       "section": "Music",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Music-Theory-Evaluation-Tool.pdf",
-      "document_index": 91
+      "document_index": 81
     },
     {
       "subject": "General",
       "title": "6-12 Technical Theatre Evaluation Tool",
       "section": "Theatre",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Technical-Theatre-6-12-Evaluation-Tool.pdf",
-      "document_index": 92
+      "document_index": 82
     },
     {
       "subject": "General",
       "title": "3-5 Technology Evaluation Tool",
       "section": "Computer Science",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Technology-3-5-Evaluation-Tool.pdf",
-      "document_index": 93
+      "document_index": 83
     },
     {
       "subject": "General",
       "title": "6-8 Technology Evaluation Tool",
       "section": "Computer Science",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Technology-6-8-Evaluation-Tool.pdf",
-      "document_index": 94
+      "document_index": 84
     },
     {
       "subject": "General",
       "title": "K-2 Technology Evaluation Tool",
       "section": "Computer Science",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Technology-K-2-Evaluation-Tool.pdf",
-      "document_index": 95
+      "document_index": 85
     },
     {
       "subject": "General",
       "title": "6-12 Theatre Evaluation Tool",
       "section": "Theatre",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Theatre-6-12-Evaluation-Tool.pdf",
-      "document_index": 96
+      "document_index": 86
     },
     {
       "subject": "General",
       "title": "K-5 Theatre Evaluation Tool",
       "section": "Theatre",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Theatre-K-5-Evaluation-Tool.pdf",
-      "document_index": 97
+      "document_index": 87
     },
     {
       "subject": "General",
       "title": "Visual Arts Evaluation Tool",
       "section": "Art",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/Visual-Arts-K-12-Evaluation-Tool.pdf",
-      "document_index": 98
+      "document_index": 88
     },
     {
       "subject": "Subject",
       "title": "World Languages and Career Applications Evaluation Tool",
       "section": "World Languages",
       "document_url": "https://www.sde.idaho.gov/wp-content/uploads/2025/12/World-Languages-and-Career-Applications-Evaluation-Tool.pdf",
-      "document_index": 99
+      "document_index": 89
     }
   ]
 }

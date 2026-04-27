@@ -2,13 +2,13 @@
   "state": "OR",
   "name": "Oregon",
   "source_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/default.aspx",
-  "scraped_at": "2026-04-27T05:43:23+00:00",
+  "scraped_at": "2026-04-27T06:56:18+00:00",
   "page_title": "High-Quality Instructional Materials (HQIM)",
-  "document_count": 3,
-  "content_hash": "f946fc477c9b580f",
+  "document_count": 16,
+  "content_hash": "e2eb162105529e6e",
   "has_active_cycle": false,
   "call_for_bids_url": null,
-  "cycle_count": 3,
+  "cycle_count": 16,
   "cycles": [
     {
       "subject": "General",
@@ -18,18 +18,109 @@
       "document_index": 1
     },
     {
+      "subject": "General",
+      "title": "\u200bNational Instructional Materials Access Center (NIMAC)",
+      "section": null,
+      "document_url": "http://www.nimac.us/",
+      "document_index": 2
+    },
+    {
+      "subject": "General",
+      "title": "Northwest Textbook Depository",
+      "section": "Instructional Materials Resources",
+      "document_url": "http://www.nwtd.com/",
+      "document_index": 3
+    },
+    {
+      "subject": "General",
+      "title": "SETDA Digital Instructional Materials - Acquisition Policies for Oregon \u200b",
+      "section": "Instructional Materials Resources",
+      "document_url": "https://dmaps.setda.org/state/oregon/",
+      "document_index": 4
+    },
+    {
+      "subject": "Rubric",
+      "title": "Instructional Materials Comparison Tool from EdReports\u200b",
+      "section": "Additional Helpful Resources",
+      "document_url": "https://www.edreports.org/compare?utm_medium=organic&utm_source=pardot&utm_campaign=welcome-email-2",
+      "document_index": 5
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards",
+      "section": null,
+      "document_url": "https://www.oregon.gov/ode/educator-resources/standards/Pages/default.aspx",
+      "document_index": 6
+    },
+    {
+      "subject": "HQIM",
+      "title": "High-Quality Instructional Materials (HQIM) A key lever for supporting teaching and learning",
+      "section": null,
+      "document_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials",
+      "document_index": 7
+    },
+    {
       "subject": "Adoption",
       "title": "Oregon Instructional Materials Adoption Schedule\u200b",
       "section": "Instructional Materials Resources",
       "document_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/Documents/InstructionalMaterialsToolkit/Instructional%20Materials%20Timeline.pdf",
-      "document_index": 2
+      "document_index": 8
     },
     {
       "subject": "Adoption",
       "title": "schedule for review and adoption of instructional materials",
       "section": "How Oregon school districts select\u00a0Instructional Materials\u00a0or Curriculum:",
       "document_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/Documents/Oregon%20Instructional%20Materials%20Adoption%20Schedule.pdf",
-      "document_index": 3
+      "document_index": 9
+    },
+    {
+      "subject": "General",
+      "title": "Adopted Instructional Materials",
+      "section": null,
+      "document_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/Pages/Adopted-Instructional-Materials.aspx",
+      "document_index": 10
+    },
+    {
+      "subject": "Adoption",
+      "title": "Adoption Criteria for Instructional Materials",
+      "section": null,
+      "document_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/Pages/Adoption-Criteria.aspx",
+      "document_index": 11
+    },
+    {
+      "subject": "HQIM",
+      "title": "High-Quality Instructional Materials (HQIM)",
+      "section": null,
+      "document_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/Pages/default.aspx",
+      "document_index": 12
+    },
+    {
+      "subject": "General",
+      "title": "Instructional Materials Toolkit",
+      "section": null,
+      "document_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/Pages/Instructional-Materials-Toolkit.aspx",
+      "document_index": 13
+    },
+    {
+      "subject": "General",
+      "title": "Instructional Materials OAR & ORS",
+      "section": null,
+      "document_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/Pages/OAR-ORS.aspx",
+      "document_index": 14
+    },
+    {
+      "subject": "Subject",
+      "title": "Career and Technical Education (CTE)",
+      "section": null,
+      "document_url": "https://www.oregon.gov/ode/learning-options/CTE/Pages/default.aspx",
+      "document_index": 15
+    },
+    {
+      "subject": "General",
+      "title": "Accessible Instructional Materials",
+      "section": "How Oregon school districts select\u00a0Instructional Materials\u00a0or Curriculum:",
+      "document_url": "https://www.oregon.gov/ode/students-and-family/SpecialEducation/RegPrograms_BestPractice/Pages/Accessible-Instructional-Materials.aspx",
+      "document_index": 16
     }
   ]
 }

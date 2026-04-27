@@ -1,0 +1,105 @@
+{
+  "state": "MA",
+  "name": "Massachusetts",
+  "source_url": "https://www.doe.mass.edu/instruction/",
+  "scraped_at": "2026-04-27T06:55:47+00:00",
+  "page_title": "Instructional Support",
+  "document_count": 13,
+  "content_hash": "bc092ff773e7cc91",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 13,
+  "cycles": [
+    {
+      "subject": "Framework",
+      "title": "Learning Standards",
+      "section": null,
+      "document_url": "https://www.doe.mass.edu/frameworks/",
+      "document_index": 1
+    },
+    {
+      "subject": "General",
+      "title": "Current Frameworks",
+      "section": null,
+      "document_url": "https://www.doe.mass.edu/frameworks/current.html",
+      "document_index": 2
+    },
+    {
+      "subject": "Framework",
+      "title": "Learning Standards",
+      "section": null,
+      "document_url": "https://www.doe.mass.edu/frameworks/default.html",
+      "document_index": 3
+    },
+    {
+      "subject": "Framework",
+      "title": "Standards Navigator",
+      "section": null,
+      "document_url": "https://www.doe.mass.edu/frameworks/search/",
+      "document_index": 4
+    },
+    {
+      "subject": "General",
+      "title": "Instructional Support",
+      "section": null,
+      "document_url": "https://www.doe.mass.edu/instruction/",
+      "document_index": 5
+    },
+    {
+      "subject": "General",
+      "title": "Instructional Support Updates Archive",
+      "section": "Instructional Support",
+      "document_url": "https://www.doe.mass.edu/instruction/?section=archive",
+      "document_index": 6
+    },
+    {
+      "subject": "General",
+      "title": "Instructional Materials",
+      "section": null,
+      "document_url": "https://www.doe.mass.edu/instruction/impd/",
+      "document_index": 7
+    },
+    {
+      "subject": "General",
+      "title": "Instructional Materials",
+      "section": null,
+      "document_url": "https://www.doe.mass.edu/instruction/impd/default.html",
+      "document_index": 8
+    },
+    {
+      "subject": "Subject",
+      "title": "Comprehensive Health and Physical Education",
+      "section": null,
+      "document_url": "https://www.doe.mass.edu/stem/chpe/",
+      "document_index": 9
+    },
+    {
+      "subject": "Subject",
+      "title": "Science, Technology Engineering, and Mathematics STEM",
+      "section": null,
+      "document_url": "https://www.doe.mass.edu/stem/default.html",
+      "document_index": 10
+    },
+    {
+      "subject": "Subject",
+      "title": "Digital Literacy and Computer Science",
+      "section": null,
+      "document_url": "https://www.doe.mass.edu/stem/dlcs/",
+      "document_index": 11
+    },
+    {
+      "subject": "General",
+      "title": "Mathematics",
+      "section": null,
+      "document_url": "https://www.doe.mass.edu/stem/math/",
+      "document_index": 12
+    },
+    {
+      "subject": "General",
+      "title": "World Languages",
+      "section": null,
+      "document_url": "https://www.doe.mass.edu/worldlanguages/",
+      "document_index": 13
+    }
+  ]
+}

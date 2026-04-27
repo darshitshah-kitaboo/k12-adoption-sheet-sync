@@ -1,0 +1,505 @@
+{
+  "state": "IN",
+  "date": "2026-04-27",
+  "change_count": 30,
+  "changes": [
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://www.pltw.org/in-high-quality-curricular-materials"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Computer Science A, 2020",
+        "section": null,
+        "document_url": "https://www.pltw.org/in-high-quality-curricular-materials",
+        "document_index": 29
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://link.codehs.com/5d03d2ef18778474dda85f6d/l/shaOxfl7Vcpitryad?rn=icmbp5mchVGTgQmbhByZulGajFWZUBSRPRkI&re=IidvdmLulmLl9GZAdmbp5mchVGbk5WYn5WaoNWYlRnI&sc=false"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Indiana Topics in Computer Science, 2024",
+        "section": null,
+        "document_url": "https://link.codehs.com/5d03d2ef18778474dda85f6d/l/shaOxfl7Vcpitryad?rn=icmbp5mchVGTgQmbhByZulGajFWZUBSRPRkI&re=IidvdmLulmLl9GZAdmbp5mchVGbk5WYn5WaoNWYlRnI&sc=false",
+        "document_index": 10
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://studio.code.org/courses/csa-2023"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Cobi AP Computer Science A, 2024",
+        "section": null,
+        "document_url": "https://studio.code.org/courses/csa-2023",
+        "document_index": 14
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://ebooks.curriculumassociates.com/story/ready-indiana-mathematics-2nd-edition-overview/page/1"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Ready Indiana Mathematics K-8, 2023",
+        "section": null,
+        "document_url": "https://ebooks.curriculumassociates.com/story/ready-indiana-mathematics-2nd-edition-overview/page/1",
+        "document_index": 7
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://k12.kendallhunt.com/program/illustrative-mathematics-middle-school"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Illustrative Mathematics 6-8, 2019",
+        "section": null,
+        "document_url": "https://k12.kendallhunt.com/program/illustrative-mathematics-middle-school",
+        "document_index": 8
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://code.org/educate/csf"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Computer Science Fundamentals K-5, 2024",
+        "section": null,
+        "document_url": "https://code.org/educate/csf",
+        "document_index": 5
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://adoptions.ngl.cengage.com/in-science-review-site"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Invitation to Computer Science AP, 2022",
+        "section": null,
+        "document_url": "https://adoptions.ngl.cengage.com/in-science-review-site",
+        "document_index": 1
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://www.pltw.org/indiana-high-quality-curriculum"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "PLTW Computer Science Foundations, 2025",
+        "section": null,
+        "document_url": "https://www.pltw.org/indiana-high-quality-curriculum",
+        "document_index": 30
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://link.codehs.com/5d03d2ef18778474dda85f6d/l/x0p6Lh6uh9sJc16Nv?rn=icmbp5mchVGTgQmbhByZulGajFWZUBSRPRkI&re=IidvdmLulmLl9GZAdmbp5mchVGbk5WYn5WaoNWYlRnI&sc=false"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "AP Computer Science Principles, 2020",
+        "section": null,
+        "document_url": "https://link.codehs.com/5d03d2ef18778474dda85f6d/l/x0p6Lh6uh9sJc16Nv?rn=icmbp5mchVGTgQmbhByZulGajFWZUBSRPRkI&re=IidvdmLulmLl9GZAdmbp5mchVGbk5WYn5WaoNWYlRnI&sc=false",
+        "document_index": 11
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://codehs.com/curriculum/catalog/Indiana"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Indiana Computer Science K-8, 2024",
+        "section": null,
+        "document_url": "https://codehs.com/curriculum/catalog/Indiana",
+        "document_index": 6
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://link.codehs.com/5d03d2ef18778474dda85f6d/l/XMmIlSrLAFJMl4Xa2?rn=icmbp5mchVGTgQmbhByZulGajFWZUBSRPRkI&re=IidvdmLulmLl9GZAdmbp5mchVGbk5WYn5WaoNWYlRnI&sc=false"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "AP Computer Science A, 2019",
+        "section": null,
+        "document_url": "https://link.codehs.com/5d03d2ef18778474dda85f6d/l/XMmIlSrLAFJMl4Xa2?rn=icmbp5mchVGTgQmbhByZulGajFWZUBSRPRkI&re=IidvdmLulmLl9GZAdmbp5mchVGbk5WYn5WaoNWYlRnI&sc=false",
+        "document_index": 12
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://code.org/educate/csd"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Computer Science Discoveries 6-8, 2024",
+        "section": null,
+        "document_url": "https://code.org/educate/csd",
+        "document_index": 4
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://protect2.fireeye.com/v1/url?k=31323334-50bba2bf-31367a34-4544474f5631-4f69103247dddf4c&q=1&e=bf24e612-33f2-4cb3-ad09-364751477ace&u=https%3A%2F%2Fgocobi.com%2Fcurriculum%2Fap-computer-science-principles"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Cobi AP Computer Science Principles, 2024",
+        "section": null,
+        "document_url": "https://protect2.fireeye.com/v1/url?k=31323334-50bba2bf-31367a34-4544474f5631-4f69103247dddf4c&q=1&e=bf24e612-33f2-4cb3-ad09-364751477ace&u=https%3A%2F%2Fgocobi.com%2Fcurriculum%2Fap-computer-science-principles",
+        "document_index": 13
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://studio.code.org/courses/csp"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Computer Science Principles, 2024",
+        "section": null,
+        "document_url": "https://studio.code.org/courses/csp",
+        "document_index": 15
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://link.codehs.com/5d03d2ef18778474dda85f6d/l/5vtBIBzRUCIIgXnHw?rn=icmbp5mchVGTgQmbhByZulGajFWZUBSRPRkI&re=IidvdmLulmLl9GZAdmbp5mchVGbk5WYn5WaoNWYlRnI&sc=false"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Indiana Introduction to Computer Science, 2024",
+        "section": null,
+        "document_url": "https://link.codehs.com/5d03d2ef18778474dda85f6d/l/5vtBIBzRUCIIgXnHw?rn=icmbp5mchVGTgQmbhByZulGajFWZUBSRPRkI&re=IidvdmLulmLl9GZAdmbp5mchVGbk5WYn5WaoNWYlRnI&sc=false",
+        "document_index": 9
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://www.compuscholar.com/schools/courses/csfoundations"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Computer Science Foundations, 2024",
+        "section": null,
+        "document_url": "https://www.compuscholar.com/schools/courses/csfoundations",
+        "document_index": 16
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://code.org/curriculum/csd"
+      ],
+      "cycle": {
+        "subject": "Subject",
+        "title": "Computer Science Discoveries, 2024",
+        "section": null,
+        "document_url": "https://code.org/curriculum/csd",
+        "document_index": 3
+      }
+    },
+    {
+      "type": "added",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://adoptions.ngl.cengage.com/in-science-review-site/"
+      ],
+      "cycle": {
+        "subject": "General",
+        "title": "Precalculus: Mathematics for Calculus, Stewart/Redlin/Watson 8e, 2023",
+        "section": null,
+        "document_url": "https://adoptions.ngl.cengage.com/in-science-review-site/",
+        "document_index": 2
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.in.gov/doe/files/2024-cost-sheet_full.xlsx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 2,
+          "new": 18
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.in.gov/doe/files/earlylearning_scholastic_february2024.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 10,
+          "new": 26
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.in.gov/doe/files/HQCM-FAQ.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 11,
+          "new": 27
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.in.gov/doe/files/Sample-Evaluation-Tool.docx.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 12,
+          "new": 28
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.in.gov/doe/files/earlylearning_elm_february2024.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 7,
+          "new": 23
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.in.gov/doe/files/2025-2026-HQCM-Evaluation-Rubric_-K-12-STEM.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 5,
+          "new": 21
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://www.in.gov/doe/files/2024-HQCM-Evaluation-Rubric_-K-5-Reading.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 4,
+          "new": 20
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Guidance",
+        null,
+        null,
+        null,
+        "https://www.in.gov/doe/files/2025-2026-HQCM-Vendor-Submission-Guide.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 6,
+          "new": 22
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "Subject",
+        null,
+        null,
+        null,
+        "https://www.in.gov/doe/files/2024-2025-HQCM-Evaluation-Rubric_-6-8-Reading.docx"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 1,
+          "new": 17
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.in.gov/doe/files/earlylearning_hs_february2024.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 8,
+          "new": 24
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.in.gov/doe/files/2024-HQCM-Evaluation-Rubric_-Early-Learning.docx.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 3,
+          "new": 19
+        }
+      }
+    },
+    {
+      "type": "modified",
+      "key": [
+        "General",
+        null,
+        null,
+        null,
+        "https://www.in.gov/doe/files/earlylearning_kaplan_february2024.pdf"
+      ],
+      "fields": {
+        "document_index": {
+          "old": 9,
+          "new": 25
+        }
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-04-23",
+  "last_updated": "2026-04-27",
   "description": "Authoritative URLs for K12 adoption intelligence discovery. One entry per state + DC. Each entry lists stable primary and secondary sources. Used as input to scraper/ in Phases 2 and 3.",
   "source_types": {
     "doe_instructional_materials": "Primary DOE page listing current and upcoming adoption cycles",
@@ -20,7 +20,7 @@
       "name": "Alabama",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.alabamaachieves.org/content-areas-specialty/textbook-adoption-and-procurement/",
@@ -47,7 +47,7 @@
       "name": "Arkansas",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://dese.ade.arkansas.gov/Offices/learning-services/curriculum-support/arkansas-initiative-for-instructional-materials-aiim",
@@ -74,7 +74,7 @@
       "name": "California",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.cde.ca.gov/ci/cr/cf/",
@@ -101,7 +101,7 @@
       "name": "Florida",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.fldoe.org/academics/standards/instructional-materials/",
@@ -128,7 +128,7 @@
       "name": "Georgia",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://gadoe.org/learning",
@@ -155,7 +155,7 @@
       "name": "Indiana",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
@@ -182,7 +182,7 @@
       "name": "Kentucky",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.education.ky.gov/curriculum/books/Pages/default.aspx",
@@ -209,7 +209,7 @@
       "name": "Louisiana",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://doe.louisiana.gov/school-system-leaders/instructional-materials-reviews",
@@ -236,7 +236,7 @@
       "name": "Mississippi",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://msinstructionalmaterials.org/resources/adoption/",
@@ -263,7 +263,7 @@
       "name": "North Carolina",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.dpi.nc.gov/districts-schools/district-operations/instructional-materialstextbook-adoption",
@@ -290,7 +290,7 @@
       "name": "New Mexico",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://web.ped.nm.gov/bureaus/instructional-materials/",
@@ -321,7 +321,7 @@
       "name": "Oklahoma",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://oklahoma.gov/education/services/hqim.html",
@@ -348,7 +348,7 @@
       "name": "Oregon",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/default.aspx",
@@ -375,7 +375,7 @@
       "name": "South Carolina",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://ed.sc.gov/instruction/instructional-materials/",
@@ -402,7 +402,7 @@
       "name": "Tennessee",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.tn.gov/textbook-commission.html",
@@ -429,7 +429,7 @@
       "name": "Texas",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://tea.texas.gov/academics/instructional-materials/review-and-adoption-process/instructional-materials-review-and-approval-resources",
@@ -456,7 +456,7 @@
       "name": "Utah",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://schools.utah.gov/curr/imc",
@@ -483,7 +483,7 @@
       "name": "Virginia",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.doe.virginia.gov/teaching-learning-assessment/instructional-resources-support/textbooks-instructional-materials",
@@ -514,7 +514,7 @@
       "name": "West Virginia",
       "governance": "State Adoption",
       "priority": 1,
-      "last_verified": null,
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://wvde.us/middle-secondary-learning/resources/instructional-resources-review-and-adoption/adoption-schedule-law-code-and-policies/",
@@ -541,7 +541,7 @@
       "name": "Alaska",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://education.alaska.gov/standards",
@@ -595,7 +595,7 @@
       "name": "Colorado",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.cde.state.co.us/standardsandinstruction",
@@ -622,7 +622,7 @@
       "name": "Connecticut",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://portal.ct.gov/sde/academic-office/academic-office",
@@ -676,7 +676,7 @@
       "name": "Delaware",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.doe.k12.de.us/domain/468",
@@ -703,7 +703,7 @@
       "name": "Hawaii",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.hawaiipublicschools.org/TeachingAndLearning/StudentLearning/Pages/home.aspx",
@@ -730,7 +730,7 @@
       "name": "Iowa",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://educate.iowa.gov/pk-12/standards",
@@ -757,7 +757,7 @@
       "name": "Idaho",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/curricular-materials/",
@@ -784,7 +784,7 @@
       "name": "Illinois",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.isbe.net/Pages/Learning-Standards.aspx",
@@ -811,7 +811,7 @@
       "name": "Kansas",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.ksde.org/Default.aspx?tabid=141",
@@ -838,7 +838,7 @@
       "name": "Massachusetts",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.doe.mass.edu/instruction/",
@@ -919,7 +919,7 @@
       "name": "Michigan",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.michigan.gov/mde/services/academic-standards",
@@ -973,7 +973,7 @@
       "name": "Missouri",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://dese.mo.gov/college-career-readiness/curriculum",
@@ -1000,7 +1000,7 @@
       "name": "Montana",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://opi.mt.gov/Educators/Teaching-Learning",
@@ -1054,7 +1054,7 @@
       "name": "Nebraska",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.education.ne.gov/contentareastandards/",
@@ -1108,7 +1108,7 @@
       "name": "New Jersey",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.nj.gov/education/standards/",
@@ -1135,7 +1135,7 @@
       "name": "Nevada",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://doe.nv.gov/offices/office-of-teaching-and-learning/instructional-materials/",
@@ -1162,7 +1162,7 @@
       "name": "New York",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.nysed.gov/curriculum-instruction",
@@ -1189,7 +1189,7 @@
       "name": "Ohio",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://education.ohio.gov/Topics/Learning-in-Ohio",
@@ -1216,7 +1216,7 @@
       "name": "Pennsylvania",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://www.education.pa.gov/K-12/Curriculum%20and%20Instruction/Pages/default.aspx",
@@ -1270,7 +1270,7 @@
       "name": "South Dakota",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://doe.sd.gov/contentstandards/",
@@ -1297,7 +1297,7 @@
       "name": "Vermont",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://education.vermont.gov/student-learning/content-areas",
@@ -1324,7 +1324,7 @@
       "name": "Washington",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials",
@@ -1351,7 +1351,7 @@
       "name": "Wisconsin",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://dpi.wi.gov/standards",
@@ -1378,7 +1378,7 @@
       "name": "Wyoming",
       "governance": "Local Control",
       "priority": 2,
-      "last_verified": "2026-04-23",
+      "last_verified": "2026-04-27",
       "sources": {
         "doe_instructional_materials": {
           "url": "https://edu.wyoming.gov/for-district-leadership/standards/",

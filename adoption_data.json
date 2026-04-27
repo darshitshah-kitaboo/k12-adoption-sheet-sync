@@ -2493,7 +2493,7 @@
       "cycles": [
         {
           "id": "AZ1",
-          "src": "https://www.azed.gov/academic-standards",
+          "src": "https://www.azed.gov/",
           "src2": [],
           "v": "2026-04-25",
           "ac": false,
@@ -2618,7 +2618,7 @@
       "cycles": [
         {
           "id": "DC1",
-          "src": "https://osse.dc.gov/page/elementary-and-secondary-education-osse",
+          "src": "https://osse.dc.gov/",
           "src2": [],
           "v": "2026-04-25",
           "ac": false,
@@ -2857,7 +2857,7 @@
       "cycles": [
         {
           "id": "MD1",
-          "src": "https://marylandpublicschools.org/programs/Pages/Programs.aspx",
+          "src": "https://marylandpublicschools.org/",
           "src2": [],
           "v": "2026-04-25",
           "ac": false,
@@ -3107,7 +3107,7 @@
       "cycles": [
         {
           "id": "ND1",
-          "src": "https://www.nd.gov/dpi/educators/curriculum-and-instruction",
+          "src": "https://www.nd.gov/dpi/",
           "src2": [],
           "v": "2026-04-25",
           "ac": false,
@@ -3182,7 +3182,7 @@
       "cycles": [
         {
           "id": "RI1",
-          "src": "https://www.ride.ri.gov/InstructionAssessment.aspx",
+          "src": "https://www.ride.ri.gov/",
           "src2": [],
           "v": "2026-04-25",
           "ac": false,

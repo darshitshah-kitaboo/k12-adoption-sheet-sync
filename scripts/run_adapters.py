@@ -83,16 +83,16 @@ ADAPTERS = {
     # Promote individuals to required=True once their live page is
     # stable. Keep CA and KY at the front because they had pre-existing
     # registry URLs and richer adoption_data context.
-    "CA": {"module": "scripts.adapters.ca", "required": False},
-    "KY": {"module": "scripts.adapters.ky", "required": False},
-    "AK": {"module": "scripts.adapters.ak", "required": False},
+    "CA": {"module": "scripts.adapters.ca", "required": True},
+    "KY": {"module": "scripts.adapters.ky", "required": True},
+    "AK": {"module": "scripts.adapters.ak", "required": True},
     "AZ": {"module": "scripts.adapters.az", "required": False},
     "CO": {"module": "scripts.adapters.co", "required": False},
     "CT": {"module": "scripts.adapters.ct", "required": False},
     "DC": {"module": "scripts.adapters.dc", "required": False},
     "DE": {"module": "scripts.adapters.de", "required": False},
     "IA": {"module": "scripts.adapters.ia", "required": False},
-    "IL": {"module": "scripts.adapters.il", "required": False},
+    "IL": {"module": "scripts.adapters.il", "required": True},
     "KS": {"module": "scripts.adapters.ks", "required": False},
     "MA": {"module": "scripts.adapters.ma", "required": False},
     "MD": {"module": "scripts.adapters.md", "required": False},
@@ -109,10 +109,10 @@ ADAPTERS = {
     "OH": {"module": "scripts.adapters.oh", "required": False},
     "PA": {"module": "scripts.adapters.pa", "required": False},
     "RI": {"module": "scripts.adapters.ri", "required": False},
-    "SD": {"module": "scripts.adapters.sd", "required": False},
-    "VT": {"module": "scripts.adapters.vt", "required": False},
-    "WA": {"module": "scripts.adapters.wa", "required": False},
-    "WI": {"module": "scripts.adapters.wi", "required": False},
+    "SD": {"module": "scripts.adapters.sd", "required": True},
+    "VT": {"module": "scripts.adapters.vt", "required": True},
+    "WA": {"module": "scripts.adapters.wa", "required": True},
+    "WI": {"module": "scripts.adapters.wi", "required": True},
     "WY": {"module": "scripts.adapters.wy", "required": False},
     # Live-verification adapters for state-adoption states whose cycles
     # were curated by hand. The adapter only needs to return a non-empty
@@ -121,10 +121,10 @@ ADAPTERS = {
     # WAF-blocked from data-center IPs so it is required=False; any
     # subset of these can be promoted to required=True once the live
     # page proves stable.
-    "ID": {"module": "scripts.adapters.id", "required": False},
+    "ID": {"module": "scripts.adapters.id", "required": True},
     "NV": {"module": "scripts.adapters.nv", "required": False},
     "NM": {"module": "scripts.adapters.nm", "required": False},
-    "OR": {"module": "scripts.adapters.or", "required": False},
+    "OR": {"module": "scripts.adapters.or", "required": True},
     "WV": {"module": "scripts.adapters.wv", "required": False},
     # Zero-cycle gap-fill. AR, GA, HI, IN had governance=State adoption
     # but cycles=[] before today's seed pass. Cycles are now seeded as
@@ -132,7 +132,7 @@ ADAPTERS = {
     "AR": {"module": "scripts.adapters.ar", "required": False},
     "GA": {"module": "scripts.adapters.ga", "required": False},
     "HI": {"module": "scripts.adapters.hi", "required": False},
-    "IN": {"module": "scripts.adapters.in", "required": False},
+    "IN": {"module": "scripts.adapters.in", "required": True},
 }
 
 # Fields in a cycle record that count as meaningful when diffing. Changes

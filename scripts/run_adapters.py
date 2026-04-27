@@ -114,6 +114,25 @@ ADAPTERS = {
     "WA": {"module": "scripts.adapters.wa", "required": False},
     "WI": {"module": "scripts.adapters.wi", "required": False},
     "WY": {"module": "scripts.adapters.wy", "required": False},
+    # Live-verification adapters for state-adoption states whose cycles
+    # were curated by hand. The adapter only needs to return a non-empty
+    # snapshot so promote_scraped Rule 1 keeps last_verified fresh.
+    # Cycle structure stays canonical in adoption_data.json. NM is
+    # WAF-blocked from data-center IPs so it is required=False; any
+    # subset of these can be promoted to required=True once the live
+    # page proves stable.
+    "ID": {"module": "scripts.adapters.id", "required": False},
+    "NV": {"module": "scripts.adapters.nv", "required": False},
+    "NM": {"module": "scripts.adapters.nm", "required": False},
+    "OR": {"module": "scripts.adapters.or", "required": False},
+    "WV": {"module": "scripts.adapters.wv", "required": False},
+    # Zero-cycle gap-fill. AR, GA, HI, IN had governance=State adoption
+    # but cycles=[] before today's seed pass. Cycles are now seeded as
+    # Monitoring placeholders; these adapters keep them refreshed.
+    "AR": {"module": "scripts.adapters.ar", "required": False},
+    "GA": {"module": "scripts.adapters.ga", "required": False},
+    "HI": {"module": "scripts.adapters.hi", "required": False},
+    "IN": {"module": "scripts.adapters.in", "required": False},
 }
 
 # Fields in a cycle record that count as meaningful when diffing. Changes

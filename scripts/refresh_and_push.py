@@ -40,6 +40,7 @@ LOG = logging.getLogger("refresh_and_push")
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = ROOT / ".sheet_config.json"
 DATA_PATH = ROOT / "adoption_data.json"
+SCRAPED_DIR = ROOT / "scraped"
 
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
@@ -63,6 +64,17 @@ TIMELINE_COLS = ["Cycle ID", "State Code", "State", "Subject", "Event Date", "Mi
 SOURCES_COLS = ["Cycle ID", "State Code", "State", "Subject", "Source Type", "Title", "URL"]
 TIPS_COLS = ["Cycle ID", "State Code", "State", "Subject", "Category", "Tip"]
 ENROLLMENT_COLS = ["State Code", "Total Enrollment", "Year", "Source", "Confidence", "K-8 (CA only)"]
+# Documents tab — fed from scraped/<STATE>.json. Surfaces every
+# document anchor an adapter saw on its last live run, so a publisher
+# can scan what each state DOE is currently publishing without diving
+# into the JSON files. Local-control adapters dominate this tab
+# because they emit one row per linked PDF/DOCX, but state-adoption
+# adapters that capture a `cycles` list with `document_url` records
+# show up here too.
+DOCUMENTS_COLS = [
+    "State Code", "State", "Subject Bucket", "Title",
+    "Section Heading", "Document URL", "Source URL", "Last Seen",
+]
 
 # Header rows already exist on the sheet. Data starts on row 2.
 DATA_START = 2
@@ -209,6 +221,52 @@ def build_enrollment_rows(data):
     return rows
 
 
+def build_documents_rows(scraped_dir=SCRAPED_DIR):
+    """Walk scraped/<STATE>.json and emit one row per tracked document.
+
+    Reads every scraped/<STATE>.json snapshot, looks for cycles that
+    carry a `document_url` field (localctl-style records), and emits a
+    Documents-tab row per entry. State-adoption adapters that don't
+    expose document_url contribute zero rows; their data lives on the
+    other tabs already.
+
+    Rows are sorted by (state, subject_bucket, title) for deterministic
+    diffs run-over-run. The Last Seen column carries the snapshot's
+    scraped_at timestamp truncated to a date.
+    """
+    if not scraped_dir.exists():
+        return []
+    rows = []
+    for path in sorted(scraped_dir.glob("*.json")):
+        if path.name.endswith(".previous.json"):
+            continue
+        try:
+            snap = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        state_code = snap.get("state") or path.stem
+        state_name = snap.get("name") or state_code
+        source_url = snap.get("source_url") or ""
+        scraped_at = (snap.get("scraped_at") or "")[:10]
+        for c in snap.get("cycles") or []:
+            doc_url = c.get("document_url")
+            if not doc_url:
+                # Snapshot wasn't from a localctl-style adapter (no
+                # document_url field). Skip; that data is in Cycles tab.
+                continue
+            rows.append([
+                state_code, state_name,
+                c.get("subject", "") or "General",
+                c.get("title", "") or "(untitled)",
+                c.get("section", "") or "",
+                doc_url,
+                source_url,
+                scraped_at,
+            ])
+    rows.sort(key=lambda r: (r[0], r[2], r[3]))
+    return rows
+
+
 def build_summary_rows(data):
     total_states = len(data["states"])
     total_cycles = sum(len(s["cycles"]) for s in data["states"])
@@ -261,6 +319,34 @@ def clear_and_write(service, sheet_id, tab, num_cols, rows):
     LOG.info("  %-11s %d rows written", tab, len(rows))
 
 
+def ensure_tab(service, sheet_id, tab, header):
+    """Create a tab named `tab` with the given header row if it does not exist.
+
+    Lets refresh_and_push add new tabs without manual intervention. If
+    the tab is already present, no-op. If creation fails (permission
+    error, conflicting name, etc.) the error bubbles up and the caller
+    decides whether to skip writing this tab.
+    """
+    meta = service.spreadsheets().get(
+        spreadsheetId=sheet_id, includeGridData=False).execute()
+    existing = {s["properties"]["title"] for s in meta.get("sheets", [])}
+    if tab in existing:
+        return False
+    requests = [{"addSheet": {"properties": {"title": tab}}}]
+    service.spreadsheets().batchUpdate(
+        spreadsheetId=sheet_id, body={"requests": requests}).execute()
+    # Write the header row so the tab matches the convention of the
+    # other tabs (header on row 1, data starts on row 2).
+    service.spreadsheets().values().update(
+        spreadsheetId=sheet_id,
+        range=f"{tab}!A1",
+        valueInputOption="USER_ENTERED",
+        body={"values": [header]},
+    ).execute()
+    LOG.info("  %-11s tab created", tab)
+    return True
+
+
 def _col_letter(n):
     s = ""
     while n > 0:
@@ -308,6 +394,12 @@ def main():
         clear_and_write(service, sheet_id, "Sources", len(SOURCES_COLS), build_sources_rows(data))
         clear_and_write(service, sheet_id, "Tips", len(TIPS_COLS), build_tips_rows(data))
         clear_and_write(service, sheet_id, "Enrollment", len(ENROLLMENT_COLS), build_enrollment_rows(data))
+        # Documents tab is sourced from scraped/<STATE>.json directly,
+        # not adoption_data.json. ensure_tab will create it on first run
+        # so the user does not have to add a tab by hand.
+        ensure_tab(service, sheet_id, "Documents", DOCUMENTS_COLS)
+        clear_and_write(service, sheet_id, "Documents", len(DOCUMENTS_COLS),
+                        build_documents_rows())
     except HttpError as e:
         LOG.error("Sheets API error: %s", e)
         sys.exit(2)

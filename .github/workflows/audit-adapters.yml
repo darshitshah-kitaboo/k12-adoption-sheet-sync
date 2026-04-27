@@ -1,0 +1,50 @@
+name: audit-adapters
+
+# One-shot diagnostic. Runs every adapter against its live DOE URL and
+# bucket-sorts each state into GREEN (clean fetch + non-zero cycles),
+# YELLOW (clean fetch but zero cycles), or RED (fetch itself failed).
+#
+# Triggered manually from the Actions tab. Output appears in the run
+# log directly, and the full per-state JSON is uploaded as a workflow
+# artifact you can download.
+#
+# Does NOT modify scraped/, adoption_data.json, or the Google Sheet.
+# Pure read-only diagnosis.
+
+on:
+  workflow_dispatch:
+    inputs:
+      states:
+        description: "Optional space-separated state codes (e.g. 'NY OH WA'). Leave blank to audit all 51."
+        required: false
+        default: ""
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run adapter audit
+        run: |
+          if [ -n "${{ inputs.states }}" ]; then
+            python scripts/audit_adapters.py --only ${{ inputs.states }}
+          else
+            python scripts/audit_adapters.py
+          fi
+
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: adapter-audit
+          path: logs/adapter_audit_*.json
+          retention-days: 30

@@ -156,6 +156,32 @@ def run():
         _fail(f"pruned doc count wrong: {pruned_data['document_count']}")
     _ok("content_hash and document_count react to link removal")
 
+    # HTML fallback: a link with no .pdf extension but matching adoption
+    # keywords should still get captured. This is what unblocks states
+    # like NY and OH whose frameworks live at /curriculum/math-framework
+    # rather than as PDFs.
+    html_fallback = """
+    <html><head><title>Test</title></head><body>
+    <h1>Curriculum</h1>
+    <a href="/curriculum/mathematics-framework">Mathematics Framework</a>
+    <a href="/curriculum/ela-standards">ELA Standards</a>
+    <a href="/about-us">About Us</a>
+    </body></html>
+    """
+    fb = localctl.parse(
+        html_fallback, source_url="https://example.gov/",
+        state_code="ZZ", state_name="Test")
+    fb_urls = sorted(c["document_url"] for c in fb["cycles"])
+    if fb["document_count"] != 2:
+        _fail(f"HTML fallback expected 2 docs, got {fb['document_count']}: {fb_urls}")
+    if not any("framework" in u for u in fb_urls):
+        _fail(f"HTML fallback missed framework page: {fb_urls}")
+    if not any("standards" in u for u in fb_urls):
+        _fail(f"HTML fallback missed standards page: {fb_urls}")
+    if any("about-us" in u for u in fb_urls):
+        _fail(f"HTML fallback wrongly captured About Us: {fb_urls}")
+    _ok("HTML fallback captures keyword-matched anchors without PDF extension")
+
     print("\nAll local-control adapter tests passed. Sample output:")
     print(json.dumps(data, indent=2)[:600] + "...")
 

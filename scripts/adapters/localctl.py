@@ -66,6 +66,32 @@ DEFAULT_DOCUMENT_EXTS = (
     ".csv",
 )
 
+# Keyword fallback for HTML pages. Many state DOEs publish frameworks,
+# rubrics, and HQIM lists as plain HTML pages, not PDFs. When an anchor
+# does not have a document extension we still keep it if its visible
+# text matches a strong adoption-relevant phrase. The keywords are case-
+# insensitive and matched against the trimmed anchor text only.
+ADOPTION_KEYWORDS = (
+    "framework",
+    "rubric",
+    "standards",
+    "approved list",
+    "approved materials",
+    "hqim",
+    "high-quality instructional materials",
+    "high quality instructional materials",
+    "recommended materials",
+    "recommended list",
+    "curriculum guide",
+    "curriculum framework",
+    "instructional materials",
+    "review tool",
+    "evaluation criteria",
+    "adoption schedule",
+    "review cycle",
+    "selection criteria",
+)
+
 # Bucket every captured link into one of these categories by inspecting
 # its visible text. The category becomes the synthetic cycle's "subject"
 # so downstream consumers can group by intent rather than file name.
@@ -110,8 +136,16 @@ def fetch_html(url, *, warmup_url=None):
     return base.fetch_html(url, warmup_url=warmup_url)
 
 
-def _is_document_link(href, document_exts, extra_hosts):
-    """True if href points to a trackable document or whitelisted host."""
+def _is_document_link(href, document_exts, extra_hosts, *, anchor_text=""):
+    """True if href points to a trackable document or whitelisted host.
+
+    Three independent paths qualify a link:
+      1. The path ends in a document extension (.pdf, .docx, etc.)
+      2. The host is in the EXTRA_HOSTS whitelist (e.g. airtable.com)
+      3. The visible anchor text contains an ADOPTION_KEYWORDS phrase.
+         This is the HTML-page fallback for state DOEs that publish
+         their frameworks and HQIM lists as web pages, not PDFs.
+    """
     parsed = urlparse(href)
     path = (parsed.path or "").lower()
     for ext in document_exts:
@@ -121,6 +155,11 @@ def _is_document_link(href, document_exts, extra_hosts):
     for h in extra_hosts:
         if h and h.lower() in host:
             return True
+    text_low = (anchor_text or "").lower()
+    if text_low:
+        for kw in ADOPTION_KEYWORDS:
+            if kw in text_low:
+                return True
     return False
 
 
@@ -223,7 +262,8 @@ def parse(html, source_url, *,
         text = a.get_text(" ", strip=True)
         if _is_noise(text):
             continue
-        if not _is_document_link(absolute, document_exts, extra_hosts):
+        if not _is_document_link(absolute, document_exts, extra_hosts,
+                                  anchor_text=text):
             continue
         seen_urls.add(absolute)
 

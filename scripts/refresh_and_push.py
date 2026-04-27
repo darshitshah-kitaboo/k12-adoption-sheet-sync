@@ -60,9 +60,9 @@ CYCLES_COLS = [
     "Accessibility", "NIMAS", "Digital", "Packaging", "HQIM", "Change Pending",
     "Primary Source URL", "Last Verified",
 ]
-TIMELINE_COLS = ["Cycle ID", "State Code", "State", "Subject", "Event Date", "Milestone", "Passed"]
-SOURCES_COLS = ["Cycle ID", "State Code", "State", "Subject", "Source Type", "Title", "URL"]
-TIPS_COLS = ["Cycle ID", "State Code", "State", "Subject", "Category", "Tip"]
+TIMELINE_COLS = ["Cycle ID", "State Code", "State", "Subject", "Subject Group", "Event Date", "Milestone", "Passed"]
+SOURCES_COLS = ["Cycle ID", "State Code", "State", "Subject", "Subject Group", "Source Type", "Title", "URL"]
+TIPS_COLS = ["Cycle ID", "State Code", "State", "Subject", "Subject Group", "Category", "Tip"]
 ENROLLMENT_COLS = ["State Code", "Total Enrollment", "Year", "Source", "Confidence", "K-8 (CA only)"]
 # Documents tab — fed from scraped/<STATE>.json. Surfaces every
 # document anchor an adapter saw on its last live run, so a publisher
@@ -84,6 +84,103 @@ def _bool(v):
     if v is True: return "Yes"
     if v is False: return "No"
     return ""
+
+
+# Front-end subject buckets. Used by the kitaboo.com/<subject>-publishers/
+# pages to filter the dashboard rows that apply to each subject vertical.
+# Order matters: this is the canonical sort order for multi-bucket rows.
+SUBJECT_BUCKETS = ("ELA/RLA", "Math", "Science", "Social Studies", "Others")
+
+# Keyword -> bucket. Order within each bucket does not matter; matches
+# are case-insensitive substring against the cycle's full subject text.
+# All-subjects sentinels (handled separately) trigger every named bucket.
+SUBJECT_KEYWORDS = {
+    "ELA/RLA": (
+        "ela", "rla",
+        "english language arts", "language arts",
+        "reading", "phonics",
+        "english", "eld", "sla", "sld",
+        # Note: "literacy" is intentionally NOT in this list. It would
+        # mis-bucket "Digital Literacy & Computer Science" (Alabama) as
+        # ELA when the user has confirmed it should be Science. ELA
+        # detection still works via the more specific phrases above.
+    ),
+    "Math": (
+        "math", "mathematics", "algebra", "geometry", "calculus", "arithmetic",
+    ),
+    "Science": (
+        "science", "biology", "chemistry", "physics", "stem",
+        # Per user direction (2026-04-27): Computer Science, Computer Apps,
+        # and Digital Literacy bucket as Science. Alabama "Digital Literacy
+        # & Computer Science" is the canonical example.
+        "computer science", "computer app", "digital literacy",
+        # CS abbreviations as they appear in Idaho subject lists,
+        # OK out-of-cycle flyers, etc. Word-bounded variants only;
+        # bare "cs" without delimiters would mis-fire on words like
+        # "csa" or fragments inside other tokens.
+        " cs ", " cs,", "cs apps", "cs application",
+    ),
+    "Social Studies": (
+        "social studies", "social science", "history",
+        "civics", "geography", "economics", "government",
+    ),
+    "Others": (
+        "cte", "career and technical", "career-technical",
+        "world language", "world languages",
+        # Arts matching is intentionally narrow. Bare " arts " would
+        # also fire on "English Language Arts", which is ELA, not
+        # Others. We require either a specific arts qualifier
+        # (fine/visual/performing/the) or a list-position marker
+        # (preceded or followed by comma).
+        "fine arts", "performing arts", "visual arts", "the arts",
+        ", arts", "arts,", "arts &", "arts and",
+        "physical education", " pe ", " pe/", "pe/health",
+        "health", "music", "library",
+        "driver", "business", "technology", "information technology",
+        "early childhood", "pre-k", "pre-kindergarten", "prekindergarten",
+    ),
+}
+
+# All-subjects sentinels. When the cycle subject contains one of these,
+# emit every named bucket so the row appears on every front-end subject
+# page. Useful for local-control states and rolling-review states whose
+# coverage genuinely spans every subject.
+_ALL_SUBJECTS_MARKERS = (
+    "all subjects", "all-subjects",
+    "rolling", "monitoring",
+    "general",
+)
+
+
+def subject_groups(subject):
+    """Bucket a granular subject string into one or more SUBJECT_BUCKETS.
+
+    Returns a comma-joined string in canonical order. Falls back to
+    "Others" when nothing matches, never returns an empty string.
+
+    Examples (from the production data set):
+        "Mathematics & Computer Science"  -> "Math, Science"
+        "Digital Literacy & Computer Science" -> "Science"
+        "ELA / English Language Arts"     -> "ELA/RLA"
+        "Social Studies, CTE: Business"   -> "Social Studies, Others"
+        "All Subjects (Local)"            -> "ELA/RLA, Math, Science, Social Studies, Others"
+        "General"                         -> "ELA/RLA, Math, Science, Social Studies, Others"
+    """
+    if not subject:
+        return "Others"
+    low = " " + subject.lower() + " "
+    if any(m in low for m in _ALL_SUBJECTS_MARKERS):
+        return ", ".join(SUBJECT_BUCKETS)
+    matched = []
+    for bucket in SUBJECT_BUCKETS:
+        for kw in SUBJECT_KEYWORDS[bucket]:
+            if kw in low:
+                if bucket not in matched:
+                    matched.append(bucket)
+                break
+    if not matched:
+        matched.append("Others")
+    return ", ".join(matched)
 
 
 def load_config():
@@ -182,7 +279,12 @@ def build_cycles_rows(data):
             students = c.get("students") or get_students(data["enrollment"], s["code"], c.get("gd", ""))
             rows.append([
                 c.get("id", ""), s["code"], s["name"], s["governance"],
-                c.get("su", ""), c.get("gr", ""), c.get("gd", ""),
+                # Subject Group is now the bucketed value (Math, Science,
+                # ELA/RLA, Social Studies, Others — comma-joined when
+                # multi). Replaces the previous gr-field-based content,
+                # which was inconsistent across states. Front-end pages
+                # at kitaboo.com/<subject>-publishers/ filter on this.
+                c.get("su", ""), subject_groups(c.get("su", "")), c.get("gd", ""),
                 c.get("st", ""), c.get("cf", ""), c.get("tier", ""),
                 c.get("ay", ""), c.get("iy", ""),
                 c.get("cs", ""), c.get("ce", ""),
@@ -200,9 +302,10 @@ def build_timeline_rows(data):
     rows = []
     for s in data["states"]:
         for c in s["cycles"]:
+            sg = subject_groups(c.get("su", ""))
             for ev in (c.get("ke") or []):
                 rows.append([
-                    c.get("id", ""), s["code"], s["name"], c.get("su", ""),
+                    c.get("id", ""), s["code"], s["name"], c.get("su", ""), sg,
                     ev.get("d", ""), ev.get("l", ""), _bool(ev.get("p", False)),
                 ])
     return rows
@@ -212,11 +315,12 @@ def build_sources_rows(data):
     rows = []
     for s in data["states"]:
         for c in s["cycles"]:
+            sg = subject_groups(c.get("su", ""))
             if c.get("src"):
-                rows.append([c.get("id", ""), s["code"], s["name"], c.get("su", ""),
+                rows.append([c.get("id", ""), s["code"], s["name"], c.get("su", ""), sg,
                              "Primary", "Primary source", c.get("src", "")])
             for src in (c.get("src2") or []):
-                rows.append([c.get("id", ""), s["code"], s["name"], c.get("su", ""),
+                rows.append([c.get("id", ""), s["code"], s["name"], c.get("su", ""), sg,
                              src.get("ty", "Secondary"), src.get("t", ""), src.get("u", "")])
     return rows
 
@@ -225,8 +329,9 @@ def build_tips_rows(data):
     rows = []
     for s in data["states"]:
         for c in s["cycles"]:
+            sg = subject_groups(c.get("su", ""))
             for tip in (c.get("tips") or []):
-                rows.append([c.get("id", ""), s["code"], s["name"], c.get("su", ""),
+                rows.append([c.get("id", ""), s["code"], s["name"], c.get("su", ""), sg,
                              tip.get("cat", ""), tip.get("note", "")])
     return rows
 
@@ -319,8 +424,26 @@ def get_service(sa_path):
     return build("sheets", "v4", credentials=creds, cache_discovery=False)
 
 
-def clear_and_write(service, sheet_id, tab, num_cols, rows):
+def clear_and_write(service, sheet_id, tab, num_cols, rows, header=None):
+    """Clear and rewrite a tab's data area.
+
+    When `header` is supplied, row 1 is also overwritten so the column
+    labels stay in sync with the schema constants. Without this the
+    sheet's row-1 headers drift out of date when columns are added or
+    renamed in code, breaking the front-end's column-name lookups.
+    """
     last_col = _col_letter(num_cols)
+    if header:
+        # Clear row 1 too, then write the header.
+        service.spreadsheets().values().clear(
+            spreadsheetId=sheet_id, range=f"{tab}!A1:{last_col}1", body={}
+        ).execute()
+        service.spreadsheets().values().update(
+            spreadsheetId=sheet_id,
+            range=f"{tab}!A1",
+            valueInputOption="USER_ENTERED",
+            body={"values": [header]},
+        ).execute()
     clear_range = f"{tab}!A{DATA_START}:{last_col}"
     service.spreadsheets().values().clear(
         spreadsheetId=sheet_id, range=clear_range, body={}
@@ -404,20 +527,32 @@ def main():
     LOG.info("Pushing to sheet %s ...", sheet_id[:12] + "...")
 
     try:
-        # Summary tab uses a different header layout; write from A2 anyway.
+        # Summary tab uses a different header layout (label/value/notes
+        # rows from A2 down). Skip the header rewrite so the bespoke
+        # heading area on row 1 stays intact.
         clear_and_write(service, sheet_id, "Summary", 3, build_summary_rows(data))
-        clear_and_write(service, sheet_id, "States", len(STATES_COLS), build_states_rows(data))
-        clear_and_write(service, sheet_id, "Cycles", len(CYCLES_COLS), build_cycles_rows(data))
-        clear_and_write(service, sheet_id, "Timeline", len(TIMELINE_COLS), build_timeline_rows(data))
-        clear_and_write(service, sheet_id, "Sources", len(SOURCES_COLS), build_sources_rows(data))
-        clear_and_write(service, sheet_id, "Tips", len(TIPS_COLS), build_tips_rows(data))
-        clear_and_write(service, sheet_id, "Enrollment", len(ENROLLMENT_COLS), build_enrollment_rows(data))
+        # The remaining tabs all use the standard header-on-row-1 layout.
+        # Passing header= keeps row 1 in lockstep with the schema so a
+        # column rename or addition (like the Subject Group rollout)
+        # does not leave the sheet's header drifting out of date.
+        clear_and_write(service, sheet_id, "States", len(STATES_COLS),
+                        build_states_rows(data), header=STATES_COLS)
+        clear_and_write(service, sheet_id, "Cycles", len(CYCLES_COLS),
+                        build_cycles_rows(data), header=CYCLES_COLS)
+        clear_and_write(service, sheet_id, "Timeline", len(TIMELINE_COLS),
+                        build_timeline_rows(data), header=TIMELINE_COLS)
+        clear_and_write(service, sheet_id, "Sources", len(SOURCES_COLS),
+                        build_sources_rows(data), header=SOURCES_COLS)
+        clear_and_write(service, sheet_id, "Tips", len(TIPS_COLS),
+                        build_tips_rows(data), header=TIPS_COLS)
+        clear_and_write(service, sheet_id, "Enrollment", len(ENROLLMENT_COLS),
+                        build_enrollment_rows(data), header=ENROLLMENT_COLS)
         # Documents tab is sourced from scraped/<STATE>.json directly,
         # not adoption_data.json. ensure_tab will create it on first run
         # so the user does not have to add a tab by hand.
         ensure_tab(service, sheet_id, "Documents", DOCUMENTS_COLS)
         clear_and_write(service, sheet_id, "Documents", len(DOCUMENTS_COLS),
-                        build_documents_rows())
+                        build_documents_rows(), header=DOCUMENTS_COLS)
     except HttpError as e:
         LOG.error("Sheets API error: %s", e)
         sys.exit(2)

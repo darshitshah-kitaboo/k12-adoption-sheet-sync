@@ -18,6 +18,15 @@ on:
       - 'scripts/validate_registry.py'
       - '.github/workflows/validate-registry.yml'
 
+# Serialise validate-registry runs. Two parallel runs racing on the
+# verification_report.json commit hit a structured-JSON merge conflict
+# that text-merge cannot auto-resolve. Holding a workflow-level lock
+# means a queued run waits rather than colliding. cancel-in-progress
+# is false so a queued run never gets dropped mid-validation.
+concurrency:
+  group: validate-registry
+  cancel-in-progress: false
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -52,16 +61,38 @@ jobs:
           fi
           git commit -m "chore: refresh registry verification [skip ci]"
           # Retry push with rebase when the runner's HEAD is behind main.
-          # Happens when a human pushed while the workflow was running.
+          # The workflow-level concurrency lock keeps validate-registry
+          # runs from racing each other, but a refresh-data run or a
+          # human commit can still land while validate is in flight.
+          # If the rebase hits a conflict on verification_report.json
+          # (the only structured-JSON file we commit), regenerate it
+          # from scratch by re-running the validator against the fresh
+          # main rather than committing a file with merge markers.
           for attempt in 1 2 3; do
             if git push; then
               echo "Push succeeded on attempt $attempt"
               exit 0
             fi
             echo "Push rejected on attempt $attempt, rebasing and retrying..."
-            git pull --rebase origin main
+            if ! git pull --rebase origin main; then
+              echo "Rebase conflict, abandoning local diff and re-validating..."
+              git rebase --abort || true
+              git fetch origin main
+              git reset --hard origin/main
+              python scripts/validate_registry.py || true
+              git add registry/verification_report.json registry/sources.json
+              if git diff --cached --quiet; then
+                echo "Nothing left to commit after rebuild; exiting clean."
+                exit 0
+              fi
+              if ! python -c "import json; json.load(open('registry/verification_report.json'))"; then
+                echo "verification_report.json is not valid JSON after rebuild; abandoning push" >&2
+                exit 1
+              fi
+              git commit -m "chore: refresh registry verification (rebuilt after rebase conflict) [skip ci]"
+            fi
           done
-          echo "Push still failing after 3 rebase attempts" >&2
+          echo "Push still failing after 3 attempts" >&2
           exit 1
 
       - name: Fail the job if priority-1 URLs failed

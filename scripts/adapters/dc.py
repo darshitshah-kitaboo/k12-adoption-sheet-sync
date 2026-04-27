@@ -23,7 +23,7 @@ from scripts.adapters import localctl
 
 STATE_CODE = "DC"
 STATE_NAME = "District of Columbia"
-SOURCE_URL = "https://osse.dc.gov/page/elementary-and-secondary-education-osse"
+SOURCE_URL = "https://osse.dc.gov/"
 WARMUP_URL = "https://osse.dc.gov/"
 
 # Whitelisted offsite hosts. Add Airtable, Smartsheet, EdReports, or any

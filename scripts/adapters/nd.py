@@ -23,7 +23,7 @@ from scripts.adapters import localctl
 
 STATE_CODE = "ND"
 STATE_NAME = "North Dakota"
-SOURCE_URL = "https://www.nd.gov/dpi/educators/curriculum-and-instruction"
+SOURCE_URL = "https://www.nd.gov/dpi/"
 WARMUP_URL = "https://www.nd.gov/"
 
 # Whitelisted offsite hosts. Add Airtable, Smartsheet, EdReports, or any

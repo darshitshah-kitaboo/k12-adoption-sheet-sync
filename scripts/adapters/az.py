@@ -23,7 +23,7 @@ from scripts.adapters import localctl
 
 STATE_CODE = "AZ"
 STATE_NAME = "Arizona"
-SOURCE_URL = "https://www.azed.gov/academic-standards"
+SOURCE_URL = "https://www.azed.gov/"
 WARMUP_URL = "https://www.azed.gov/"
 
 # Whitelisted offsite hosts. Add Airtable, Smartsheet, EdReports, or any

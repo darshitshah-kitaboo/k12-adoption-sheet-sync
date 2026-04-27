@@ -23,7 +23,7 @@ from scripts.adapters import localctl
 
 STATE_CODE = "MD"
 STATE_NAME = "Maryland"
-SOURCE_URL = "https://marylandpublicschools.org/programs/Pages/Programs.aspx"
+SOURCE_URL = "https://marylandpublicschools.org/"
 WARMUP_URL = "https://marylandpublicschools.org/"
 
 # Whitelisted offsite hosts. Add Airtable, Smartsheet, EdReports, or any

@@ -23,7 +23,7 @@ from scripts.adapters import localctl
 
 STATE_CODE = "RI"
 STATE_NAME = "Rhode Island"
-SOURCE_URL = "https://www.ride.ri.gov/InstructionAssessment.aspx"
+SOURCE_URL = "https://www.ride.ri.gov/"
 WARMUP_URL = "https://www.ride.ri.gov/"
 
 # Whitelisted offsite hosts. Add Airtable, Smartsheet, EdReports, or any

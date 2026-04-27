@@ -100,8 +100,26 @@ def load_data():
         raise FileNotFoundError(
             f"{DATA_PATH} is missing. The nightly task should produce it before pushing."
         )
-    with DATA_PATH.open() as f:
-        return json.load(f)
+    raw = DATA_PATH.read_text(encoding="utf-8")
+    # Catch merge-conflict markers from a failed rebase before json.load
+    # blows up with a confusing "Expecting property name" message.
+    for marker in ("<<<<<<<", "=======\n", ">>>>>>>"):
+        if marker in raw:
+            line = raw[:raw.index(marker)].count("\n") + 1
+            raise ValueError(
+                f"adoption_data.json contains a merge conflict marker ({marker!r}) "
+                f"at approximately line {line}. The previous workflow run had a "
+                f"rebase conflict that was committed without resolution. Pull main, "
+                f"resolve or revert that commit, and re-run."
+            )
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError as e:
+        raise ValueError(
+            f"adoption_data.json is not valid JSON: {e}. "
+            f"This usually means a previous CI run committed a partially-written "
+            f"file. Restore from git history or from a known-good local copy."
+        ) from e
 
 
 def recompute_time_fields(data):

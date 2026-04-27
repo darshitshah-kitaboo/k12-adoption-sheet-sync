@@ -108,6 +108,16 @@ DASHBOARD_SKIP_URLS = {
     # doe_instructional_materials.
     "https://web.ped.nm.gov/wp-content/uploads/2025/01/adoption-cycle_02_19_24.pdf",
     "https://web.ped.nm.gov/bureaus/instructional-materials/publishers/",
+    "https://web.ped.nm.gov/wp-content/uploads/2025/08/2026_RFA-for-9-12-ELA_SLA_WL_ELD_SLD.pdf",
+    # Virginia DOE WAF tightened in late April 2026. The textbook subject
+    # pages 403 from data-center IPs even with browser headers and a
+    # warmup hit. The URLs are the canonical curated subject hubs and
+    # work in a real browser; skip them rather than auto-replace with
+    # less-specific parents.
+    "https://www.doe.virginia.gov/teaching-learning-assessment/k-12-standards-instruction/english-reading-literacy/english-textbooks",
+    "https://www.doe.virginia.gov/teaching-learning-assessment/k-12-standards-instruction/history-social-science/history-social-science-textbooks",
+    "https://www.doe.virginia.gov/teaching-learning-assessment/k-12-standards-instruction/mathematics/mathematics-textbooks",
+    "https://www.doe.virginia.gov/teaching-learning-assessment/k-12-standards-instruction/science/science-textbooks",
 }
 
 

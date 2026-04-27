@@ -35,6 +35,7 @@ import json
 import re
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
@@ -150,7 +151,11 @@ def _collect_announcement(news_heading, source_url):
             for a in sib.find_all("a"):
                 href = a.get("href", "") or ""
                 if href and href.lower().startswith(("http", "/")):
-                    first_url = href
+                    # Resolve relative paths against source_url so the
+                    # promoted dashboard URL is always absolute. Without
+                    # this, a "/teaching-learning-.../mathematics-textbooks"
+                    # href would land in the sheet as a broken relative path.
+                    first_url = urljoin(source_url, href)
                     break
 
     return title, subject, latest_date, first_url

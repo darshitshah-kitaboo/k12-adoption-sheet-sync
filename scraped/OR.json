@@ -1,0 +1,35 @@
+{
+  "state": "OR",
+  "name": "Oregon",
+  "source_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/default.aspx",
+  "scraped_at": "2026-04-27T05:43:23+00:00",
+  "page_title": "High-Quality Instructional Materials (HQIM)",
+  "document_count": 3,
+  "content_hash": "f946fc477c9b580f",
+  "has_active_cycle": false,
+  "call_for_bids_url": null,
+  "cycle_count": 3,
+  "cycles": [
+    {
+      "subject": "General",
+      "title": "A\u200bccessible Educational Materials and Technologies in the IEP\u200b\u200b",
+      "section": null,
+      "document_url": "http://aem.cast.org/binaries/content/assets/common/publications/aem/aem-iep-brief-2018.pdf",
+      "document_index": 1
+    },
+    {
+      "subject": "Adoption",
+      "title": "Oregon Instructional Materials Adoption Schedule\u200b",
+      "section": "Instructional Materials Resources",
+      "document_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/Documents/InstructionalMaterialsToolkit/Instructional%20Materials%20Timeline.pdf",
+      "document_index": 2
+    },
+    {
+      "subject": "Adoption",
+      "title": "schedule for review and adoption of instructional materials",
+      "section": "How Oregon school districts select\u00a0Instructional Materials\u00a0or Curriculum:",
+      "document_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/Documents/Oregon%20Instructional%20Materials%20Adoption%20Schedule.pdf",
+      "document_index": 3
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-27T05:35:05+00:00",
-  "count": 1,
+  "generated_at": "2026-04-27T05:43:41+00:00",
+  "count": 3,
   "conflicts": [
     {
       "state": "NC",
@@ -9,6 +9,24 @@
       "field": "src",
       "adoption_data_value": "https://www.dpi.nc.gov/districts-schools/classroom-resources/office-teaching-and-learning",
       "scraped_value": "https://www.dpi.nc.gov/districts-schools/district-operations/textbook-adoption",
+      "note": "adoption_data.json src does not match the scraped URL. Confirm which is canonical."
+    },
+    {
+      "state": "OR",
+      "cycle_id": "OR1",
+      "subject": "Physical Education, World Languages, Arts",
+      "field": "src",
+      "adoption_data_value": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/announcements-and-notices.aspx",
+      "scraped_value": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/default.aspx",
+      "note": "adoption_data.json src does not match the scraped URL. Confirm which is canonical."
+    },
+    {
+      "state": "OR",
+      "cycle_id": "OR2",
+      "subject": "ELA / English Language Arts",
+      "field": "src",
+      "adoption_data_value": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/announcements-and-notices.aspx",
+      "scraped_value": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/default.aspx",
       "note": "adoption_data.json src does not match the scraped URL. Confirm which is canonical."
     }
   ]

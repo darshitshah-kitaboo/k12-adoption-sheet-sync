@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-27T10:09:00+00:00",
+  "generated_at": "2026-04-27T10:14:16+00:00",
   "summary": {
     "total_urls": 89,
-    "ok": 83,
-    "failed": 1,
+    "ok": 81,
+    "failed": 3,
     "skipped": 5,
-    "priority_one_failures": 0,
+    "priority_one_failures": 2,
     "dashboard": {
       "total_urls": 119,
-      "ok": 103,
-      "failed": 6,
+      "ok": 104,
+      "failed": 5,
       "skipped": 10
     }
   },
@@ -33,7 +33,7 @@
         "url": "https://generalservices.state.nm.us/state-purchasing/active-itbs-and-rfps/active-procurements/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 1064,
+        "elapsed_ms": 487,
         "error": null
       }
     },
@@ -56,7 +56,7 @@
         "url": "https://eva.virginia.gov/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 96,
+        "elapsed_ms": 104,
         "error": null
       }
     },
@@ -69,49 +69,49 @@
         "error": "skip_validation: true (WAF-blocked from data-center IPs)"
       }
     },
-    "AR": {
-      "sbe_agenda": {
-        "url": "https://meetings.boardbook.org/Public/Organization/1133",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 129,
-        "error": null
-      },
-      "doe_instructional_materials": {
-        "url": "https://dese.ade.arkansas.gov/Offices/learning-services/curriculum-support/arkansas-initiative-for-instructional-materials-aiim",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 837,
-        "error": null
-      },
-      "procurement_portal": {
-        "url": "https://www.arkansas.gov/tss/procurement/bids/index.php",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 1006,
-        "error": null
-      }
-    },
     "AL": {
       "procurement_portal": {
         "url": "https://procurement.staars.alabama.gov/",
         "final_url": "https://procurement.staars.alabama.gov/PRDVSS1X1/AltSelfService",
         "status": 200,
-        "elapsed_ms": 204,
+        "elapsed_ms": 175,
         "error": null
       },
       "doe_instructional_materials": {
         "url": "https://www.alabamaachieves.org/content-areas-specialty/textbook-adoption-and-procurement/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 351,
+        "elapsed_ms": 388,
         "error": null
       },
       "sbe_agenda": {
         "url": "https://www.alabamaachieves.org/state-board-of-education/meeting-agendas/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 356,
+        "elapsed_ms": 390,
+        "error": null
+      }
+    },
+    "AR": {
+      "sbe_agenda": {
+        "url": "https://meetings.boardbook.org/Public/Organization/1133",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 260,
+        "error": null
+      },
+      "procurement_portal": {
+        "url": "https://www.arkansas.gov/tss/procurement/bids/index.php",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 350,
+        "error": null
+      },
+      "doe_instructional_materials": {
+        "url": "https://dese.ade.arkansas.gov/Offices/learning-services/curriculum-support/arkansas-initiative-for-instructional-materials-aiim",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 715,
         "error": null
       }
     },
@@ -120,113 +120,67 @@
         "url": "https://caleprocure.ca.gov/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 205,
-        "error": null
-      },
-      "sbe_agenda": {
-        "url": "https://www.cde.ca.gov/be/ag/ag/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 991,
+        "elapsed_ms": 198,
         "error": null
       },
       "doe_instructional_materials": {
         "url": "https://www.cde.ca.gov/ci/cr/cf/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 1151,
+        "elapsed_ms": 818,
+        "error": null
+      },
+      "sbe_agenda": {
+        "url": "https://www.cde.ca.gov/be/ag/ag/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 925,
         "error": null
       }
     },
     "FL": {
-      "doe_instructional_materials": {
-        "url": "https://www.fldoe.org/academics/standards/instructional-materials/",
+      "sbe_agenda": {
+        "url": "https://www.fldoe.org/policy/state-board-of-edu/meetings/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 444,
+        "elapsed_ms": 210,
         "error": null
       },
       "procurement_portal": {
         "url": "https://www.dms.myflorida.com/business_operations/state_purchasing/vendor_resources/solicitations_vendor_bid_system",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 444,
+        "elapsed_ms": 311,
         "error": null
       },
-      "sbe_agenda": {
-        "url": "https://www.fldoe.org/policy/state-board-of-edu/meetings/",
+      "doe_instructional_materials": {
+        "url": "https://www.fldoe.org/academics/standards/instructional-materials/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 1835,
+        "elapsed_ms": 526,
         "error": null
       }
     },
     "GA": {
-      "doe_instructional_materials": {
-        "url": "https://gadoe.org/learning",
-        "final_url": "https://gadoe.org/learning/",
-        "status": 200,
-        "elapsed_ms": 312,
-        "error": null
-      },
       "procurement_portal": {
         "url": "https://ssl.doas.state.ga.us/gpr/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 211,
+        "elapsed_ms": 145,
         "error": null
       },
       "sbe_agenda": {
         "url": "https://gadoe.org/state-board/meeting-minutes/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 297,
-        "error": null
-      }
-    },
-    "IN": {
-      "doe_instructional_materials": {
-        "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 75,
-        "error": null
-      },
-      "sbe_agenda": {
-        "url": "https://www.in.gov/sboe/board-meetings-and-materials/board-meetings-and-materials/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 99,
-        "error": null
-      },
-      "procurement_portal": {
-        "url": "https://www.in.gov/idoa/procurement/current-business-opportunities/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 68,
-        "error": null
-      }
-    },
-    "LA": {
-      "procurement_portal": {
-        "url": "https://wwwcfprd.doa.louisiana.gov/osp/lapac/pubmain.cfm",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 295,
-        "error": null
-      },
-      "sbe_agenda": {
-        "url": "https://bese.louisiana.gov/meetings",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 494,
+        "elapsed_ms": 343,
         "error": null
       },
       "doe_instructional_materials": {
-        "url": "https://doe.louisiana.gov/school-system-leaders/instructional-materials-reviews",
-        "final_url": null,
+        "url": "https://gadoe.org/learning",
+        "final_url": "https://gadoe.org/learning/",
         "status": 200,
-        "elapsed_ms": 631,
+        "elapsed_ms": 374,
         "error": null
       }
     },
@@ -235,44 +189,67 @@
         "url": "https://www.education.ky.gov/KBE/meet/Pages/default.aspx",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 492,
+        "elapsed_ms": 306,
         "error": null
       },
       "doe_instructional_materials": {
         "url": "https://www.education.ky.gov/curriculum/books/Pages/default.aspx",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 748,
+        "elapsed_ms": 434,
         "error": null
       },
       "procurement_portal": {
         "url": "https://finance.ky.gov/eProcurement/Pages/default.aspx",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 1979,
+        "elapsed_ms": 409,
+        "error": null
+      }
+    },
+    "LA": {
+      "sbe_agenda": {
+        "url": "https://bese.louisiana.gov/meetings",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 211,
+        "error": null
+      },
+      "doe_instructional_materials": {
+        "url": "https://doe.louisiana.gov/school-system-leaders/instructional-materials-reviews",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 422,
+        "error": null
+      },
+      "procurement_portal": {
+        "url": "https://wwwcfprd.doa.louisiana.gov/osp/lapac/pubmain.cfm",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 227,
         "error": null
       }
     },
     "NC": {
-      "doe_instructional_materials": {
-        "url": "https://www.dpi.nc.gov/districts-schools/district-operations/instructional-materialstextbook-adoption",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 272,
-        "error": null
-      },
       "sbe_agenda": {
         "url": "https://www.dpi.nc.gov/about-dpi/state-board-education/meeting-information",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 196,
+        "elapsed_ms": 63,
+        "error": null
+      },
+      "doe_instructional_materials": {
+        "url": "https://www.dpi.nc.gov/districts-schools/district-operations/instructional-materialstextbook-adoption",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 114,
         "error": null
       },
       "procurement_portal": {
         "url": "https://evp.nc.gov/solicitations/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 1273,
+        "elapsed_ms": 627,
         "error": null
       }
     },
@@ -281,21 +258,21 @@
         "url": "https://oklahoma.gov/education/services/hqim.html",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 204,
+        "elapsed_ms": 64,
         "error": null
       },
       "sbe_agenda": {
         "url": "https://oklahoma.gov/education/state-board-of-education.html",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 308,
+        "elapsed_ms": 49,
         "error": null
       },
       "procurement_portal": {
         "url": "https://www.ok.gov/dcs/solicit/app/index.php",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 510,
+        "elapsed_ms": 371,
         "error": null
       }
     },
@@ -311,14 +288,14 @@
         "url": "https://mdek12.org/procurement/rfp/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 1230,
+        "elapsed_ms": 1283,
         "error": null
       },
       "doe_instructional_materials": {
         "url": "https://msinstructionalmaterials.org/resources/adoption/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 2016,
+        "elapsed_ms": 1966,
         "error": null
       }
     },
@@ -327,21 +304,21 @@
         "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/default.aspx",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 541,
-        "error": null
-      },
-      "sbe_agenda": {
-        "url": "https://www.oregon.gov/ode/about-us/stateboard/pages/stateboardmeetings.aspx",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 606,
+        "elapsed_ms": 576,
         "error": null
       },
       "procurement_portal": {
         "url": "https://oregonbuys.gov/bso/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 237,
+        "elapsed_ms": 240,
+        "error": null
+      },
+      "sbe_agenda": {
+        "url": "https://www.oregon.gov/ode/about-us/stateboard/pages/stateboardmeetings.aspx",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 436,
         "error": null
       }
     },
@@ -350,21 +327,44 @@
         "url": "https://scbo.sc.gov/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 194,
+        "elapsed_ms": 190,
         "error": null
       },
       "doe_instructional_materials": {
         "url": "https://ed.sc.gov/instruction/instructional-materials/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 2493,
+        "elapsed_ms": 2473,
         "error": null
       },
       "sbe_agenda": {
         "url": "https://ed.sc.gov/state-board/state-board-of-education/about-state-board/minutes-orders/archive/minutes-archive-2025-2032/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 2632,
+        "elapsed_ms": 2595,
+        "error": null
+      }
+    },
+    "TN": {
+      "sbe_agenda": {
+        "url": "https://www.tn.gov/sbe/meetings.html",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 201,
+        "error": null
+      },
+      "procurement_portal": {
+        "url": "https://www.tn.gov/generalservices/procurement/central-procurement-office--cpo-/supplier-information/request-for-proposals--rfp--opportunities1.html",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 181,
+        "error": null
+      },
+      "doe_instructional_materials": {
+        "url": "https://www.tn.gov/textbook-commission.html",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 2295,
         "error": null
       }
     },
@@ -373,21 +373,21 @@
         "url": "https://tea.texas.gov/academics/instructional-materials/review-and-adoption-process/instructional-materials-review-and-approval-resources",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 147,
-        "error": null
-      },
-      "procurement_portal": {
-        "url": "https://tea.texas.gov/academics/instructional-materials/procure-instructional-materials-in-emat/instructional-materials-funding",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 157,
+        "elapsed_ms": 124,
         "error": null
       },
       "sbe_agenda": {
         "url": "https://sboe.texas.gov/state-board-of-education/sboe-meetings",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 246,
+        "elapsed_ms": 117,
+        "error": null
+      },
+      "procurement_portal": {
+        "url": "https://tea.texas.gov/academics/instructional-materials/procure-instructional-materials-in-emat/instructional-materials-funding",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 123,
         "error": null
       }
     },
@@ -396,44 +396,44 @@
         "url": "https://schools.utah.gov/curr/imc",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 132,
+        "elapsed_ms": 114,
         "error": null
       },
       "sbe_agenda": {
         "url": "https://schools.utah.gov/board/utah/meetings",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 126,
+        "elapsed_ms": 100,
         "error": null
       },
       "procurement_portal": {
         "url": "https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfUtah",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 272,
+        "elapsed_ms": 160,
         "error": null
       }
     },
     "WV": {
-      "sbe_agenda": {
-        "url": "https://wvde.us/divisions-offices/west-virginia-board-education/meeting-agendas-minutes",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 175,
-        "error": null
-      },
       "doe_instructional_materials": {
         "url": "https://wvde.us/middle-secondary-learning/resources/instructional-resources-review-and-adoption/adoption-schedule-law-code-and-policies/",
         "final_url": "https://wvde.us/academics/middle-secondary-education/adopting-instructional-resources/instructional-resources-review-adoption/adoption-schedule-law-code-policies",
         "status": 200,
-        "elapsed_ms": 272,
+        "elapsed_ms": 42,
+        "error": null
+      },
+      "sbe_agenda": {
+        "url": "https://wvde.us/divisions-offices/west-virginia-board-education/meeting-agendas-minutes",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 32,
         "error": null
       },
       "procurement_portal": {
         "url": "https://www.wvoasis.gov/VSS/Default",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 139,
+        "elapsed_ms": 96,
         "error": null
       }
     },
@@ -442,66 +442,7 @@
         "url": "https://www.azed.gov/",
         "final_url": null,
         "status": 403,
-        "elapsed_ms": 87,
-        "error": null
-      }
-    },
-    "TN": {
-      "doe_instructional_materials": {
-        "url": "https://www.tn.gov/textbook-commission.html",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 1251,
-        "error": null
-      },
-      "procurement_portal": {
-        "url": "https://www.tn.gov/generalservices/procurement/central-procurement-office--cpo-/supplier-information/request-for-proposals--rfp--opportunities1.html",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 1248,
-        "error": null
-      },
-      "sbe_agenda": {
-        "url": "https://www.tn.gov/sbe/meetings.html",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 2310,
-        "error": null
-      }
-    },
-    "CT": {
-      "doe_instructional_materials": {
-        "url": "https://portal.ct.gov/sde/academic-office/academic-office",
-        "final_url": "https://portal.ct.gov/en/404error/?item=%2fsde%2facademic-office%2facademic-office&user=extranet%5cAnonymous&site=website",
-        "status": 200,
-        "elapsed_ms": 468,
-        "error": null
-      }
-    },
-    "DC": {
-      "doe_instructional_materials": {
-        "url": "https://osse.dc.gov/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 86,
-        "error": null
-      }
-    },
-    "DE": {
-      "doe_instructional_materials": {
-        "url": "https://www.doe.k12.de.us/domain/468",
-        "final_url": "https://education.delaware.gov/",
-        "status": 200,
-        "elapsed_ms": 230,
-        "error": null
-      }
-    },
-    "ID": {
-      "doe_instructional_materials": {
-        "url": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/curricular-materials/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 285,
+        "elapsed_ms": 35,
         "error": null
       }
     },
@@ -510,106 +451,34 @@
         "url": "https://education.alaska.gov/standards",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 1088,
+        "elapsed_ms": 971,
         "error": null
       }
     },
-    "IL": {
+    "DC": {
       "doe_instructional_materials": {
-        "url": "https://www.isbe.net/Pages/Learning-Standards.aspx",
+        "url": "https://osse.dc.gov/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 360,
+        "elapsed_ms": 54,
         "error": null
       }
     },
-    "HI": {
+    "DE": {
       "doe_instructional_materials": {
-        "url": "https://www.hawaiipublicschools.org/TeachingAndLearning/StudentLearning/Pages/home.aspx",
-        "final_url": "https://hawaiipublicschools.org",
+        "url": "https://www.doe.k12.de.us/domain/468",
+        "final_url": "https://education.delaware.gov/",
         "status": 200,
-        "elapsed_ms": 973,
+        "elapsed_ms": 128,
         "error": null
       }
     },
-    "MA": {
+    "CT": {
       "doe_instructional_materials": {
-        "url": "https://www.doe.mass.edu/instruction/",
-        "final_url": null,
+        "url": "https://portal.ct.gov/sde/academic-office/academic-office",
+        "final_url": "https://portal.ct.gov/en/404error/?item=%2fsde%2facademic-office%2facademic-office&user=extranet%5cAnonymous&site=website",
         "status": 200,
-        "elapsed_ms": 186,
-        "error": null
-      }
-    },
-    "MN": {
-      "doe_instructional_materials": {
-        "url": "https://education.mn.gov/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 152,
-        "error": null
-      }
-    },
-    "ME": {
-      "doe_instructional_materials": {
-        "url": "https://www.maine.gov/doe/learning",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 265,
-        "error": null
-      }
-    },
-    "MO": {
-      "doe_instructional_materials": {
-        "url": "https://dese.mo.gov/college-career-readiness/curriculum",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 80,
-        "error": null
-      }
-    },
-    "MD": {
-      "doe_instructional_materials": {
-        "url": "https://marylandpublicschools.org/",
-        "final_url": "https://marylandpublicschools.org/Pages/Default.aspx",
-        "status": 200,
-        "elapsed_ms": 437,
-        "error": null
-      }
-    },
-    "ND": {
-      "doe_instructional_materials": {
-        "url": "https://www.nd.gov/dpi/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 349,
-        "error": null
-      }
-    },
-    "NJ": {
-      "doe_instructional_materials": {
-        "url": "https://www.nj.gov/education/standards/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 203,
-        "error": null
-      }
-    },
-    "CO": {
-      "doe_instructional_materials": {
-        "url": "https://www.cde.state.co.us/standardsandinstruction",
-        "final_url": "https://ed.cde.state.co.us/standardsandinstruction",
-        "status": 200,
-        "elapsed_ms": 2152,
-        "error": null
-      }
-    },
-    "NY": {
-      "doe_instructional_materials": {
-        "url": "https://www.nysed.gov/curriculum-instruction",
-        "final_url": "https://www.nysed.gov/standards-instruction",
-        "status": 200,
-        "elapsed_ms": 153,
+        "elapsed_ms": 522,
         "error": null
       }
     },
@@ -618,88 +487,61 @@
         "url": "https://educate.iowa.gov/pk-12/standards",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 1775,
+        "elapsed_ms": 78,
         "error": null
       }
     },
-    "NE": {
+    "ID": {
       "doe_instructional_materials": {
-        "url": "https://www.education.ne.gov/contentareastandards/",
+        "url": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/curricular-materials/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 557,
+        "elapsed_ms": 238,
         "error": null
       }
     },
-    "OH": {
+    "IL": {
       "doe_instructional_materials": {
-        "url": "https://education.ohio.gov/Topics/Learning-in-Ohio",
+        "url": "https://www.isbe.net/Pages/Learning-Standards.aspx",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 253,
+        "elapsed_ms": 270,
         "error": null
       }
     },
-    "SD": {
+    "CO": {
       "doe_instructional_materials": {
-        "url": "https://doe.sd.gov/contentstandards/",
+        "url": "https://www.cde.state.co.us/standardsandinstruction",
+        "final_url": "https://ed.cde.state.co.us/standardsandinstruction",
+        "status": 200,
+        "elapsed_ms": 1694,
+        "error": null
+      }
+    },
+    "HI": {
+      "doe_instructional_materials": {
+        "url": "https://www.hawaiipublicschools.org/TeachingAndLearning/StudentLearning/Pages/home.aspx",
+        "final_url": "https://hawaiipublicschools.org",
+        "status": 200,
+        "elapsed_ms": 582,
+        "error": null
+      }
+    },
+    "MA": {
+      "doe_instructional_materials": {
+        "url": "https://www.doe.mass.edu/instruction/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 132,
+        "elapsed_ms": 227,
         "error": null
       }
     },
-    "NV": {
+    "MD": {
       "doe_instructional_materials": {
-        "url": "https://doe.nv.gov/offices/office-of-teaching-and-learning/instructional-materials/",
-        "final_url": null,
+        "url": "https://marylandpublicschools.org/",
+        "final_url": "https://marylandpublicschools.org/Pages/Default.aspx",
         "status": 200,
-        "elapsed_ms": 371,
-        "error": null
-      }
-    },
-    "WA": {
-      "doe_instructional_materials": {
-        "url": "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 105,
-        "error": null
-      }
-    },
-    "WI": {
-      "doe_instructional_materials": {
-        "url": "https://dpi.wi.gov/standards",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 97,
-        "error": null
-      }
-    },
-    "MT": {
-      "doe_instructional_materials": {
-        "url": "https://opi.mt.gov/Educators/Teaching-Learning",
-        "final_url": "https://opi.mt.gov/Educators",
-        "status": 200,
-        "elapsed_ms": 828,
-        "error": null
-      }
-    },
-    "PA": {
-      "doe_instructional_materials": {
-        "url": "https://www.education.pa.gov/K-12/Curriculum%20and%20Instruction/Pages/default.aspx",
-        "final_url": "https://www.pa.gov/agencies/education",
-        "status": 200,
-        "elapsed_ms": 405,
-        "error": null
-      }
-    },
-    "RI": {
-      "doe_instructional_materials": {
-        "url": "https://www.ride.ri.gov/",
-        "final_url": "https://ride.ri.gov:443/",
-        "status": 200,
-        "elapsed_ms": 381,
+        "elapsed_ms": 257,
         "error": null
       }
     },
@@ -708,7 +550,133 @@
         "url": "https://www.michigan.gov/mde/services/academic-standards",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 1301,
+        "elapsed_ms": 144,
+        "error": null
+      }
+    },
+    "MN": {
+      "doe_instructional_materials": {
+        "url": "https://education.mn.gov/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 173,
+        "error": null
+      }
+    },
+    "ME": {
+      "doe_instructional_materials": {
+        "url": "https://www.maine.gov/doe/learning",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 351,
+        "error": null
+      }
+    },
+    "MO": {
+      "doe_instructional_materials": {
+        "url": "https://dese.mo.gov/college-career-readiness/curriculum",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 214,
+        "error": null
+      }
+    },
+    "NJ": {
+      "doe_instructional_materials": {
+        "url": "https://www.nj.gov/education/standards/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 123,
+        "error": null
+      }
+    },
+    "ND": {
+      "doe_instructional_materials": {
+        "url": "https://www.nd.gov/dpi/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 293,
+        "error": null
+      }
+    },
+    "NV": {
+      "doe_instructional_materials": {
+        "url": "https://doe.nv.gov/offices/office-of-teaching-and-learning/instructional-materials/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 75,
+        "error": null
+      }
+    },
+    "NE": {
+      "doe_instructional_materials": {
+        "url": "https://www.education.ne.gov/contentareastandards/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 409,
+        "error": null
+      }
+    },
+    "NY": {
+      "doe_instructional_materials": {
+        "url": "https://www.nysed.gov/curriculum-instruction",
+        "final_url": "https://www.nysed.gov/standards-instruction",
+        "status": 200,
+        "elapsed_ms": 159,
+        "error": null
+      }
+    },
+    "OH": {
+      "doe_instructional_materials": {
+        "url": "https://education.ohio.gov/Topics/Learning-in-Ohio",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 226,
+        "error": null
+      }
+    },
+    "RI": {
+      "doe_instructional_materials": {
+        "url": "https://www.ride.ri.gov/",
+        "final_url": "https://ride.ri.gov:443/",
+        "status": 200,
+        "elapsed_ms": 214,
+        "error": null
+      }
+    },
+    "SD": {
+      "doe_instructional_materials": {
+        "url": "https://doe.sd.gov/contentstandards/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 145,
+        "error": null
+      }
+    },
+    "MT": {
+      "doe_instructional_materials": {
+        "url": "https://opi.mt.gov/Educators/Teaching-Learning",
+        "final_url": "https://opi.mt.gov/Educators",
+        "status": 200,
+        "elapsed_ms": 832,
+        "error": null
+      }
+    },
+    "WI": {
+      "doe_instructional_materials": {
+        "url": "https://dpi.wi.gov/standards",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 47,
+        "error": null
+      }
+    },
+    "WA": {
+      "doe_instructional_materials": {
+        "url": "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 126,
         "error": null
       }
     },
@@ -717,7 +685,25 @@
         "url": "https://education.vermont.gov/student-learning/content-areas",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 812,
+        "elapsed_ms": 212,
+        "error": null
+      }
+    },
+    "PA": {
+      "doe_instructional_materials": {
+        "url": "https://www.education.pa.gov/K-12/Curriculum%20and%20Instruction/Pages/default.aspx",
+        "final_url": "https://www.pa.gov/agencies/education",
+        "status": 200,
+        "elapsed_ms": 489,
+        "error": null
+      }
+    },
+    "WY": {
+      "doe_instructional_materials": {
+        "url": "https://edu.wyoming.gov/for-district-leadership/standards/",
+        "final_url": "https://edu.wyoming.gov/transparency/content-performance-standards/standards-review/",
+        "status": 200,
+        "elapsed_ms": 1088,
         "error": null
       }
     },
@@ -726,17 +712,31 @@
         "url": "https://www.ksde.gov/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 2554,
+        "elapsed_ms": 2593,
         "error": "SSL warning (ignored)"
       }
     },
-    "WY": {
-      "doe_instructional_materials": {
-        "url": "https://edu.wyoming.gov/for-district-leadership/standards/",
-        "final_url": "https://edu.wyoming.gov/transparency/content-performance-standards/standards-review/",
+    "IN": {
+      "sbe_agenda": {
+        "url": "https://www.in.gov/sboe/board-meetings-and-materials/board-meetings-and-materials/",
+        "final_url": null,
         "status": 200,
-        "elapsed_ms": 1065,
-        "error": null
+        "elapsed_ms": 170694,
+        "error": "slow-retry"
+      },
+      "procurement_portal": {
+        "url": "https://www.in.gov/idoa/procurement/current-business-opportunities/",
+        "final_url": null,
+        "status": null,
+        "elapsed_ms": 274217,
+        "error": "Timeout after 60s (slow-retry)"
+      },
+      "doe_instructional_materials": {
+        "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
+        "final_url": null,
+        "status": null,
+        "elapsed_ms": 274247,
+        "error": "Timeout after 60s (slow-retry)"
       }
     }
   },
@@ -827,11 +827,11 @@
     ],
     "AL": [
       {
-        "field": "AL1:src",
+        "field": "AL1:src2[0]",
         "url": "https://www.alabamaachieves.org/wp-content/uploads/2026/02/TAP_20260227_DigitalLiteracyCSBidPacket_v1.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 222,
+        "elapsed_ms": 451,
         "error": null
       },
       {
@@ -839,57 +839,33 @@
         "url": "https://www.alabamaachieves.org/content-areas-specialty/textbook-adoption-and-procurement/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 222,
+        "elapsed_ms": 453,
         "error": null
       },
       {
-        "field": "AL1:src2[0]",
+        "field": "AL1:src",
         "url": "https://www.alabamaachieves.org/wp-content/uploads/2026/02/TAP_20260227_DigitalLiteracyCSBidPacket_v1.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 235,
+        "elapsed_ms": 458,
         "error": null
       }
     ],
     "CA": [
       {
+        "field": "CA1:src2[1]",
+        "url": "https://www.cde.ca.gov/ci/rl/im/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 677,
+        "error": null
+      },
+      {
         "field": "CA1:src",
         "url": "https://www.cde.ca.gov/ci/rl/im/elaeldfupsigevents.asp",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 900,
-        "error": null
-      },
-      {
-        "field": "CA1:src2[2]",
-        "url": "https://www.cde.ca.gov/ci/rl/im/elaeldfollowupadoptfaq.asp",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 962,
-        "error": null
-      },
-      {
-        "field": "CA2:src",
-        "url": "https://www.cde.ca.gov/ci/ma/im/evalmapinstructmath2025.asp",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 827,
-        "error": null
-      },
-      {
-        "field": "CA1:src2[4]",
-        "url": "https://www.cde.ca.gov/ci/rl/im/elaeldparticipants2026.asp",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 1016,
-        "error": null
-      },
-      {
-        "field": "CA1:src2[3]",
-        "url": "https://www.cde.ca.gov/ci/rl/im/pubbulletin3elaeldfup.asp",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 1473,
+        "elapsed_ms": 754,
         "error": null
       },
       {
@@ -897,15 +873,39 @@
         "url": "https://www.cde.ca.gov/ci/rl/im/elaeldfupsigevents.asp",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 1501,
+        "elapsed_ms": 760,
         "error": null
       },
       {
-        "field": "CA1:src2[1]",
-        "url": "https://www.cde.ca.gov/ci/rl/im/",
+        "field": "CA1:src2[3]",
+        "url": "https://www.cde.ca.gov/ci/rl/im/pubbulletin3elaeldfup.asp",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 1537,
+        "elapsed_ms": 870,
+        "error": null
+      },
+      {
+        "field": "CA1:src2[2]",
+        "url": "https://www.cde.ca.gov/ci/rl/im/elaeldfollowupadoptfaq.asp",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 884,
+        "error": null
+      },
+      {
+        "field": "CA2:src",
+        "url": "https://www.cde.ca.gov/ci/ma/im/evalmapinstructmath2025.asp",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 725,
+        "error": null
+      },
+      {
+        "field": "CA1:src2[4]",
+        "url": "https://www.cde.ca.gov/ci/rl/im/elaeldparticipants2026.asp",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 792,
         "error": null
       },
       {
@@ -913,33 +913,17 @@
         "url": "https://www.cde.ca.gov/ci/ma/im/evalmapinstructmath2025.asp",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 1508,
+        "elapsed_ms": 2019,
         "error": null
       }
     ],
     "FL": [
       {
-        "field": "FL1:src",
-        "url": "https://www.fldoe.org/academics/standards/instructional-materials/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 93,
-        "error": null
-      },
-      {
         "field": "FL1:src2[0]",
         "url": "https://www.fldoe.org/academics/standards/instructional-materials/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 95,
-        "error": null
-      },
-      {
-        "field": "FL1:src2[1]",
-        "url": "https://www.fldoe.org/file/5574/2627SBL-K-12-Math.pdf",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 279,
+        "elapsed_ms": 289,
         "error": null
       },
       {
@@ -947,39 +931,7 @@
         "url": "https://www.fldoe.org/file/5574/2627SBL-K-12-CompSci.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 301,
-        "error": null
-      },
-      {
-        "field": "FL1:src2[3]",
-        "url": "https://www.fldoe.org/file/5574/AdoptionCycle.pdf",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 449,
-        "error": null
-      },
-      {
-        "field": "FL3:src",
-        "url": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 309,
-        "error": null
-      },
-      {
-        "field": "FL4:src",
-        "url": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 184,
-        "error": null
-      },
-      {
-        "field": "FL2:src",
-        "url": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 391,
+        "elapsed_ms": 234,
         "error": null
       },
       {
@@ -987,7 +939,39 @@
         "url": "https://www.fldoe.org/file/5574/2627pubtimelinechecklist.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 458,
+        "elapsed_ms": 96,
+        "error": null
+      },
+      {
+        "field": "FL1:src",
+        "url": "https://www.fldoe.org/academics/standards/instructional-materials/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 467,
+        "error": null
+      },
+      {
+        "field": "FL1:src2[3]",
+        "url": "https://www.fldoe.org/file/5574/AdoptionCycle.pdf",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 328,
+        "error": null
+      },
+      {
+        "field": "FL3:src",
+        "url": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 107,
+        "error": null
+      },
+      {
+        "field": "FL1:src2[1]",
+        "url": "https://www.fldoe.org/file/5574/2627SBL-K-12-Math.pdf",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 505,
         "error": null
       },
       {
@@ -995,43 +979,33 @@
         "url": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 256,
-        "error": null
-      }
-    ],
-    "ID": [
-      {
-        "field": "ID1:src2[0]",
-        "url": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/curricular-materials/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 215,
+        "elapsed_ms": 161,
         "error": null
       },
       {
-        "field": "ID1:src",
-        "url": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/curricular-materials/",
+        "field": "FL2:src",
+        "url": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 251,
+        "elapsed_ms": 256,
+        "error": null
+      },
+      {
+        "field": "FL4:src",
+        "url": "https://www.fldoe.org/core/fileparse.php/5574/urlt/AdoptionCycle.pdf",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 281,
         "error": null
       }
     ],
     "LA": [
       {
-        "field": "LA2:src",
-        "url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/2025-2026-imr-rubric---science-k-12.pdf",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 118,
-        "error": null
-      },
-      {
         "field": "LA1:src",
         "url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/2025-2026-imr-rubric---ece-ages-birth-to-five.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 153,
+        "elapsed_ms": 53,
         "error": null
       },
       {
@@ -1039,7 +1013,15 @@
         "url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/imr-weekly-report.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 253,
+        "elapsed_ms": 72,
+        "error": null
+      },
+      {
+        "field": "LA2:src",
+        "url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/2025-2026-imr-rubric---science-k-12.pdf",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 67,
         "error": null
       },
       {
@@ -1047,15 +1029,7 @@
         "url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/imr-weekly-report.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 176,
-        "error": null
-      },
-      {
-        "field": "LA2:src2[0]",
-        "url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/imr-weekly-report.pdf",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 197,
+        "elapsed_ms": 97,
         "error": null
       },
       {
@@ -1063,7 +1037,85 @@
         "url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/2025-2026-imr-rubric---social-studies-k-12.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 201,
+        "elapsed_ms": 115,
+        "error": null
+      },
+      {
+        "field": "LA2:src2[0]",
+        "url": "https://doe.louisiana.gov/docs/default-source/curricular-resources/imr-weekly-report.pdf",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 142,
+        "error": null
+      }
+    ],
+    "ID": [
+      {
+        "field": "ID1:src",
+        "url": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/curricular-materials/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 243,
+        "error": null
+      },
+      {
+        "field": "ID1:src2[0]",
+        "url": "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/curricular-materials/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 236,
+        "error": null
+      }
+    ],
+    "NC": [
+      {
+        "field": "NC1:src",
+        "url": "https://www.dpi.nc.gov/districts-schools/classroom-resources/office-teaching-and-learning",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 102,
+        "error": null
+      },
+      {
+        "field": "NC1:src2[0]",
+        "url": "https://www.dpi.nc.gov/districts-schools/classroom-resources/office-teaching-and-learning",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 31,
+        "error": null
+      },
+      {
+        "field": "NC1:src2[1]",
+        "url": "https://www.dpi.nc.gov/districts-schools/district-operations/textbook-adoption",
+        "final_url": "https://www.dpi.nc.gov/districts-schools/district-operations/instructional-materialstextbook-adoption",
+        "status": 200,
+        "elapsed_ms": 58,
+        "error": null
+      },
+      {
+        "field": "NC1:src2[2]",
+        "url": "https://www.dpi.nc.gov/districts-schools/district-operations/textbook-adoption/textbook-commission",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 55,
+        "error": null
+      }
+    ],
+    "NV": [
+      {
+        "field": "NV1:src2[0]",
+        "url": "https://doe.nv.gov/offices/office-of-teaching-and-learning/instructional-materials",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 155,
+        "error": null
+      },
+      {
+        "field": "NV1:src",
+        "url": "https://doe.nv.gov/offices/office-of-teaching-and-learning/instructional-materials",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 164,
         "error": null
       }
     ],
@@ -1073,7 +1125,7 @@
         "url": "https://www.education.ky.gov/curriculum/books/Pages/default.aspx",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 227,
+        "elapsed_ms": 489,
         "error": null
       }
     ],
@@ -1083,15 +1135,7 @@
         "url": "https://msinstructionalmaterials.org/wp-content/uploads/2026/02/2023-2031-Textbook-Adoption-Schedule.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 132,
-        "error": null
-      },
-      {
-        "field": "MS1:src2[0]",
-        "url": "https://msinstructionalmaterials.org/wp-content/uploads/2026/02/2023-2031-Textbook-Adoption-Schedule.pdf",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 164,
+        "elapsed_ms": 310,
         "error": null
       },
       {
@@ -1099,25 +1143,15 @@
         "url": "https://msinstructionalmaterials.org/wp-content/uploads/2026/02/2023-2031-Textbook-Adoption-Schedule.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 1566,
-        "error": null
-      }
-    ],
-    "NV": [
-      {
-        "field": "NV1:src",
-        "url": "https://doe.nv.gov/offices/office-of-teaching-and-learning/instructional-materials",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 145,
+        "elapsed_ms": 286,
         "error": null
       },
       {
-        "field": "NV1:src2[0]",
-        "url": "https://doe.nv.gov/offices/office-of-teaching-and-learning/instructional-materials",
+        "field": "MS1:src2[0]",
+        "url": "https://msinstructionalmaterials.org/wp-content/uploads/2026/02/2023-2031-Textbook-Adoption-Schedule.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 210,
+        "elapsed_ms": 361,
         "error": null
       }
     ],
@@ -1127,15 +1161,7 @@
         "url": "https://oklahoma.gov/content/dam/ok/en/osde/documents/services/standards-learning/hqim/oklahoma-state-textbook-committee/Subject%20Material%20Adoption%20Cycle%202026.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 74,
-        "error": null
-      },
-      {
-        "field": "OK1:src2[1]",
-        "url": "https://oklahoma.gov/education/services/hqim.html",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 51,
+        "elapsed_ms": 104,
         "error": null
       },
       {
@@ -1143,51 +1169,25 @@
         "url": "https://oklahoma.gov/content/dam/ok/en/osde/documents/services/standards-learning/hqim/oklahoma-state-textbook-committee/Subject%20Material%20Adoption%20Cycle%202026.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 151,
-        "error": null
-      }
-    ],
-    "NC": [
-      {
-        "field": "NC1:src2[1]",
-        "url": "https://www.dpi.nc.gov/districts-schools/district-operations/textbook-adoption",
-        "final_url": "https://www.dpi.nc.gov/districts-schools/district-operations/instructional-materialstextbook-adoption",
-        "status": 200,
-        "elapsed_ms": 176,
+        "elapsed_ms": 106,
         "error": null
       },
       {
-        "field": "NC1:src",
-        "url": "https://www.dpi.nc.gov/districts-schools/classroom-resources/office-teaching-and-learning",
+        "field": "OK1:src2[1]",
+        "url": "https://oklahoma.gov/education/services/hqim.html",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 216,
-        "error": null
-      },
-      {
-        "field": "NC1:src2[0]",
-        "url": "https://www.dpi.nc.gov/districts-schools/classroom-resources/office-teaching-and-learning",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 225,
-        "error": null
-      },
-      {
-        "field": "NC1:src2[2]",
-        "url": "https://www.dpi.nc.gov/districts-schools/district-operations/textbook-adoption/textbook-commission",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 310,
+        "elapsed_ms": 95,
         "error": null
       }
     ],
     "OR": [
       {
-        "field": "OR1:src2[1]",
-        "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/Pages/Adopted-Instructional-Materials.aspx",
+        "field": "OR1:src2[3]",
+        "url": "https://www.oregon.gov/ode/educator-resources/standards/socialsciences/pages/default.aspx",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 381,
+        "elapsed_ms": 521,
         "error": null
       },
       {
@@ -1195,23 +1195,7 @@
         "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/announcements-and-notices.aspx",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 398,
-        "error": null
-      },
-      {
-        "field": "OR1:src2[2]",
-        "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/adoption-criteria.aspx",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 409,
-        "error": null
-      },
-      {
-        "field": "OR1:src",
-        "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/announcements-and-notices.aspx",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 455,
+        "elapsed_ms": 640,
         "error": null
       },
       {
@@ -1219,15 +1203,31 @@
         "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/announcements-and-notices.aspx",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 388,
+        "elapsed_ms": 594,
         "error": null
       },
       {
-        "field": "OR1:src2[3]",
-        "url": "https://www.oregon.gov/ode/educator-resources/standards/socialsciences/pages/default.aspx",
+        "field": "OR1:src2[1]",
+        "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/Pages/Adopted-Instructional-Materials.aspx",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 479,
+        "elapsed_ms": 657,
+        "error": null
+      },
+      {
+        "field": "OR1:src",
+        "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/announcements-and-notices.aspx",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 697,
+        "error": null
+      },
+      {
+        "field": "OR1:src2[2]",
+        "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/instructional-materials/pages/adoption-criteria.aspx",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 679,
         "error": null
       }
     ],
@@ -1237,31 +1237,7 @@
         "url": "https://www.tn.gov/textbook-commission/textbook-information-for-publishers.html",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 141,
-        "error": null
-      },
-      {
-        "field": "TN1:src2[0]",
-        "url": "https://www.tn.gov/textbook-commission/textbook-information-for-publishers.html",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 173,
-        "error": null
-      },
-      {
-        "field": "TN1:src2[1]",
-        "url": "https://www.tn.gov/textbook-commission/textbook-adoption-process.html",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 191,
-        "error": null
-      },
-      {
-        "field": "TN1:src2[3]",
-        "url": "https://www.tn.gov/content/dam/tn/textbook-commission/documents/schedule-f/Schedule_F_Calendar.pdf",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 147,
+        "elapsed_ms": 242,
         "error": null
       },
       {
@@ -1269,7 +1245,7 @@
         "url": "https://www.tn.gov/content/dam/tn/education/textbook/Instructional_Materials_Adoption_Schedule.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 203,
+        "elapsed_ms": 193,
         "error": null
       },
       {
@@ -1277,7 +1253,15 @@
         "url": "https://www.tn.gov/content/dam/tn/textbook-commission/documents/schedule-f/Schedule_F_Calendar.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 179,
+        "elapsed_ms": 210,
+        "error": null
+      },
+      {
+        "field": "TN1:src2[3]",
+        "url": "https://www.tn.gov/content/dam/tn/textbook-commission/documents/schedule-f/Schedule_F_Calendar.pdf",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 217,
         "error": null
       },
       {
@@ -1285,7 +1269,7 @@
         "url": "https://www.tn.gov/content/dam/tn/education/textbook/Instructional_Materials_Adoption_Schedule.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 137,
+        "elapsed_ms": 136,
         "error": null
       },
       {
@@ -1293,7 +1277,7 @@
         "url": "https://www.tn.gov/content/dam/tn/education/textbook/Instructional_Materials_Adoption_Schedule.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 196,
+        "elapsed_ms": 176,
         "error": null
       },
       {
@@ -1301,7 +1285,23 @@
         "url": "https://www.tn.gov/content/dam/tn/education/textbook/Instructional_Materials_Adoption_Schedule.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 133,
+        "elapsed_ms": 190,
+        "error": null
+      },
+      {
+        "field": "TN1:src2[1]",
+        "url": "https://www.tn.gov/textbook-commission/textbook-adoption-process.html",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 1232,
+        "error": null
+      },
+      {
+        "field": "TN1:src2[0]",
+        "url": "https://www.tn.gov/textbook-commission/textbook-information-for-publishers.html",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 1258,
         "error": null
       }
     ],
@@ -1311,7 +1311,7 @@
         "url": "https://sboe.texas.gov/state-board-of-education/imra/current-imra-cycle",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 129,
+        "elapsed_ms": 128,
         "error": null
       },
       {
@@ -1319,15 +1319,7 @@
         "url": "https://sboe.texas.gov/state-board-of-education/imra/current-imra-cycle",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 125,
-        "error": null
-      },
-      {
-        "field": "TX1:src2[2]",
-        "url": "https://tea.texas.gov/academics/instructional-materials/review-and-adoption-process/imra-multi-year-plan",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 121,
+        "elapsed_ms": 284,
         "error": null
       },
       {
@@ -1335,15 +1327,15 @@
         "url": "https://tea.texas.gov/state-board-of-education/imra/imra26-rfim.pdf",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 211,
+        "elapsed_ms": 294,
         "error": null
       },
       {
-        "field": "TX1:src2[4]",
-        "url": "https://tea.texas.gov/academics/instructional-materials/publishers",
+        "field": "TX1:src2[2]",
+        "url": "https://tea.texas.gov/academics/instructional-materials/review-and-adoption-process/imra-multi-year-plan",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 142,
+        "elapsed_ms": 169,
         "error": null
       },
       {
@@ -1351,7 +1343,7 @@
         "url": "https://im.tea.texas.gov/rubrics",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 206,
+        "elapsed_ms": 148,
         "error": null
       },
       {
@@ -1359,7 +1351,15 @@
         "url": "https://tea.texas.gov/academics/instructional-materials/review-and-adoption-process/imra-multi-year-plan",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 107,
+        "elapsed_ms": 118,
+        "error": null
+      },
+      {
+        "field": "TX1:src2[4]",
+        "url": "https://tea.texas.gov/academics/instructional-materials/publishers",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 189,
         "error": null
       },
       {
@@ -1367,35 +1367,7 @@
         "url": "https://tea.texas.gov/academics/instructional-materials/review-and-adoption-process/imra-multi-year-plan",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 136,
-        "error": null
-      }
-    ],
-    "WV": [
-      {
-        "field": "WV1:src",
-        "url": "https://wvde.us/academics/middle-secondary-education/adopting-instructional-resources/instructional-resources-review-adoption/adoption-schedule-law-code-policies",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 64,
-        "error": null
-      },
-      {
-        "field": "WV1:src2[0]",
-        "url": "https://wvde.us/academics/middle-secondary-education/adopting-instructional-resources/instructional-resources-review-adoption/adoption-schedule-law-code-policies",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 64,
-        "error": null
-      }
-    ],
-    "AZ": [
-      {
-        "field": "AZ1:src",
-        "url": "https://www.azed.gov/academic-standards",
-        "final_url": null,
-        "status": 403,
-        "elapsed_ms": 36,
+        "elapsed_ms": 185,
         "error": null
       }
     ],
@@ -1405,7 +1377,7 @@
         "url": "https://schools.utah.gov/curr/imc",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 176,
+        "elapsed_ms": 136,
         "error": null
       },
       {
@@ -1413,7 +1385,35 @@
         "url": "https://schools.utah.gov/curr/imc",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 170,
+        "elapsed_ms": 150,
+        "error": null
+      }
+    ],
+    "WV": [
+      {
+        "field": "WV1:src",
+        "url": "https://wvde.us/academics/middle-secondary-education/adopting-instructional-resources/instructional-resources-review-adoption/adoption-schedule-law-code-policies",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 199,
+        "error": null
+      },
+      {
+        "field": "WV1:src2[0]",
+        "url": "https://wvde.us/academics/middle-secondary-education/adopting-instructional-resources/instructional-resources-review-adoption/adoption-schedule-law-code-policies",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 207,
+        "error": null
+      }
+    ],
+    "AZ": [
+      {
+        "field": "AZ1:src",
+        "url": "https://www.azed.gov/",
+        "final_url": null,
+        "status": 403,
+        "elapsed_ms": 113,
         "error": null
       }
     ],
@@ -1423,181 +1423,7 @@
         "url": "https://aredreports.ade.arkansas.gov/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 260,
-        "error": null
-      }
-    ],
-    "CO": [
-      {
-        "field": "CO1:src",
-        "url": "https://www.cde.state.co.us/standardsandinstruction",
-        "final_url": "https://ed.cde.state.co.us/standardsandinstruction",
-        "status": 200,
-        "elapsed_ms": 342,
-        "error": null
-      }
-    ],
-    "DE": [
-      {
-        "field": "DE1:src",
-        "url": "https://www.doe.k12.de.us/domain/468",
-        "final_url": "https://education.delaware.gov/",
-        "status": 200,
-        "elapsed_ms": 128,
-        "error": null
-      }
-    ],
-    "DC": [
-      {
-        "field": "DC1:src",
-        "url": "https://osse.dc.gov/page/elementary-and-secondary-education-osse",
-        "final_url": null,
-        "status": 404,
-        "elapsed_ms": 75,
-        "error": null
-      }
-    ],
-    "CT": [
-      {
-        "field": "CT1:src",
-        "url": "https://portal.ct.gov/sde/academic-office/academic-office",
-        "final_url": "https://portal.ct.gov/en/404error/?item=%2fsde%2facademic-office%2facademic-office&user=extranet%5cAnonymous&site=website",
-        "status": 200,
-        "elapsed_ms": 448,
-        "error": null
-      }
-    ],
-    "GA": [
-      {
-        "field": "GA1:src",
-        "url": "https://gadoe.org/learning",
-        "final_url": "https://gadoe.org/learning/",
-        "status": 200,
-        "elapsed_ms": 163,
-        "error": null
-      }
-    ],
-    "IN": [
-      {
-        "field": "IN1:src",
-        "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 60,
-        "error": null
-      },
-      {
-        "field": "IN2:src",
-        "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 59,
-        "error": null
-      },
-      {
-        "field": "IN3:src",
-        "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 59,
-        "error": null
-      },
-      {
-        "field": "IN4:src",
-        "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 64,
-        "error": null
-      }
-    ],
-    "IL": [
-      {
-        "field": "IL1:src",
-        "url": "https://www.isbe.net/Pages/Learning-Standards.aspx",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 240,
-        "error": null
-      }
-    ],
-    "IA": [
-      {
-        "field": "IA1:src",
-        "url": "https://educate.iowa.gov/pk-12/standards",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 56,
-        "error": null
-      }
-    ],
-    "ME": [
-      {
-        "field": "ME1:src",
-        "url": "https://www.maine.gov/doe/learning",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 74,
-        "error": null
-      }
-    ],
-    "AK": [
-      {
-        "field": "AK1:src",
-        "url": "https://education.alaska.gov/standards",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 1025,
-        "error": null
-      }
-    ],
-    "HI": [
-      {
-        "field": "HI1:src",
-        "url": "https://www.hawaiipublicschools.org/TeachingAndLearning/StudentLearning/Pages/home.aspx",
-        "final_url": "https://hawaiipublicschools.org",
-        "status": 200,
-        "elapsed_ms": 575,
-        "error": null
-      }
-    ],
-    "MD": [
-      {
-        "field": "MD1:src",
-        "url": "https://marylandpublicschools.org/programs/Pages/Programs.aspx",
-        "final_url": null,
-        "status": 404,
-        "elapsed_ms": 142,
-        "error": null
-      }
-    ],
-    "MI": [
-      {
-        "field": "MI1:src",
-        "url": "https://www.michigan.gov/mde/services/academic-standards",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 64,
-        "error": null
-      }
-    ],
-    "MA": [
-      {
-        "field": "MA1:src",
-        "url": "https://www.doe.mass.edu/instruction/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 129,
-        "error": null
-      }
-    ],
-    "MO": [
-      {
-        "field": "MO1:src",
-        "url": "https://dese.mo.gov/college-career-readiness/curriculum",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 75,
+        "elapsed_ms": 186,
         "error": null
       }
     ],
@@ -1607,7 +1433,7 @@
         "url": "https://ed.sc.gov/newsroom/news-releases/request-for-bids-high-quality-instructional-materials/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 2560,
+        "elapsed_ms": 2541,
         "error": null
       },
       {
@@ -1615,7 +1441,7 @@
         "url": "https://ed.sc.gov/instruction/instructional-materials/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 2496,
+        "elapsed_ms": 2452,
         "error": null
       },
       {
@@ -1623,7 +1449,7 @@
         "url": "https://ed.sc.gov/newsroom/news-releases/request-for-bids-high-quality-instructional-materials/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 2575,
+        "elapsed_ms": 2529,
         "error": null
       },
       {
@@ -1631,7 +1457,117 @@
         "url": "https://ed.sc.gov/instruction/instructional-materials/information-for-publishers/publisher-vendor-registration-for-the-instructional-materials-bid-portal-imbp/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 2776,
+        "elapsed_ms": 2547,
+        "error": null
+      }
+    ],
+    "CO": [
+      {
+        "field": "CO1:src",
+        "url": "https://www.cde.state.co.us/standardsandinstruction",
+        "final_url": "https://ed.cde.state.co.us/standardsandinstruction",
+        "status": 200,
+        "elapsed_ms": 338,
+        "error": null
+      }
+    ],
+    "DE": [
+      {
+        "field": "DE1:src",
+        "url": "https://www.doe.k12.de.us/domain/468",
+        "final_url": "https://education.delaware.gov/",
+        "status": 200,
+        "elapsed_ms": 205,
+        "error": null
+      }
+    ],
+    "DC": [
+      {
+        "field": "DC1:src",
+        "url": "https://osse.dc.gov/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 83,
+        "error": null
+      }
+    ],
+    "GA": [
+      {
+        "field": "GA1:src",
+        "url": "https://gadoe.org/learning",
+        "final_url": "https://gadoe.org/learning/",
+        "status": 200,
+        "elapsed_ms": 185,
+        "error": null
+      }
+    ],
+    "CT": [
+      {
+        "field": "CT1:src",
+        "url": "https://portal.ct.gov/sde/academic-office/academic-office",
+        "final_url": "https://portal.ct.gov/en/404error/?item=%2fsde%2facademic-office%2facademic-office&user=extranet%5cAnonymous&site=website",
+        "status": 200,
+        "elapsed_ms": 587,
+        "error": null
+      }
+    ],
+    "IL": [
+      {
+        "field": "IL1:src",
+        "url": "https://www.isbe.net/Pages/Learning-Standards.aspx",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 286,
+        "error": null
+      }
+    ],
+    "AK": [
+      {
+        "field": "AK1:src",
+        "url": "https://education.alaska.gov/standards",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 1042,
+        "error": null
+      }
+    ],
+    "HI": [
+      {
+        "field": "HI1:src",
+        "url": "https://www.hawaiipublicschools.org/TeachingAndLearning/StudentLearning/Pages/home.aspx",
+        "final_url": "https://hawaiipublicschools.org",
+        "status": 200,
+        "elapsed_ms": 641,
+        "error": null
+      }
+    ],
+    "ME": [
+      {
+        "field": "ME1:src",
+        "url": "https://www.maine.gov/doe/learning",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 150,
+        "error": null
+      }
+    ],
+    "IA": [
+      {
+        "field": "IA1:src",
+        "url": "https://educate.iowa.gov/pk-12/standards",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 274,
+        "error": null
+      }
+    ],
+    "MA": [
+      {
+        "field": "MA1:src",
+        "url": "https://www.doe.mass.edu/instruction/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 169,
         "error": null
       }
     ],
@@ -1641,117 +1577,27 @@
         "url": "https://education.mn.gov/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 235,
+        "elapsed_ms": 163,
         "error": null
       }
     ],
-    "NJ": [
+    "MD": [
       {
-        "field": "NJ1:src",
-        "url": "https://www.nj.gov/education/standards/",
+        "field": "MD1:src",
+        "url": "https://marylandpublicschools.org/",
+        "final_url": "https://marylandpublicschools.org/Pages/Default.aspx",
+        "status": 200,
+        "elapsed_ms": 377,
+        "error": null
+      }
+    ],
+    "MO": [
+      {
+        "field": "MO1:src",
+        "url": "https://dese.mo.gov/college-career-readiness/curriculum",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 99,
-        "error": null
-      }
-    ],
-    "NH": [
-      {
-        "field": "NH1:src",
-        "url": "https://www.education.nh.gov/who-we-are/division-of-learner-support/bureau-of-instructional-support",
-        "final_url": null,
-        "status": 403,
-        "elapsed_ms": 224,
-        "error": null
-      }
-    ],
-    "NY": [
-      {
-        "field": "NY1:src",
-        "url": "https://www.nysed.gov/curriculum-instruction",
-        "final_url": "https://www.nysed.gov/standards-instruction",
-        "status": 200,
-        "elapsed_ms": 127,
-        "error": null
-      }
-    ],
-    "NE": [
-      {
-        "field": "NE1:src",
-        "url": "https://www.education.ne.gov/contentareastandards/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 353,
-        "error": null
-      }
-    ],
-    "SD": [
-      {
-        "field": "SD1:src",
-        "url": "https://doe.sd.gov/contentstandards/",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 130,
-        "error": null
-      }
-    ],
-    "RI": [
-      {
-        "field": "RI1:src",
-        "url": "https://www.ride.ri.gov/InstructionAssessment.aspx",
-        "final_url": "https://ride.ri.gov:443/InstructionAssessment.aspx",
-        "status": 404,
-        "elapsed_ms": 170,
-        "error": null
-      }
-    ],
-    "OH": [
-      {
-        "field": "OH1:src",
-        "url": "https://education.ohio.gov/Topics/Learning-in-Ohio",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 209,
-        "error": null
-      }
-    ],
-    "VT": [
-      {
-        "field": "VT1:src",
-        "url": "https://education.vermont.gov/student-learning/content-areas",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 45,
-        "error": null
-      }
-    ],
-    "WA": [
-      {
-        "field": "WA1:src",
-        "url": "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 36,
-        "error": null
-      }
-    ],
-    "WI": [
-      {
-        "field": "WI1:src",
-        "url": "https://dpi.wi.gov/standards",
-        "final_url": null,
-        "status": 200,
-        "elapsed_ms": 52,
-        "error": null
-      }
-    ],
-    "ND": [
-      {
-        "field": "ND1:src",
-        "url": "https://www.nd.gov/dpi/educators/curriculum-and-instruction",
-        "final_url": null,
-        "status": 404,
-        "elapsed_ms": 420,
+        "elapsed_ms": 213,
         "error": null
       }
     ],
@@ -1761,17 +1607,97 @@
         "url": "https://opi.mt.gov/Educators/Teaching-Learning",
         "final_url": "https://opi.mt.gov/Educators",
         "status": 200,
-        "elapsed_ms": 786,
+        "elapsed_ms": 811,
         "error": null
       }
     ],
-    "WY": [
+    "NE": [
       {
-        "field": "WY1:src",
-        "url": "https://edu.wyoming.gov/for-district-leadership/standards/",
-        "final_url": "https://edu.wyoming.gov/transparency/content-performance-standards/standards-review/",
+        "field": "NE1:src",
+        "url": "https://www.education.ne.gov/contentareastandards/",
+        "final_url": null,
         "status": 200,
-        "elapsed_ms": 1059,
+        "elapsed_ms": 679,
+        "error": null
+      }
+    ],
+    "NH": [
+      {
+        "field": "NH1:src",
+        "url": "https://www.education.nh.gov/who-we-are/division-of-learner-support/bureau-of-instructional-support",
+        "final_url": null,
+        "status": 403,
+        "elapsed_ms": 193,
+        "error": null
+      }
+    ],
+    "NJ": [
+      {
+        "field": "NJ1:src",
+        "url": "https://www.nj.gov/education/standards/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 225,
+        "error": null
+      }
+    ],
+    "NY": [
+      {
+        "field": "NY1:src",
+        "url": "https://www.nysed.gov/curriculum-instruction",
+        "final_url": "https://www.nysed.gov/standards-instruction",
+        "status": 200,
+        "elapsed_ms": 299,
+        "error": null
+      }
+    ],
+    "ND": [
+      {
+        "field": "ND1:src",
+        "url": "https://www.nd.gov/dpi/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 398,
+        "error": null
+      }
+    ],
+    "OH": [
+      {
+        "field": "OH1:src",
+        "url": "https://education.ohio.gov/Topics/Learning-in-Ohio",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 218,
+        "error": null
+      }
+    ],
+    "RI": [
+      {
+        "field": "RI1:src",
+        "url": "https://www.ride.ri.gov/",
+        "final_url": "https://ride.ri.gov:443/",
+        "status": 200,
+        "elapsed_ms": 291,
+        "error": null
+      }
+    ],
+    "PA": [
+      {
+        "field": "PA1:src",
+        "url": "https://www.education.pa.gov/K-12/Curriculum%20and%20Instruction/Pages/default.aspx",
+        "final_url": "https://www.pa.gov/agencies/education",
+        "status": 200,
+        "elapsed_ms": 311,
+        "error": null
+      }
+    ],
+    "SD": [
+      {
+        "field": "SD1:src",
+        "url": "https://doe.sd.gov/contentstandards/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 140,
         "error": null
       }
     ],
@@ -1781,18 +1707,92 @@
         "url": "https://www.ksde.gov/",
         "final_url": null,
         "status": 200,
-        "elapsed_ms": 2661,
+        "elapsed_ms": 2596,
         "error": "SSL warning (ignored)"
       }
     ],
-    "PA": [
+    "WA": [
       {
-        "field": "PA1:src",
-        "url": "https://www.education.pa.gov/K-12/Curriculum%20and%20Instruction/Pages/default.aspx",
-        "final_url": "https://www.pa.gov/agencies/education",
+        "field": "WA1:src",
+        "url": "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials",
+        "final_url": null,
         "status": 200,
-        "elapsed_ms": 3392,
+        "elapsed_ms": 93,
         "error": null
+      }
+    ],
+    "WI": [
+      {
+        "field": "WI1:src",
+        "url": "https://dpi.wi.gov/standards",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 48,
+        "error": null
+      }
+    ],
+    "VT": [
+      {
+        "field": "VT1:src",
+        "url": "https://education.vermont.gov/student-learning/content-areas",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 422,
+        "error": null
+      }
+    ],
+    "WY": [
+      {
+        "field": "WY1:src",
+        "url": "https://edu.wyoming.gov/for-district-leadership/standards/",
+        "final_url": "https://edu.wyoming.gov/transparency/content-performance-standards/standards-review/",
+        "status": 200,
+        "elapsed_ms": 997,
+        "error": null
+      }
+    ],
+    "MI": [
+      {
+        "field": "MI1:src",
+        "url": "https://www.michigan.gov/mde/services/academic-standards",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 4517,
+        "error": null
+      }
+    ],
+    "IN": [
+      {
+        "field": "IN2:src",
+        "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
+        "final_url": null,
+        "status": 200,
+        "elapsed_ms": 92171,
+        "error": "slow-retry"
+      },
+      {
+        "field": "IN1:src",
+        "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
+        "final_url": null,
+        "status": null,
+        "elapsed_ms": 274175,
+        "error": "Timeout after 60s (slow-retry)"
+      },
+      {
+        "field": "IN3:src",
+        "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
+        "final_url": null,
+        "status": null,
+        "elapsed_ms": 274187,
+        "error": "Timeout after 60s (slow-retry)"
+      },
+      {
+        "field": "IN4:src",
+        "url": "https://www.in.gov/doe/students/high-quality-curricular-materials-advisory-lists/",
+        "final_url": null,
+        "status": null,
+        "elapsed_ms": 274154,
+        "error": "Timeout after 60s (slow-retry)"
       }
     ]
   }
